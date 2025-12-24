@@ -1,0 +1,1446 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - General Safety and Health Provisions",
+    "part": "1926",
+    "subpart": "C",
+    "authority": "40 U.S.C. 3701 et seq.; 29 U.S.C. 653, 655, 657; Secretary of Labor's Order No. 12-71 (36 FR 8754), 8-76 (41 FR 25059), 9-83 (48 FR 35736), 6-96 (62 FR 111), 5-2007 (72 FR 31160), or 1-2012 (77 FR 3912) as applicable; and 29 CFR part 1911",
+    "effective_date": "1979-02-09",
+    "last_updated": "2025-06-05",
+    "applies_to": "all construction work covered under 29 CFR part 1926",
+    "excludes": []
+  },
+  "sections": [
+    {
+      "section_number": "1926.20",
+      "title": "General safety and health provisions",
+      "subsections": [
+        {
+          "subsection": "1926.20(a)",
+          "title": "Contractor requirements",
+          "rules": [
+            {
+              "rule_id": "1926.20(a)(1)",
+              "text": "Section 107 of the Act requires that it shall be a condition of each contract which is entered into under legislation subject to Reorganization Plan Number 14 of 1950 (64 Stat. 1267), as defined in § 1926.12, and is for construction, alteration, and/or repair, including painting and decorating, that no contractor or subcontractor for any part of the contract work shall require any laborer or mechanic employed in the performance of the contract to work in surroundings or under working conditions which are unsanitary, hazardous, or dangerous to his health or safety.",
+              "requirement": "ensure no contractor or subcontractor requires workers to work in unsanitary, hazardous, or dangerous conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all contractors and subcontractors",
+              "work_types": ["construction", "alteration", "repair", "painting", "decorating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "contract_work", "condition": "contract work under Reorganization Plan 14", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "contract_work"
+              },
+              "protections": ["safe working conditions", "health protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.20(b)",
+          "title": "Accident prevention responsibilities",
+          "rules": [
+            {
+              "rule_id": "1926.20(b)(1)",
+              "text": "It shall be the responsibility of the employer to initiate and maintain such programs as may be necessary to comply with this part.",
+              "requirement": "initiate and maintain safety programs necessary for compliance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["comprehensive safety programs"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.20(b)(2)",
+              "text": "Such programs shall provide for frequent and regular inspections of the job sites, materials, and equipment to be made by competent persons designated by the employers.",
+              "requirement": "conduct frequent and regular inspections by competent persons",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all safety programs",
+              "work_types": ["construction", "maintenance"],
+              "personnel_required": "competent person",
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["regular inspections", "competent oversight"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.20(b)(3)",
+              "text": "The use of any machinery, tool, material, or equipment which is not in compliance with any applicable requirement of this part is prohibited. Such machine, tool, material, or equipment shall either be identified as unsafe by tagging or locking the controls to render them inoperable or shall be physically removed from its place of operation.",
+              "requirement": "prohibit use of non-compliant equipment and properly remove or secure unsafe items",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all machinery, tools, materials, and equipment",
+              "work_types": ["construction", "maintenance", "operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "non_compliance", "condition": "equipment not in compliance with requirements", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "non_compliance"
+              },
+              "protections": ["unsafe equipment identification", "tagging", "lockout", "physical removal"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.20(b)(4)",
+              "text": "The employer shall permit only those employees qualified by training or experience to operate equipment and machinery.",
+              "requirement": "ensure only qualified employees operate equipment and machinery",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "equipment and machinery operators",
+              "work_types": ["equipment operation", "machinery operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "equipment_operation", "condition": "employee operating equipment or machinery", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "equipment_operation"
+              },
+              "protections": ["qualified operators", "training verification", "experience verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.20(c)",
+          "title": "Geographic scope",
+          "rules": [
+            {
+              "rule_id": "1926.20(c)",
+              "text": "The standards contained in this part shall apply with respect to employments performed in a workplace in a State, the District of Columbia, the Commonwealth of Puerto Rico, the Virgin Islands, American Samoa, Guam, the Commonwealth of the Northern Mariana Islands, Wake Island, Outer Continental Shelf lands defined in the Outer Continental Shelf Lands Act, and Johnston Island.",
+              "requirement": "apply standards to all specified geographic jurisdictions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all workplaces in specified jurisdictions",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "covered_jurisdiction", "condition": "workplace in covered jurisdiction", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "covered_jurisdiction"
+              },
+              "protections": ["comprehensive geographic coverage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.20(d)",
+          "title": "Standard precedence",
+          "rules": [
+            {
+              "rule_id": "1926.20(d)(1)",
+              "text": "If a particular standard is specifically applicable to a condition, practice, means, method, operation, or process, it shall prevail over any different general standard which might otherwise be applicable to the same condition, practice, means, method, operation, or process.",
+              "requirement": "apply specific standards over general standards when both apply to same condition",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all standards application",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "specific_standard_exists", "condition": "specific standard applies to condition", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "general_standard_exists", "condition": "general standard also applies", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "specific_standard_exists AND general_standard_exists"
+              },
+              "protections": ["specific standard precedence"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.20(d)(2)",
+              "text": "On the other hand, any standard shall apply according to its terms to any employment and place of employment in any industry, even though particular standards are also prescribed for the industry to the extent that none of such particular standards applies.",
+              "requirement": "apply general standards when no particular industry standards apply",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employment and workplaces",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "no_particular_standard", "condition": "no particular industry standard applies", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "no_particular_standard"
+              },
+              "protections": ["general standard application"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.20(e)",
+          "title": "Employee protection scope",
+          "rules": [
+            {
+              "rule_id": "1926.20(e)",
+              "text": "In the event a standard protects on its face a class of persons larger than employees, the standard shall be applicable under this part only to employees and their employment and places of employment.",
+              "requirement": "limit standard application to employees only when standard covers broader class",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "standards covering broader classes",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "broader_class_standard", "condition": "standard protects class larger than employees", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "broader_class_standard"
+              },
+              "protections": ["employee-focused application"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.20(f)",
+          "title": "Compliance duties owed to each employee",
+          "rules": [
+            {
+              "rule_id": "1926.20(f)(1)",
+              "text": "Personal protective equipment. Standards in this part requiring the employer to provide personal protective equipment (PPE), including respirators and other types of PPE, because of hazards to employees impose a separate compliance duty with respect to each employee covered by the requirement. The employer must provide PPE to each employee required to use the PPE, and each failure to provide PPE to an employee may be considered a separate violation.",
+              "requirement": "provide required PPE to each individual employee as separate compliance duty",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees requiring PPE",
+              "work_types": ["construction", "maintenance", "hazardous operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ppe_required", "condition": "PPE required due to hazards", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "ppe_required"
+              },
+              "protections": ["individual PPE provision", "respirators", "protective equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.20(f)(2)",
+              "text": "Training. Standards in this part requiring training on hazards and related matters, such as standards requiring that employees receive training or that the employer train employees, provide training to employees, or institute or implement a training program, impose a separate compliance duty with respect to each employee covered by the requirement. The employer must train each affected employee in the manner required by the standard, and each failure to train an employee may be considered a separate violation.",
+              "requirement": "provide required training to each individual employee as separate compliance duty",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees requiring training",
+              "work_types": ["construction", "maintenance", "hazardous operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "training_required", "condition": "training required by standard", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "training_required"
+              },
+              "protections": ["individual training provision", "hazard recognition training", "training programs"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.21",
+      "title": "Safety training and education",
+      "subsections": [
+        {
+          "subsection": "1926.21(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1926.21(a)",
+              "text": "The Secretary shall, pursuant to section 107(f) of the Act, establish and supervise programs for the education and training of employers and employees in the recognition, avoidance and prevention of unsafe conditions in employments covered by the act.",
+              "requirement": "establish and supervise safety education and training programs",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "Secretary of Labor",
+              "work_types": ["safety training", "education programs"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["safety education", "hazard recognition training", "unsafe condition prevention"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.21(b)",
+          "title": "Employer responsibility",
+          "rules": [
+            {
+              "rule_id": "1926.21(b)(1)",
+              "text": "The employer should avail himself of the safety and health training programs the Secretary provides.",
+              "requirement": "utilize Secretary-provided safety and health training programs",
+              "type": "recommended",
+              "severity": "medium",
+              "applies_to": "all employers",
+              "work_types": ["training participation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["Secretary-provided training programs"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.21(b)(2)",
+              "text": "The employer shall instruct each employee in the recognition and avoidance of unsafe conditions and the regulations applicable to his work environment to control or eliminate any hazards or other exposure to illness or injury.",
+              "requirement": "instruct each employee in hazard recognition, avoidance, and applicable regulations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["hazard recognition training", "unsafe condition avoidance", "regulatory knowledge"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.21(b)(3)",
+              "text": "Employees required to handle or use poisons, caustics, and other harmful substances shall be instructed regarding the safe handling and use, and be made aware of the potential hazards, personal hygiene, and personal protective measures required.",
+              "requirement": "provide specialized training for employees handling harmful substances",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees handling harmful substances",
+              "work_types": ["chemical handling", "hazardous material work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "harmful_substance_handling", "condition": "employee handles poisons, caustics, or harmful substances", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "harmful_substance_handling"
+              },
+              "protections": ["safe handling training", "hazard awareness", "personal hygiene training", "PPE training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.21(b)(4)",
+              "text": "In job site areas where harmful plants or animals are present, employees who may be exposed shall be instructed regarding the potential hazards, and how to avoid injury, and the first aid procedures to be used in the event of injury.",
+              "requirement": "provide training for employees exposed to harmful plants or animals",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employees exposed to harmful plants or animals",
+              "work_types": ["outdoor construction", "environmental work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "harmful_plants_animals", "condition": "harmful plants or animals present at job site", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "harmful_plants_animals"
+              },
+              "protections": ["hazard awareness training", "injury avoidance training", "first aid training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.21(b)(5)",
+              "text": "Employees required to handle or use flammable liquids, gases, or toxic materials shall be instructed in the safe handling and use of these materials and made aware of the specific requirements contained in subparts D, F, and other applicable subparts of this part.",
+              "requirement": "provide specialized training for employees handling flammable or toxic materials",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees handling flammable or toxic materials",
+              "work_types": ["chemical handling", "flammable material work", "toxic material work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "flammable_toxic_handling", "condition": "employee handles flammable liquids, gases, or toxic materials", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "flammable_toxic_handling"
+              },
+              "protections": ["safe handling training", "material-specific training", "regulatory requirement awareness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.22",
+      "title": "Recording and reporting of injuries",
+      "subsections": [
+        {
+          "subsection": "1926.22",
+          "title": "Reserved",
+          "rules": [
+            {
+              "rule_id": "1926.22-reserved",
+              "text": "[Reserved]",
+              "requirement": "no current requirements - section reserved",
+              "type": "informational",
+              "severity": "low",
+              "applies_to": "not applicable",
+              "work_types": [],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.23",
+      "title": "First aid and medical attention",
+      "subsections": [
+        {
+          "subsection": "1926.23",
+          "title": "First aid and medical attention",
+          "rules": [
+            {
+              "rule_id": "1926.23",
+              "text": "First aid services and provisions for medical care shall be made available by the employer for every employee covered by these regulations. Regulations prescribing specific requirements for first aid, medical attention, and emergency facilities are contained in subpart D of this part.",
+              "requirement": "provide first aid services and medical care provisions for all employees",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["first aid services", "medical care provisions", "emergency facilities"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.24",
+      "title": "Fire protection and prevention",
+      "subsections": [
+        {
+          "subsection": "1926.24",
+          "title": "Fire protection and prevention",
+          "rules": [
+            {
+              "rule_id": "1926.24",
+              "text": "The employer shall be responsible for the development and maintenance of an effective fire protection and prevention program at the job site throughout all phases of the construction, repair, alteration, or demolition work. The employer shall ensure the availability of the fire protection and suppression equipment required by subpart F of this part.",
+              "requirement": "develop and maintain effective fire protection and prevention program throughout all construction phases",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["construction", "repair", "alteration", "demolition"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["fire protection program", "fire prevention program", "fire suppression equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.25",
+      "title": "Housekeeping",
+      "subsections": [
+        {
+          "subsection": "1926.25(a)",
+          "title": "Form and scrap lumber removal",
+          "rules": [
+            {
+              "rule_id": "1926.25(a)",
+              "text": "During the course of construction, alteration, or repairs, form and scrap lumber with protruding nails, and all other debris, shall be kept cleared from work areas, passageways, and stairs, in and around buildings or other structures.",
+              "requirement": "keep work areas, passageways, and stairs clear of form lumber, scrap lumber with protruding nails, and debris",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all construction areas",
+              "work_types": ["construction", "alteration", "repairs"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["clear work areas", "clear passageways", "clear stairs", "debris removal"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.25(b)",
+          "title": "Combustible material removal",
+          "rules": [
+            {
+              "rule_id": "1926.25(b)",
+              "text": "Combustible scrap and debris shall be removed at regular intervals during the course of construction. Safe means shall be provided to facilitate such removal.",
+              "requirement": "remove combustible scrap and debris at regular intervals with safe removal methods",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all construction sites with combustible materials",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_materials", "condition": "combustible scrap and debris present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "combustible_materials"
+              },
+              "protections": ["regular removal", "safe removal methods"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.25(c)",
+          "title": "Waste containers",
+          "rules": [
+            {
+              "rule_id": "1926.25(c)",
+              "text": "Containers shall be provided for the collection and separation of waste, trash, oily and used rags, and other refuse. Containers used for garbage and other oily, flammable, or hazardous wastes, such as caustics, acids, harmful dusts, etc. shall be equipped with covers. Garbage and other waste shall be disposed of at frequent and regular intervals.",
+              "requirement": "provide waste containers with covers for hazardous materials and dispose of waste at regular intervals",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all construction sites",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hazardous_waste", "condition": "oily, flammable, or hazardous waste present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazardous_waste"
+              },
+              "protections": ["waste containers", "covered containers for hazardous waste", "regular disposal"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.26",
+      "title": "Illumination",
+      "subsections": [
+        {
+          "subsection": "1926.26",
+          "title": "Illumination",
+          "rules": [
+            {
+              "rule_id": "1926.26",
+              "text": "Construction areas, aisles, stairs, ramps, runways, corridors, offices, shops, and storage areas where work is in progress shall be lighted with either natural or artificial illumination. The minimum illumination requirements for work areas are contained in subpart D of this part.",
+              "requirement": "provide adequate lighting in all work areas using natural or artificial illumination",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all work areas where work is in progress",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "work_in_progress", "condition": "work in progress in area", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "work_in_progress"
+              },
+              "protections": ["adequate illumination", "natural lighting", "artificial lighting"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.27",
+      "title": "Sanitation",
+      "subsections": [
+        {
+          "subsection": "1926.27",
+          "title": "Sanitation",
+          "rules": [
+            {
+              "rule_id": "1926.27",
+              "text": "Health and sanitation requirements for drinking water are contained in subpart D of this part.",
+              "requirement": "comply with health and sanitation requirements for drinking water per subpart D",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all construction sites providing drinking water",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "drinking_water_provided", "condition": "drinking water provided at site", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "drinking_water_provided"
+              },
+              "protections": ["safe drinking water", "sanitation compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.28",
+      "title": "Personal protective equipment",
+      "subsections": [
+        {
+          "subsection": "1926.28(a)",
+          "title": "Employer responsibility",
+          "rules": [
+            {
+              "rule_id": "1926.28(a)",
+              "text": "The employer is responsible for requiring the wearing of appropriate personal protective equipment in all operations where there is an exposure to hazardous conditions or where this part indicates the need for using such equipment to reduce the hazards to the employees.",
+              "requirement": "require appropriate PPE in all operations with hazardous conditions or where indicated by regulations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees exposed to hazardous conditions",
+              "work_types": ["construction", "maintenance", "hazardous operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hazardous_exposure", "condition": "exposure to hazardous conditions", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "ppe_indicated", "condition": "regulations indicate need for PPE", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazardous_exposure OR ppe_indicated"
+              },
+              "protections": ["appropriate personal protective equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.28(b)",
+          "title": "Regulatory reference",
+          "rules": [
+            {
+              "rule_id": "1926.28(b)",
+              "text": "Regulations governing the use, selection, and maintenance of personal protective and lifesaving equipment are described under subpart E of this part.",
+              "requirement": "comply with PPE regulations in subpart E for use, selection, and maintenance",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all PPE and lifesaving equipment",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ppe_equipment_used", "condition": "personal protective or lifesaving equipment used", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "ppe_equipment_used"
+              },
+              "protections": ["proper PPE use", "proper selection", "proper maintenance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.29",
+      "title": "Acceptable certifications",
+      "subsections": [
+        {
+          "subsection": "1926.29(a)",
+          "title": "Pressure vessels",
+          "rules": [
+            {
+              "rule_id": "1926.29(a)",
+              "text": "Current and valid certification by an insurance company or regulatory authority shall be deemed as acceptable evidence of safe installation, inspection, and testing of pressure vessels provided by the employer.",
+              "requirement": "obtain current and valid certification for pressure vessels from insurance company or regulatory authority",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employer-provided pressure vessels",
+              "work_types": ["pressure vessel operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "pressure_vessel_provided", "condition": "employer provides pressure vessel", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "pressure_vessel_provided"
+              },
+              "protections": ["certified safe installation", "certified inspection", "certified testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.29(b)",
+          "title": "Boilers",
+          "rules": [
+            {
+              "rule_id": "1926.29(b)",
+              "text": "Boilers provided by the employer shall be deemed to be in compliance with the requirements of this part when evidence of current and valid certification by an insurance company or regulatory authority attesting to the safe installation, inspection, and testing is presented.",
+              "requirement": "obtain current and valid certification for boilers from insurance company or regulatory authority",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employer-provided boilers",
+              "work_types": ["boiler operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "boiler_provided", "condition": "employer provides boiler", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "boiler_provided"
+              },
+              "protections": ["certified safe installation", "certified inspection", "certified testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.29(c)",
+          "title": "Other requirements",
+          "rules": [
+            {
+              "rule_id": "1926.29(c)",
+              "text": "Regulations prescribing specific requirements for other types of pressure vessels and similar equipment are contained in subparts F and O of this part.",
+              "requirement": "comply with specific requirements for pressure vessels and similar equipment per subparts F and O",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "other pressure vessels and similar equipment",
+              "work_types": ["pressure vessel operations", "similar equipment operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "other_pressure_equipment", "condition": "other pressure vessels or similar equipment used", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "other_pressure_equipment"
+              },
+              "protections": ["subpart F compliance", "subpart O compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.30",
+      "title": "Shipbuilding and ship repairing",
+      "subsections": [
+        {
+          "subsection": "1926.30(a)",
+          "title": "General",
+          "rules": [
+            {
+              "rule_id": "1926.30(a)",
+              "text": "Shipbuilding, ship repairing, alterations, and maintenance performed on ships under Government contract, except naval ship construction, is work subject to the Act.",
+              "requirement": "apply Act requirements to shipbuilding and ship repair under government contract except naval construction",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "shipbuilding and ship repair under government contract",
+              "work_types": ["shipbuilding", "ship repairing", "ship alterations", "ship maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "government_contract", "condition": "work under government contract", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "ship_work", "condition": "shipbuilding, repair, alteration, or maintenance", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "government_contract AND ship_work"
+              },
+              "protections": ["Act compliance"],
+              "exceptions": {
+                "items": [
+                  {"id": "naval_construction", "description": "naval ship construction", "conditions": []}
+                ],
+                "expression": "naval_construction"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.30(b)",
+          "title": "Applicable safety and health standards",
+          "rules": [
+            {
+              "rule_id": "1926.30(b)",
+              "text": "For the purpose of work carried out under this section, the safety and health regulations in part 1915 of this title, Shipyard Employment, shall apply.",
+              "requirement": "apply part 1915 shipyard employment regulations for shipbuilding and ship repair work",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "shipbuilding and ship repair work",
+              "work_types": ["shipbuilding", "ship repairing", "ship alterations", "ship maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "shipyard_work", "condition": "work under section 1926.30", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "shipyard_work"
+              },
+              "protections": ["part 1915 compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.32",
+      "title": "Definitions",
+      "subsections": [
+        {
+          "subsection": "1926.32",
+          "title": "Definitions applicable to this part",
+          "rules": [
+            {
+              "rule_id": "1926.32-act",
+              "text": "Act means section 107 of the Contract Work Hours and Safety Standards Act, commonly known as the Construction Safety Act (86 Stat. 96; 40 U.S.C. 333).",
+              "requirement": "recognize Act as section 107 of the Construction Safety Act",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "all regulatory references",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-ansi",
+              "text": "ANSI means American National Standards Institute.",
+              "requirement": "recognize ANSI as American National Standards Institute",
+              "type": "informational",
+              "severity": "low",
+              "applies_to": "standards references",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-approved",
+              "text": "Approved means sanctioned, endorsed, accredited, certified, or accepted as satisfactory by a duly constituted and nationally recognized authority or agency.",
+              "requirement": "use only approved equipment and methods sanctioned by recognized authorities",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all equipment and methods requiring approval",
+              "work_types": ["construction", "equipment use"],
+              "triggers": {
+                "conditions": [
+                  {"id": "approval_required", "condition": "equipment or method requires approval", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "approval_required"
+              },
+              "protections": ["recognized authority approval"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-authorized_person",
+              "text": "Authorized person means a person approved or assigned by the employer to perform a specific type of duty or duties or to be at a specific location or locations at the jobsite.",
+              "requirement": "ensure only authorized persons perform assigned duties or access designated locations",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "personnel assignments",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "specific_duty_required", "condition": "specific duty or location access required", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "specific_duty_required"
+              },
+              "protections": ["employer authorization", "specific duty assignment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-competent_person",
+              "text": "Competent person means one who is capable of identifying existing and predictable hazards in the surroundings or working conditions which are unsanitary, hazardous, or dangerous to employees, and who has authorization to take prompt corrective measures to eliminate them.",
+              "requirement": "designate competent persons with hazard identification capability and corrective action authority",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety oversight positions",
+              "work_types": ["construction", "maintenance", "safety oversight"],
+              "personnel_required": "competent person",
+              "triggers": {
+                "conditions": [
+                  {"id": "hazard_identification_needed", "condition": "hazard identification and correction needed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazard_identification_needed"
+              },
+              "protections": ["hazard identification", "corrective action authority"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-qualified",
+              "text": "Qualified means one who, by possession of a recognized degree, certificate, or professional standing, or who by extensive knowledge, training, and experience, has successfully demonstrated his ability to solve or resolve problems relating to the subject matter, the work, or the project.",
+              "requirement": "use qualified persons with demonstrated ability through credentials or experience",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "technical positions requiring expertise",
+              "work_types": ["design", "engineering", "specialized construction"],
+              "personnel_required": "qualified person",
+              "triggers": {
+                "conditions": [
+                  {"id": "technical_expertise_required", "condition": "technical expertise required for work", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "technical_expertise_required"
+              },
+              "protections": ["demonstrated technical ability", "professional credentials"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.32-safety_factor",
+              "text": "Safety factor means the ratio of the ultimate breaking strength of a member or piece of material or equipment to the actual working stress or safe load when in use.",
+              "requirement": "apply appropriate safety factors in design calculations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "structural design and equipment selection",
+              "work_types": ["structural design", "equipment specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "structural_calculation_required", "condition": "structural calculations or equipment rating required", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "structural_calculation_required"
+              },
+              "protections": ["adequate safety margins", "structural integrity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.33",
+      "title": "Access to employee exposure and medical records",
+      "subsections": [
+        {
+          "subsection": "1926.33",
+          "title": "Access to employee exposure and medical records",
+          "rules": [
+            {
+              "rule_id": "1926.33",
+              "text": "Note: The requirements applicable to construction work under this section are identical to those set forth at § 1910.1020 of this chapter.",
+              "requirement": "comply with section 1910.1020 requirements for employee exposure and medical records access",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all construction work involving employee exposure and medical records",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "exposure_records_maintained", "condition": "employee exposure or medical records maintained", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "exposure_records_maintained"
+              },
+              "protections": ["employee record access", "medical record access"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.34",
+      "title": "Means of egress",
+      "subsections": [
+        {
+          "subsection": "1926.34(a)",
+          "title": "General",
+          "rules": [
+            {
+              "rule_id": "1926.34(a)",
+              "text": "In every building or structure exits shall be so arranged and maintained as to provide free and unobstructed egress from all parts of the building or structure at all times when it is occupied. No lock or fastening to prevent free escape from the inside of any building shall be installed except in mental, penal, or corrective institutions where supervisory personnel is continually on duty and effective provisions are made to remove occupants in case of fire or other emergency.",
+              "requirement": "maintain free and unobstructed egress from all building parts at all times when occupied",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all buildings and structures",
+              "work_types": ["construction", "maintenance", "occupancy"],
+              "triggers": {
+                "conditions": [
+                  {"id": "building_occupied", "condition": "building or structure occupied", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "building_occupied"
+              },
+              "protections": ["free egress", "unobstructed exits"],
+              "exceptions": {
+                "items": [
+                  {"id": "institutional_facilities", "description": "mental, penal, or corrective institutions with continuous supervision and emergency removal provisions", "conditions": [
+                    {"parameter": "supervisory_personnel", "value": "true", "unit": "boolean", "operator": "="},
+                    {"parameter": "emergency_removal_provisions", "value": "true", "unit": "boolean", "operator": "="}
+                  ]}
+                ],
+                "expression": "institutional_facilities"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.34(b)",
+          "title": "Exit marking",
+          "rules": [
+            {
+              "rule_id": "1926.34(b)",
+              "text": "Exits shall be marked by a readily visible sign. Access to exits shall be marked by readily visible signs in all cases where the exit or way to reach it is not immediately visible to the occupants.",
+              "requirement": "mark exits and access routes with readily visible signs when not immediately visible",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exits and exit access routes",
+              "work_types": ["construction", "signage installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "exit_not_visible", "condition": "exit or access route not immediately visible", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "exit_not_visible"
+              },
+              "protections": ["visible exit signs", "access route signs"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.34(c)",
+          "title": "Maintenance and workmanship",
+          "rules": [
+            {
+              "rule_id": "1926.34(c)",
+              "text": "Means of egress shall be continually maintained free of all obstructions or impediments to full instant use in the case of fire or other emergency.",
+              "requirement": "maintain means of egress free of obstructions for instant emergency use",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all means of egress",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["obstruction-free egress", "instant emergency access"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.35",
+      "title": "Employee emergency action plans",
+      "subsections": [
+        {
+          "subsection": "1926.35(a)",
+          "title": "Scope and application",
+          "rules": [
+            {
+              "rule_id": "1926.35(a)",
+              "text": "This section applies to all emergency action plans required by a particular OSHA standard. The emergency action plan shall be in writing (except as provided in the last sentence of paragraph (e)(3) of this section) and shall cover those designated actions employers and employees must take to ensure employee safety from fire and other emergencies.",
+              "requirement": "develop written emergency action plans covering designated actions for employee safety",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all situations requiring emergency action plans per OSHA standards",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "emergency_plan_required", "condition": "OSHA standard requires emergency action plan", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "emergency_plan_required"
+              },
+              "protections": ["written emergency plans", "employee safety procedures"],
+              "exceptions": {
+                "items": [
+                  {"id": "small_employer_oral", "description": "employers with 10 or fewer employees may use oral plans", "conditions": [
+                    {"parameter": "employee_count", "value": "10", "unit": "employees", "operator": "<="}
+                  ]}
+                ],
+                "expression": "small_employer_oral"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.35(b)",
+          "title": "Elements",
+          "rules": [
+            {
+              "rule_id": "1926.35(b)(1)",
+              "text": "Emergency escape procedures and emergency escape route assignments.",
+              "requirement": "include emergency escape procedures and route assignments in emergency action plan",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["escape procedures", "route assignments"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(b)(2)",
+              "text": "Procedures to be followed by employees who remain to operate critical plant operations before they evacuate.",
+              "requirement": "include procedures for employees operating critical operations before evacuation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "facilities with critical operations",
+              "work_types": ["emergency planning", "critical operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "critical_operations", "condition": "critical plant operations present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "critical_operations"
+              },
+              "protections": ["critical operation procedures", "safe shutdown procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(b)(3)",
+              "text": "Procedures to account for all employees after emergency evacuation has been completed.",
+              "requirement": "include procedures to account for all employees after evacuation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["employee accountability", "evacuation verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(b)(4)",
+              "text": "Rescue and medical duties for those employees who are to perform them.",
+              "requirement": "include rescue and medical duties for designated employees",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees designated for rescue and medical duties",
+              "work_types": ["emergency response", "medical response"],
+              "triggers": {
+                "conditions": [
+                  {"id": "rescue_medical_designated", "condition": "employees designated for rescue and medical duties", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "rescue_medical_designated"
+              },
+              "protections": ["rescue procedures", "medical response procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(b)(5)",
+              "text": "The preferred means of reporting fires and other emergencies.",
+              "requirement": "include preferred means of reporting fires and emergencies",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["emergency reporting procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(b)(6)",
+              "text": "Names or regular job titles of persons or departments who can be contacted for further information or explanation of duties under the plan.",
+              "requirement": "include contact information for plan clarification and duty explanation",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["emergency contact information", "plan clarification resources"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.35(c)",
+          "title": "Alarm system",
+          "rules": [
+            {
+              "rule_id": "1926.35(c)(1)",
+              "text": "The employer shall establish an employee alarm system which complies with § 1926.159.",
+              "requirement": "establish employee alarm system complying with section 1926.159",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers with emergency action plans",
+              "work_types": ["alarm system installation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["compliant alarm system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(c)(2)",
+              "text": "If the employee alarm system is used for alerting fire brigade members, or for other purposes, a distinctive signal for each purpose shall be used.",
+              "requirement": "use distinctive signals for different alarm purposes",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "multi-purpose alarm systems",
+              "work_types": ["alarm system design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "multiple_alarm_purposes", "condition": "alarm system used for multiple purposes", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "multiple_alarm_purposes"
+              },
+              "protections": ["distinctive alarm signals", "purpose-specific alerts"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.35(d)",
+          "title": "Evacuation",
+          "rules": [
+            {
+              "rule_id": "1926.35(d)",
+              "text": "The employer shall establish in the emergency action plan the types of evacuation to be used in emergency circumstances.",
+              "requirement": "establish evacuation types for different emergency circumstances in plan",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["circumstance-specific evacuation procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.35(e)",
+          "title": "Training",
+          "rules": [
+            {
+              "rule_id": "1926.35(e)(1)",
+              "text": "Before implementing the emergency action plan, the employer shall designate and train a sufficient number of persons to assist in the safe and orderly emergency evacuation of employees.",
+              "requirement": "designate and train sufficient persons to assist in emergency evacuation before plan implementation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["emergency training"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["trained evacuation assistants", "safe evacuation procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(e)(2)(i)",
+              "text": "The employer shall review the plan with each employee covered by the plan initially when the plan is developed.",
+              "requirement": "review emergency action plan with each covered employee when initially developed",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees covered by emergency action plans",
+              "work_types": ["emergency training"],
+              "triggers": {
+                "conditions": [
+                  {"id": "plan_developed", "condition": "emergency action plan initially developed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "plan_developed"
+              },
+              "protections": ["initial plan review", "employee awareness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(e)(2)(ii)",
+              "text": "The employer shall review the plan with each employee whenever the employee's responsibilities or designated actions under the plan change.",
+              "requirement": "review plan with employees when their responsibilities or actions change",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees with changed responsibilities",
+              "work_types": ["emergency training updates"],
+              "triggers": {
+                "conditions": [
+                  {"id": "responsibilities_changed", "condition": "employee responsibilities or actions under plan change", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "responsibilities_changed"
+              },
+              "protections": ["updated plan review", "current responsibility awareness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(e)(2)(iii)",
+              "text": "The employer shall review the plan with each employee whenever the plan is changed.",
+              "requirement": "review plan with all employees whenever plan is changed",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees when plan changes",
+              "work_types": ["emergency training updates"],
+              "triggers": {
+                "conditions": [
+                  {"id": "plan_changed", "condition": "emergency action plan is changed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "plan_changed"
+              },
+              "protections": ["plan change review", "updated procedures awareness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.35(e)(3)",
+              "text": "The employer shall review with each employee upon initial assignment those parts of the plan which the employee must know to protect the employee in the event of an emergency. The written plan shall be kept at the workplace and made available for employee review. For those employers with 10 or fewer employees the plan may be communicated orally to employees and the employer need not maintain a written plan.",
+              "requirement": "review relevant plan parts with new employees and maintain plan accessibility",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all new employee assignments",
+              "work_types": ["new employee training"],
+              "triggers": {
+                "conditions": [
+                  {"id": "initial_assignment", "condition": "employee initial assignment", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "small_employer", "condition": "employer has 10 or fewer employees", "value": "10", "unit": "employees", "operator": "<="}
+                ],
+                "expression": "initial_assignment"
+              },
+              "protections": ["new employee plan review", "plan accessibility"],
+              "exceptions": {
+                "items": [
+                  {"id": "oral_plan_small_employer", "description": "employers with 10 or fewer employees may use oral communication and need not maintain written plan", "conditions": [
+                    {"parameter": "employee_count", "value": "10", "unit": "employees", "operator": "<="}
+                  ]}
+                ],
+                "expression": "oral_plan_small_employer"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

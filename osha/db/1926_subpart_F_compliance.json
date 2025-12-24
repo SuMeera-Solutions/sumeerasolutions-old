@@ -1,0 +1,1632 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - Fire Protection and Prevention",
+    "part": "1926",
+    "subpart": "F",
+    "authority": "40 U.S.C. 3704; 29 U.S.C. 653, 655, and 657",
+    "effective_date": "1979-02-09",
+    "last_updated": "2025-06-05",
+    "applies_to": "all construction workplaces covered under 29 CFR part 1926",
+    "excludes": []
+  },
+  "sections": [
+    {
+      "section_number": "1926.150",
+      "title": "Fire protection",
+      "subsections": [
+        {
+          "subsection": "1926.150(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1926.150(a)(1)",
+              "text": "The employer shall be responsible for the development of a fire protection program to be followed throughout all phases of the construction and demolition work, and he shall provide for the firefighting equipment as specified in this subpart. As fire hazards occur, there shall be no delay in providing the necessary equipment.",
+              "requirement": "develop and maintain fire protection program with immediate equipment provision",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["construction", "demolition"],
+              "triggers": {
+                "conditions": [
+                  {"id": "fire_hazard_occurrence", "condition": "fire hazards occur", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "fire_hazard_occurrence"
+              },
+              "protections": ["fire protection program", "firefighting equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(a)(2)",
+              "text": "Access to all available firefighting equipment shall be maintained at all times.",
+              "requirement": "maintain continuous access to firefighting equipment",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all construction sites",
+              "work_types": ["construction", "demolition"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["equipment access"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(a)(3)",
+              "text": "All firefighting equipment, provided by the employer, shall be conspicuously located.",
+              "requirement": "locate firefighting equipment conspicuously",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all firefighting equipment",
+              "work_types": ["construction", "demolition"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["visible equipment placement"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(a)(4)",
+              "text": "All firefighting equipment shall be periodically inspected and maintained in operating condition. Defective equipment shall be immediately replaced.",
+              "requirement": "inspect and maintain equipment periodically, replace defective equipment immediately",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all firefighting equipment",
+              "work_types": ["equipment maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "defective_equipment", "condition": "equipment defective", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "defective_equipment"
+              },
+              "protections": ["periodic inspection", "immediate replacement"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(a)(5)",
+              "text": "As warranted by the project, the employer shall provide a trained and equipped firefighting organization (Fire Brigade) to assure adequate protection to life.",
+              "requirement": "provide trained fire brigade when warranted by project",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers on warranted projects",
+              "work_types": ["large construction projects"],
+              "personnel_required": "trained fire brigade",
+              "triggers": {
+                "conditions": [
+                  {"id": "project_warrants", "condition": "project warrants fire brigade", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "project_warrants"
+              },
+              "protections": ["fire brigade", "life protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.150(b)",
+          "title": "Water supply",
+          "rules": [
+            {
+              "rule_id": "1926.150(b)(1)",
+              "text": "A temporary or permanent water supply, of sufficient volume, duration, and pressure, required to properly operate the firefighting equipment shall be made available as soon as combustible materials accumulate.",
+              "requirement": "provide adequate water supply when combustible materials accumulate",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all construction sites",
+              "work_types": ["construction", "material storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_accumulation", "condition": "combustible materials accumulate", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "combustible_accumulation"
+              },
+              "protections": ["water supply system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(b)(2)",
+              "text": "Where underground water mains are to be provided, they shall be installed, completed, and made available for use as soon as practicable.",
+              "requirement": "install underground water mains as soon as practicable",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "projects with underground water mains",
+              "work_types": ["infrastructure construction"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["underground water supply"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.150(c)",
+          "title": "Portable firefighting equipment",
+          "rules": [
+            {
+              "rule_id": "1926.150(c)(1)(i)",
+              "text": "A fire extinguisher, rated not less than 2A, shall be provided for each 3,000 square feet of the protected building area, or major fraction thereof. Travel distance from any point of the protected area to the nearest fire extinguisher shall not exceed 100 feet.",
+              "requirement": "provide 2A fire extinguisher per 3,000 sq ft with max 100 ft travel distance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "protected building areas",
+              "work_types": ["construction", "building protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "building_area", "condition": "protected building area", "value": "3000", "unit": "square feet", "operator": ">="},
+                  {"id": "travel_distance", "condition": "travel distance to extinguisher", "value": "100", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "building_area AND travel_distance"
+              },
+              "protections": ["2A fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(c)(1)(ii)",
+              "text": "One 55-gallon open drum of water with two fire pails may be substituted for a fire extinguisher having a 2A rating.",
+              "requirement": "allow substitution of 55-gallon water drum with 2 pails for 2A extinguisher",
+              "type": "alternative",
+              "severity": "medium",
+              "applies_to": "areas requiring 2A extinguishers",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "water_drum_capacity", "condition": "water drum capacity", "value": "55", "unit": "gallons", "operator": "="},
+                  {"id": "fire_pails", "condition": "number of fire pails", "value": "2", "unit": "pieces", "operator": "="}
+                ],
+                "expression": "water_drum_capacity AND fire_pails"
+              },
+              "protections": ["water drum", "fire pails"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(c)(1)(iii)",
+              "text": "A 1/2-inch diameter garden-type hose line, not to exceed 100 feet in length and equipped with a nozzle, may be substituted for a 2A-rated fire extinguisher, providing it is capable of discharging a minimum of 5 gallons per minute with a minimum hose stream range of 30 feet horizontally.",
+              "requirement": "allow garden hose substitution if meets flow and range specifications",
+              "type": "alternative",
+              "severity": "medium",
+              "applies_to": "areas requiring 2A extinguishers",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hose_diameter", "condition": "hose diameter", "value": "0.5", "unit": "inches", "operator": "="},
+                  {"id": "hose_length", "condition": "hose length", "value": "100", "unit": "feet", "operator": "<="},
+                  {"id": "flow_rate", "condition": "discharge rate", "value": "5", "unit": "gallons per minute", "operator": ">="},
+                  {"id": "stream_range", "condition": "horizontal stream range", "value": "30", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "hose_diameter AND hose_length AND flow_rate AND stream_range"
+              },
+              "protections": ["garden-type hose", "nozzle"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(c)(1)(iv)",
+              "text": "One or more fire extinguishers, rated not less than 2A, shall be provided on each floor. In multistory buildings, at least one fire extinguisher shall be located adjacent to stairway.",
+              "requirement": "provide 2A extinguisher on each floor, with one adjacent to stairway in multistory buildings",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all floors in buildings",
+              "work_types": ["multistory construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "multistory_building", "condition": "multistory building", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "multistory_building"
+              },
+              "protections": ["2A fire extinguisher per floor", "stairway extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(c)(1)(vi)",
+              "text": "A fire extinguisher, rated not less than 10B, shall be provided within 50 feet of wherever more than 5 gallons of flammable or combustible liquids or 5 pounds of flammable gas are being used on the jobsite.",
+              "requirement": "provide 10B extinguisher within 50 feet of flammable material usage exceeding limits",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "areas with flammable materials",
+              "work_types": ["construction with flammable materials"],
+              "triggers": {
+                "conditions": [
+                  {"id": "flammable_liquid_quantity", "condition": "flammable liquid quantity", "value": "5", "unit": "gallons", "operator": ">"},
+                  {"id": "flammable_gas_weight", "condition": "flammable gas weight", "value": "5", "unit": "pounds", "operator": ">"},
+                  {"id": "extinguisher_distance", "condition": "distance to extinguisher", "value": "50", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "(flammable_liquid_quantity OR flammable_gas_weight) AND extinguisher_distance"
+              },
+              "protections": ["10B fire extinguisher"],
+              "exceptions": {
+                "items": [
+                  {"id": "motor_vehicle_tanks", "description": "integral fuel tanks of motor vehicles", "conditions": []}
+                ],
+                "expression": "motor_vehicle_tanks"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.150(c)(2)",
+          "title": "Fire hose and connections",
+          "rules": [
+            {
+              "rule_id": "1926.150(c)(2)(i)",
+              "text": "One hundred feet, or less, of 1½-inch hose, with a nozzle capable of discharging water at 25 gallons or more per minute, may be substituted for a fire extinguisher rated not more than 2A in the designated area provided that the hose line can reach all points in the area.",
+              "requirement": "allow hose substitution for 2A extinguisher if meets specifications and coverage",
+              "type": "alternative",
+              "severity": "medium",
+              "applies_to": "designated areas with 2A requirements",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hose_length_max", "condition": "hose length", "value": "100", "unit": "feet", "operator": "<="},
+                  {"id": "hose_diameter_1_5", "condition": "hose diameter", "value": "1.5", "unit": "inches", "operator": "="},
+                  {"id": "discharge_rate_25", "condition": "water discharge rate", "value": "25", "unit": "gallons per minute", "operator": ">="},
+                  {"id": "area_coverage", "condition": "hose reaches all points in area", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hose_length_max AND hose_diameter_1_5 AND discharge_rate_25 AND area_coverage"
+              },
+              "protections": ["1.5-inch fire hose", "nozzle"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.150(c)(2)(iii)",
+              "text": "During demolition involving combustible materials, charged hose lines, supplied by hydrants, water tank trucks with pumps, or equivalent, shall be made available.",
+              "requirement": "provide charged hose lines during combustible material demolition",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "demolition operations with combustible materials",
+              "work_types": ["demolition"],
+              "triggers": {
+                "conditions": [
+                  {"id": "demolition_combustible", "condition": "demolition involving combustible materials", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "demolition_combustible"
+              },
+              "protections": ["charged hose lines", "hydrants", "water tank trucks"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.151",
+      "title": "Fire prevention",
+      "subsections": [
+        {
+          "subsection": "1926.151(a)",
+          "title": "Ignition hazards",
+          "rules": [
+            {
+              "rule_id": "1926.151(a)(2)",
+              "text": "Internal combustion engine powered equipment shall be so located that the exhausts are well away from combustible materials. When the exhausts are piped to outside the building under construction, a clearance of at least 6 inches shall be maintained between such piping and combustible material.",
+              "requirement": "maintain 6-inch clearance between exhaust piping and combustible materials",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "internal combustion engine equipment",
+              "work_types": ["construction with powered equipment"],
+              "triggers": {
+                "conditions": [
+                  {"id": "exhaust_clearance", "condition": "clearance between exhaust piping and combustible material", "value": "6", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "exhaust_clearance"
+              },
+              "protections": ["exhaust clearance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.151(a)(3)",
+              "text": "Smoking shall be prohibited at or in the vicinity of operations which constitute a fire hazard, and shall be conspicuously posted: 'No Smoking or Open Flame.'",
+              "requirement": "prohibit smoking near fire hazards with conspicuous posting",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "fire hazard areas",
+              "work_types": ["all construction with fire hazards"],
+              "triggers": {
+                "conditions": [
+                  {"id": "fire_hazard_operation", "condition": "operations constitute fire hazard", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "fire_hazard_operation"
+              },
+              "protections": ["smoking prohibition", "conspicuous signage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.151(b)",
+          "title": "Temporary buildings",
+          "rules": [
+            {
+              "rule_id": "1926.151(b)(3)",
+              "text": "Temporary buildings, located other than inside another building and not used for the storage, handling, or use of flammable or combustible liquids, flammable gases, explosives, or blasting agents, or similar hazardous occupancies, shall be located at a distance of not less than 10 feet from another building or structure.",
+              "requirement": "maintain 10-foot minimum distance between temporary buildings and other structures",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "temporary buildings",
+              "work_types": ["temporary construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "building_separation", "condition": "distance from other buildings", "value": "10", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "building_separation"
+              },
+              "protections": ["fire separation distance"],
+              "exceptions": {
+                "items": [
+                  {"id": "inside_building", "description": "located inside another building", "conditions": []},
+                  {"id": "hazardous_occupancy", "description": "used for hazardous materials", "conditions": []}
+                ],
+                "expression": "inside_building OR hazardous_occupancy"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.151(c)",
+          "title": "Open yard storage",
+          "rules": [
+            {
+              "rule_id": "1926.151(c)(1)",
+              "text": "Combustible materials shall be piled with due regard to the stability of piles and in no case higher than 20 feet.",
+              "requirement": "limit combustible material pile height to maximum 20 feet",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor combustible material storage",
+              "work_types": ["material storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "pile_height", "condition": "combustible material pile height", "value": "20", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "pile_height"
+              },
+              "protections": ["pile height limit", "stability requirements"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.151(c)(2)",
+              "text": "Driveways between and around combustible storage piles shall be at least 15 feet wide and maintained free from accumulation of rubbish, equipment, or other articles or materials. Driveways shall be so spaced that a maximum grid system unit of 50 feet by 150 feet is produced.",
+              "requirement": "maintain 15-foot wide driveways creating maximum 50x150 foot grid units",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "combustible storage areas",
+              "work_types": ["material storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "driveway_width", "condition": "driveway width", "value": "15", "unit": "feet", "operator": ">="},
+                  {"id": "grid_length", "condition": "grid system length", "value": "150", "unit": "feet", "operator": "<="},
+                  {"id": "grid_width", "condition": "grid system width", "value": "50", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "driveway_width AND grid_length AND grid_width"
+              },
+              "protections": ["clear driveways", "grid system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.151(c)(5)",
+              "text": "No combustible material shall be stored outdoors within 10 feet of a building or structure.",
+              "requirement": "maintain 10-foot clearance between outdoor combustible storage and buildings",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor combustible material storage",
+              "work_types": ["material storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "storage_clearance", "condition": "distance from building", "value": "10", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "storage_clearance"
+              },
+              "protections": ["building separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.151(c)(6)",
+              "text": "Portable fire extinguishing equipment, suitable for the fire hazard involved, shall be provided at convenient, conspicuously accessible locations in the yard area. Portable fire extinguishers, rated not less than 2A, shall be placed so that maximum travel distance to the nearest unit shall not exceed 100 feet.",
+              "requirement": "provide 2A extinguishers with maximum 100-foot travel distance in yard areas",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "yard storage areas",
+              "work_types": ["outdoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "yard_travel_distance", "condition": "travel distance to extinguisher", "value": "100", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "yard_travel_distance"
+              },
+              "protections": ["2A fire extinguisher", "accessible placement"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.151(d)",
+          "title": "Indoor storage",
+          "rules": [
+            {
+              "rule_id": "1926.151(d)(5)",
+              "text": "Clearance of at least 36 inches shall be maintained between the top level of the stored material and the sprinkler deflectors.",
+              "requirement": "maintain 36-inch clearance between stored materials and sprinkler deflectors",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "indoor storage with sprinkler systems",
+              "work_types": ["indoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "sprinkler_clearance", "condition": "clearance from sprinkler deflectors", "value": "36", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "sprinkler_clearance"
+              },
+              "protections": ["sprinkler system effectiveness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.151(d)(7)",
+              "text": "A clearance of 24 inches shall be maintained around the path of travel of fire doors unless a barricade is provided, in which case no clearance is needed. Material shall not be stored within 36 inches of a fire door opening.",
+              "requirement": "maintain 24-inch clearance around fire door travel path and 36-inch clearance from opening",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "areas with fire doors",
+              "work_types": ["indoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "door_travel_clearance", "condition": "clearance around fire door travel", "value": "24", "unit": "inches", "operator": ">="},
+                  {"id": "door_opening_clearance", "condition": "clearance from fire door opening", "value": "36", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "door_travel_clearance AND door_opening_clearance"
+              },
+              "protections": ["fire door operation"],
+              "exceptions": {
+                "items": [
+                  {"id": "barricade_provided", "description": "barricade is provided", "conditions": []}
+                ],
+                "expression": "barricade_provided"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.152",
+      "title": "Flammable liquids",
+      "subsections": [
+        {
+          "subsection": "1926.152(b)",
+          "title": "Indoor storage of flammable liquids",
+          "rules": [
+            {
+              "rule_id": "1926.152(b)(1)",
+              "text": "No more than 25 gallons of flammable liquids shall be stored in a room outside of an approved storage cabinet.",
+              "requirement": "limit flammable liquid storage to 25 gallons per room without approved cabinet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "indoor storage rooms",
+              "work_types": ["flammable liquid storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "room_storage_limit", "condition": "flammable liquid quantity in room", "value": "25", "unit": "gallons", "operator": "<="}
+                ],
+                "expression": "room_storage_limit"
+              },
+              "protections": ["storage quantity limits"],
+              "exceptions": {
+                "items": [
+                  {"id": "approved_cabinet", "description": "stored in approved storage cabinet", "conditions": []}
+                ],
+                "expression": "approved_cabinet"
+              }
+            },
+            {
+              "rule_id": "1926.152(b)(3)",
+              "text": "Not more than 60 gallons of Category 1, 2 and/or 3 flammable liquids or 120 gallons of Category 4 flammable liquids shall be stored in any one storage cabinet. Not more than three such cabinets may be located in a single storage area.",
+              "requirement": "limit cabinet storage to 60 gallons (Cat 1-3) or 120 gallons (Cat 4) with max 3 cabinets per area",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "storage cabinets",
+              "work_types": ["flammable liquid storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "cabinet_limit_cat123", "condition": "Category 1-3 liquids per cabinet", "value": "60", "unit": "gallons", "operator": "<="},
+                  {"id": "cabinet_limit_cat4", "condition": "Category 4 liquids per cabinet", "value": "120", "unit": "gallons", "operator": "<="},
+                  {"id": "cabinet_count", "condition": "number of cabinets per storage area", "value": "3", "unit": "cabinets", "operator": "<="}
+                ],
+                "expression": "(cabinet_limit_cat123 OR cabinet_limit_cat4) AND cabinet_count"
+              },
+              "protections": ["storage cabinet limits"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(c)",
+          "title": "Storage outside buildings",
+          "rules": [
+            {
+              "rule_id": "1926.152(c)(1)",
+              "text": "Storage of containers (not more than 60 gallons each) shall not exceed 1,100 gallons in any one pile or area. Piles or groups of containers shall be separated by a 5-foot clearance. Piles or groups of containers shall not be nearer than 20 feet to a building.",
+              "requirement": "limit outdoor container storage to 1,100 gallons per pile with 5-foot separation and 20-foot building clearance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "outdoor container storage",
+              "work_types": ["outdoor flammable liquid storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "container_size", "condition": "individual container capacity", "value": "60", "unit": "gallons", "operator": "<="},
+                  {"id": "pile_limit", "condition": "total capacity per pile", "value": "1100", "unit": "gallons", "operator": "<="},
+                  {"id": "pile_separation", "condition": "separation between piles", "value": "5", "unit": "feet", "operator": ">="},
+                  {"id": "building_distance", "condition": "distance from building", "value": "20", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "container_size AND pile_limit AND pile_separation AND building_distance"
+              },
+              "protections": ["storage quantity limits", "separation distances"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(c)(2)",
+              "text": "Within 200 feet of each pile of containers, there shall be a 12-foot-wide access way to permit approach of fire control apparatus.",
+              "requirement": "provide 12-foot wide access way within 200 feet of each container pile",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor container storage",
+              "work_types": ["outdoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "access_distance", "condition": "distance to access way", "value": "200", "unit": "feet", "operator": "<="},
+                  {"id": "access_width", "condition": "access way width", "value": "12", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "access_distance AND access_width"
+              },
+              "protections": ["fire apparatus access"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(c)(3)",
+              "text": "The storage area shall be graded in a manner to divert possible spills away from buildings or other exposures, or shall be surrounded by a curb or earth dike at least 12 inches high. When curbs or dikes are used, provisions shall be made for draining off accumulations of ground or rain water, or spills of flammable liquids.",
+              "requirement": "grade storage areas for spill diversion or provide 12-inch minimum curb/dike with drainage",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor flammable liquid storage areas",
+              "work_types": ["outdoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "curb_dike_height", "condition": "curb or earth dike height", "value": "12", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "curb_dike_height"
+              },
+              "protections": ["spill containment", "drainage system"],
+              "exceptions": {
+                "items": [
+                  {"id": "graded_diversion", "description": "area graded to divert spills away", "conditions": []}
+                ],
+                "expression": "graded_diversion"
+              }
+            },
+            {
+              "rule_id": "1926.152(c)(4)(i)",
+              "text": "Portable tanks shall not be nearer than 20 feet from any building. Two or more portable tanks, grouped together, having a combined capacity in excess of 2,200 gallons, shall be separated by a 5-foot-clear area. Individual portable tanks exceeding 1,100 gallons shall be separated by a 5-foot-clear area.",
+              "requirement": "maintain 20-foot building clearance and 5-foot tank separation for specified capacities",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "portable tanks for flammable liquids",
+              "work_types": ["portable tank storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "tank_building_distance", "condition": "distance from building", "value": "20", "unit": "feet", "operator": ">="},
+                  {"id": "grouped_tank_capacity", "condition": "combined capacity of grouped tanks", "value": "2200", "unit": "gallons", "operator": ">"},
+                  {"id": "individual_tank_capacity", "condition": "individual tank capacity", "value": "1100", "unit": "gallons", "operator": ">"},
+                  {"id": "tank_separation", "condition": "separation between tanks", "value": "5", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "tank_building_distance AND ((grouped_tank_capacity AND tank_separation) OR (individual_tank_capacity AND tank_separation))"
+              },
+              "protections": ["building separation", "tank separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(c)(6)",
+              "text": "Portable tanks, not exceeding 660 gallons, shall be provided with emergency venting and other devices, as required by chapters III and IV of NFPA 30-1969, The Flammable and Combustible Liquids Code.",
+              "requirement": "provide emergency venting for portable tanks not exceeding 660 gallons per NFPA 30-1969",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "portable tanks ≤660 gallons",
+              "work_types": ["portable tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "tank_capacity_660", "condition": "portable tank capacity", "value": "660", "unit": "gallons", "operator": "<="}
+                ],
+                "expression": "tank_capacity_660"
+              },
+              "protections": ["emergency venting", "NFPA compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(c)(7)",
+              "text": "Portable tanks, in excess of 660 gallons, shall have emergency venting and other devices, as required by chapters II and III of The Flammable and Combustible Liquids Code, NFPA 30-1969.",
+              "requirement": "provide emergency venting for portable tanks exceeding 660 gallons per NFPA 30-1969",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "portable tanks >660 gallons",
+              "work_types": ["portable tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "tank_capacity_over_660", "condition": "portable tank capacity", "value": "660", "unit": "gallons", "operator": ">"}
+                ],
+                "expression": "tank_capacity_over_660"
+              },
+              "protections": ["emergency venting", "NFPA compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(d)(4)",
+              "text": "At least one portable fire extinguisher having a rating of not less than 20-B:C units shall be provided on all tank trucks or other vehicles used for transporting and/or dispensing flammable liquids.",
+              "requirement": "provide 20-B:C extinguisher on all flammable liquid transport/dispensing vehicles",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "flammable liquid transport vehicles",
+              "work_types": ["vehicle transport", "dispensing"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["20-B:C fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(d)",
+          "title": "Fire control for flammable liquid storage",
+          "rules": [
+            {
+              "rule_id": "1926.152(d)(1)",
+              "text": "At least one portable fire extinguisher, having a rating of not less than 20-B units, shall be located outside of, but not more than 10 feet from, the door opening into any room used for storage of more than 60 gallons of flammable liquids.",
+              "requirement": "provide 20-B extinguisher within 10 feet of storage room door for >60 gallon storage",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "flammable liquid storage rooms",
+              "work_types": ["flammable liquid storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "storage_quantity", "condition": "flammable liquid storage quantity", "value": "60", "unit": "gallons", "operator": ">"},
+                  {"id": "extinguisher_distance", "condition": "distance from door", "value": "10", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "storage_quantity AND extinguisher_distance"
+              },
+              "protections": ["20-B fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(d)(2)",
+              "text": "At least one portable fire extinguisher having a rating of not less than 20-B units shall be located not less than 25 feet, nor more than 75 feet, from any flammable liquid storage area located outside.",
+              "requirement": "provide 20-B extinguisher 25-75 feet from outdoor flammable liquid storage",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "outdoor flammable liquid storage areas",
+              "work_types": ["outdoor storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "outdoor_extinguisher_min", "condition": "minimum distance from storage", "value": "25", "unit": "feet", "operator": ">="},
+                  {"id": "outdoor_extinguisher_max", "condition": "maximum distance from storage", "value": "75", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "outdoor_extinguisher_min AND outdoor_extinguisher_max"
+              },
+              "protections": ["20-B fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(e)",
+          "title": "Dispensing liquids",
+          "rules": [
+            {
+              "rule_id": "1926.152(e)(1)",
+              "text": "Areas in which flammable liquids are transferred at one time, in quantities greater than 5 gallons from one tank or container to another tank or container, shall be separated from other operations by 25-feet distance or by construction having a fire resistance of at least 1 hour.",
+              "requirement": "separate liquid transfer areas >5 gallons by 25 feet or 1-hour fire resistance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "flammable liquid transfer operations",
+              "work_types": ["liquid transfer"],
+              "triggers": {
+                "conditions": [
+                  {"id": "transfer_quantity", "condition": "liquid transfer quantity", "value": "5", "unit": "gallons", "operator": ">"},
+                  {"id": "separation_distance", "condition": "separation distance", "value": "25", "unit": "feet", "operator": ">="},
+                  {"id": "fire_resistance", "condition": "construction fire resistance", "value": "1", "unit": "hours", "operator": ">="}
+                ],
+                "expression": "transfer_quantity AND (separation_distance OR fire_resistance)"
+              },
+              "protections": ["area separation", "fire-resistant construction"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(f)(3)",
+              "text": "Category 1, 2, or 3 flammable liquids may be used only where there are no open flames or other sources of ignition within 50 feet of the operation, unless conditions warrant greater clearance.",
+              "requirement": "maintain 50-foot clearance from ignition sources when using Category 1-3 flammable liquids",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "Category 1-3 flammable liquid use",
+              "work_types": ["flammable liquid handling"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ignition_clearance", "condition": "clearance from ignition sources", "value": "50", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "ignition_clearance"
+              },
+              "protections": ["ignition source separation"],
+              "exceptions": {
+                "items": [
+                  {"id": "greater_clearance_warranted", "description": "conditions warrant greater clearance", "conditions": []}
+                ],
+                "expression": "greater_clearance_warranted"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(g)",
+          "title": "Service and refueling areas",
+          "rules": [
+            {
+              "rule_id": "1926.152(g)(7)(i)",
+              "text": "Heating equipment of an approved type may be installed in the lubrication or service area where there is no dispensing or transferring of Category 1, 2, or 3 flammable liquids, provided the bottom of the heating unit is at least 18 inches above the floor and is protected from physical damage.",
+              "requirement": "install approved heating equipment 18 inches above floor when no Category 1-3 liquids dispensed",
+              "type": "conditional",
+              "severity": "high",
+              "applies_to": "lubrication/service areas",
+              "work_types": ["service area heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "heating_height", "condition": "heating unit height above floor", "value": "18", "unit": "inches", "operator": ">="},
+                  {"id": "no_cat123_dispensing", "condition": "no Category 1-3 liquid dispensing", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "heating_height AND no_cat123_dispensing"
+              },
+              "protections": ["elevated heating", "physical protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(g)(7)(ii)",
+              "text": "Heating equipment installed in lubrication or service areas, where Category 1, 2, or 3 flammable liquids are dispensed, shall be of an approved type for garages, and shall be installed at least 8 feet above the floor.",
+              "requirement": "install garage-approved heating equipment 8 feet above floor where Category 1-3 liquids dispensed",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "service areas with Category 1-3 liquid dispensing",
+              "work_types": ["service area heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "garage_heating_height", "condition": "garage heating unit height above floor", "value": "8", "unit": "feet", "operator": ">="},
+                  {"id": "cat123_dispensing", "condition": "Category 1-3 liquid dispensing present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "garage_heating_height AND cat123_dispensing"
+              },
+              "protections": ["garage-approved heating", "elevated installation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(g)(11)",
+              "text": "Each service or fueling area shall be provided with at least one fire extinguisher having a rating of not less than 20-B:C located so that an extinguisher will be within 75 feet of each pump, dispenser, underground fill pipe opening, and lubrication or service area.",
+              "requirement": "provide 20-B:C extinguisher within 75 feet of each pump, dispenser, and service area",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "service and fueling areas",
+              "work_types": ["fueling", "service operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "service_extinguisher_distance", "condition": "distance to extinguisher from equipment", "value": "75", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "service_extinguisher_distance"
+              },
+              "protections": ["20-B:C fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(i)",
+          "title": "Tank storage",
+          "rules": [
+            {
+              "rule_id": "1926.152(i)(2)(ii)(A)",
+              "text": "The distance between any two flammable liquid storage tanks shall not be less than 3 feet (0.912 m).",
+              "requirement": "maintain minimum 3-foot distance between flammable liquid storage tanks",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "flammable liquid storage tanks",
+              "work_types": ["tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "tank_spacing_minimum", "condition": "distance between tanks", "value": "3", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "tank_spacing_minimum"
+              },
+              "protections": ["tank separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(i)(2)(ii)(B)",
+              "text": "Except as provided in paragraph (i)(2)(ii)(C) of this section, the distance between any two adjacent tanks shall not be less than one-sixth the sum of their diameters. When the diameter of one tank is less than one-half the diameter of the adjacent tank, the distance between the two tanks shall not be less than one-half the diameter of the smaller tank.",
+              "requirement": "maintain tank spacing based on diameter calculations (1/6 sum or 1/2 smaller diameter)",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "adjacent storage tanks",
+              "work_types": ["tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "diameter_sum_spacing", "condition": "spacing as fraction of diameter sum", "value": "0.167", "unit": "times diameter sum", "operator": ">="},
+                  {"id": "diameter_ratio", "condition": "smaller diameter to larger diameter ratio", "value": "0.5", "unit": "ratio", "operator": "<"},
+                  {"id": "half_diameter_spacing", "condition": "spacing as fraction of smaller diameter", "value": "0.5", "unit": "times smaller diameter", "operator": ">="}
+                ],
+                "expression": "diameter_sum_spacing OR (diameter_ratio AND half_diameter_spacing)"
+              },
+              "protections": ["calculated tank separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(i)(2)(ii)(F)",
+              "text": "The minimum separation between a liquefied petroleum gas container and a flammable liquid storage tank shall be 20 feet (6.08 m), except in the case of flammable liquid tanks operating at pressures exceeding 2.5 p.s.i.g. or equipped with emergency venting which will permit pressures to exceed 2.5 p.s.i.g.",
+              "requirement": "maintain 20-foot separation between LP-Gas containers and flammable liquid tanks",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "mixed LP-Gas and flammable liquid storage",
+              "work_types": ["mixed fuel storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "lpg_tank_separation", "condition": "separation between LP-Gas and flammable liquid storage", "value": "20", "unit": "feet", "operator": ">="},
+                  {"id": "tank_pressure", "condition": "flammable liquid tank operating pressure", "value": "2.5", "unit": "p.s.i.g.", "operator": "<="}
+                ],
+                "expression": "lpg_tank_separation"
+              },
+              "protections": ["LP-Gas separation"],
+              "exceptions": {
+                "items": [
+                  {"id": "high_pressure_tanks", "description": "tanks operating above 2.5 p.s.i.g. or with emergency venting", "conditions": []}
+                ],
+                "expression": "high_pressure_tanks"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(i)(3)",
+          "title": "Installation of underground tanks",
+          "rules": [
+            {
+              "rule_id": "1926.152(i)(3)(i)",
+              "text": "The distance from any part of a tank storing Category 1 or 2 flammable liquids, or Category 3 flammable liquids with a flashpoint below 100 °F (37.8 °C), to the nearest wall of any basement or pit shall be not less than 1 foot (0.304 m), and to any property line that may be built upon, not less than 3 feet (0.912 m). The distance from any part of a tank storing Category 3 flammable liquids with a flashpoint at or above 100 °F (37.8 °C) or Category 4 flammable liquids to the nearest wall of any basement, pit or property line shall be not less than 1 foot (0.304 m).",
+              "requirement": "maintain specified distances from underground tanks to basements and property lines based on liquid category",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "underground flammable liquid tanks",
+              "work_types": ["underground tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "cat12_basement_distance", "condition": "Category 1-2 distance to basement/pit", "value": "1", "unit": "feet", "operator": ">="},
+                  {"id": "cat12_property_distance", "condition": "Category 1-2 distance to property line", "value": "3", "unit": "feet", "operator": ">="},
+                  {"id": "cat3_low_flashpoint", "condition": "Category 3 flashpoint below 100°F", "value": "100", "unit": "°F", "operator": "<"},
+                  {"id": "cat34_high_flashpoint", "condition": "Category 3-4 flashpoint at/above 100°F", "value": "100", "unit": "°F", "operator": ">="},
+                  {"id": "cat34_distance", "condition": "Category 3-4 high flashpoint distance", "value": "1", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "((cat12_basement_distance AND cat12_property_distance) OR (cat3_low_flashpoint AND cat12_basement_distance AND cat12_property_distance)) OR (cat34_high_flashpoint AND cat34_distance)"
+              },
+              "protections": ["underground separation distances"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(i)(3)(ii)",
+              "text": "Underground tanks shall be set on firm foundations and surrounded with at least 6 inches (15.24 cm) of noncorrosive, inert materials such as clean sand, earth, or gravel well tamped in place. Tanks shall be covered with a minimum of 2 feet (0.608 m) of earth, or shall be covered with not less than 1 foot (0.304 m) of earth, on top of which shall be placed a slab of reinforced concrete not less than 4 inches (10.16 cm) thick.",
+              "requirement": "provide 6-inch inert material surround and 2-foot earth cover or 1-foot earth plus 4-inch concrete",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "underground tank installation",
+              "work_types": ["underground tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "surround_material", "condition": "inert material surround thickness", "value": "6", "unit": "inches", "operator": ">="},
+                  {"id": "earth_cover_option1", "condition": "earth cover minimum", "value": "2", "unit": "feet", "operator": ">="},
+                  {"id": "earth_cover_option2", "condition": "earth cover with concrete", "value": "1", "unit": "feet", "operator": ">="},
+                  {"id": "concrete_thickness", "condition": "reinforced concrete slab thickness", "value": "4", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "surround_material AND (earth_cover_option1 OR (earth_cover_option2 AND concrete_thickness))"
+              },
+              "protections": ["foundation support", "cover protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(i)(3)(ii)_traffic",
+              "text": "When underground tanks are, or are likely to be, subject to traffic, they shall be protected against damage from vehicles passing over them by at least 3 feet (0.912 m) of earth cover, or 18 inches (45.72 cm) of well-tamped earth, plus 6 inches (15.24 cm) of reinforced concrete or 8 inches (20.32 cm) of asphaltic concrete.",
+              "requirement": "provide enhanced protection for tanks subject to traffic: 3-foot earth or 18-inch earth plus concrete",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "underground tanks subject to traffic",
+              "work_types": ["underground tank installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "traffic_exposure", "condition": "tank subject to vehicle traffic", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "traffic_earth_cover", "condition": "earth cover for traffic areas", "value": "3", "unit": "feet", "operator": ">="},
+                  {"id": "traffic_earth_alternate", "condition": "alternate earth cover", "value": "18", "unit": "inches", "operator": ">="},
+                  {"id": "traffic_concrete", "condition": "reinforced concrete over earth", "value": "6", "unit": "inches", "operator": ">="},
+                  {"id": "traffic_asphalt", "condition": "asphaltic concrete thickness", "value": "8", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "traffic_exposure AND (traffic_earth_cover OR (traffic_earth_alternate AND (traffic_concrete OR traffic_asphalt)))"
+              },
+              "protections": ["traffic load protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.152(k)",
+          "title": "Marine service stations",
+          "rules": [
+            {
+              "rule_id": "1926.152(k)(1)(i)",
+              "text": "The dispensing area shall be located away from other structures so as to provide room for safe ingress and egress of craft to be fueled. Dispensing units shall in all cases be at least 20 feet (6.08 m) from any activity involving fixed sources of ignition.",
+              "requirement": "maintain 20-foot clearance from marine dispensing units to fixed ignition sources",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "marine fuel dispensing areas",
+              "work_types": ["marine fueling"],
+              "triggers": {
+                "conditions": [
+                  {"id": "marine_ignition_clearance", "condition": "distance from fixed ignition sources", "value": "20", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "marine_ignition_clearance"
+              },
+              "protections": ["ignition source separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.152(k)(2)(ii)",
+              "text": "Where shore location would require excessively long supply lines to dispensers, tanks may be installed on a pier provided that applicable portions of paragraph (b) of this section relative to spacing, diking, and piping are complied with and the quantity so stored does not exceed 1,100 gallons (4,163.5 L) aggregate capacity.",
+              "requirement": "limit pier-mounted tank storage to 1,100 gallons aggregate capacity",
+              "type": "conditional",
+              "severity": "high",
+              "applies_to": "pier-mounted fuel tanks",
+              "work_types": ["marine fuel storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "pier_storage_limit", "condition": "pier storage aggregate capacity", "value": "1100", "unit": "gallons", "operator": "<="},
+                  {"id": "long_supply_lines", "condition": "shore location requires excessive supply lines", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "pier_storage_limit AND long_supply_lines"
+              },
+              "protections": ["capacity limits", "spacing compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.153",
+      "title": "Liquefied petroleum gas (LP-Gas)",
+      "subsections": [
+        {
+          "subsection": "1926.153(c)",
+          "title": "Container valves and container accessories",
+          "rules": [
+            {
+              "rule_id": "1926.153(c)(1)",
+              "text": "Valves, fittings, and accessories connected directly to the container, including primary shut off valves, shall have a rated working pressure of at least 250 p.s.i.g. and shall be of material and design suitable for LP-Gas service.",
+              "requirement": "ensure LP-Gas valves and fittings have minimum 250 p.s.i.g. working pressure rating",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas container valves and fittings",
+              "work_types": ["LP-Gas system installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "valve_working_pressure", "condition": "valve working pressure rating", "value": "250", "unit": "p.s.i.g.", "operator": ">="}
+                ],
+                "expression": "valve_working_pressure"
+              },
+              "protections": ["pressure rating compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.153(d)",
+          "title": "Safety devices",
+          "rules": [
+            {
+              "rule_id": "1926.153(d)(1)",
+              "text": "Every container and every vaporizer shall be provided with one or more approved safety relief valves or devices. These valves shall be arranged to afford free vent to the outer air with discharge not less than 5 feet horizontally away from any opening into a building which is below such discharge.",
+              "requirement": "provide safety relief valves with 5-foot horizontal clearance from building openings",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas containers and vaporizers",
+              "work_types": ["LP-Gas systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "relief_valve_clearance", "condition": "horizontal clearance from building openings", "value": "5", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "relief_valve_clearance"
+              },
+              "protections": ["safety relief valves", "proper venting"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(d)(3)",
+              "text": "Container safety relief devices and regulator relief vents shall be located not less than 5 feet in any direction from air openings into sealed combustion system appliances or mechanical ventilation air intakes.",
+              "requirement": "maintain 5-foot clearance from relief devices to air intakes",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "LP-Gas safety relief devices",
+              "work_types": ["LP-Gas systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "relief_device_clearance", "condition": "clearance from air intakes", "value": "5", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "relief_device_clearance"
+              },
+              "protections": ["air intake protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.153(e)",
+          "title": "Dispensing",
+          "rules": [
+            {
+              "rule_id": "1926.153(e)(1)",
+              "text": "Filling of fuel containers for trucks or motor vehicles from bulk storage containers shall be performed not less than 10 feet from the nearest masonry-walled building, or not less than 25 feet from the nearest building or other construction and, in any event, not less than 25 feet from any building opening.",
+              "requirement": "maintain 10 feet from masonry buildings, 25 feet from other buildings and openings during vehicle fuel filling",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "vehicle fuel filling operations",
+              "work_types": ["LP-Gas dispensing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "masonry_building_distance", "condition": "distance from masonry-walled building", "value": "10", "unit": "feet", "operator": ">="},
+                  {"id": "general_building_distance", "condition": "distance from other buildings", "value": "25", "unit": "feet", "operator": ">="},
+                  {"id": "opening_distance", "condition": "distance from building openings", "value": "25", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "masonry_building_distance AND general_building_distance AND opening_distance"
+              },
+              "protections": ["safe dispensing distances"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(e)(2)",
+              "text": "Filling of portable containers or containers mounted on skids from storage containers shall be performed not less than 50 feet from the nearest building.",
+              "requirement": "maintain 50-foot distance from buildings when filling portable containers",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "portable container filling",
+              "work_types": ["LP-Gas container filling"],
+              "triggers": {
+                "conditions": [
+                  {"id": "portable_fill_distance", "condition": "distance from nearest building", "value": "50", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "portable_fill_distance"
+              },
+              "protections": ["building separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.153(h)",
+          "title": "Containers and equipment used inside of buildings or structures",
+          "rules": [
+            {
+              "rule_id": "1926.153(h)(3)",
+              "text": "Systems utilizing containers having a water capacity greater than 2½ pounds (nominal 1 pound LP-Gas capacity) shall be equipped with excess flow valves. Such excess flow valves shall be either integral with the container valves or in the connections to the container valve outlets.",
+              "requirement": "equip containers >2.5 pounds water capacity with excess flow valves",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas containers >2.5 pounds water capacity",
+              "work_types": ["indoor LP-Gas systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "container_water_capacity", "condition": "container water capacity", "value": "2.5", "unit": "pounds", "operator": ">"}
+                ],
+                "expression": "container_water_capacity"
+              },
+              "protections": ["excess flow valves"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(4)",
+              "text": "Regulators shall be either directly connected to the container valves or to manifolds connected to the container valves. The regulator shall be suitable for use with LP-Gas. Manifolds and fittings connecting containers to pressure regulator inlets shall be designed for at least 250 p.s.i.g. service pressure.",
+              "requirement": "design manifolds and fittings for minimum 250 p.s.i.g. service pressure",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas manifolds and regulator connections",
+              "work_types": ["LP-Gas system installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "manifold_pressure_rating", "condition": "manifold and fitting service pressure", "value": "250", "unit": "p.s.i.g.", "operator": ">="}
+                ],
+                "expression": "manifold_pressure_rating"
+              },
+              "protections": ["pressure rating compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(5)",
+              "text": "Valves on containers having water capacity greater than 50 pounds (nominal 20 pounds LP-Gas capacity) shall be protected from damage while in use or storage.",
+              "requirement": "protect valves on containers >50 pounds water capacity from damage",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "LP-Gas containers >50 pounds water capacity",
+              "work_types": ["LP-Gas storage and use"],
+              "triggers": {
+                "conditions": [
+                  {"id": "large_container_capacity", "condition": "container water capacity", "value": "50", "unit": "pounds", "operator": ">"}
+                ],
+                "expression": "large_container_capacity"
+              },
+              "protections": ["valve protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(7)",
+              "text": "Hose shall be designed for a working pressure of at least 250 p.s.i.g. Design, construction, and performance of hose, and hose connections shall have their suitability determined by listing by a nationally recognized testing agency. The hose length shall be as short as practicable.",
+              "requirement": "design LP-Gas hose for minimum 250 p.s.i.g. working pressure with shortest practicable length",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas hoses",
+              "work_types": ["LP-Gas hose installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hose_working_pressure", "condition": "hose working pressure", "value": "250", "unit": "p.s.i.g.", "operator": ">="}
+                ],
+                "expression": "hose_working_pressure"
+              },
+              "protections": ["pressure rating", "testing agency approval", "length minimization"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(8)",
+              "text": "Portable heaters, including salamanders, shall be equipped with an approved automatic device to shut off the flow of gas to the main burner, and pilot if used, in the event of flame failure. Such heaters, having inputs above 50,000 B.t.u. per hour, shall be equipped with either a pilot, which must be lighted and proved before the main burner can be turned on, or an electrical ignition system.",
+              "requirement": "equip portable heaters with automatic shutoff and require pilot/ignition systems for >50,000 BTU/hr units",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas portable heaters",
+              "work_types": ["portable heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "heater_input_high", "condition": "heater input rate", "value": "50000", "unit": "B.t.u. per hour", "operator": ">"}
+                ],
+                "expression": "heater_input_high"
+              },
+              "protections": ["automatic shutoff device", "pilot or electrical ignition"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(12)",
+              "text": "The maximum water capacity of individual containers shall be 245 pounds (nominal 100 pounds LP-Gas capacity).",
+              "requirement": "limit individual indoor container capacity to 245 pounds water capacity",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "indoor LP-Gas containers",
+              "work_types": ["indoor LP-Gas use"],
+              "triggers": {
+                "conditions": [
+                  {"id": "container_capacity", "condition": "container water capacity", "value": "245", "unit": "pounds", "operator": "<="}
+                ],
+                "expression": "container_capacity"
+              },
+              "protections": ["capacity limitations"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(13)",
+              "text": "For temporary heating, heaters (other than integral heater-container units) shall be located at least 6 feet from any LP-Gas container. Blower and radiant type heaters shall not be directed toward any LP-Gas container within 20 feet.",
+              "requirement": "maintain 6-foot separation between heaters and containers, 20-foot clearance for directed heaters",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "temporary heating with LP-Gas",
+              "work_types": ["temporary heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "heater_separation", "condition": "distance between heater and container", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "directed_heater_clearance", "condition": "clearance for directed heaters", "value": "20", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "heater_separation AND directed_heater_clearance"
+              },
+              "protections": ["heater separation", "directional clearance"],
+              "exceptions": {
+                "items": [
+                  {"id": "integral_units", "description": "integral heater-container units", "conditions": []}
+                ],
+                "expression": "integral_units"
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(14)",
+              "text": "If two or more heater-container units, of either the integral or nonintegral type, are located in an unpartitioned area on the same floor, the container or containers of each unit shall be separated from the container or containers of any other unit by at least 20 feet.",
+              "requirement": "maintain 20-foot separation between heater-container units in unpartitioned areas",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "multiple heater-container units",
+              "work_types": ["multi-unit heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "unit_separation", "condition": "separation between units", "value": "20", "unit": "feet", "operator": ">="},
+                  {"id": "unpartitioned_area", "condition": "located in unpartitioned area", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "unit_separation AND unpartitioned_area"
+              },
+              "protections": ["unit separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.153(h)(15)",
+              "text": "When heaters are connected to containers for use in an unpartitioned area on the same floor, the total water capacity of containers, manifolded together for connection to a heater or heaters, shall not be greater than 735 pounds (nominal 300 pounds LP-Gas capacity). Such manifolds shall be separated by at least 20 feet.",
+              "requirement": "limit manifolded container capacity to 735 pounds with 20-foot manifold separation",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manifolded container systems",
+              "work_types": ["manifolded heating systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "manifold_capacity", "condition": "total manifolded container capacity", "value": "735", "unit": "pounds", "operator": "<="},
+                  {"id": "manifold_separation", "condition": "separation between manifolds", "value": "20", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "manifold_capacity AND manifold_separation"
+              },
+              "protections": ["capacity limits", "manifold separation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.153(k)",
+          "title": "Storage outside of buildings",
+          "rules": [
+            {
+              "rule_id": "1926.153(k)(1)",
+              "text": "Storage outside of buildings, for containers awaiting use, shall be located from the nearest building or group of buildings, in accordance with Table F-3: 500 lbs. or less - 0 feet, 501 to 6,000 lbs - 10 feet, 6,001 to 10,000 lbs - 20 feet, Over 10,000 lbs - 25 feet.",
+              "requirement": "maintain storage distances based on LP-Gas quantity as specified in Table F-3",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "outdoor LP-Gas storage",
+              "work_types": ["LP-Gas storage"],
+              "triggers": {
+                "conditions": [
+                  {"id": "storage_500_less", "condition": "storage quantity 500 lbs or less", "value": "500", "unit": "pounds", "operator": "<="},
+                  {"id": "distance_500_less", "condition": "distance for 500 lbs or less", "value": "0", "unit": "feet", "operator": ">="},
+                  {"id": "storage_501_6000", "condition": "storage quantity 501-6000 lbs", "value": "6000", "unit": "pounds", "operator": "<="},
+                  {"id": "distance_501_6000", "condition": "distance for 501-6000 lbs", "value": "10", "unit": "feet", "operator": ">="},
+                  {"id": "storage_6001_10000", "condition": "storage quantity 6001-10000 lbs", "value": "10000", "unit": "pounds", "operator": "<="},
+                  {"id": "distance_6001_10000", "condition": "distance for 6001-10000 lbs", "value": "20", "unit": "feet", "operator": ">="},
+                  {"id": "storage_over_10000", "condition": "storage quantity over 10000 lbs", "value": "10000", "unit": "pounds", "operator": ">"},
+                  {"id": "distance_over_10000", "condition": "distance for over 10000 lbs", "value": "25", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "(storage_500_less AND distance_500_less) OR (storage_501_6000 AND distance_501_6000) OR (storage_6001_10000 AND distance_6001_10000) OR (storage_over_10000 AND distance_over_10000)"
+              },
+              "protections": ["quantity-based separation distances"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.153(l)",
+          "title": "Fire protection",
+          "rules": [
+            {
+              "rule_id": "1926.153(l)",
+              "text": "Storage locations shall be provided with at least one approved portable fire extinguisher having a rating of not less than 20-B:C.",
+              "requirement": "provide 20-B:C fire extinguisher at LP-Gas storage locations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "LP-Gas storage locations",
+              "work_types": ["LP-Gas storage"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["20-B:C fire extinguisher"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.154",
+      "title": "Temporary heating devices",
+      "subsections": [
+        {
+          "subsection": "1926.154(b)",
+          "title": "Clearance and mounting",
+          "rules": [
+            {
+              "rule_id": "1926.154(b)(1)",
+              "text": "Temporary heating devices shall be installed to provide clearance to combustible material not less than the amount shown in Table F-4: Room heater, circulating type: Sides 12 inches, Rear 12 inches, Chimney connector 18 inches; Room heater, radiant type: Sides 36 inches, Rear 36 inches, Chimney connector 18 inches.",
+              "requirement": "maintain specified clearances from combustible materials based on heater type",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "temporary heating devices",
+              "work_types": ["temporary heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "circulating_sides", "condition": "circulating heater side clearance", "value": "12", "unit": "inches", "operator": ">="},
+                  {"id": "circulating_rear", "condition": "circulating heater rear clearance", "value": "12", "unit": "inches", "operator": ">="},
+                  {"id": "circulating_chimney", "condition": "circulating heater chimney connector clearance", "value": "18", "unit": "inches", "operator": ">="},
+                  {"id": "radiant_sides", "condition": "radiant heater side clearance", "value": "36", "unit": "inches", "operator": ">="},
+                  {"id": "radiant_rear", "condition": "radiant heater rear clearance", "value": "36", "unit": "inches", "operator": ">="},
+                  {"id": "radiant_chimney", "condition": "radiant heater chimney connector clearance", "value": "18", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "(circulating_sides AND circulating_rear AND circulating_chimney) OR (radiant_sides AND radiant_rear AND radiant_chimney)"
+              },
+              "protections": ["combustible material clearance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.154(b)(3)",
+              "text": "Heaters not suitable for use on wood floors shall not be set directly upon them or other combustible materials. When such heaters are used, they shall rest on suitable heat insulating material or at least 1-inch concrete, or equivalent. The insulating material shall extend beyond the heater 2 feet or more in all directions.",
+              "requirement": "provide 1-inch concrete or equivalent with 2-foot extension for heaters not suitable for wood floors",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "heaters unsuitable for wood floors",
+              "work_types": ["temporary heating"],
+              "triggers": {
+                "conditions": [
+                  {"id": "concrete_thickness", "condition": "concrete thickness", "value": "1", "unit": "inches", "operator": ">="},
+                  {"id": "insulation_extension", "condition": "insulation extension beyond heater", "value": "2", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "concrete_thickness AND insulation_extension"
+              },
+              "protections": ["heat insulation", "floor protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.154(b)(4)",
+              "text": "Heaters used in the vicinity of combustible tarpaulins, canvas, or similar coverings shall be located at least 10 feet from the coverings. The coverings shall be securely fastened to prevent ignition or upsetting of the heater due to wind action on the covering or other material.",
+              "requirement": "maintain 10-foot clearance between heaters and combustible coverings",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "heaters near combustible coverings",
+              "work_types": ["temporary heating with coverings"],
+              "triggers": {
+                "conditions": [
+                  {"id": "covering_clearance", "condition": "clearance from combustible coverings", "value": "10", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "covering_clearance"
+              },
+              "protections": ["covering separation", "secure fastening"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.155",
+      "title": "Definitions applicable to this subpart",
+      "subsections": [
+        {
+          "subsection": "1926.155",
+          "title": "Definitions",
+          "rules": [
+            {
+              "rule_id": "1926.155(h)",
+              "text": "Flammable liquid means any liquid having a vapor pressure not exceeding 40 pounds per square inch (absolute) at 100 °F (37.8 °C) and having a flashpoint at or below 199.4 °F (93 °C). Categories: Category 1 - flashpoints below 73.4 °F (23 °C) and boiling point at or below 95 °F (35 °C); Category 2 - flashpoints below 73.4 °F (23 °C) and boiling point above 95 °F (35 °C); Category 3 - flashpoints at or above 73.4 °F (23 °C) and at or below 140 °F (60 °C); Category 4 - flashpoints above 140 °F (60 °C) and at or below 199.4 °F (93 °C).",
+              "requirement": "classify flammable liquids according to vapor pressure and flashpoint criteria",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "all flammable liquids",
+              "work_types": ["flammable liquid classification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "vapor_pressure_limit", "condition": "vapor pressure at 100°F", "value": "40", "unit": "psi absolute", "operator": "<="},
+                  {"id": "flashpoint_limit", "condition": "flashpoint", "value": "199.4", "unit": "°F", "operator": "<="},
+                  {"id": "cat1_flashpoint", "condition": "Category 1 flashpoint", "value": "73.4", "unit": "°F", "operator": "<"},
+                  {"id": "cat1_boiling", "condition": "Category 1 boiling point", "value": "95", "unit": "°F", "operator": "<="},
+                  {"id": "cat2_flashpoint", "condition": "Category 2 flashpoint", "value": "73.4", "unit": "°F", "operator": "<"},
+                  {"id": "cat2_boiling", "condition": "Category 2 boiling point", "value": "95", "unit": "°F", "operator": ">"},
+                  {"id": "cat3_flashpoint_min", "condition": "Category 3 flashpoint minimum", "value": "73.4", "unit": "°F", "operator": ">="},
+                  {"id": "cat3_flashpoint_max", "condition": "Category 3 flashpoint maximum", "value": "140", "unit": "°F", "operator": "<="},
+                  {"id": "cat4_flashpoint_min", "condition": "Category 4 flashpoint minimum", "value": "140", "unit": "°F", "operator": ">"},
+                  {"id": "cat4_flashpoint_max", "condition": "Category 4 flashpoint maximum", "value": "199.4", "unit": "°F", "operator": "<="}
+                ],
+                "expression": "vapor_pressure_limit AND flashpoint_limit AND ((cat1_flashpoint AND cat1_boiling) OR (cat2_flashpoint AND cat2_boiling) OR (cat3_flashpoint_min AND cat3_flashpoint_max) OR (cat4_flashpoint_min AND cat4_flashpoint_max))"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.155(l)",
+              "text": "Safety can means an approved closed container, of not more than 5 gallons capacity, having a flash-arresting screen, spring-closing lid and spout cover and so designed that it will safely relieve internal pressure when subjected to fire exposure.",
+              "requirement": "define safety can specifications for flammable liquid containers",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "flammable liquid containers",
+              "work_types": ["container specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "safety_can_capacity", "condition": "safety can capacity", "value": "5", "unit": "gallons", "operator": "<="}
+                ],
+                "expression": "safety_can_capacity"
+              },
+              "protections": ["flash-arresting screen", "spring-closing lid", "pressure relief"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

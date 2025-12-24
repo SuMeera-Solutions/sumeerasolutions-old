@@ -1,0 +1,1311 @@
+{
+  "regulation": {
+    "title": "Occupational Safety and Health Standards - Exit Routes and Emergency Planning",
+    "part": "1910",
+    "subpart": "E",
+    "authority": "29 U.S.C. 653, 655, 657; Secretary of Labor's Orders",
+    "effective_date": "2002-11-07",
+    "last_updated": "2025-06-05",
+    "applies_to": "workplaces in general industry except mobile workplaces such as vehicles or vessels",
+    "excludes": ["mobile workplaces", "vehicles", "vessels"]
+  },
+  "sections": [
+    {
+      "section_number": "1910.33",
+      "title": "Table of contents",
+      "subsections": [
+        {
+          "subsection": "1910.33",
+          "title": "Table of contents",
+          "rules": [
+            {
+              "rule_id": "1910.33",
+              "text": "This section lists the sections and paragraph headings contained in §§ 1910.34 through 1910.39.",
+              "requirement": "reference sections 1910.34 through 1910.39 for applicable requirements",
+              "type": "informational",
+              "severity": "low",
+              "applies_to": "all covered employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.34",
+      "title": "Coverage and definitions",
+      "subsections": [
+        {
+          "subsection": "1910.34(a)",
+          "title": "Coverage",
+          "rules": [
+            {
+              "rule_id": "1910.34(a)",
+              "text": "Sections 1910.34 through 1910.39 apply to workplaces in general industry except mobile workplaces such as vehicles or vessels.",
+              "requirement": "comply with exit route requirements for general industry workplaces",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "every employer in general industry",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["exit routes", "emergency action plans", "fire prevention plans"],
+              "exceptions": {
+                "items": [
+                  {"id": "mobile_workplaces", "description": "mobile workplaces such as vehicles or vessels", "conditions": []}
+                ],
+                "expression": "mobile_workplaces"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.34(c)",
+          "title": "Definitions",
+          "rules": [
+            {
+              "rule_id": "1910.34(c)-electroluminescent",
+              "text": "Electroluminescent means a light-emitting capacitor. Alternating current excites phosphor atoms when placed between the electrically conductive surfaces to produce light.",
+              "requirement": "understand electroluminescent light source definition for exit lighting",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "exit lighting systems",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["exit lighting"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.34(c)-occupant_load",
+              "text": "Occupant load means the total number of persons that may occupy a workplace or portion of a workplace at any one time. The occupant load of a workplace is calculated by dividing the gross floor area of the workplace or portion of the workplace by the occupant load factor for that particular type of workplace occupancy.",
+              "requirement": "calculate occupant load using gross floor area divided by occupant load factor",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all workplaces",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["adequate exit capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.34(c)-refuge_area",
+              "text": "Refuge area means either: (1) A space along an exit route that is protected from the effects of fire by separation from other spaces within the building by a barrier with at least a one-hour fire resistance-rating; or (2) A floor with at least two spaces, separated from each other by smoke-resistant partitions, in a building protected throughout by an automatic sprinkler system that complies with § 1910.159 of this part.",
+              "requirement": "provide refuge areas with one-hour fire resistance rating or sprinkler-protected spaces with smoke-resistant partitions",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "buildings with refuge areas",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "fire_resistance", "parameter": "fire resistance rating", "value": "1", "unit": "hour", "operator": ">="},
+                  {"id": "min_spaces", "parameter": "minimum spaces on floor", "value": "2", "unit": "spaces", "operator": ">="}
+                ],
+                "expression": "fire_resistance OR (min_spaces AND sprinkler_system)"
+              },
+              "protections": ["fire barriers", "smoke-resistant partitions", "automatic sprinkler systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.35",
+      "title": "Compliance with alternate exit-route codes",
+      "subsections": [
+        {
+          "subsection": "1910.35",
+          "title": "Alternate compliance",
+          "rules": [
+            {
+              "rule_id": "1910.35",
+              "text": "OSHA will deem an employer demonstrating compliance with the exit-route provisions of NFPA 101, Life Safety Code, 2009 edition, or the exit-route provisions of the International Fire Code, 2009 edition, to be in compliance with the corresponding requirements in §§ 1910.34, 1910.36, and 1910.37.",
+              "requirement": "comply with NFPA 101-2009 or IFC-2009 exit route provisions as alternative compliance method",
+              "type": "alternative",
+              "severity": "medium",
+              "applies_to": "employers choosing alternate compliance",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["NFPA 101 exit routes", "IFC exit routes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.36",
+      "title": "Design and construction requirements for exit routes",
+      "subsections": [
+        {
+          "subsection": "1910.36(a)",
+          "title": "Basic requirements",
+          "rules": [
+            {
+              "rule_id": "1910.36(a)(1)",
+              "text": "An exit route must be permanent. Each exit route must be a permanent part of the workplace.",
+              "requirement": "ensure exit routes are permanent parts of the workplace",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["permanent exit routes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(a)(2)",
+              "text": "An exit must be separated by fire resistant materials. Construction materials used to separate an exit from other parts of the workplace must have a one-hour fire resistance-rating if the exit connects three or fewer stories and a two-hour fire resistance-rating if the exit connects four or more stories.",
+              "requirement": "separate exits with fire resistant materials based on number of stories connected",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exits",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "stories_few", "parameter": "number of stories connected", "value": "3", "unit": "stories", "operator": "<="},
+                  {"id": "stories_many", "parameter": "number of stories connected", "value": "4", "unit": "stories", "operator": ">="}
+                ],
+                "expression": "stories_few OR stories_many"
+              },
+              "protections": ["one-hour fire resistance materials", "two-hour fire resistance materials"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(a)(3)",
+              "text": "Openings into an exit must be limited. An exit is permitted to have only those openings necessary to allow access to the exit from occupied areas of the workplace, or to the exit discharge. An opening into an exit must be protected by a self-closing fire door that remains closed or automatically closes in an emergency upon the sounding of a fire alarm or employee alarm system.",
+              "requirement": "limit exit openings to necessary access points and protect with self-closing fire doors",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit openings",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["self-closing fire doors", "automatic closing systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(b)",
+          "title": "Number of exit routes",
+          "rules": [
+            {
+              "rule_id": "1910.36(b)(1)",
+              "text": "At least two exit routes must be available in a workplace to permit prompt evacuation of employees and other building occupants during an emergency, except as allowed in paragraph (b)(3) of this section.",
+              "requirement": "provide at least two exit routes located as far away as practical from each other",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "most workplaces",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_exits", "parameter": "minimum exit routes required", "value": "2", "unit": "exit routes", "operator": ">="}
+                ],
+                "expression": "min_exits"
+              },
+              "protections": ["multiple exit routes", "separated exit locations"],
+              "exceptions": {
+                "items": [
+                  {"id": "single_exit_allowed", "description": "as allowed in paragraph (b)(3) for single exit route", "conditions": []}
+                ],
+                "expression": "single_exit_allowed"
+              }
+            },
+            {
+              "rule_id": "1910.36(b)(2)",
+              "text": "More than two exit routes must be available in a workplace if the number of employees, the size of the building, its occupancy, or the arrangement of the workplace is such that all employees would not be able to evacuate safely during an emergency.",
+              "requirement": "provide more than two exit routes when needed for safe evacuation based on occupancy factors",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "large or complex workplaces",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "more_exits_needed", "parameter": "safe evacuation capability", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "more_exits_needed"
+              },
+              "protections": ["additional exit routes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(b)(3)",
+              "text": "A single exit route is permitted where the number of employees, the size of the building, its occupancy, or the arrangement of the workplace is such that all employees would be able to evacuate safely during an emergency.",
+              "requirement": "single exit route permitted only when all employees can evacuate safely",
+              "type": "exception",
+              "severity": "high",
+              "applies_to": "small workplaces meeting safety criteria",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "safe_single_exit", "parameter": "safe evacuation with single exit", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "safe_single_exit"
+              },
+              "protections": ["single exit route"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(c)",
+          "title": "Exit discharge",
+          "rules": [
+            {
+              "rule_id": "1910.36(c)(1)",
+              "text": "Each exit discharge must lead directly outside or to a street, walkway, refuge area, public way, or open space with access to the outside.",
+              "requirement": "ensure exit discharge leads directly to safe exterior location",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit discharges",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["direct exterior access", "safe discharge areas"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(c)(2)",
+              "text": "The street, walkway, refuge area, public way, or open space to which an exit discharge leads must be large enough to accommodate the building occupants likely to use the exit route.",
+              "requirement": "size discharge areas to accommodate expected building occupants",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all discharge areas",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["adequate discharge area capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(d)",
+          "title": "Exit door requirements",
+          "rules": [
+            {
+              "rule_id": "1910.36(d)(1)",
+              "text": "Employees must be able to open an exit route door from the inside at all times without keys, tools, or special knowledge. A device such as a panic bar that locks only from the outside is permitted on exit discharge doors.",
+              "requirement": "ensure exit doors can be opened from inside without keys, tools, or special knowledge",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit route doors",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["unrestricted interior egress", "panic hardware"],
+              "exceptions": {
+                "items": [
+                  {"id": "panic_bar_exterior", "description": "panic bar that locks only from outside on exit discharge doors", "conditions": []},
+                  {"id": "institutional_facilities", "description": "mental, penal, or correctional facilities with supervisory personnel", "conditions": []}
+                ],
+                "expression": "panic_bar_exterior OR institutional_facilities"
+              }
+            },
+            {
+              "rule_id": "1910.36(d)(2)",
+              "text": "Exit route doors must be free of any device or alarm that could restrict emergency use of the exit route if the device or alarm fails.",
+              "requirement": "ensure exit route doors remain usable if devices or alarms fail",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit route doors",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["fail-safe door operation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(e)",
+          "title": "Side-hinged exit door requirements",
+          "rules": [
+            {
+              "rule_id": "1910.36(e)(1)",
+              "text": "A side-hinged door must be used to connect any room to an exit route.",
+              "requirement": "use side-hinged doors for all room connections to exit routes",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all room-to-exit connections",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["side-hinged door operation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(e)(2)",
+              "text": "The door that connects any room to an exit route must swing out in the direction of exit travel if the room is designed to be occupied by more than 50 people or if the room is a high hazard area.",
+              "requirement": "ensure doors swing outward for rooms with 50+ occupants or high hazard areas",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "large occupancy rooms and high hazard areas",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "high_occupancy", "parameter": "room occupancy", "value": "50", "unit": "people", "operator": ">"},
+                  {"id": "high_hazard", "parameter": "high hazard area designation", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "high_occupancy OR high_hazard"
+              },
+              "protections": ["outward swinging doors"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(f)",
+          "title": "Exit route capacity",
+          "rules": [
+            {
+              "rule_id": "1910.36(f)(1)",
+              "text": "Exit routes must support the maximum permitted occupant load for each floor served.",
+              "requirement": "size exit routes to support maximum permitted occupant load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["adequate exit capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(f)(2)",
+              "text": "The capacity of an exit route may not decrease in the direction of exit route travel to the exit discharge.",
+              "requirement": "maintain or increase exit route capacity toward exit discharge",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["non-decreasing exit capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(g)",
+          "title": "Height and width requirements",
+          "rules": [
+            {
+              "rule_id": "1910.36(g)(1)",
+              "text": "The ceiling of an exit route must be at least seven feet six inches (2.3 m) high. Any projection from the ceiling must not reach a point less than six feet eight inches (2.0 m) from the floor.",
+              "requirement": "maintain minimum ceiling height of 7 feet 6 inches with projections not below 6 feet 8 inches",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_ceiling_height", "parameter": "ceiling height", "value": "7.5", "unit": "feet", "operator": ">="},
+                  {"id": "projection_clearance", "parameter": "projection clearance from floor", "value": "6.67", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "min_ceiling_height AND projection_clearance"
+              },
+              "protections": ["adequate headroom"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(g)(2)",
+              "text": "An exit access must be at least 28 inches (71.1 cm) wide at all points. Where there is only one exit access leading to an exit or exit discharge, the width of the exit and exit discharge must be at least equal to the width of the exit access.",
+              "requirement": "maintain minimum width of 28 inches for exit access with matching exit widths",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit access routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_access_width", "parameter": "exit access width", "value": "28", "unit": "inches", "operator": ">="},
+                  {"id": "single_access", "parameter": "single exit access", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "min_access_width AND (single_access IMPLIES matching_exit_width)"
+              },
+              "protections": ["adequate exit width"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(g)(3)",
+              "text": "The width of an exit route must be sufficient to accommodate the maximum permitted occupant load of each floor served by the exit route.",
+              "requirement": "size exit route width based on maximum permitted occupant load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["load-based exit width"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(g)(4)",
+              "text": "Objects that project into the exit route must not reduce the width of the exit route to less than the minimum width requirements for exit routes.",
+              "requirement": "prevent objects from reducing exit route width below minimum requirements",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["unobstructed exit width"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.36(h)",
+          "title": "Outdoor exit routes",
+          "rules": [
+            {
+              "rule_id": "1910.36(h)(1)",
+              "text": "The outdoor exit route must have guardrails to protect unenclosed sides if a fall hazard exists.",
+              "requirement": "install guardrails on outdoor exit routes where fall hazards exist",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor exit routes with fall hazards",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "fall_hazard_exists", "parameter": "fall hazard present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "fall_hazard_exists"
+              },
+              "protections": ["guardrails"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.36(h)(2)",
+              "text": "The outdoor exit route must be covered if snow or ice is likely to accumulate along the route, unless the employer can demonstrate that any snow or ice accumulation will be removed before it presents a slipping hazard.",
+              "requirement": "cover outdoor exit routes or remove snow/ice accumulation to prevent slipping hazards",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor exit routes in snow/ice climates",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "snow_ice_likely", "parameter": "snow or ice accumulation likely", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "snow_ice_likely"
+              },
+              "protections": ["route covering", "snow/ice removal procedures"],
+              "exceptions": {
+                "items": [
+                  {"id": "removal_demonstrated", "description": "employer demonstrates snow/ice removal before slipping hazard", "conditions": []}
+                ],
+                "expression": "removal_demonstrated"
+              }
+            },
+            {
+              "rule_id": "1910.36(h)(4)",
+              "text": "The outdoor exit route must not have a dead-end that is longer than 20 feet (6.2 m).",
+              "requirement": "limit outdoor exit route dead-ends to maximum 20 feet",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outdoor exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_dead_end", "parameter": "dead-end length", "value": "20", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_dead_end"
+              },
+              "protections": ["limited dead-end exposure"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.37",
+      "title": "Maintenance, safeguards, and operational features for exit routes",
+      "subsections": [
+        {
+          "subsection": "1910.37(a)",
+          "title": "Minimizing danger to employees",
+          "rules": [
+            {
+              "rule_id": "1910.37(a)(1)",
+              "text": "Exit routes must be kept free of explosive or highly flammable furnishings or other decorations.",
+              "requirement": "prohibit explosive or highly flammable furnishings and decorations in exit routes",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["fire-safe furnishings"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.37(a)(3)",
+              "text": "Exit routes must be free and unobstructed. No materials or equipment may be placed, either permanently or temporarily, within the exit route. The exit access must not go through a room that can be locked, such as a bathroom, to reach an exit or exit discharge, nor may it lead into a dead-end corridor.",
+              "requirement": "maintain unobstructed exit routes without materials, equipment, or lockable rooms in path",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all exit routes and exit access",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["unobstructed egress paths"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.37(b)",
+          "title": "Lighting and marking",
+          "rules": [
+            {
+              "rule_id": "1910.37(b)(1)",
+              "text": "Each exit route must be adequately lighted so that an employee with normal vision can see along the exit route.",
+              "requirement": "provide adequate lighting for normal vision along entire exit route",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit routes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["adequate exit lighting"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.37(b)(2)",
+              "text": "Each exit must be clearly visible and marked by a sign reading 'Exit.'",
+              "requirement": "mark each exit with clearly visible 'Exit' sign",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exits",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["exit signage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.37(b)(6)",
+              "text": "Each exit sign must be illuminated to a surface value of at least five foot-candles (54 lux) by a reliable light source and be distinctive in color. Self-luminous or electroluminescent signs that have a minimum luminance surface value of at least .06 footlamberts (0.21 cd/m2) are permitted.",
+              "requirement": "illuminate exit signs to minimum 5 foot-candles or use self-luminous signs with 0.06 footlamberts minimum",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit signs",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_illumination", "parameter": "exit sign illumination", "value": "5", "unit": "foot-candles", "operator": ">="},
+                  {"id": "self_luminous", "parameter": "self-luminous sign luminance", "value": "0.06", "unit": "footlamberts", "operator": ">="}
+                ],
+                "expression": "min_illumination OR self_luminous"
+              },
+              "protections": ["illuminated exit signs", "self-luminous signs"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.37(b)(7)",
+              "text": "Each exit sign must have the word 'Exit' in plainly legible letters not less than six inches (15.2 cm) high, with the principal strokes of the letters in the word 'Exit' not less than three-fourths of an inch (1.9 cm) wide.",
+              "requirement": "size exit sign letters minimum 6 inches high with strokes minimum 3/4 inch wide",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all exit signs",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "letter_height", "parameter": "exit sign letter height", "value": "6", "unit": "inches", "operator": ">="},
+                  {"id": "stroke_width", "parameter": "letter stroke width", "value": "0.75", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "letter_height AND stroke_width"
+              },
+              "protections": ["properly sized exit signage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.37(d)",
+          "title": "Construction and alterations",
+          "rules": [
+            {
+              "rule_id": "1910.37(d)(1)",
+              "text": "During new construction, employees must not occupy a workplace until the exit routes required by this subpart are completed and ready for employee use for the portion of the workplace they occupy.",
+              "requirement": "complete exit routes before allowing employee occupancy during new construction",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "new construction projects",
+              "work_types": ["construction", "general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["completed exit routes before occupancy"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.37(d)(2)",
+              "text": "During repairs or alterations, employees must not occupy a workplace unless the exit routes required by this subpart are available and existing fire protections are maintained, or until alternate fire protection is furnished that provides an equivalent level of safety.",
+              "requirement": "maintain required exit routes and fire protections during repairs/alterations or provide equivalent alternatives",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "repair and alteration projects",
+              "work_types": ["construction", "maintenance", "general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["maintained exit routes", "equivalent fire protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.37(e)",
+          "title": "Employee alarm system",
+          "rules": [
+            {
+              "rule_id": "1910.37(e)",
+              "text": "Employers must install and maintain an operable employee alarm system that has a distinctive signal to warn employees of fire or other emergencies, unless employees can promptly see or smell a fire or other hazard in time to provide adequate warning to them. The employee alarm system must comply with § 1910.165.",
+              "requirement": "install and maintain operable employee alarm system with distinctive signals unless natural detection is adequate",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "most workplaces",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "natural_detection_inadequate", "parameter": "employees cannot promptly detect hazards", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "natural_detection_inadequate"
+              },
+              "protections": ["employee alarm systems", "distinctive alarm signals"],
+              "exceptions": {
+                "items": [
+                  {"id": "natural_detection", "description": "employees can promptly see or smell fire/hazards for adequate warning", "conditions": []}
+                ],
+                "expression": "natural_detection"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.38",
+      "title": "Emergency action plans",
+      "subsections": [
+        {
+          "subsection": "1910.38(a)",
+          "title": "Application",
+          "rules": [
+            {
+              "rule_id": "1910.38(a)",
+              "text": "An employer must have an emergency action plan whenever an OSHA standard in this part requires one. The requirements in this section apply to each such emergency action plan.",
+              "requirement": "develop emergency action plan when required by OSHA standards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers required by OSHA standards",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "osha_standard_requires", "parameter": "OSHA standard requires emergency action plan", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "osha_standard_requires"
+              },
+              "protections": ["emergency action plans"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.38(b)",
+          "title": "Written and oral emergency action plans",
+          "rules": [
+            {
+              "rule_id": "1910.38(b)",
+              "text": "An emergency action plan must be in writing, kept in the workplace, and available to employees for review. However, an employer with 10 or fewer employees may communicate the plan orally to employees.",
+              "requirement": "maintain written emergency action plan available for employee review, or oral communication for 10 or fewer employees",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers with emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "employee_count", "parameter": "number of employees", "value": "10", "unit": "employees", "operator": ">"}
+                ],
+                "expression": "employee_count"
+              },
+              "protections": ["written emergency procedures", "employee access to plans"],
+              "exceptions": {
+                "items": [
+                  {"id": "small_employer", "description": "employer with 10 or fewer employees may communicate plan orally", "conditions": [{"parameter": "number of employees", "value": "10", "unit": "employees", "operator": "<="}]}
+                ],
+                "expression": "small_employer"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.38(c)",
+          "title": "Minimum elements of emergency action plan",
+          "rules": [
+            {
+              "rule_id": "1910.38(c)(1)",
+              "text": "Procedures for reporting a fire or other emergency.",
+              "requirement": "establish procedures for reporting fires and other emergencies",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["emergency reporting procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(c)(2)",
+              "text": "Procedures for emergency evacuation, including type of evacuation and exit route assignments.",
+              "requirement": "establish emergency evacuation procedures with evacuation types and exit route assignments",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["evacuation procedures", "exit route assignments"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(c)(3)",
+              "text": "Procedures to be followed by employees who remain to operate critical plant operations before they evacuate.",
+              "requirement": "establish procedures for employees operating critical systems before evacuation",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "workplaces with critical operations",
+              "work_types": ["general industry", "manufacturing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "critical_operations", "parameter": "critical plant operations present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "critical_operations"
+              },
+              "protections": ["critical operations procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(c)(4)",
+              "text": "Procedures to account for all employees after evacuation.",
+              "requirement": "establish procedures to account for all employees after evacuation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["employee accountability procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(c)(5)",
+              "text": "Procedures to be followed by employees performing rescue or medical duties.",
+              "requirement": "establish procedures for employees performing rescue or medical duties",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "workplaces with designated rescue/medical personnel",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "rescue_medical_duties", "parameter": "employees assigned rescue or medical duties", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "rescue_medical_duties"
+              },
+              "protections": ["rescue procedures", "medical response procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(c)(6)",
+              "text": "The name or job title of every employee who may be contacted by employees who need more information about the plan or an explanation of their duties under the plan.",
+              "requirement": "identify contact persons for plan information and duty explanations",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["designated plan contacts"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.38(d)",
+          "title": "Employee alarm system",
+          "rules": [
+            {
+              "rule_id": "1910.38(d)",
+              "text": "An employer must have and maintain an employee alarm system. The employee alarm system must use a distinctive signal for each purpose and comply with the requirements in § 1910.165.",
+              "requirement": "maintain employee alarm system with distinctive signals for each purpose complying with § 1910.165",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers with emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["employee alarm systems", "distinctive alarm signals"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.38(e)",
+          "title": "Training",
+          "rules": [
+            {
+              "rule_id": "1910.38(e)",
+              "text": "An employer must designate and train employees to assist in a safe and orderly evacuation of other employees.",
+              "requirement": "designate and train employees to assist in safe and orderly evacuations",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers with emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["trained evacuation assistants"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.38(f)",
+          "title": "Review of emergency action plan",
+          "rules": [
+            {
+              "rule_id": "1910.38(f)(1)",
+              "text": "When the plan is developed or the employee is assigned initially to a job.",
+              "requirement": "review emergency action plan when developed or employee initially assigned",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employees covered by emergency action plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "plan_developed", "parameter": "emergency plan developed", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "initial_assignment", "parameter": "employee initial job assignment", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "plan_developed OR initial_assignment"
+              },
+              "protections": ["emergency plan training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(f)(2)",
+              "text": "When the employee's responsibilities under the plan change.",
+              "requirement": "review emergency action plan when employee responsibilities change",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employees with changed plan responsibilities",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "responsibilities_change", "parameter": "employee plan responsibilities change", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "responsibilities_change"
+              },
+              "protections": ["updated emergency plan training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.38(f)(3)",
+              "text": "When the plan is changed.",
+              "requirement": "review emergency action plan with employees when plan is changed",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employees when plan changes",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "plan_changed", "parameter": "emergency plan changed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "plan_changed"
+              },
+              "protections": ["updated emergency plan training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.39",
+      "title": "Fire prevention plans",
+      "subsections": [
+        {
+          "subsection": "1910.39(a)",
+          "title": "Application",
+          "rules": [
+            {
+              "rule_id": "1910.39(a)",
+              "text": "An employer must have a fire prevention plan when an OSHA standard in this part requires one. The requirements in this section apply to each such fire prevention plan.",
+              "requirement": "develop fire prevention plan when required by OSHA standards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers required by OSHA standards",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "osha_requires_fire_plan", "parameter": "OSHA standard requires fire prevention plan", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "osha_requires_fire_plan"
+              },
+              "protections": ["fire prevention plans"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.39(b)",
+          "title": "Written and oral fire prevention plans",
+          "rules": [
+            {
+              "rule_id": "1910.39(b)",
+              "text": "A fire prevention plan must be in writing, be kept in the workplace, and be made available to employees for review. However, an employer with 10 or fewer employees may communicate the plan orally to employees.",
+              "requirement": "maintain written fire prevention plan available for employee review, or oral communication for 10 or fewer employees",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers with fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "employee_count_fire", "parameter": "number of employees", "value": "10", "unit": "employees", "operator": ">"}
+                ],
+                "expression": "employee_count_fire"
+              },
+              "protections": ["written fire prevention procedures", "employee access to plans"],
+              "exceptions": {
+                "items": [
+                  {"id": "small_employer_fire", "description": "employer with 10 or fewer employees may communicate plan orally", "conditions": [{"parameter": "number of employees", "value": "10", "unit": "employees", "operator": "<="}]}
+                ],
+                "expression": "small_employer_fire"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.39(c)",
+          "title": "Minimum elements of fire prevention plan",
+          "rules": [
+            {
+              "rule_id": "1910.39(c)(1)",
+              "text": "A list of all major fire hazards, proper handling and storage procedures for hazardous materials, potential ignition sources and their control, and the type of fire protection equipment necessary to control each major hazard.",
+              "requirement": "identify major fire hazards, handling procedures, ignition sources, and required fire protection equipment",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["hazard identification", "fire protection equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.39(c)(2)",
+              "text": "Procedures to control accumulations of flammable and combustible waste materials.",
+              "requirement": "establish procedures to control flammable and combustible waste accumulations",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["waste control procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.39(c)(3)",
+              "text": "Procedures for regular maintenance of safeguards installed on heat-producing equipment to prevent the accidental ignition of combustible materials.",
+              "requirement": "establish regular maintenance procedures for heat-producing equipment safeguards",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "workplaces with heat-producing equipment",
+              "work_types": ["general industry", "manufacturing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "heat_equipment", "parameter": "heat-producing equipment present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "heat_equipment"
+              },
+              "protections": ["equipment safeguard maintenance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.39(c)(4)",
+              "text": "The name or job title of employees responsible for maintaining equipment to prevent or control sources of ignition or fires.",
+              "requirement": "identify employees responsible for maintaining ignition control and fire prevention equipment",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["designated maintenance personnel"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.39(c)(5)",
+              "text": "The name or job title of employees responsible for the control of fuel source hazards.",
+              "requirement": "identify employees responsible for controlling fuel source hazards",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["designated fuel hazard control personnel"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.39(d)",
+          "title": "Employee information",
+          "rules": [
+            {
+              "rule_id": "1910.39(d)",
+              "text": "An employer must inform employees upon initial assignment to a job of the fire hazards to which they are exposed. An employer must also review with each employee those parts of the fire prevention plan necessary for self-protection.",
+              "requirement": "inform employees of fire hazards upon initial assignment and review relevant fire prevention plan elements",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employees in workplaces with fire prevention plans",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "initial_job_assignment", "parameter": "employee initial job assignment", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "initial_job_assignment"
+              },
+              "protections": ["fire hazard awareness", "fire prevention training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

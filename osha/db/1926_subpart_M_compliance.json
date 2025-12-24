@@ -1,0 +1,1571 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - Fall Protection",
+    "part": "1926",
+    "subpart": "M",
+    "authority": "40 U.S.C. 3704; 29 U.S.C. 653, 655, and 657",
+    "effective_date": "1994-08-09",
+    "last_updated": "2025-06-05",
+    "applies_to": "all fall protection in construction workplaces covered under 29 CFR part 1926",
+    "excludes": ["employees making inspection/investigation/assessment prior to construction start", "employees after all construction work completed"]
+  },
+  "sections": [
+    {
+      "section_number": "1926.500",
+      "title": "Scope, application, and definitions applicable to this subpart",
+      "subsections": [
+        {
+          "subsection": "1926.500(a)",
+          "title": "Scope and application",
+          "rules": [
+            {
+              "rule_id": "1926.500(a)(1)",
+              "text": "This subpart sets forth requirements and criteria for fall protection in construction workplaces covered under 29 CFR part 1926.",
+              "requirement": "comply with fall protection requirements for construction workplaces",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "construction workplaces",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["fall protection systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "pre_construction", "description": "employees making inspection, investigation, or assessment prior to actual start of construction work", "conditions": []},
+                  {"id": "post_construction", "description": "employees after all construction work has been completed", "conditions": []}
+                ],
+                "expression": "pre_construction OR post_construction"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.500(b)",
+          "title": "Definitions",
+          "rules": [
+            {
+              "rule_id": "1926.500(b)-hole",
+              "text": "Hole means a gap or void 2 inches (5.1 cm) or more in its least dimension, in a floor, roof, or other walking/working surface.",
+              "requirement": "recognize holes as 2 inches or larger gaps requiring protection",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "all walking/working surfaces",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "gap_size", "condition": "gap or void size", "value": "2", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "gap_size"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.500(b)-opening",
+              "text": "Opening means a gap or void 30 inches (76 cm) or more high and 18 inches (48 cm) or more wide, in a wall or partition, through which employees can fall to a lower level.",
+              "requirement": "recognize openings as gaps 30+ inches high and 18+ inches wide requiring protection",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "walls and partitions",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "opening_height", "condition": "opening height", "value": "30", "unit": "inches", "operator": ">="},
+                  {"id": "opening_width", "condition": "opening width", "value": "18", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "opening_height AND opening_width"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.500(b)-unprotected_sides",
+              "text": "Unprotected sides and edges means any side or edge (except at entrances to points of access) of a walking/working surface where there is no wall or guardrail system at least 39 inches (1.0 m) high.",
+              "requirement": "recognize unprotected sides and edges where guardrail is less than 39 inches",
+              "type": "informational",
+              "severity": "critical",
+              "applies_to": "walking/working surfaces",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "guardrail_height", "condition": "guardrail system height", "value": "39", "unit": "inches", "operator": "<"}
+                ],
+                "expression": "guardrail_height"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [
+                  {"id": "access_entrances", "description": "entrances to points of access", "conditions": []}
+                ],
+                "expression": "access_entrances"
+              }
+            },
+            {
+              "rule_id": "1926.500(b)-low_slope_roof",
+              "text": "Low-slope roof means a roof having a slope less than or equal to 4 in 12 (vertical to horizontal).",
+              "requirement": "classify roofs with slope 4:12 or less as low-slope",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "roof work",
+              "work_types": ["roofing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "roof_slope", "condition": "roof slope ratio", "value": "4", "unit": "in 12 (vertical to horizontal)", "operator": "<="}
+                ],
+                "expression": "roof_slope"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.500(b)-steep_roof",
+              "text": "Steep roof means a roof having a slope greater than 4 in 12 (vertical to horizontal).",
+              "requirement": "classify roofs with slope greater than 4:12 as steep",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "roof work",
+              "work_types": ["roofing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "roof_slope_steep", "condition": "roof slope ratio", "value": "4", "unit": "in 12 (vertical to horizontal)", "operator": ">"}
+                ],
+                "expression": "roof_slope_steep"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.501",
+      "title": "Duty to have fall protection",
+      "subsections": [
+        {
+          "subsection": "1926.501(a)",
+          "title": "General",
+          "rules": [
+            {
+              "rule_id": "1926.501(a)(2)",
+              "text": "The employer shall determine if the walking/working surfaces on which its employees are to work have the strength and structural integrity to support employees safely.",
+              "requirement": "assess walking/working surface strength and structural integrity before allowing work",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["structural assessment", "strength verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.501(b)",
+          "title": "Specific fall protection requirements",
+          "rules": [
+            {
+              "rule_id": "1926.501(b)(1)",
+              "text": "Each employee on a walking/working surface (horizontal and vertical surface) with an unprotected side or edge which is 6 feet (1.8 m) or more above a lower level shall be protected from falling by the use of guardrail systems, safety net systems, or personal fall arrest systems.",
+              "requirement": "provide fall protection for employees 6 feet or more above lower levels at unprotected sides/edges",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees on walking/working surfaces",
+              "work_types": ["construction", "maintenance", "installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "height_unprotected", "condition": "height above lower level at unprotected sides/edges", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "height_unprotected"
+              },
+              "protections": ["guardrail systems", "safety net systems", "personal fall arrest systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(2)(i)",
+              "text": "Each employee who is constructing a leading edge 6 feet (1.8 m) or more above lower levels shall be protected from falling by guardrail systems, safety net systems, or personal fall arrest systems.",
+              "requirement": "provide fall protection for leading edge construction 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees constructing leading edges",
+              "work_types": ["leading edge construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "leading_edge_height", "condition": "leading edge height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "leading_edge_height"
+              },
+              "protections": ["guardrail systems", "safety net systems", "personal fall arrest systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "infeasible_greater_hazard", "description": "when employer can demonstrate it is infeasible or creates a greater hazard to use these systems", "conditions": []}
+                ],
+                "expression": "infeasible_greater_hazard"
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(3)",
+              "text": "Each employee in a hoist area shall be protected from falling 6 feet (1.8 m) or more to lower levels by guardrail systems or personal fall arrest systems.",
+              "requirement": "provide fall protection in hoist areas for falls 6 feet or more",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees in hoist areas",
+              "work_types": ["hoisting operations", "material handling"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hoist_area_height", "condition": "height in hoist area", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "hoist_area_height"
+              },
+              "protections": ["guardrail systems", "personal fall arrest systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(4)(i)",
+              "text": "Each employee on walking/working surfaces shall be protected from falling through holes (including skylights) more than 6 feet (1.8 m) above lower levels, by personal fall arrest systems, covers, or guardrail systems erected around such holes.",
+              "requirement": "protect employees from falling through holes more than 6 feet above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees on walking/working surfaces with holes",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hole_height", "condition": "height of hole above lower level", "value": "6", "unit": "feet", "operator": ">"}
+                ],
+                "expression": "hole_height"
+              },
+              "protections": ["personal fall arrest systems", "covers", "guardrail systems around holes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(4)(ii)",
+              "text": "Each employee on a walking/working surface shall be protected from tripping in or stepping into or through holes (including skylights) by covers.",
+              "requirement": "protect employees from tripping in or stepping through holes using covers",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employees on walking/working surfaces with holes",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["covers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(5)",
+              "text": "Each employee on the face of formwork or reinforcing steel shall be protected from falling 6 feet (1.8 m) or more to lower levels by personal fall arrest systems, safety net systems, or positioning device systems.",
+              "requirement": "provide fall protection for formwork and reinforcing steel work 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees on formwork or reinforcing steel",
+              "work_types": ["formwork", "reinforcing steel installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "formwork_height", "condition": "height of formwork/reinforcing steel above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "formwork_height"
+              },
+              "protections": ["personal fall arrest systems", "safety net systems", "positioning device systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(6)",
+              "text": "Each employee on ramps, runways, and other walkways shall be protected from falling 6 feet (1.8 m) or more to lower levels by guardrail systems.",
+              "requirement": "provide guardrail systems for ramps, runways, and walkways 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees on ramps, runways, and walkways",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "walkway_height", "condition": "height of ramps/runways/walkways above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "walkway_height"
+              },
+              "protections": ["guardrail systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(7)(i)",
+              "text": "Each employee at the edge of an excavation 6 feet (1.8 m) or more in depth shall be protected from falling by guardrail systems, fences, or barricades when the excavations are not readily seen because of plant growth or other visual barrier.",
+              "requirement": "provide protection at excavation edges 6 feet or more deep when not readily visible",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees at excavation edges",
+              "work_types": ["excavation", "construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "excavation_depth", "condition": "excavation depth", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "visual_barrier", "condition": "excavation not readily seen due to visual barrier", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "excavation_depth AND visual_barrier"
+              },
+              "protections": ["guardrail systems", "fences", "barricades"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(7)(ii)",
+              "text": "Each employee at the edge of a well, pit, shaft, and similar excavation 6 feet (1.8 m) or more in depth shall be protected from falling by guardrail systems, fences, barricades, or covers.",
+              "requirement": "provide protection at edges of wells, pits, shafts 6 feet or more deep",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees at edges of wells, pits, shafts",
+              "work_types": ["excavation", "construction", "utilities"],
+              "triggers": {
+                "conditions": [
+                  {"id": "well_pit_depth", "condition": "well/pit/shaft depth", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "well_pit_depth"
+              },
+              "protections": ["guardrail systems", "fences", "barricades", "covers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(8)(i)",
+              "text": "Each employee less than 6 feet (1.8 m) above dangerous equipment shall be protected from falling into or onto the dangerous equipment by guardrail systems or by equipment guards.",
+              "requirement": "protect employees less than 6 feet above dangerous equipment from falling into/onto equipment",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees near dangerous equipment",
+              "work_types": ["construction", "maintenance", "industrial"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dangerous_equipment_height", "condition": "height above dangerous equipment", "value": "6", "unit": "feet", "operator": "<"}
+                ],
+                "expression": "dangerous_equipment_height"
+              },
+              "protections": ["guardrail systems", "equipment guards"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(8)(ii)",
+              "text": "Each employee 6 feet (1.8 m) or more above dangerous equipment shall be protected from fall hazards by guardrail systems, personal fall arrest systems, or safety net systems.",
+              "requirement": "protect employees 6 feet or more above dangerous equipment from fall hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees 6+ feet above dangerous equipment",
+              "work_types": ["construction", "maintenance", "industrial"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dangerous_equipment_height_6ft", "condition": "height above dangerous equipment", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "dangerous_equipment_height_6ft"
+              },
+              "protections": ["guardrail systems", "personal fall arrest systems", "safety net systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(9)(i)",
+              "text": "Each employee performing overhand bricklaying and related work 6 feet (1.8 m) or more above lower levels, shall be protected from falling by guardrail systems, safety net systems, personal fall arrest systems, or shall work in a controlled access zone.",
+              "requirement": "provide fall protection for overhand bricklaying 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees performing overhand bricklaying",
+              "work_types": ["overhand bricklaying", "masonry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "bricklaying_height", "condition": "overhand bricklaying height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "bricklaying_height"
+              },
+              "protections": ["guardrail systems", "safety net systems", "personal fall arrest systems", "controlled access zone"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(9)(ii)",
+              "text": "Each employee reaching more than 10 inches (25 cm) below the level of the walking/working surface on which they are working, shall be protected from falling by a guardrail system, safety net system, or personal fall arrest system.",
+              "requirement": "provide fall protection when reaching more than 10 inches below working surface",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees reaching below working surface",
+              "work_types": ["overhand bricklaying", "construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "reach_below", "condition": "reach below walking/working surface", "value": "10", "unit": "inches", "operator": ">"}
+                ],
+                "expression": "reach_below"
+              },
+              "protections": ["guardrail system", "safety net system", "personal fall arrest system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(10)",
+              "text": "Each employee engaged in roofing activities on low-slope roofs, with unprotected sides and edges 6 feet (1.8 m) or more above lower levels shall be protected from falling by guardrail systems, safety net systems, personal fall arrest systems, or combination protection systems, or safety monitoring system alone on roofs 50 feet (15.25 m) or less in width.",
+              "requirement": "provide fall protection for low-slope roofing work 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees doing roofing on low-slope roofs",
+              "work_types": ["roofing", "low-slope roof work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "low_slope_roofing_height", "condition": "low-slope roof height above lower level", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "roof_width_monitoring", "condition": "roof width for safety monitoring alone", "value": "50", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "low_slope_roofing_height"
+              },
+              "protections": ["guardrail systems", "safety net systems", "personal fall arrest systems", "warning line system combinations", "safety monitoring system alone (roofs ≤50 ft wide)"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(11)",
+              "text": "Each employee on a steep roof with unprotected sides and edges 6 feet (1.8 m) or more above lower levels shall be protected from falling by guardrail systems with toeboards, safety net systems, or personal fall arrest systems.",
+              "requirement": "provide fall protection for steep roof work 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees on steep roofs",
+              "work_types": ["roofing", "steep roof work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "steep_roof_height", "condition": "steep roof height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "steep_roof_height"
+              },
+              "protections": ["guardrail systems with toeboards", "safety net systems", "personal fall arrest systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(12)",
+              "text": "Each employee engaged in the erection of precast concrete members who is 6 feet (1.8 m) or more above lower levels shall be protected from falling by guardrail systems, safety net systems, or personal fall arrest systems.",
+              "requirement": "provide fall protection for precast concrete erection 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees erecting precast concrete",
+              "work_types": ["precast concrete erection", "concrete construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "precast_height", "condition": "precast concrete erection height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "precast_height"
+              },
+              "protections": ["guardrail systems", "safety net systems", "personal fall arrest systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "precast_infeasible", "description": "when employer can demonstrate it is infeasible or creates a greater hazard to use these systems", "conditions": []}
+                ],
+                "expression": "precast_infeasible"
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(13)",
+              "text": "Each employee engaged in residential construction activities 6 feet (1.8 m) or more above lower levels shall be protected by guardrail systems, safety net system, or personal fall arrest system.",
+              "requirement": "provide fall protection for residential construction 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees in residential construction",
+              "work_types": ["residential construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "residential_height", "condition": "residential construction height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "residential_height"
+              },
+              "protections": ["guardrail systems", "safety net system", "personal fall arrest system"],
+              "exceptions": {
+                "items": [
+                  {"id": "residential_infeasible", "description": "when employer can demonstrate it is infeasible or creates a greater hazard to use these systems", "conditions": []}
+                ],
+                "expression": "residential_infeasible"
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(14)",
+              "text": "Each employee working on, at, above, or near wall openings where the outside bottom edge of the wall opening is 6 feet (1.8 m) or more above lower levels and the inside bottom edge of the wall opening is less than 39 inches (1.0 m) above the walking/working surface, shall be protected from falling by the use of a guardrail system, a safety net system, or a personal fall arrest system.",
+              "requirement": "provide fall protection for work near wall openings with specific dimensional criteria",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees working near wall openings",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wall_opening_outside", "condition": "outside bottom edge height above lower level", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "wall_opening_inside", "condition": "inside bottom edge height above walking surface", "value": "39", "unit": "inches", "operator": "<"}
+                ],
+                "expression": "wall_opening_outside AND wall_opening_inside"
+              },
+              "protections": ["guardrail system", "safety net system", "personal fall arrest system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.501(b)(15)",
+              "text": "Each employee on a walking/working surface 6 feet (1.8 m) or more above lower levels shall be protected from falling by a guardrail system, safety net system, or personal fall arrest system.",
+              "requirement": "provide fall protection for all other walking/working surfaces 6 feet or more above lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees on walking/working surfaces not otherwise addressed",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "general_height", "condition": "walking/working surface height above lower level", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "general_height"
+              },
+              "protections": ["guardrail system", "safety net system", "personal fall arrest system"],
+              "exceptions": {
+                "items": [
+                  {"id": "other_provisions", "description": "as provided in § 1926.500(a)(2) or in § 1926.501 (b)(1) through (b)(14)", "conditions": []}
+                ],
+                "expression": "other_provisions"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.501(c)",
+          "title": "Protection from falling objects",
+          "rules": [
+            {
+              "rule_id": "1926.501(c)",
+              "text": "When an employee is exposed to falling objects, the employer shall have each employee wear a hard hat and shall implement one of the following measures: toeboards/screens/guardrails, canopy structure, or barricade area.",
+              "requirement": "provide hard hats and falling object protection when employees exposed to falling objects",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees exposed to falling objects",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "falling_object_exposure", "condition": "employee exposed to falling objects", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "falling_object_exposure"
+              },
+              "protections": ["hard hats", "toeboards", "screens", "guardrail systems", "canopy structure", "barricaded area"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.502",
+      "title": "Fall protection systems criteria and practices",
+      "subsections": [
+        {
+          "subsection": "1926.502(b)",
+          "title": "Guardrail systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(b)(1)",
+              "text": "Top edge height of top rails, or equivalent guardrail system members, shall be 42 inches (1.1 m) plus or minus 3 inches (8 cm) above the walking/working level.",
+              "requirement": "maintain guardrail top edge height between 39-45 inches above walking/working level",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all guardrail systems",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "top_rail_height_min", "condition": "top rail height minimum", "value": "39", "unit": "inches", "operator": ">="},
+                  {"id": "top_rail_height_max", "condition": "top rail height maximum", "value": "45", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "top_rail_height_min AND top_rail_height_max"
+              },
+              "protections": ["proper guardrail height"],
+              "exceptions": {
+                "items": [
+                  {"id": "height_exceed_conditions", "description": "height may exceed 45 inches when conditions warrant and system meets all other criteria", "conditions": []}
+                ],
+                "expression": "height_exceed_conditions"
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(2)",
+              "text": "Midrails, screens, mesh, intermediate vertical members, or equivalent intermediate structural members shall be installed between the top edge of the guardrail system and the walking/working surface when there is no wall or parapet wall at least 21 inches (53 cm) high.",
+              "requirement": "install intermediate protection when no wall/parapet of 21+ inches exists",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "guardrail systems without adequate walls",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wall_height", "condition": "wall or parapet wall height", "value": "21", "unit": "inches", "operator": "<"}
+                ],
+                "expression": "wall_height"
+              },
+              "protections": ["midrails", "screens", "mesh", "intermediate vertical members"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(2)(iii)",
+              "text": "Intermediate members (such as balusters), when used between posts, shall be not more than 19 inches (48 cm) apart.",
+              "requirement": "space intermediate members maximum 19 inches apart",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "guardrail systems with intermediate members",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "intermediate_spacing", "condition": "spacing between intermediate members", "value": "19", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "intermediate_spacing"
+              },
+              "protections": ["proper spacing of intermediate members"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(2)(iv)",
+              "text": "Other structural members shall be installed such that there are no openings in the guardrail system that are more than 19 inches (.5 m) wide.",
+              "requirement": "ensure no guardrail openings exceed 19 inches wide",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all guardrail systems",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "opening_width", "condition": "guardrail system opening width", "value": "19", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "opening_width"
+              },
+              "protections": ["controlled opening sizes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(3)",
+              "text": "Guardrail systems shall be capable of withstanding, without failure, a force of at least 200 pounds (890 N) applied within 2 inches (5.1 cm) of the top edge, in any outward or downward direction, at any point along the top edge.",
+              "requirement": "design guardrails to withstand 200 pound force at top edge",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all guardrail systems",
+              "work_types": ["guardrail design", "installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "top_edge_force", "condition": "force resistance at top edge", "value": "200", "unit": "pounds", "operator": ">="},
+                  {"id": "force_application_distance", "condition": "force application distance from top edge", "value": "2", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "top_edge_force AND force_application_distance"
+              },
+              "protections": ["adequate structural strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(4)",
+              "text": "When the 200 pound test load is applied in a downward direction, the top edge of the guardrail shall not deflect to a height less than 39 inches (1.0 m) above the walking/working level.",
+              "requirement": "ensure guardrail maintains minimum 39-inch height under 200 pound downward load",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all guardrail systems",
+              "work_types": ["guardrail design", "testing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "deflection_height", "condition": "top edge height under load", "value": "39", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "deflection_height"
+              },
+              "protections": ["controlled deflection limits"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(5)",
+              "text": "Midrails, screens, mesh, intermediate vertical members, solid panels, and equivalent structural members shall be capable of withstanding, without failure, a force of at least 150 pounds (666 N) applied in any downward or outward direction at any point along the midrail or other member.",
+              "requirement": "design intermediate guardrail components to withstand 150 pound force",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "intermediate guardrail components",
+              "work_types": ["guardrail design", "installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "intermediate_force", "condition": "force resistance of intermediate members", "value": "150", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "intermediate_force"
+              },
+              "protections": ["adequate intermediate member strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(b)(9)",
+              "text": "Top rails and midrails shall be at least one-quarter inch (0.6 cm) nominal diameter or thickness to prevent cuts and lacerations. If wire rope is used for top rails, it shall be flagged at not more than 6-foot (1.8 m) intervals with high-visibility material.",
+              "requirement": "ensure minimum rail thickness and flag wire rope every 6 feet maximum",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "guardrail rails",
+              "work_types": ["guardrail installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "rail_thickness", "condition": "rail diameter or thickness", "value": "0.25", "unit": "inches", "operator": ">="},
+                  {"id": "wire_rope_flagging", "condition": "wire rope flagging interval", "value": "6", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "rail_thickness AND (wire_rope_flagging IF wire_rope_used)"
+              },
+              "protections": ["adequate rail thickness", "high-visibility flagging"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(c)",
+          "title": "Safety net systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(c)(1)",
+              "text": "Safety nets shall be installed as close as practicable under the walking/working surface on which employees are working, but in no case more than 30 feet (9.1 m) below such level.",
+              "requirement": "install safety nets maximum 30 feet below working surface",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety net installations",
+              "work_types": ["safety net installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "net_distance", "condition": "distance of net below working surface", "value": "30", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "net_distance"
+              },
+              "protections": ["proper net positioning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(c)(2)",
+              "text": "Safety nets shall extend outward from the outermost projection of the work surface as specified in the distance table.",
+              "requirement": "extend safety nets proper distances based on height: up to 5ft=8ft, 5-10ft=10ft, >10ft=13ft",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety net installations",
+              "work_types": ["safety net installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "height_up_to_5", "condition": "vertical distance up to 5 feet", "value": "5", "unit": "feet", "operator": "<="},
+                  {"id": "extension_8ft", "condition": "net extension for up to 5ft height", "value": "8", "unit": "feet", "operator": ">="},
+                  {"id": "height_5_to_10", "condition": "vertical distance 5 to 10 feet", "value": "10", "unit": "feet", "operator": "<="},
+                  {"id": "extension_10ft", "condition": "net extension for 5-10ft height", "value": "10", "unit": "feet", "operator": ">="},
+                  {"id": "height_over_10", "condition": "vertical distance over 10 feet", "value": "10", "unit": "feet", "operator": ">"},
+                  {"id": "extension_13ft", "condition": "net extension for >10ft height", "value": "13", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "(height_up_to_5 AND extension_8ft) OR (height_5_to_10 AND extension_10ft) OR (height_over_10 AND extension_13ft)"
+              },
+              "protections": ["adequate net coverage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(c)(4)(i)",
+              "text": "Safety nets shall be drop-tested with a 400 pound (180 kg) bag after initial installation, when relocated, after major repair, and at 6-month intervals, dropped from the highest working surface but not less than 42 inches above net level.",
+              "requirement": "conduct drop tests with 400 pound bag at specified intervals and conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety net systems",
+              "work_types": ["safety net testing", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "test_weight", "condition": "drop test weight", "value": "400", "unit": "pounds", "operator": "="},
+                  {"id": "minimum_drop_height", "condition": "minimum drop height above net", "value": "42", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "test_weight AND minimum_drop_height"
+              },
+              "protections": ["verified net integrity"],
+              "exceptions": {
+                "items": [
+                  {"id": "unreasonable_test", "description": "when employer can demonstrate drop-test is unreasonable", "conditions": []}
+                ],
+                "expression": "unreasonable_test"
+              }
+            },
+            {
+              "rule_id": "1926.502(c)(7)",
+              "text": "The maximum size of each safety net mesh opening shall not exceed 36 square inches (230 cm²) nor be longer than 6 inches (15 cm) on any side, and the opening, measured center-to-center of mesh ropes or webbing, shall not be longer than 6 inches (15 cm).",
+              "requirement": "limit mesh openings to maximum 36 square inches and 6 inches on any side",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "safety net mesh",
+              "work_types": ["safety net specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "mesh_area", "condition": "mesh opening area", "value": "36", "unit": "square inches", "operator": "<="},
+                  {"id": "mesh_side_length", "condition": "mesh opening side length", "value": "6", "unit": "inches", "operator": "<="},
+                  {"id": "mesh_center_distance", "condition": "center-to-center mesh distance", "value": "6", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "mesh_area AND mesh_side_length AND mesh_center_distance"
+              },
+              "protections": ["controlled mesh opening sizes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(c)(8)",
+              "text": "Each safety net (or section of it) shall have a border rope for webbing with a minimum breaking strength of 5,000 pounds (22.2 kN).",
+              "requirement": "provide border rope/webbing with minimum 5,000 pound breaking strength",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "safety nets",
+              "work_types": ["safety net specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "border_strength", "condition": "border rope/webbing breaking strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "border_strength"
+              },
+              "protections": ["adequate border strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(d)",
+          "title": "Personal fall arrest systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(d)(3)",
+              "text": "Dee-rings and snaphooks shall have a minimum tensile strength of 5,000 pounds (22.2 kN).",
+              "requirement": "ensure dee-rings and snaphooks have minimum 5,000 pound tensile strength",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest system components",
+              "work_types": ["fall arrest system specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dee_ring_strength", "condition": "dee-ring tensile strength", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "snaphook_strength", "condition": "snaphook tensile strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "dee_ring_strength AND snaphook_strength"
+              },
+              "protections": ["adequate component strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(d)(9)",
+              "text": "Lanyards and vertical lifelines shall have a minimum breaking strength of 5,000 pounds (22.2 kN).",
+              "requirement": "ensure lanyards and vertical lifelines have minimum 5,000 pound breaking strength",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "lanyards and vertical lifelines",
+              "work_types": ["fall arrest system specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "lanyard_strength", "condition": "lanyard breaking strength", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "lifeline_strength", "condition": "vertical lifeline breaking strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "lanyard_strength AND lifeline_strength"
+              },
+              "protections": ["adequate lanyard and lifeline strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(d)(12)",
+              "text": "Self-retracting lifelines and lanyards which automatically limit free fall distance to 2 feet (0.61 m) or less shall be capable of sustaining a minimum tensile load of 3,000 pounds (13.3 kN).",
+              "requirement": "ensure self-retracting devices limiting falls to 2 feet sustain 3,000 pound load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "self-retracting lifelines/lanyards",
+              "work_types": ["fall arrest system specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "free_fall_limit", "condition": "automatic free fall distance limit", "value": "2", "unit": "feet", "operator": "<="},
+                  {"id": "tensile_load_3000", "condition": "minimum tensile load capacity", "value": "3000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "free_fall_limit AND tensile_load_3000"
+              },
+              "protections": ["adequate self-retracting device strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(d)(15)",
+              "text": "Anchorages used for attachment of personal fall arrest equipment shall be capable of supporting at least 5,000 pounds (22.2 kN) per employee attached, or shall be designed as part of a complete system maintaining a safety factor of at least two under supervision of a qualified person.",
+              "requirement": "provide anchorages supporting 5,000 pounds per employee or designed system with 2:1 safety factor",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fall arrest anchorages",
+              "work_types": ["anchorage design", "installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "anchorage_strength_per_employee", "condition": "anchorage strength per employee", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "system_safety_factor", "condition": "complete system safety factor", "value": "2", "unit": "ratio", "operator": ">="}
+                ],
+                "expression": "anchorage_strength_per_employee OR system_safety_factor"
+              },
+              "protections": ["adequate anchorage strength", "qualified design supervision"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(d)(16)(iii)",
+              "text": "Personal fall arrest systems shall be rigged such that an employee can neither free fall more than 6 feet (1.8 m), nor contact any lower level.",
+              "requirement": "limit free fall to maximum 6 feet and prevent contact with lower levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest systems",
+              "work_types": ["fall arrest rigging"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_free_fall", "condition": "maximum free fall distance", "value": "6", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_free_fall"
+              },
+              "protections": ["controlled fall distances", "clearance from lower levels"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(d)(16)(iv)",
+              "text": "Personal fall arrest systems shall bring an employee to a complete stop and limit maximum deceleration distance an employee travels to 3.5 feet (1.07 m).",
+              "requirement": "limit maximum deceleration distance to 3.5 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest systems",
+              "work_types": ["fall arrest design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_deceleration", "condition": "maximum deceleration distance", "value": "3.5", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_deceleration"
+              },
+              "protections": ["controlled deceleration"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(e)",
+          "title": "Positioning device systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(e)(1)",
+              "text": "Positioning devices shall be rigged such that an employee cannot free fall more than 2 feet (.6 m).",
+              "requirement": "limit positioning device free fall to maximum 2 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "positioning device systems",
+              "work_types": ["positioning device rigging"],
+              "triggers": {
+                "conditions": [
+                  {"id": "positioning_free_fall", "condition": "positioning device free fall distance", "value": "2", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "positioning_free_fall"
+              },
+              "protections": ["controlled positioning fall distance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(e)(2)",
+              "text": "Positioning devices shall be secured to an anchorage capable of supporting at least twice the potential impact load of an employee's fall or 3,000 pounds (13.3 kN), whichever is greater.",
+              "requirement": "secure positioning devices to anchorage supporting 2x impact load or 3,000 pounds minimum",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "positioning device anchorages",
+              "work_types": ["positioning device installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "positioning_anchorage_impact", "condition": "anchorage strength - 2x impact load", "value": "2", "unit": "times impact load", "operator": ">="},
+                  {"id": "positioning_anchorage_min", "condition": "minimum anchorage strength", "value": "3000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "positioning_anchorage_impact OR positioning_anchorage_min"
+              },
+              "protections": ["adequate positioning anchorage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(f)",
+          "title": "Warning line systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(f)(1)(i)",
+              "text": "When mechanical equipment is not being used, the warning line shall be erected not less than 6 feet (1.8 m) from the roof edge.",
+              "requirement": "maintain warning line minimum 6 feet from roof edge when no mechanical equipment used",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "warning line systems without mechanical equipment",
+              "work_types": ["roofing without mechanical equipment"],
+              "triggers": {
+                "conditions": [
+                  {"id": "warning_line_distance_no_equipment", "condition": "warning line distance from edge without equipment", "value": "6", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "warning_line_distance_no_equipment"
+              },
+              "protections": ["adequate warning distance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(f)(1)(ii)",
+              "text": "When mechanical equipment is being used, the warning line shall be erected not less than 6 feet (1.8 m) from the roof edge parallel to equipment operation, and not less than 10 feet (3.1 m) from the roof edge perpendicular to equipment operation.",
+              "requirement": "maintain warning line 6 feet parallel and 10 feet perpendicular to mechanical equipment operation",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "warning line systems with mechanical equipment",
+              "work_types": ["roofing with mechanical equipment"],
+              "triggers": {
+                "conditions": [
+                  {"id": "warning_line_parallel", "condition": "warning line distance parallel to equipment", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "warning_line_perpendicular", "condition": "warning line distance perpendicular to equipment", "value": "10", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "warning_line_parallel AND warning_line_perpendicular"
+              },
+              "protections": ["adequate clearance for equipment operation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(f)(2)(ii)",
+              "text": "The rope, wire, or chain shall be rigged and supported so that its lowest point (including sag) is no less than 34 inches (.9 m) from the walking/working surface and its highest point is no more than 39 inches (1.0 m) from the walking/working surface.",
+              "requirement": "maintain warning line height between 34-39 inches above walking surface",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "warning line systems",
+              "work_types": ["warning line installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "warning_line_min_height", "condition": "warning line minimum height", "value": "34", "unit": "inches", "operator": ">="},
+                  {"id": "warning_line_max_height", "condition": "warning line maximum height", "value": "39", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "warning_line_min_height AND warning_line_max_height"
+              },
+              "protections": ["proper warning line visibility and effectiveness"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(f)(2)(iv)",
+              "text": "The rope, wire, or chain shall have a minimum tensile strength of 500 pounds (2.22 kN).",
+              "requirement": "ensure warning line has minimum 500 pound tensile strength",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "warning line materials",
+              "work_types": ["warning line specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "warning_line_strength", "condition": "warning line tensile strength", "value": "500", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "warning_line_strength"
+              },
+              "protections": ["adequate warning line strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(g)",
+          "title": "Controlled access zones",
+          "rules": [
+            {
+              "rule_id": "1926.502(g)(1)(i)",
+              "text": "When control lines are used for leading edge work, they shall be erected not less than 6 feet (1.8 m) nor more than 25 feet (7.7 m) from the unprotected or leading edge, except when erecting precast concrete members.",
+              "requirement": "position control lines 6-25 feet from leading edge for general work",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "controlled access zones for leading edge work",
+              "work_types": ["leading edge work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "control_line_min_distance", "condition": "control line minimum distance from edge", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "control_line_max_distance", "condition": "control line maximum distance from edge", "value": "25", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "control_line_min_distance AND control_line_max_distance"
+              },
+              "protections": ["proper controlled access zone sizing"],
+              "exceptions": {
+                "items": [
+                  {"id": "precast_concrete_work", "description": "when erecting precast concrete members", "conditions": []}
+                ],
+                "expression": "precast_concrete_work"
+              }
+            },
+            {
+              "rule_id": "1926.502(g)(1)(ii)",
+              "text": "When erecting precast concrete members, the control line shall be erected not less than 6 feet (1.8 m) nor more than 60 feet (18 m) or half the length of the member being erected, whichever is less, from the leading edge.",
+              "requirement": "position control lines for precast work 6 feet to lesser of 60 feet or half member length",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "controlled access zones for precast concrete erection",
+              "work_types": ["precast concrete erection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "precast_control_min", "condition": "precast control line minimum distance", "value": "6", "unit": "feet", "operator": ">="},
+                  {"id": "precast_control_max_60", "condition": "precast control line maximum 60 feet", "value": "60", "unit": "feet", "operator": "<="},
+                  {"id": "precast_half_length", "condition": "half length of member being erected", "value": "0.5", "unit": "times member length", "operator": "<="}
+                ],
+                "expression": "precast_control_min AND (precast_control_max_60 OR precast_half_length)"
+              },
+              "protections": ["proper precast work zone sizing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(g)(2)(i)",
+              "text": "When used to control access to areas where overhand bricklaying and related work are taking place, the controlled access zone shall be defined by a control line erected not less than 10 feet (3.1 m) nor more than 15 feet (4.5 m) from the working edge.",
+              "requirement": "position control lines 10-15 feet from working edge for overhand bricklaying",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "controlled access zones for overhand bricklaying",
+              "work_types": ["overhand bricklaying"],
+              "triggers": {
+                "conditions": [
+                  {"id": "bricklaying_control_min", "condition": "bricklaying control line minimum distance", "value": "10", "unit": "feet", "operator": ">="},
+                  {"id": "bricklaying_control_max", "condition": "bricklaying control line maximum distance", "value": "15", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "bricklaying_control_min AND bricklaying_control_max"
+              },
+              "protections": ["proper bricklaying work zone"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(g)(3)(ii)",
+              "text": "Each control line shall be rigged and supported so that its lowest point (including sag) is not less than 39 inches (1 m) from the walking/working surface and its highest point is not more than 45 inches (1.3 m) [50 inches (1.3 m) when overhand bricklaying operations are being performed] from the walking/working surface.",
+              "requirement": "maintain control line height 39-45 inches (50 inches for bricklaying) above walking surface",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "control lines",
+              "work_types": ["controlled access zone installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "control_line_min_height", "condition": "control line minimum height", "value": "39", "unit": "inches", "operator": ">="},
+                  {"id": "control_line_max_height_general", "condition": "control line maximum height general", "value": "45", "unit": "inches", "operator": "<="},
+                  {"id": "control_line_max_height_bricklaying", "condition": "control line maximum height bricklaying", "value": "50", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "control_line_min_height AND (control_line_max_height_general OR control_line_max_height_bricklaying)"
+              },
+              "protections": ["proper control line visibility"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(h)",
+          "title": "Safety monitoring systems",
+          "rules": [
+            {
+              "rule_id": "1926.502(h)(1)",
+              "text": "The employer shall designate a competent person to monitor the safety of other employees and ensure the safety monitor is competent to recognize fall hazards, warns employees of hazards, stays on same surface within visual distance, can communicate orally, and has no other distracting responsibilities.",
+              "requirement": "designate competent safety monitor with specific qualifications and responsibilities",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety monitoring systems",
+              "work_types": ["safety monitoring"],
+              "personnel_required": "competent person",
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["competent safety monitoring", "hazard recognition", "warning system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(i)",
+          "title": "Covers",
+          "rules": [
+            {
+              "rule_id": "1926.502(i)(1)",
+              "text": "Covers located in roadways and vehicular aisles shall be capable of supporting, without failure, at least twice the maximum axle load of the largest vehicle expected to cross over the cover.",
+              "requirement": "design roadway covers to support twice maximum vehicle axle load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "covers in roadways and vehicular aisles",
+              "work_types": ["cover installation", "roadway construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "vehicle_cover_load", "condition": "cover load capacity", "value": "2", "unit": "times maximum axle load", "operator": ">="}
+                ],
+                "expression": "vehicle_cover_load"
+              },
+              "protections": ["adequate vehicle load support"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(i)(2)",
+              "text": "All other covers shall be capable of supporting, without failure, at least twice the weight of employees, equipment, and materials that may be imposed on the cover at any one time.",
+              "requirement": "design general covers to support twice expected load of employees, equipment, and materials",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "general covers",
+              "work_types": ["cover installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "general_cover_load", "condition": "cover load capacity", "value": "2", "unit": "times expected load", "operator": ">="}
+                ],
+                "expression": "general_cover_load"
+              },
+              "protections": ["adequate load support"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(i)(4)",
+              "text": "All covers shall be color coded or they shall be marked with the word 'HOLE' or 'COVER' to provide warning of the hazard.",
+              "requirement": "color code covers or mark with 'HOLE' or 'COVER' warning",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all covers",
+              "work_types": ["cover installation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["visual hazard warning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.502(j)",
+          "title": "Protection from falling objects",
+          "rules": [
+            {
+              "rule_id": "1926.502(j)(2)",
+              "text": "Toeboards shall be capable of withstanding, without failure, a force of at least 50 pounds (222 N) applied in any downward or outward direction at any point along the toeboard.",
+              "requirement": "design toeboards to withstand minimum 50 pound force",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "toeboards",
+              "work_types": ["toeboard installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "toeboard_force", "condition": "toeboard force resistance", "value": "50", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "toeboard_force"
+              },
+              "protections": ["adequate toeboard strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(j)(3)",
+              "text": "Toeboards shall be a minimum of 3½ inches (9 cm) in vertical height from their top edge to the level of the walking/working surface. They shall have not more than ¼ inch (0.6 cm) clearance above the walking/working surface.",
+              "requirement": "maintain toeboard minimum 3.5 inch height with maximum 0.25 inch clearance",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "toeboards",
+              "work_types": ["toeboard installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "toeboard_height", "condition": "toeboard vertical height", "value": "3.5", "unit": "inches", "operator": ">="},
+                  {"id": "toeboard_clearance", "condition": "toeboard clearance above surface", "value": "0.25", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "toeboard_height AND toeboard_clearance"
+              },
+              "protections": ["adequate toeboard coverage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.502(j)(6)(i)",
+              "text": "During the performance of overhand bricklaying and related work, no materials or equipment except masonry and mortar shall be stored within 4 feet (1.2 m) of the working edge.",
+              "requirement": "prohibit storage of non-masonry materials within 4 feet of overhand bricklaying edge",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "overhand bricklaying operations",
+              "work_types": ["overhand bricklaying"],
+              "triggers": {
+                "conditions": [
+                  {"id": "bricklaying_storage_distance", "condition": "distance from working edge", "value": "4", "unit": "feet", "operator": ">"}
+                ],
+                "expression": "bricklaying_storage_distance"
+              },
+              "protections": ["controlled material storage"],
+              "exceptions": {
+                "items": [
+                  {"id": "masonry_mortar", "description": "masonry and mortar materials", "conditions": []}
+                ],
+                "expression": "masonry_mortar"
+              }
+            },
+            {
+              "rule_id": "1926.502(j)(7)(i)",
+              "text": "During the performance of roofing work, materials and equipment shall not be stored within 6 feet (1.8 m) of a roof edge unless guardrails are erected at the edge.",
+              "requirement": "prohibit roofing material storage within 6 feet of roof edge unless guardrails installed",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "roofing operations",
+              "work_types": ["roofing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "roofing_storage_distance", "condition": "distance from roof edge", "value": "6", "unit": "feet", "operator": ">"}
+                ],
+                "expression": "roofing_storage_distance"
+              },
+              "protections": ["controlled roofing material storage"],
+              "exceptions": {
+                "items": [
+                  {"id": "edge_guardrails", "description": "guardrails are erected at the edge", "conditions": []}
+                ],
+                "expression": "edge_guardrails"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.503",
+      "title": "Training requirements",
+      "subsections": [
+        {
+          "subsection": "1926.503(a)",
+          "title": "Training program",
+          "rules": [
+            {
+              "rule_id": "1926.503(a)(1)",
+              "text": "The employer shall provide a training program for each employee who might be exposed to fall hazards. The program shall enable each employee to recognize the hazards of falling and shall train each employee in the procedures to be followed in order to minimize these hazards.",
+              "requirement": "provide fall hazard training program for all employees exposed to fall hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees exposed to fall hazards",
+              "work_types": ["construction", "maintenance"],
+              "personnel_required": "competent person for training",
+              "triggers": {
+                "conditions": [
+                  {"id": "fall_hazard_exposure", "condition": "employee exposed to fall hazards", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "fall_hazard_exposure"
+              },
+              "protections": ["hazard recognition training", "procedure training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.503(a)(2)",
+              "text": "The employer shall assure that each employee has been trained by a competent person qualified in fall protection areas including: nature of fall hazards, correct procedures for system installation/maintenance/inspection, use and operation of protection systems, employee roles in safety monitoring, equipment limitations, handling and storage procedures, and standards contained in this subpart.",
+              "requirement": "ensure comprehensive fall protection training by competent person covering all specified areas",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees using fall protection",
+              "work_types": ["fall protection work"],
+              "personnel_required": "competent person",
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["comprehensive fall protection knowledge"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.503(b)",
+          "title": "Certification of training",
+          "rules": [
+            {
+              "rule_id": "1926.503(b)(1)",
+              "text": "The employer shall verify compliance with training requirements by preparing a written certification record containing the name or other identity of the employee trained, the date(s) of the training, and the signature of the person who conducted the training or the signature of the employer.",
+              "requirement": "maintain written training certification records with employee identity, dates, and trainer signature",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all fall protection training",
+              "work_types": ["training documentation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["training verification", "record keeping"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.503(c)",
+          "title": "Retraining",
+          "rules": [
+            {
+              "rule_id": "1926.503(c)",
+              "text": "When the employer has reason to believe that any affected employee who has already been trained does not have the understanding and skill required, the employer shall retrain each such employee. Circumstances requiring retraining include workplace changes, equipment changes, or inadequacies in employee knowledge or use.",
+              "requirement": "provide retraining when employee lacks required understanding or when circumstances change",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employees with inadequate fall protection knowledge",
+              "work_types": ["retraining situations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "workplace_changes", "condition": "changes in workplace render previous training obsolete", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "equipment_changes", "condition": "changes in fall protection systems or equipment", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "knowledge_inadequacies", "condition": "inadequacies in employee knowledge or use", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "workplace_changes OR equipment_changes OR knowledge_inadequacies"
+              },
+              "protections": ["updated training", "competency maintenance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "appendices": [
+    {
+      "appendix_id": "A",
+      "title": "Determining Roof Widths",
+      "purpose": "Non-mandatory guidelines for complying with § 1926.501(b)(10)",
+      "key_rule": {
+        "rule_id": "appendix_a_roof_width",
+        "text": "Safety monitoring system alone may be used on low-sloped roofs 50 feet (15.25 m) or less in width. Width is determined as the lesser of the two primary dimensions when viewed from above.",
+        "requirement": "determine roof width correctly for safety monitoring system eligibility",
+        "type": "guideline",
+        "severity": "high",
+        "applies_to": "low-slope roofing operations",
+        "work_types": ["roofing"],
+        "triggers": {
+          "conditions": [
+            {"id": "roof_width_measurement", "condition": "roof width (lesser of two primary dimensions)", "value": "50", "unit": "feet", "operator": "<="},
+            {"id": "low_slope_roof", "condition": "roof slope", "value": "4", "unit": "in 12 (vertical to horizontal)", "operator": "<="}
+          ],
+          "expression": "roof_width_measurement AND low_slope_roof"
+        },
+        "protections": ["safety monitoring system alone"],
+        "exceptions": {
+          "items": [],
+          "expression": ""
+        }
+      }
+    }
+  ]
+}

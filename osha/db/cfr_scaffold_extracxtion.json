@@ -1,0 +1,313 @@
+{
+  "document_metadata": {
+    "title": "29 CFR Part 1910 Subpart D - Walking-Working Surfaces",
+    "authority": "Occupational Safety and Health Administration, Department of Labor",
+    "cfr_citation": "29 CFR Part 1910 Subpart D",
+    "subpart": "Subpart D - Walking-Working Surfaces",
+    "effective_date": "November 18, 2016",
+    "last_updated": "September 15, 2025",
+    "source": "OSHA CFR PDF"
+  },
+  "extracted_content": [
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.21",
+        "subsection": "(b)",
+        "paragraph": "Alternating tread-type stair",
+        "page_number": "1",
+        "line_reference": "29 CFR 1910.21(b)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.21(b)",
+      "content": {
+        "id": "alternating_tread_stair",
+        "title": "Alternating tread-type stair",
+        "text": "Alternating tread-type stair means a type of stairway consisting of a series of treads that usually are attached to a center support in an alternating manner such that an employee typically does not have both feet on the same level while using the stairway.",
+        "summary": "A stairway design where treads alternate sides, requiring employees to use alternating feet on different levels",
+        "category": "Structural Definition",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["stairway", "treads", "walking-working surface"]
+    },
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.21",
+        "subsection": "(b)",
+        "paragraph": "Anchorage",
+        "page_number": "1",
+        "line_reference": "29 CFR 1910.21(b)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.21(b)",
+      "content": {
+        "id": "anchorage",
+        "title": "Anchorage",
+        "text": "Anchorage means a secure point of attachment for equipment such as lifelines, lanyards, deceleration devices, and rope descent systems.",
+        "summary": "A secure attachment point for fall protection equipment",
+        "category": "Fall Protection Definition",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["lifelines", "lanyards", "deceleration devices", "rope descent systems"]
+    },
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.21",
+        "subsection": "(b)",
+        "paragraph": "Qualified",
+        "page_number": "4",
+        "line_reference": "29 CFR 1910.21(b)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.21(b)",
+      "content": {
+        "id": "qualified_person",
+        "title": "Qualified",
+        "text": "Qualified describes a person who, by possession of a recognized degree, certificate, or professional standing, or who by extensive knowledge, training, and experience has successfully demonstrated the ability to solve or resolve problems relating to the subject matter, the work, or the project.",
+        "summary": "A person with education, certification, or demonstrated expertise to handle specific technical work",
+        "category": "Personnel Definition",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["training", "experience", "certification"]
+    },
+    {
+      "content_type": "procedure",
+      "source_location": {
+        "section": "1910.22",
+        "subsection": "(a)",
+        "paragraph": "(1)-(3)",
+        "page_number": "5",
+        "line_reference": "29 CFR 1910.22(a)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.22(a)",
+      "content": {
+        "id": "surface_conditions_requirements",
+        "title": "Surface Conditions Requirements",
+        "text": "The employer must ensure: (1) All places of employment, passageways, storerooms, service rooms, and walking-working surfaces are kept in a clean, orderly, and sanitary condition. (2) The floor of each workroom is maintained in a clean and, to the extent feasible, in a dry condition. When wet processes are used, drainage must be maintained and, to the extent feasible, dry standing places, such as false floors, platforms, and mats must be provided. (3) Walking-working surfaces are maintained free of hazards such as sharp or protruding objects, loose boards, corrosion, leaks, spills, snow, and ice.",
+        "summary": "Employers must maintain clean, dry, and hazard-free walking and working surfaces",
+        "category": "Surface Maintenance",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["walking-working surfaces", "hazards", "maintenance"],
+      "procedure_steps": [
+        "Keep all employment areas, passageways, and surfaces clean and orderly",
+        "Maintain dry conditions where feasible",
+        "Provide drainage for wet processes",
+        "Install dry standing areas (false floors, platforms, mats) where needed",
+        "Remove hazards like sharp objects, loose boards, corrosion, leaks, spills, snow, and ice"
+      ],
+      "required_elements": ["clean conditions", "dry conditions", "hazard removal", "drainage systems", "dry standing areas"]
+    },
+    {
+      "content_type": "procedure",
+      "source_location": {
+        "section": "1910.22",
+        "subsection": "(d)",
+        "paragraph": "(1)-(3)",
+        "page_number": "5-6",
+        "line_reference": "29 CFR 1910.22(d)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.22(d)",
+      "content": {
+        "id": "inspection_maintenance_repair",
+        "title": "Inspection, Maintenance, and Repair Requirements",
+        "text": "The employer must ensure: (1) Walking-working surfaces are inspected, regularly and as necessary, and maintained in a safe condition; (2) Hazardous conditions on walking-working surfaces are corrected or repaired before an employee uses the walking-working surface again. If the correction or repair cannot be made immediately, the hazard must be guarded to prevent employees from using the walking-working surface until the hazard is corrected or repaired; and (3) When any correction or repair involves the structural integrity of the walking-working surface, a qualified person performs or supervises the correction or repair.",
+        "summary": "Regular inspection and maintenance of walking-working surfaces with qualified oversight for structural repairs",
+        "category": "Maintenance and Inspection",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["qualified person", "inspection", "maintenance", "structural integrity"],
+      "procedure_steps": [
+        "Conduct regular inspections of walking-working surfaces",
+        "Maintain surfaces in safe condition",
+        "Correct or repair hazardous conditions before employee use",
+        "Guard hazards if immediate repair is not possible",
+        "Ensure qualified person performs or supervises structural repairs"
+      ],
+      "required_elements": ["regular inspection", "safe condition maintenance", "hazard correction", "guarding procedures", "qualified person supervision"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.30",
+        "subsection": "(a)",
+        "paragraph": "(1)-(4)",
+        "page_number": "38",
+        "line_reference": "29 CFR 1910.30(a)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.30(a)",
+      "content": {
+        "id": "fall_hazards_training",
+        "title": "Fall Hazards Training Requirements",
+        "text": "Before any employee is exposed to a fall hazard, the employer must provide training for each employee who uses personal fall protection systems or who is required to be trained as specified elsewhere in this subpart. Employers must ensure employees are trained in the requirements of this paragraph on or before May 17, 2017. The employer must ensure that each employee is trained by a qualified person. The employer must train each employee in at least the following topics: (i) The nature of the fall hazards in the work area and how to recognize them; (ii) The procedures to be followed to minimize those hazards; (iii) The correct procedures for installing, inspecting, operating, maintaining, and disassembling the personal fall protection systems that the employee uses; and (iv) The correct use of personal fall protection systems and equipment specified in paragraph (a)(1) of this section, including, but not limited to, proper hook-up, anchoring, and tie-off techniques, and methods of equipment inspection and storage, as specified by the manufacturer.",
+        "summary": "Comprehensive training on fall hazards and personal fall protection systems before exposure",
+        "category": "Fall Protection Training",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "29 CFR 1910.30(b)",
+          "purpose": "Equipment hazards training"
+        }
+      ],
+      "related_terms": ["fall hazards", "personal fall protection systems", "qualified person"],
+      "training_details": {
+        "frequency": "Before exposure to fall hazards",
+        "scope": "Fall hazard recognition, procedures, equipment use",
+        "trainer_requirements": "Qualified person",
+        "audience": "Employees exposed to fall hazards or using personal fall protection systems",
+        "quality_benchmark": "Understanding and skill demonstrated",
+        "example_institutions": [],
+        "industry_specific": "General industry workplaces",
+        "trigger": "Before any employee exposure to fall hazards",
+        "performance_standard": "Employee demonstrates understanding and skill in fall protection",
+        "reference": "29 CFR 1910.30(a)"
+      }
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.30",
+        "subsection": "(b)",
+        "paragraph": "(1)-(4)",
+        "page_number": "38",
+        "line_reference": "29 CFR 1910.30(b)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.30(b)",
+      "content": {
+        "id": "equipment_hazards_training",
+        "title": "Equipment Hazards Training Requirements",
+        "text": "The employer must train each employee on or before May 17, 2017 in the proper care, inspection, storage, and use of equipment covered by this subpart before an employee uses the equipment. The employer must train each employee who uses a dockboard to properly place and secure it to prevent unintentional movement. The employer must train each employee who uses a rope descent system in proper rigging and use of the equipment in accordance with § 1910.27. The employer must train each employee who uses a designated area in the proper set-up and use of the area.",
+        "summary": "Equipment-specific training for proper care, inspection, storage, and use",
+        "category": "Equipment Training",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "29 CFR 1910.27",
+          "purpose": "Rope descent system requirements"
+        }
+      ],
+      "related_terms": ["dockboard", "rope descent system", "designated area"],
+      "training_details": {
+        "frequency": "Before equipment use",
+        "scope": "Equipment care, inspection, storage, and use",
+        "trainer_requirements": "Not specified",
+        "audience": "Employees using covered equipment",
+        "quality_benchmark": "Proper equipment handling demonstrated",
+        "example_institutions": [],
+        "industry_specific": "General industry workplaces",
+        "trigger": "Before employee uses equipment",
+        "performance_standard": "Proper care, inspection, storage, and use of equipment",
+        "reference": "29 CFR 1910.30(b)"
+      }
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.30",
+        "subsection": "(c)",
+        "paragraph": "(1)-(3)",
+        "page_number": "38-39",
+        "line_reference": "29 CFR 1910.30(c)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.30(c)",
+      "content": {
+        "id": "retraining_requirements",
+        "title": "Retraining Requirements",
+        "text": "The employer must retrain an employee when the employer has reason to believe the employee does not have the understanding and skill required by paragraphs (a) and (b) of this section. Situations requiring retraining include, but are not limited to, the following: (1) When changes in the workplace render previous training obsolete or inadequate; (2) When changes in the types of fall protection systems or equipment to be used render previous training obsolete or inadequate; or (3) When inadequacies in an affected employee's knowledge or use of fall protection systems or equipment indicate that the employee no longer has the requisite understanding or skill necessary to use equipment or perform the job safely.",
+        "summary": "Retraining required when workplace changes or employee performance indicates inadequate knowledge",
+        "category": "Retraining Requirements",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["retraining", "workplace changes", "fall protection systems"],
+      "training_details": {
+        "frequency": "When understanding/skill deficiencies identified",
+        "scope": "Same as initial training",
+        "trainer_requirements": "Not specified",
+        "audience": "Employees with identified deficiencies",
+        "quality_benchmark": "Restored understanding and skill",
+        "example_institutions": [],
+        "industry_specific": "General industry workplaces",
+        "trigger": "Workplace changes, equipment changes, or performance inadequacies",
+        "performance_standard": "Requisite understanding or skill necessary to use equipment or perform job safely",
+        "reference": "29 CFR 1910.30(c)"
+      }
+    },
+    {
+      "content_type": "reference",
+      "source_location": {
+        "section": "1910.27",
+        "subsection": "(a)",
+        "paragraph": "N/A",
+        "page_number": "20",
+        "line_reference": "29 CFR 1910.27(a)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.27(a)",
+      "content": {
+        "id": "scaffolds_reference",
+        "title": "Scaffolds Requirements Reference",
+        "text": "Scaffolds used in general industry must meet the requirements in 29 CFR part 1926, subpart L (Scaffolds).",
+        "summary": "Scaffolds in general industry must comply with construction industry scaffold standards",
+        "category": "External Reference",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "29 CFR part 1926, subpart L",
+          "purpose": "Scaffold requirements for general industry"
+        }
+      ],
+      "related_terms": ["scaffolds", "construction standards"],
+      "reference_details": {
+        "standard_id": "29 CFR part 1926, subpart L",
+        "title": "Scaffolds",
+        "organization": "OSHA",
+        "publication_year": "Not specified",
+        "purpose": "Scaffold safety requirements for general industry",
+        "incorporation_method": "Reference",
+        "publication_title": "Code of Federal Regulations"
+      }
+    },
+    {
+      "content_type": "reference",
+      "source_location": {
+        "section": "1910.29",
+        "subsection": "(c)",
+        "paragraph": "N/A",
+        "page_number": "31",
+        "line_reference": "29 CFR 1910.29(c)"
+      },
+      "hierarchy_path": "Part 1910 → Subpart D → 1910.29(c)",
+      "content": {
+        "id": "safety_net_systems_reference",
+        "title": "Safety Net Systems Requirements Reference",
+        "text": "The employer must ensure each safety net system meets the requirements in 29 CFR part 1926, subpart M.",
+        "summary": "Safety net systems must comply with construction industry safety net standards",
+        "category": "External Reference",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "29 CFR part 1926, subpart M",
+          "purpose": "Safety net system requirements"
+        }
+      ],
+      "related_terms": ["safety net systems", "fall protection"],
+      "reference_details": {
+        "standard_id": "29 CFR part 1926, subpart M",
+        "title": "Safety Net Systems",
+        "organization": "OSHA",
+        "publication_year": "Not specified",
+        "purpose": "Safety net system requirements",
+        "incorporation_method": "Reference",
+        "publication_title": "Code of Federal Regulations"
+      }
+    }
+  ]
+}

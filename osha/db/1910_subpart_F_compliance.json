@@ -1,0 +1,1058 @@
+{
+  "regulation": {
+    "title": "Occupational Safety and Health Standards - Powered Platforms, Manlifts, and Vehicle-Mounted Work Platforms",
+    "part": "1910",
+    "subpart": "F",
+    "authority": "33 U.S.C. 941; 29 U.S.C. 653, 655, 657; Secretary of Labor's Orders",
+    "effective_date": "1974-06-27",
+    "last_updated": "2025-06-05",
+    "applies_to": "powered platform installations, vehicle-mounted elevating and rotating work platforms, and manlifts",
+    "excludes": ["firefighting equipment", "vehicles upon which aerial devices are mounted (except stability requirements)"]
+  },
+  "sections": [
+    {
+      "section_number": "1910.66",
+      "title": "Powered platforms for building maintenance",
+      "subsections": [
+        {
+          "subsection": "1910.66(a)",
+          "title": "Scope",
+          "rules": [
+            {
+              "rule_id": "1910.66(a)-scope",
+              "text": "This section covers powered platform installations permanently dedicated to interior or exterior building maintenance of a specific structure or group of structures.",
+              "requirement": "comply with powered platform requirements for building maintenance installations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "powered platform installations for building maintenance",
+              "work_types": ["building maintenance", "window cleaning", "caulking", "metal polishing", "reglazing"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["powered platform safety systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "suspended_scaffolds", "description": "suspended scaffolds (swinging scaffolds) used to service buildings on a temporary basis covered under subpart D", "conditions": []},
+                  {"id": "construction_scaffolds", "description": "suspended scaffolds used for construction work covered under subpart L of 29 CFR part 1926", "conditions": []}
+                ],
+                "expression": "suspended_scaffolds OR construction_scaffolds"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.66(b)",
+          "title": "Application",
+          "rules": [
+            {
+              "rule_id": "1910.66(b)(1)-new_installations",
+              "text": "This section applies to all permanent installations completed after July 23, 1990. Major modifications to existing installations completed after that date are also considered new installations under this section.",
+              "requirement": "comply with new installation requirements for installations completed after July 23, 1990",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "permanent installations and major modifications",
+              "work_types": ["installation", "modification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "completion_date", "parameter": "installation completion date", "value": "1990-07-23", "unit": "date", "operator": ">"}
+                ],
+                "expression": "completion_date"
+              },
+              "protections": ["compliance with section requirements"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(b)(2)-existing_installations",
+              "text": "Permanent installations in existence and/or completed before July 23, 1990 shall comply with paragraphs (g), (h), (i), (j) and appendix C to subpart I of this part.",
+              "requirement": "comply with specified paragraphs for pre-1990 installations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "existing installations before July 23, 1990",
+              "work_types": ["existing installation operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "installation_date", "parameter": "installation completion date", "value": "1990-07-23", "unit": "date", "operator": "<"}
+                ],
+                "expression": "installation_date"
+              },
+              "protections": ["compliance with paragraphs (g), (h), (i), (j) and appendix C"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.66(c)",
+          "title": "Assurance",
+          "rules": [
+            {
+              "rule_id": "1910.66(c)(1)-building_owner_assurance",
+              "text": "Building owners of new installations shall inform the employer before each use in writing that the installation meets the requirements of paragraphs (e)(1) and (f)(1) of this section and the additional design criteria.",
+              "requirement": "provide written assurance before each use that installation meets safety requirements",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "building owners of new installations",
+              "work_types": ["pre-use verification"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["written verification of compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(c)(4)-employer_prohibition",
+              "text": "The employer shall not permit employees to use the installation prior to receiving assurance from the building owner that the installation meets the requirements contained in paragraphs (c)(1) and (c)(3) of this section.",
+              "requirement": "prohibit employee use until receiving building owner assurance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers",
+              "work_types": ["pre-use authorization"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["verification of building owner assurance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.66(e)",
+          "title": "Powered platform installations—Affected parts of buildings",
+          "rules": [
+            {
+              "rule_id": "1910.66(e)(1)(i)-structural_design",
+              "text": "Structural supports, tie-downs, tie-in guides, anchoring devices and any affected parts of the building included in the installation shall be designed by or under the direction of a registered professional engineer experienced in such design.",
+              "requirement": "ensure structural components are designed by registered professional engineer",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "building structural components for powered platforms",
+              "work_types": ["structural design", "installation design"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["professional engineering design"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(2)(i)-tie_in_guides",
+              "text": "The exterior of each building shall be provided with tie-in guides unless the conditions in paragraph (e)(2)(ii) or (e)(2)(iii) of this section are met.",
+              "requirement": "provide tie-in guides on building exterior unless specific exceptions apply",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "building exteriors with powered platforms",
+              "work_types": ["platform stabilization"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["tie-in guide systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "angulated_roping", "description": "angulated roping with specific force requirements", "conditions": [{"parameter": "angulation force", "value": "10", "unit": "pounds", "operator": ">="}]},
+                  {"id": "alternative_systems", "description": "alternative guide systems meeting specified requirements", "conditions": []}
+                ],
+                "expression": "angulated_roping OR alternative_systems"
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(2)(iii)(A)(1)-anchor_spacing",
+              "text": "The maximum vertical interval between building anchors shall be three floors or 50 feet (15.3 m), whichever is less.",
+              "requirement": "maintain maximum vertical spacing between building anchors",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "intermittent stabilization systems",
+              "work_types": ["anchor installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "vertical_interval_floors", "parameter": "vertical interval between anchors", "value": "3", "unit": "floors", "operator": "<="},
+                  {"id": "vertical_interval_feet", "parameter": "vertical interval between anchors", "value": "50", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "vertical_interval_floors OR vertical_interval_feet"
+              },
+              "protections": ["building anchor stabilization"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(2)(iii)(A)(5)-anchor_capacity",
+              "text": "The intermittent stabilization system building anchors and components shall be capable of sustaining without failure at least four times the maximum anticipated load applied or transmitted to the components and anchors. The minimum design wind load for each anchor shall be 300 (1334 n) pounds, if two anchors share the wind load.",
+              "requirement": "ensure building anchors can sustain four times maximum anticipated load with minimum wind load capacity",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "intermittent stabilization system anchors",
+              "work_types": ["anchor design", "load calculation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "safety_factor", "parameter": "anchor load capacity safety factor", "value": "4", "unit": "times maximum load", "operator": ">="},
+                  {"id": "wind_load", "parameter": "minimum design wind load per anchor", "value": "300", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "safety_factor AND wind_load"
+              },
+              "protections": ["anchor load capacity", "wind load resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(3)(i)-roof_guarding",
+              "text": "Employees working on roofs while performing building maintenance shall be protected by a perimeter guarding system which meets the requirements of paragraph (c)(1) of § 1910.23 of this part.",
+              "requirement": "protect employees on roofs with perimeter guarding system meeting § 1910.23(c)(1)",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees working on roofs",
+              "work_types": ["roof maintenance", "building maintenance"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["perimeter guarding system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(3)(ii)-guard_setback",
+              "text": "The perimeter guard shall not be more than six inches (152 mm) inboard of the inside face of a barrier, i.e. the parapet wall, or roof edge curb of the building being serviced; however, the perimeter guard location shall not exceed an 18 inch (457 mm) setback from the exterior building face.",
+              "requirement": "position perimeter guard within specified distance limits from building edge",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "perimeter guard installation",
+              "work_types": ["guard installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "inboard_distance", "parameter": "distance inboard from barrier", "value": "6", "unit": "inches", "operator": "<="},
+                  {"id": "setback_distance", "parameter": "setback from exterior building face", "value": "18", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "inboard_distance AND setback_distance"
+              },
+              "protections": ["proper guard positioning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(8)(i)-cable_stabilization",
+              "text": "Hanging lifelines and all cables not in tension shall be stabilized at each 200 foot (61 m) interval of vertical travel of the working platform beyond an initial 200 foot (61 m) distance.",
+              "requirement": "stabilize hanging lifelines and cables at 200-foot intervals beyond initial 200 feet",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "hanging lifelines and cables not in tension",
+              "work_types": ["cable management", "platform operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "vertical_travel", "parameter": "vertical travel distance", "value": "200", "unit": "feet", "operator": ">"},
+                  {"id": "stabilization_interval", "parameter": "stabilization interval", "value": "200", "unit": "feet", "operator": "="}
+                ],
+                "expression": "vertical_travel AND stabilization_interval"
+              },
+              "protections": ["cable stabilization"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(8)(ii)-tension_cable_stabilization",
+              "text": "Hanging cables, other than suspended wire ropes, which are in constant tension shall be stabilized when the vertical travel exceeds an initial 600 foot (183 m) distance, and at further intervals of 600 feet (183 m) or less.",
+              "requirement": "stabilize tension cables at 600-foot intervals when vertical travel exceeds 600 feet",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "hanging cables in constant tension",
+              "work_types": ["cable management", "platform operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "initial_distance", "parameter": "initial vertical travel distance", "value": "600", "unit": "feet", "operator": ">"},
+                  {"id": "interval_distance", "parameter": "stabilization interval", "value": "600", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "initial_distance AND interval_distance"
+              },
+              "protections": ["tension cable stabilization"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(e)(11)(ii)-voltage_drop",
+              "text": "Building electrical wiring shall be of such capacity that when full load is applied to the equipment power circuit not more than a five percent drop from building service-vault voltage shall occur at any power circuit outlet used by equipment regulated by this section.",
+              "requirement": "limit voltage drop to maximum 5% at equipment power circuit outlets under full load",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "building electrical systems serving powered platforms",
+              "work_types": ["electrical installation", "power supply"],
+              "triggers": {
+                "conditions": [
+                  {"id": "voltage_drop", "parameter": "voltage drop from service-vault voltage", "value": "5", "unit": "percent", "operator": "<="}
+                ],
+                "expression": "voltage_drop"
+              },
+              "protections": ["adequate electrical capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.66(f)",
+          "title": "Powered platform installations—Equipment",
+          "rules": [
+            {
+              "rule_id": "1910.66(f)(1)(ii)-live_load",
+              "text": "The design shall provide for a minimum live load of 250 pounds (113.6 kg) for each occupant of a suspended or supported platform.",
+              "requirement": "design for minimum 250 pounds live load per platform occupant",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "suspended or supported platform design",
+              "work_types": ["platform design", "load calculation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "live_load_per_occupant", "parameter": "minimum live load per occupant", "value": "250", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "live_load_per_occupant"
+              },
+              "protections": ["adequate load capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(1)(iii)-wind_load_out_of_service",
+              "text": "Equipment that is exposed to wind when not in service shall be designed to withstand forces generated by winds of at least 100 miles per hour (44.7 m/s) at 30 feet (9.2 m) above grade.",
+              "requirement": "design equipment to withstand 100 mph winds when not in service",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "equipment exposed to wind when not in service",
+              "work_types": ["equipment design", "wind load calculation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wind_speed", "parameter": "design wind speed", "value": "100", "unit": "miles per hour", "operator": ">="},
+                  {"id": "reference_height", "parameter": "reference height above grade", "value": "30", "unit": "feet", "operator": "="}
+                ],
+                "expression": "wind_speed AND reference_height"
+              },
+              "protections": ["wind resistance design"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(1)(iv)-wind_load_in_service",
+              "text": "Equipment that is exposed to wind when in service shall be designed to withstand forces generated by winds of at least 50 miles per hour (22.4 m/s) for all elevations.",
+              "requirement": "design equipment to withstand 50 mph winds when in service",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "equipment exposed to wind when in service",
+              "work_types": ["equipment design", "wind load calculation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "service_wind_speed", "parameter": "design wind speed in service", "value": "50", "unit": "miles per hour", "operator": ">="}
+                ],
+                "expression": "service_wind_speed"
+              },
+              "protections": ["operational wind resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(3)(i)(B)-carriage_speed",
+              "text": "Powered carriages shall not exceed a traversing speed of 50 feet per minute (0.3 m/s).",
+              "requirement": "limit powered carriage traversing speed to maximum 50 feet per minute",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "powered carriages",
+              "work_types": ["carriage operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "traversing_speed", "parameter": "carriage traversing speed", "value": "50", "unit": "feet per minute", "operator": "<="}
+                ],
+                "expression": "traversing_speed"
+              },
+              "protections": ["speed limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(3)(i)(C)-manual_force",
+              "text": "The initiation of a traversing movement for a manually propelled carriage on a smooth level surface shall not require a person to exert a horizontal force greater than 40 pounds (444.8 n).",
+              "requirement": "limit manual force required to initiate carriage movement to maximum 40 pounds",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manually propelled carriages",
+              "work_types": ["manual carriage operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "manual_force", "parameter": "horizontal force to initiate movement", "value": "40", "unit": "pounds", "operator": "<="}
+                ],
+                "expression": "manual_force"
+              },
+              "protections": ["ergonomic operation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(5)(ii)(A)-platform_width",
+              "text": "The working platform shall be not less than 24 inches (610 mm) wide and shall be provided with a minimum of a 12 inch (305 mm) wide passage at or past any obstruction on the platform.",
+              "requirement": "maintain minimum platform width of 24 inches with 12-inch passage clearance",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "working platforms",
+              "work_types": ["platform design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "platform_width", "parameter": "working platform width", "value": "24", "unit": "inches", "operator": ">="},
+                  {"id": "passage_width", "parameter": "passage width at obstructions", "value": "12", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "platform_width AND passage_width"
+              },
+              "protections": ["adequate platform space"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(5)(ii)(G)-platform_speed",
+              "text": "The maximum rated speed of the platform shall not exceed 50 feet per minute (0.3 ms) with single speed hoists, nor 75 feet per minute (0.4 ms) with multi-speed hoists.",
+              "requirement": "limit platform speed to 50 fpm for single speed or 75 fpm for multi-speed hoists",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "working platforms",
+              "work_types": ["platform operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "single_speed_limit", "parameter": "platform speed with single speed hoist", "value": "50", "unit": "feet per minute", "operator": "<="},
+                  {"id": "multi_speed_limit", "parameter": "platform speed with multi-speed hoist", "value": "75", "unit": "feet per minute", "operator": "<="}
+                ],
+                "expression": "single_speed_limit OR multi_speed_limit"
+              },
+              "protections": ["speed control"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(7)(ii)-design_factor",
+              "text": "Each suspension rope shall have a \"Design Factor\" of at least 10. The \"Design Factor\" is the ratio of the rated strength of the suspension wire rope to the rated working load.",
+              "requirement": "maintain minimum design factor of 10 for suspension ropes",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "suspension wire ropes",
+              "work_types": ["rope specification", "safety calculation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "design_factor", "parameter": "suspension rope design factor", "value": "10", "unit": "ratio", "operator": ">="}
+                ],
+                "expression": "design_factor"
+              },
+              "protections": ["rope safety margin"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.66(f)(7)(iv)-rope_diameter",
+              "text": "Suspension wire ropes shall be sized to conform with the required design factor, but shall not be less than 5⁄16 inch (7.94 mm) in diameter.",
+              "requirement": "ensure suspension rope diameter is at least 5/16 inch",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "suspension wire ropes",
+              "work_types": ["rope specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "rope_diameter", "parameter": "suspension rope diameter", "value": "0.3125", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "rope_diameter"
+              },
+              "protections": ["minimum rope strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.66(i)",
+          "title": "Operations",
+          "rules": [
+            {
+              "rule_id": "1910.66(i)(2)(v)-wind_speed_limit",
+              "text": "The platform shall not be operated in winds in excess of 25 miles per hour (40.2 km/hr) except to move it from an operating to a storage position. Wind speed shall be determined based on the best available information, which includes on-site anemometer readings and local weather forecasts which predict wind velocities for the area.",
+              "requirement": "prohibit platform operation in winds exceeding 25 mph except for storage movement",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "platform operations",
+              "work_types": ["platform operation", "weather monitoring"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wind_speed_limit", "parameter": "wind speed", "value": "25", "unit": "miles per hour", "operator": "<="}
+                ],
+                "expression": "wind_speed_limit"
+              },
+              "protections": ["wind speed monitoring", "operation restriction"],
+              "exceptions": {
+                "items": [
+                  {"id": "storage_movement", "description": "movement from operating to storage position", "conditions": []}
+                ],
+                "expression": "storage_movement"
+              }
+            },
+            {
+              "rule_id": "1910.66(i)(2)(vi)-anemometer_requirement",
+              "text": "On exterior installations, an anemometer shall be mounted on the platform to provide information of on-site wind velocities prior to and during the use of the platform. The anemometer may be a portable (hand held) unit which is temporarily mounted during platform use.",
+              "requirement": "provide anemometer on platform for exterior installations to monitor wind velocities",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "exterior platform installations",
+              "work_types": ["platform operation", "wind monitoring"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["wind velocity monitoring"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.67",
+      "title": "Vehicle-mounted elevating and rotating work platforms",
+      "subsections": [
+        {
+          "subsection": "1910.67(b)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.67(b)(1)-design_standard",
+              "text": "Unless otherwise provided in this section, aerial devices (aerial lifts) acquired on or after July 1, 1975, shall be designed and constructed in conformance with the applicable requirements of the American National Standard for \"Vehicle Mounted Elevating and Rotating Work Platforms,\" ANSI A92.2—1969.",
+              "requirement": "design aerial devices according to ANSI A92.2-1969 standard for devices acquired after July 1, 1975",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "aerial devices acquired on or after July 1, 1975",
+              "work_types": ["aerial device design", "manufacturing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "acquisition_date", "parameter": "device acquisition date", "value": "1975-07-01", "unit": "date", "operator": ">="}
+                ],
+                "expression": "acquisition_date"
+              },
+              "protections": ["ANSI standard compliance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.67(c)",
+          "title": "Specific requirements",
+          "rules": [
+            {
+              "rule_id": "1910.67(c)(2)(ii)-trained_operators",
+              "text": "Only trained persons shall operate an aerial lift.",
+              "requirement": "ensure only trained persons operate aerial lifts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "aerial lift operators",
+              "work_types": ["aerial lift operation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["operator training"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.67(c)(2)(iii)-belting_off_prohibition",
+              "text": "Belting off to an adjacent pole, structure, or equipment while working from an aerial lift shall not be permitted.",
+              "requirement": "prohibit belting off to adjacent structures while working from aerial lift",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "aerial lift operators",
+              "work_types": ["aerial lift operation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["proper fall protection use"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.67(c)(2)(v)-fall_protection",
+              "text": "A personal fall arrest or travel restraint system that meets the requirements in subpart I of this part shall be worn and attached to the boom or basket when working from an aerial lift.",
+              "requirement": "wear and attach personal fall arrest or travel restraint system meeting subpart I requirements",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "aerial lift operators",
+              "work_types": ["aerial lift operation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["personal fall arrest system", "travel restraint system"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.67(c)(2)(viii)-movement_restriction",
+              "text": "An aerial lift truck may not be moved when the boom is elevated in a working position with men in the basket, except for equipment which is specifically designed for this type of operation in accordance with the provisions of paragraphs (b)(1) and (b)(2) of this section.",
+              "requirement": "prohibit movement of aerial lift truck with elevated boom and personnel in basket unless specifically designed for such operation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "aerial lift truck operations",
+              "work_types": ["aerial lift operation", "vehicle movement"],
+              "triggers": {
+                "conditions": [
+                  {"id": "boom_elevated", "parameter": "boom position", "value": "elevated", "unit": "boolean", "operator": "="},
+                  {"id": "personnel_in_basket", "parameter": "personnel in basket", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "boom_elevated AND personnel_in_basket"
+              },
+              "protections": ["movement restriction"],
+              "exceptions": {
+                "items": [
+                  {"id": "designed_for_movement", "description": "equipment specifically designed for this type of operation per paragraphs (b)(1) and (b)(2)", "conditions": []}
+                ],
+                "expression": "designed_for_movement"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.68",
+      "title": "Manlifts",
+      "subsections": [
+        {
+          "subsection": "1910.68(b)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.68(b)(5)(i)-floor_opening_size",
+              "text": "Floor openings for both the \"up\" and \"down\" runs shall be not less than 28 inches nor more than 36 inches in width for a 12-inch belt; not less than 34 inches nor more than 38 inches for a 14-inch belt; and not less than 36 inches nor more than 40 inches for a 16-inch belt and shall extend not less than 24 inches, nor more than 28 inches from the face of the belt.",
+              "requirement": "maintain floor opening dimensions within specified ranges based on belt width",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift floor openings",
+              "work_types": ["manlift installation", "opening construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "12_inch_belt_width", "parameter": "floor opening width for 12-inch belt", "value": "28", "unit": "inches", "operator": ">=" },
+                  {"id": "12_inch_belt_width_max", "parameter": "floor opening width for 12-inch belt", "value": "36", "unit": "inches", "operator": "<="},
+                  {"id": "14_inch_belt_width", "parameter": "floor opening width for 14-inch belt", "value": "34", "unit": "inches", "operator": ">="},
+                  {"id": "14_inch_belt_width_max", "parameter": "floor opening width for 14-inch belt", "value": "38", "unit": "inches", "operator": "<="},
+                  {"id": "16_inch_belt_width", "parameter": "floor opening width for 16-inch belt", "value": "36", "unit": "inches", "operator": ">="},
+                  {"id": "16_inch_belt_width_max", "parameter": "floor opening width for 16-inch belt", "value": "40", "unit": "inches", "operator": "<="},
+                  {"id": "extension_min", "parameter": "extension from belt face", "value": "24", "unit": "inches", "operator": ">="},
+                  {"id": "extension_max", "parameter": "extension from belt face", "value": "28", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "(12_inch_belt_width AND 12_inch_belt_width_max) OR (14_inch_belt_width AND 14_inch_belt_width_max) OR (16_inch_belt_width AND 16_inch_belt_width_max) AND (extension_min AND extension_max)"
+              },
+              "protections": ["proper opening sizing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(6)(i)-vertical_clearance",
+              "text": "The clearance between the floor or mounting platform and the lower edge for the conical guard above it required by subparagraph (7) of this paragraph shall not be less than 7 feet 6 inches.",
+              "requirement": "maintain minimum vertical clearance of 7 feet 6 inches between floor and conical guard",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift landing areas",
+              "work_types": ["clearance verification", "guard installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "vertical_clearance", "parameter": "clearance between floor and conical guard", "value": "90", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "vertical_clearance"
+              },
+              "protections": ["adequate head clearance"],
+              "exceptions": {
+                "items": [
+                  {"id": "no_access", "description": "where clearance cannot be obtained, no access shall be provided and runway shall be enclosed", "conditions": []}
+                ],
+                "expression": "no_access"
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(6)(iii)-lighting_requirement",
+              "text": "Adequate lighting, not less than 5-foot candles, shall be provided at each floor landing at all times when the lift is in operation.",
+              "requirement": "provide minimum 5-foot candle lighting at each floor landing during operation",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manlift floor landings",
+              "work_types": ["lighting installation", "manlift operation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "lighting_level", "parameter": "lighting level at floor landing", "value": "5", "unit": "foot candles", "operator": ">="}
+                ],
+                "expression": "lighting_level"
+              },
+              "protections": ["adequate illumination"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(6)(v)-emergency_landings",
+              "text": "Where there is a travel of 50 feet or more between floor landings, one or more emergency landings shall be provided so that there will be a landing (either floor or emergency) for every 25 feet or less of manlift travel.",
+              "requirement": "provide emergency landings for every 25 feet when travel exceeds 50 feet between floor landings",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlifts with extended travel distances",
+              "work_types": ["emergency landing installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "travel_distance", "parameter": "travel distance between floor landings", "value": "50", "unit": "feet", "operator": ">="},
+                  {"id": "landing_interval", "parameter": "maximum distance between landings", "value": "25", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "travel_distance AND landing_interval"
+              },
+              "protections": ["emergency egress points"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(7)(i)(a)-cone_angle",
+              "text": "The cone shall make an angle of not less than 45° with the horizontal. An angle of 60° or greater shall be used where ceiling heights permit.",
+              "requirement": "maintain cone angle of at least 45° with horizontal, preferably 60° or greater",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "floor opening guards (cones)",
+              "work_types": ["guard installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "cone_angle_min", "parameter": "cone angle with horizontal", "value": "45", "unit": "degrees", "operator": ">="},
+                  {"id": "cone_angle_preferred", "parameter": "preferred cone angle with horizontal", "value": "60", "unit": "degrees", "operator": ">="}
+                ],
+                "expression": "cone_angle_min"
+              },
+              "protections": ["deflection protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(7)(i)(b)-guard_extension",
+              "text": "The lower edge of this guard shall extend at least 42 inches outward from any handhold on the belt. It shall not extend beyond the upper surface of the floor above.",
+              "requirement": "extend guard at least 42 inches outward from belt handholds without exceeding floor above",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "floor opening guards",
+              "work_types": ["guard sizing", "installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "guard_extension", "parameter": "guard extension from handhold", "value": "42", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "guard_extension"
+              },
+              "protections": ["adequate guard coverage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(b)(11)(i)-top_clearance",
+              "text": "A top clearance shall be provided of at least 11 feet above the top terminal landing. This clearance shall be maintained from a plane through each face of the belt to a vertical cylindrical plane having a diameter 2 feet greater than the diameter of the floor opening, extending upward from the top floor to the ceiling on the up-running side of the belt.",
+              "requirement": "provide minimum 11 feet top clearance above terminal landing with specified cylindrical clearance zone",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift top arrangements",
+              "work_types": ["clearance verification", "installation planning"],
+              "triggers": {
+                "conditions": [
+                  {"id": "top_clearance", "parameter": "clearance above top terminal landing", "value": "11", "unit": "feet", "operator": ">="},
+                  {"id": "cylindrical_clearance", "parameter": "cylindrical clearance zone diameter", "value": "2", "unit": "feet greater than opening", "operator": "="}
+                ],
+                "expression": "top_clearance AND cylindrical_clearance"
+              },
+              "protections": ["overhead clearance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.68(c)",
+          "title": "Mechanical requirements",
+          "rules": [
+            {
+              "rule_id": "1910.68(c)(1)(i)-brake_capacity",
+              "text": "Brakes provided for stopping and holding a manlift shall be inherently self-engaging, by requiring power or force from an external source to cause disengagement. The brake shall be electrically released, and shall be applied to the motor shaft for direct-connected units or to the input shaft for belt-driven units. The brake shall be capable of stopping and holding the manlift when the descending side is loaded with 250 lb on each step.",
+              "requirement": "provide self-engaging brakes capable of stopping and holding manlift with 250 lb per step on descending side",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "manlift braking systems",
+              "work_types": ["brake design", "safety verification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "load_per_step", "parameter": "load per step on descending side", "value": "250", "unit": "pounds", "operator": "="}
+                ],
+                "expression": "load_per_step"
+              },
+              "protections": ["self-engaging brakes", "load holding capacity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(1)(ii)(b)-belt_width",
+              "text": "The width of the belt shall be not less than 12 inches for a travel not exceeding 100 feet, not less than 14 inches for a travel greater than 100 feet but not exceeding 150 feet and 16 inches for a travel exceeding 150 feet.",
+              "requirement": "use appropriate belt width based on travel distance: 12\" for ≤100', 14\" for 100-150', 16\" for >150'",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift belts",
+              "work_types": ["belt specification", "design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "travel_100", "parameter": "travel distance", "value": "100", "unit": "feet", "operator": "<="},
+                  {"id": "belt_width_12", "parameter": "belt width for travel ≤100 feet", "value": "12", "unit": "inches", "operator": ">="},
+                  {"id": "travel_100_150", "parameter": "travel distance", "value": "100", "unit": "feet", "operator": ">"},
+                  {"id": "travel_150_max", "parameter": "travel distance", "value": "150", "unit": "feet", "operator": "<="},
+                  {"id": "belt_width_14", "parameter": "belt width for travel 100-150 feet", "value": "14", "unit": "inches", "operator": ">="},
+                  {"id": "travel_over_150", "parameter": "travel distance", "value": "150", "unit": "feet", "operator": ">"},
+                  {"id": "belt_width_16", "parameter": "belt width for travel >150 feet", "value": "16", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "(travel_100 AND belt_width_12) OR (travel_100_150 AND travel_150_max AND belt_width_14) OR (travel_over_150 AND belt_width_16)"
+              },
+              "protections": ["adequate belt strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(2)(i)-maximum_speed",
+              "text": "No manlift designed for a speed in excess of 80 feet per minute shall be installed.",
+              "requirement": "limit manlift design speed to maximum 80 feet per minute",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift speed design",
+              "work_types": ["manlift design", "speed specification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "design_speed", "parameter": "manlift design speed", "value": "80", "unit": "feet per minute", "operator": "<="}
+                ],
+                "expression": "design_speed"
+              },
+              "protections": ["speed limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(3)(i)-step_depth",
+              "text": "Steps or platforms shall be not less than 12 inches nor more than 14 inches deep, measured from the belt to the edge of the step or platform.",
+              "requirement": "maintain step depth between 12 and 14 inches from belt to edge",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manlift steps and platforms",
+              "work_types": ["step design", "platform construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "step_depth_min", "parameter": "step depth", "value": "12", "unit": "inches", "operator": ">="},
+                  {"id": "step_depth_max", "parameter": "step depth", "value": "14", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "step_depth_min AND step_depth_max"
+              },
+              "protections": ["proper step sizing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(3)(iii)-step_spacing",
+              "text": "The distance between steps shall be equally spaced and not less than 16 feet measured from the upper surface of one step to the upper surface of the next step above it.",
+              "requirement": "maintain minimum 16 feet equal spacing between steps measured from upper surfaces",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manlift step spacing",
+              "work_types": ["step installation", "spacing verification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "step_spacing", "parameter": "distance between step upper surfaces", "value": "16", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "step_spacing"
+              },
+              "protections": ["adequate step spacing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(4)(i)-handhold_location",
+              "text": "Handholds attached to the belt shall be provided and installed so that they are not less than 4 feet nor more than 4 feet 8 inches above the step tread. These shall be so located as to be available on the both \"up\" and \"down\" run of the belt.",
+              "requirement": "position handholds between 4 feet and 4 feet 8 inches above step tread on both belt runs",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift handholds",
+              "work_types": ["handhold installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "handhold_height_min", "parameter": "handhold height above step", "value": "4", "unit": "feet", "operator": ">="},
+                  {"id": "handhold_height_max", "parameter": "handhold height above step", "value": "4.67", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "handhold_height_min AND handhold_height_max"
+              },
+              "protections": ["proper handhold positioning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(4)(ii)-handhold_size",
+              "text": "The grab surface of the handhold shall be not less than 4½ inches in width, not less than 3 inches in depth, and shall provide 2 inches of clearance from the belt.",
+              "requirement": "provide handhold grab surface of minimum 4.5\" width, 3\" depth, with 2\" clearance from belt",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manlift handhold design",
+              "work_types": ["handhold design", "manufacturing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "handhold_width", "parameter": "handhold grab surface width", "value": "4.5", "unit": "inches", "operator": ">="},
+                  {"id": "handhold_depth", "parameter": "handhold grab surface depth", "value": "3", "unit": "inches", "operator": ">="},
+                  {"id": "belt_clearance", "parameter": "clearance from belt", "value": "2", "unit": "inches", "operator": "="}
+                ],
+                "expression": "handhold_width AND handhold_depth AND belt_clearance"
+              },
+              "protections": ["adequate grip surface"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(c)(4)(iii)-handhold_strength",
+              "text": "The handhold shall be capable of withstanding, without damage, a load of 300 pounds applied parallel to the run of the belt.",
+              "requirement": "ensure handhold can withstand 300 pounds load parallel to belt run without damage",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "manlift handholds",
+              "work_types": ["handhold testing", "strength verification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "handhold_load", "parameter": "handhold load capacity", "value": "300", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "handhold_load"
+              },
+              "protections": ["handhold structural integrity"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.68(e)",
+          "title": "Periodic inspection",
+          "rules": [
+            {
+              "rule_id": "1910.68(e)(1)-inspection_frequency",
+              "text": "All manlifts shall be inspected by a competent designated person at intervals of not more than 30 days. Limit switches shall be checked weekly. Manlifts found to be unsafe shall not be operated until properly repaired.",
+              "requirement": "conduct manlift inspections every 30 days maximum with weekly limit switch checks by competent person",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all manlifts",
+              "work_types": ["inspection", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "inspection_interval", "parameter": "inspection interval", "value": "30", "unit": "days", "operator": "<="},
+                  {"id": "limit_switch_check", "parameter": "limit switch check interval", "value": "7", "unit": "days", "operator": "<="}
+                ],
+                "expression": "inspection_interval AND limit_switch_check"
+              },
+              "protections": ["regular safety verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.68(e)(3)-inspection_record",
+              "text": "A certification record shall be kept of each inspection which includes the date of the inspection, the signature of the person who performed the inspection and the serial number, or other identifier, of the manlift which was inspected. This record of inspection shall be made available to the Assistant Secretary of Labor or a duly authorized representative.",
+              "requirement": "maintain inspection records with date, inspector signature, and manlift identifier, available for OSHA review",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "manlift inspection documentation",
+              "work_types": ["record keeping", "documentation"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["inspection documentation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

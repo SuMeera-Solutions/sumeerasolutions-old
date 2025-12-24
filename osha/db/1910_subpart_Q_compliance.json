@@ -1,0 +1,594 @@
+{
+  "regulation": {
+    "title": "Occupational Safety and Health Standards - Welding, Cutting and Brazing",
+    "part": "1910",
+    "subpart": "Q",
+    "authority": "33 U.S.C. 941; 29 U.S.C. 653, 655, 657; Secretary of Labor's Orders",
+    "effective_date": "1990-04-11",
+    "last_updated": "2025-06-05",
+    "applies_to": "all welding, cutting and brazing operations in general industry",
+    "excludes": []
+  },
+  "sections": [
+    {
+      "section_number": "1910.251",
+      "title": "Definitions",
+      "subsections": [
+        {
+          "subsection": "1910.251(a)",
+          "title": "Welder and welding operator",
+          "rules": [
+            {
+              "rule_id": "1910.251(a)",
+              "text": "Welder and welding operator mean any operator of electric or gas welding and cutting equipment.",
+              "requirement": "define personnel operating welding and cutting equipment",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "welding operators",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.251(b)",
+          "title": "Approved",
+          "rules": [
+            {
+              "rule_id": "1910.251(b)",
+              "text": "Approved means listed or approved by a nationally recognized testing laboratory.",
+              "requirement": "use only approved equipment from nationally recognized testing laboratories",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all welding equipment",
+              "work_types": ["welding", "cutting", "brazing"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["approved equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.252",
+      "title": "General requirements",
+      "subsections": [
+        {
+          "subsection": "1910.252(a)(1)",
+          "title": "Basic precautions",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(1)(i)",
+              "text": "If the object to be welded or cut cannot readily be moved, all movable fire hazards in the vicinity shall be taken to a safe place.",
+              "requirement": "remove movable fire hazards from welding vicinity",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all welding operations",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "immovable_object", "parameter": "object mobility", "value": "false", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "immovable_object"
+              },
+              "protections": ["fire hazard removal"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.252(a)(1)(ii)",
+              "text": "If the object to be welded or cut cannot be moved and if all the fire hazards cannot be removed, then guards shall be used to confine the heat, sparks, and slag, and to protect the immovable fire hazards.",
+              "requirement": "use guards to protect immovable fire hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all welding operations",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "immovable_object", "parameter": "object mobility", "value": "false", "unit": "boolean", "operator": "="},
+                  {"id": "immovable_hazards", "parameter": "fire hazard mobility", "value": "false", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "immovable_object AND immovable_hazards"
+              },
+              "protections": ["guards", "heat shields"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.252(a)(1)(iii)",
+              "text": "If the requirements stated in paragraphs (a)(1)(i) and (a)(1)(ii) of this section cannot be followed then welding and cutting shall not be performed.",
+              "requirement": "prohibit welding when fire precautions cannot be implemented",
+              "type": "prohibitive",
+              "severity": "critical",
+              "applies_to": "all welding operations",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "precautions_impossible", "parameter": "fire precaution feasibility", "value": "false", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "precautions_impossible"
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.252(a)(2)(i)",
+          "title": "Combustible material",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(2)(i)",
+              "text": "Wherever there are floor openings or cracks in the flooring that cannot be closed, precautions shall be taken so that no readily combustible materials on the floor below will be exposed to sparks which might drop through the floor.",
+              "requirement": "protect combustible materials below floor openings from sparks",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "multi-level welding operations",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "floor_openings", "parameter": "floor opening presence", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "floor_openings"
+              },
+              "protections": ["spark protection", "material shielding"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.252(a)(2)(iii)(A)",
+          "title": "Fire watch requirements",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(2)(iii)(A)(1)",
+              "text": "Fire watchers shall be required whenever welding or cutting is performed in locations where other than a minor fire might develop, or any of the following conditions exist: Appreciable combustible material, in building construction or contents, closer than 35 feet to the point of operation.",
+              "requirement": "provide fire watchers when combustible materials within 35 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "welding operations near combustibles",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_distance", "parameter": "distance to combustible materials", "value": "35", "unit": "feet", "operator": "<"}
+                ],
+                "expression": "combustible_distance"
+              },
+              "protections": ["fire watchers", "fire extinguishing equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.252(a)(2)(iii)(A)(2)",
+              "text": "Appreciable combustibles are more than 35 feet away but are easily ignited by sparks.",
+              "requirement": "provide fire watchers for easily ignitable materials beyond 35 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "welding operations near easily ignitable materials",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_distance_far", "parameter": "distance to combustible materials", "value": "35", "unit": "feet", "operator": ">"},
+                  {"id": "easily_ignitable", "parameter": "material ignitability", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "combustible_distance_far AND easily_ignitable"
+              },
+              "protections": ["fire watchers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.252(a)(2)(iii)(A)(3)",
+              "text": "Wall or floor openings within a 35-foot radius expose combustible material in adjacent areas including concealed spaces in walls or floors.",
+              "requirement": "provide fire watchers when openings within 35-foot radius expose combustibles",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "welding near wall or floor openings",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "opening_radius", "parameter": "distance to wall/floor openings", "value": "35", "unit": "feet", "operator": "<="},
+                  {"id": "exposed_combustibles", "parameter": "combustible exposure through openings", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "opening_radius AND exposed_combustibles"
+              },
+              "protections": ["fire watchers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.252(a)(2)(iii)(B)",
+          "title": "Fire watcher duties",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(2)(iii)(B)",
+              "text": "A fire watch shall be maintained for at least a half hour after completion of welding or cutting operations to detect and extinguish possible smoldering fires.",
+              "requirement": "maintain fire watch for minimum 30 minutes after welding completion",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all fire watch operations",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "operation_complete", "parameter": "welding operation status", "value": "completed", "unit": "status", "operator": "="}
+                ],
+                "expression": "operation_complete"
+              },
+              "protections": ["fire watch", "smoldering fire detection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.252(a)(2)(v)",
+          "title": "Floor protection",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(2)(v)",
+              "text": "Where combustible materials such as paper clippings, wood shavings, or textile fibers are on the floor, the floor shall be swept clean for a radius of 35 feet. Combustible floors shall be kept wet, covered with damp sand, or protected by fire-resistant shields.",
+              "requirement": "clean floor within 35-foot radius and protect combustible floors",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "welding on or near combustible floors",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_floor_materials", "parameter": "presence of combustible floor materials", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "cleaning_radius", "parameter": "floor cleaning radius", "value": "35", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "combustible_floor_materials"
+              },
+              "protections": ["floor cleaning", "wet floors", "damp sand", "fire-resistant shields"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.252(a)(2)(vii)",
+          "title": "Relocation of combustibles",
+          "rules": [
+            {
+              "rule_id": "1910.252(a)(2)(vii)",
+              "text": "Where practicable, all combustibles shall be relocated at least 35 feet from the work site. Where relocation is impracticable, combustibles shall be protected with flameproofed covers or otherwise shielded with metal or asbestos guards or curtains.",
+              "requirement": "relocate combustibles 35+ feet or protect with flame-resistant covers",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all welding operations near combustibles",
+              "work_types": ["welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_distance_protection", "parameter": "distance to combustibles or protection", "value": "35", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "combustible_distance_protection"
+              },
+              "protections": ["combustible relocation", "flameproof covers", "metal guards", "protective curtains"],
+              "exceptions": {
+                "items": [
+                  {"id": "relocation_impracticable", "description": "when relocation is impracticable", "conditions": []}
+                ],
+                "expression": "relocation_impracticable"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.253",
+      "title": "Oxygen-fuel gas welding and cutting",
+      "subsections": [
+        {
+          "subsection": "1910.253(a)(2)",
+          "title": "Maximum pressure",
+          "rules": [
+            {
+              "rule_id": "1910.253(a)(2)",
+              "text": "Under no condition shall acetylene be generated, piped (except in approved cylinder manifolds) or utilized at a pressure in excess of 15 psig or 30 psia.",
+              "requirement": "limit acetylene pressure to maximum 15 psig or 30 psia",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "acetylene gas systems",
+              "work_types": ["gas welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "acetylene_pressure_gauge", "parameter": "acetylene gauge pressure", "value": "15", "unit": "psig", "operator": "<="},
+                  {"id": "acetylene_pressure_absolute", "parameter": "acetylene absolute pressure", "value": "30", "unit": "psia", "operator": "<="}
+                ],
+                "expression": "acetylene_pressure_gauge OR acetylene_pressure_absolute"
+              },
+              "protections": ["pressure regulation"],
+              "exceptions": {
+                "items": [
+                  {"id": "approved_manifolds", "description": "approved cylinder manifolds", "conditions": []},
+                  {"id": "dissolved_storage", "description": "acetylene dissolved in suitable solvent in DOT cylinders", "conditions": []},
+                  {"id": "chemical_use", "description": "acetylene for chemical use", "conditions": []}
+                ],
+                "expression": "approved_manifolds OR dissolved_storage OR chemical_use"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.253(b)(2)(ii)",
+          "title": "Cylinder storage distance",
+          "rules": [
+            {
+              "rule_id": "1910.253(b)(2)(ii)",
+              "text": "Inside of buildings, cylinders shall be stored in a well-protected, well-ventilated, dry location, at least 20 feet from highly combustible materials such as oil or excelsior.",
+              "requirement": "store cylinders minimum 20 feet from highly combustible materials",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "cylinder storage inside buildings",
+              "work_types": ["gas welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "storage_distance", "parameter": "distance from highly combustible materials", "value": "20", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "storage_distance"
+              },
+              "protections": ["distance separation", "ventilation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.253(b)(3)",
+          "title": "Fuel-gas cylinder storage limits",
+          "rules": [
+            {
+              "rule_id": "1910.253(b)(3)",
+              "text": "Inside a building, cylinders, except those in actual use or attached ready for use, shall be limited to a total gas capacity of 2,000 cubic feet or 300 pounds of liquefied petroleum gas.",
+              "requirement": "limit indoor cylinder storage to 2,000 cubic feet or 300 pounds LPG",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "fuel-gas cylinder storage",
+              "work_types": ["gas welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "gas_capacity", "parameter": "total gas capacity", "value": "2000", "unit": "cubic feet", "operator": "<="},
+                  {"id": "lpg_weight", "parameter": "liquefied petroleum gas weight", "value": "300", "unit": "pounds", "operator": "<="}
+                ],
+                "expression": "gas_capacity OR lpg_weight"
+              },
+              "protections": ["storage limits"],
+              "exceptions": {
+                "items": [
+                  {"id": "in_use", "description": "cylinders in actual use", "conditions": []},
+                  {"id": "ready_for_use", "description": "cylinders attached ready for use", "conditions": []}
+                ],
+                "expression": "in_use OR ready_for_use"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.253(b)(4)(iii)",
+          "title": "Oxygen cylinder separation",
+          "rules": [
+            {
+              "rule_id": "1910.253(b)(4)(iii)",
+              "text": "Oxygen cylinders in storage shall be separated from fuel-gas cylinders or combustible materials (especially oil or grease), a minimum distance of 20 feet or by a noncombustible barrier at least 5 feet high having a fire-resistance rating of at least one-half hour.",
+              "requirement": "separate oxygen cylinders by 20 feet or 5-foot fire-resistant barrier",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "oxygen cylinder storage",
+              "work_types": ["gas welding", "cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "separation_distance", "parameter": "separation distance", "value": "20", "unit": "feet", "operator": ">="},
+                  {"id": "barrier_height", "parameter": "noncombustible barrier height", "value": "5", "unit": "feet", "operator": ">="},
+                  {"id": "fire_resistance", "parameter": "fire resistance rating", "value": "0.5", "unit": "hours", "operator": ">="}
+                ],
+                "expression": "separation_distance OR (barrier_height AND fire_resistance)"
+              },
+              "protections": ["distance separation", "fire-resistant barriers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.254",
+      "title": "Arc welding and cutting",
+      "subsections": [
+        {
+          "subsection": "1910.254(b)(3)(i)",
+          "title": "Voltage limits - Alternating current",
+          "rules": [
+            {
+              "rule_id": "1910.254(b)(3)(i)(A)",
+              "text": "Manual arc welding and cutting—80 volts.",
+              "requirement": "limit manual AC arc welding voltage to maximum 80 volts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "manual AC arc welding equipment",
+              "work_types": ["arc welding", "arc cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ac_manual_voltage", "parameter": "AC manual welding voltage", "value": "80", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "ac_manual_voltage"
+              },
+              "protections": ["voltage limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.254(b)(3)(i)(B)",
+              "text": "Automatic (machine or mechanized) arc welding and cutting—100 volts.",
+              "requirement": "limit automatic AC arc welding voltage to maximum 100 volts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "automatic AC arc welding equipment",
+              "work_types": ["arc welding", "arc cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ac_automatic_voltage", "parameter": "AC automatic welding voltage", "value": "100", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "ac_automatic_voltage"
+              },
+              "protections": ["voltage limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.254(b)(3)(ii)",
+          "title": "Voltage limits - Direct current",
+          "rules": [
+            {
+              "rule_id": "1910.254(b)(3)(ii)(A)",
+              "text": "Manual arc welding and cutting—100 volts.",
+              "requirement": "limit manual DC arc welding voltage to maximum 100 volts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "manual DC arc welding equipment",
+              "work_types": ["arc welding", "arc cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dc_manual_voltage", "parameter": "DC manual welding voltage", "value": "100", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "dc_manual_voltage"
+              },
+              "protections": ["voltage limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.254(b)(3)(ii)(B)",
+              "text": "Automatic (machine or mechanized) arc welding and cutting-100 volts.",
+              "requirement": "limit automatic DC arc welding voltage to maximum 100 volts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "automatic DC arc welding equipment",
+              "work_types": ["arc welding", "arc cutting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dc_automatic_voltage", "parameter": "DC automatic welding voltage", "value": "100", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "dc_automatic_voltage"
+              },
+              "protections": ["voltage limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.254(d)(8)",
+          "title": "Electric shock prevention",
+          "rules": [
+            {
+              "rule_id": "1910.254(d)(8)",
+              "text": "Cables with splices within 10 feet of the holder shall not be used. The welder should not coil or loop welding electrode cable around parts of his body.",
+              "requirement": "prohibit cable splices within 10 feet of electrode holder and body contact",
+              "type": "prohibitive",
+              "severity": "critical",
+              "applies_to": "arc welding operations",
+              "work_types": ["arc welding"],
+              "triggers": {
+                "conditions": [
+                  {"id": "splice_distance", "parameter": "distance of cable splice from holder", "value": "10", "unit": "feet", "operator": ">"},
+                  {"id": "cable_body_contact", "parameter": "cable contact with body", "value": "false", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "splice_distance AND cable_body_contact"
+              },
+              "protections": ["splice distance requirements", "body contact prevention"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.255",
+      "title": "Resistance welding",
+      "subsections": [
+        {
+          "subsection": "1910.255(b)(1)",
+          "title": "Voltage limits",
+          "rules": [
+            {
+              "rule_id": "1910.255(b)(1)",
+              "text": "All external weld initiating control circuits shall operate on low voltage, not over 120 volts, for the safety of the operators.",
+              "requirement": "limit external weld control circuits to maximum 120 volts",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "resistance welding control circuits",
+              "work_types": ["resistance welding"],
+              "triggers": {
+                "conditions": [
+                  {"id": "control_voltage", "parameter": "external control circuit voltage", "value": "120", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "control_voltage"
+              },
+              "protections": ["low voltage controls"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

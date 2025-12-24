@@ -1,0 +1,914 @@
+{
+  "regulation": {
+    "title": "Occupational Safety and Health Standards - Personal Protective Equipment",
+    "part": "1910",
+    "subpart": "I",
+    "authority": "33 U.S.C. 941; 29 U.S.C. 653, 655, 657; Secretary of Labor's Order No. 12-71 (36 FR 8754); 8-76 (41 FR 25059), 9-83 (48 FR 35736), 1-90 (55 FR 9033), 6-96 (62 FR 111), 3-2000 (65 FR 50017), 5-2002 (67 FR 65008), 5-2007 (72 FR 31160), 4-2010 (75 FR 55355), 1-2012 (77 FR 3912), or 08-2020 (85 FR 58393); 29 CFR part 1911; and 5 U.S.C. 553",
+    "effective_date": "1974-06-27",
+    "last_updated": "2025-06-05",
+    "applies_to": "all general industry workplaces covered under 29 CFR part 1910",
+    "excludes": []
+  },
+  "sections": [
+    {
+      "section_number": "1910.132",
+      "title": "General requirements",
+      "subsections": [
+        {
+          "subsection": "1910.132(a)",
+          "title": "Application",
+          "rules": [
+            {
+              "rule_id": "1910.132(a)",
+              "text": "Protective equipment, including personal protective equipment for eyes, face, head, and extremities, protective clothing, respiratory devices, and protective shields and barriers, shall be provided, used, and maintained in a sanitary and reliable condition wherever it is necessary by reason of hazards of processes or environment, chemical hazards, radiological hazards, or mechanical irritants encountered in a manner capable of causing injury or impairment in the function of any part of the body through absorption, inhalation or physical contact.",
+              "requirement": "provide, use, and maintain protective equipment in sanitary and reliable condition when hazards are present",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "process_hazards", "parameter": "hazards of processes or environment", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "chemical_hazards", "parameter": "chemical hazards present", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "radiological_hazards", "parameter": "radiological hazards present", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "mechanical_irritants", "parameter": "mechanical irritants present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "process_hazards OR chemical_hazards OR radiological_hazards OR mechanical_irritants"
+              },
+              "protections": ["eye protection", "face protection", "head protection", "extremity protection", "protective clothing", "respiratory devices", "protective shields", "protective barriers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.132(d)",
+          "title": "Hazard assessment and equipment selection",
+          "rules": [
+            {
+              "rule_id": "1910.132(d)(1)",
+              "text": "The employer shall assess the workplace to determine if hazards are present, or are likely to be present, which necessitate the use of personal protective equipment (PPE). If such hazards are present, or likely to be present, the employer shall: (i) Select, and have each affected employee use, the types of PPE that will protect the affected employee from the hazards identified in the hazard assessment; (ii) Communicate selection decisions to each affected employee; and, (iii) Select PPE that properly fits each affected employee.",
+              "requirement": "conduct workplace hazard assessment and select appropriate PPE for each affected employee",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hazards_present", "parameter": "hazards present or likely to be present", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazards_present"
+              },
+              "protections": ["appropriate PPE selection", "proper fit", "employee communication"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.132(d)(2)",
+              "text": "The employer shall verify that the required workplace hazard assessment has been performed through a written certification that identifies the workplace evaluated; the person certifying that the evaluation has been performed; the date(s) of the hazard assessment; and, which identifies the document as a certification of hazard assessment.",
+              "requirement": "provide written certification of hazard assessment with specified information",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "assessment_performed", "parameter": "hazard assessment performed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "assessment_performed"
+              },
+              "protections": ["written certification", "documentation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.132(f)",
+          "title": "Training",
+          "rules": [
+            {
+              "rule_id": "1910.132(f)(1)",
+              "text": "The employer shall provide training to each employee who is required by this section to use PPE. Each such employee shall be trained to know at least the following: (i) When PPE is necessary; (ii) What PPE is necessary; (iii) How to properly don, doff, adjust, and wear PPE; (iv) The limitations of the PPE; and, (v) The proper care, maintenance, useful life and disposal of the PPE.",
+              "requirement": "provide comprehensive PPE training covering when, what, how to use, limitations, and maintenance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees required to use PPE",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ppe_required", "parameter": "employee required to use PPE", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "ppe_required"
+              },
+              "protections": ["training program", "employee education"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.132(f)(2)",
+              "text": "Each affected employee shall demonstrate an understanding of the training specified in paragraph (f)(1) of this section, and the ability to use PPE properly, before being allowed to perform work requiring the use of PPE.",
+              "requirement": "verify employee demonstrates understanding and proper PPE use before allowing work",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "affected employees",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "work_requires_ppe", "parameter": "work requires PPE use", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "work_requires_ppe"
+              },
+              "protections": ["competency verification", "demonstration of understanding"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.132(h)",
+          "title": "Payment for protective equipment",
+          "rules": [
+            {
+              "rule_id": "1910.132(h)(1)",
+              "text": "Except as provided by paragraphs (h)(2) through (h)(6) of this section, the protective equipment, including personal protective equipment (PPE), used to comply with this part, shall be provided by the employer at no cost to employees.",
+              "requirement": "provide PPE at no cost to employees except for specified exceptions",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ppe_compliance_required", "parameter": "PPE required for compliance", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "ppe_compliance_required"
+              },
+              "protections": ["employer-provided PPE"],
+              "exceptions": {
+                "items": [
+                  {"id": "non_specialty_footwear", "description": "non-specialty safety-toe protective footwear and non-specialty prescription safety eyewear permitted for off-job use", "conditions": []},
+                  {"id": "metatarsal_protection", "description": "shoes or boots with built-in metatarsal protection when employer provides metatarsal guards", "conditions": []},
+                  {"id": "logging_boots", "description": "logging boots required by 29 CFR 1910.266(d)(1)(v)", "conditions": []},
+                  {"id": "everyday_clothing", "description": "everyday clothing, weather protection items", "conditions": []}
+                ],
+                "expression": "non_specialty_footwear OR metatarsal_protection OR logging_boots OR everyday_clothing"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.133",
+      "title": "Eye and face protection",
+      "subsections": [
+        {
+          "subsection": "1910.133(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.133(a)(1)",
+              "text": "The employer shall ensure that each affected employee uses appropriate eye or face protection when exposed to eye or face hazards from flying particles, molten metal, liquid chemicals, acids or caustic liquids, chemical gases or vapors, or potentially injurious light radiation.",
+              "requirement": "ensure employees use appropriate eye or face protection when exposed to specified hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "affected employees",
+              "work_types": ["general industry", "welding", "chemical handling", "metal work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "flying_particles", "parameter": "exposure to flying particles", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "molten_metal", "parameter": "exposure to molten metal", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "liquid_chemicals", "parameter": "exposure to liquid chemicals", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "acids_caustics", "parameter": "exposure to acids or caustic liquids", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "chemical_gases", "parameter": "exposure to chemical gases or vapors", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "light_radiation", "parameter": "exposure to potentially injurious light radiation", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "flying_particles OR molten_metal OR liquid_chemicals OR acids_caustics OR chemical_gases OR light_radiation"
+              },
+              "protections": ["appropriate eye protection", "appropriate face protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.133(a)(5)",
+              "text": "The employer shall ensure that each affected employee uses equipment with filter lenses that have a shade number appropriate for the work being performed for protection from injurious light radiation.",
+              "requirement": "use filter lenses with appropriate shade number for protection from injurious light radiation",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees exposed to light radiation",
+              "work_types": ["welding", "cutting", "brazing", "arc welding"],
+              "triggers": {
+                "conditions": [
+                  {"id": "shielded_metal_arc_welding_lt3", "parameter": "shielded metal arc welding electrode size", "value": "3", "unit": "1/32 inch", "operator": "<"},
+                  {"id": "arc_current_lt60", "parameter": "arc current", "value": "60", "unit": "amperes", "operator": "<"},
+                  {"id": "gas_welding_light", "parameter": "gas welding plate thickness", "value": "0.125", "unit": "inches", "operator": "<"},
+                  {"id": "oxygen_cutting_light", "parameter": "oxygen cutting plate thickness", "value": "1", "unit": "inches", "operator": "<"}
+                ],
+                "expression": "(shielded_metal_arc_welding_lt3 AND arc_current_lt60) OR gas_welding_light OR oxygen_cutting_light"
+              },
+              "protections": ["filter lenses with minimum shade 7", "filter lenses with minimum shade 4", "filter lenses with minimum shade 3"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.134",
+      "title": "Respiratory protection",
+      "subsections": [
+        {
+          "subsection": "1910.134(a)",
+          "title": "Permissible practice",
+          "rules": [
+            {
+              "rule_id": "1910.134(a)(1)",
+              "text": "In the control of those occupational diseases caused by breathing air contaminated with harmful dusts, fogs, fumes, mists, gases, smokes, sprays, or vapors, the primary objective shall be to prevent atmospheric contamination. This shall be accomplished as far as feasible by accepted engineering control measures (for example, enclosure or confinement of the operation, general and local ventilation, and substitution of less toxic materials). When effective engineering controls are not feasible, or while they are being instituted, appropriate respirators shall be used pursuant to this section.",
+              "requirement": "implement engineering controls as primary method, use respirators when engineering controls not feasible",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "air_contamination", "parameter": "air contaminated with harmful substances", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "engineering_controls_not_feasible", "parameter": "engineering controls not feasible or being instituted", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "air_contamination AND engineering_controls_not_feasible"
+              },
+              "protections": ["engineering controls", "enclosure or confinement", "ventilation", "material substitution", "appropriate respirators"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.134(c)",
+          "title": "Respiratory protection program",
+          "rules": [
+            {
+              "rule_id": "1910.134(c)(1)",
+              "text": "In any workplace where respirators are necessary to protect the health of the employee or whenever respirators are required by the employer, the employer shall establish and implement a written respiratory protection program with worksite-specific procedures.",
+              "requirement": "establish and implement written respiratory protection program with worksite-specific procedures",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers where respirators are necessary or required",
+              "work_types": ["general industry", "construction", "shipyards", "marine terminals", "longshoring"],
+              "triggers": {
+                "conditions": [
+                  {"id": "respirators_necessary", "parameter": "respirators necessary to protect health", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "respirators_required", "parameter": "respirators required by employer", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "respirators_necessary OR respirators_required"
+              },
+              "protections": ["written respiratory protection program", "worksite-specific procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.134(d)",
+          "title": "Selection of respirators",
+          "rules": [
+            {
+              "rule_id": "1910.134(d)(1)(ii)",
+              "text": "The employer shall select a NIOSH-certified respirator. The respirator shall be used in compliance with the conditions of its certification.",
+              "requirement": "select NIOSH-certified respirator and use in compliance with certification conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers using respirators",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "respirator_selection_required", "parameter": "respirator selection required", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "respirator_selection_required"
+              },
+              "protections": ["NIOSH-certified respirator"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.134(d)(2)(i)",
+              "text": "The employer shall provide the following respirators for employee use in IDLH atmospheres: (A) A full facepiece pressure demand SCBA certified by NIOSH for a minimum service life of thirty minutes, or (B) A combination full facepiece pressure demand supplied-air respirator (SAR) with auxiliary self-contained air supply.",
+              "requirement": "provide specified respirators for IDLH atmospheres with minimum 30-minute service life",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees working in IDLH atmospheres",
+              "work_types": ["emergency response", "confined space", "hazardous atmospheres"],
+              "triggers": {
+                "conditions": [
+                  {"id": "idlh_atmosphere", "parameter": "immediately dangerous to life or health atmosphere", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "service_life_minimum", "parameter": "SCBA service life", "value": "30", "unit": "minutes", "operator": ">="}
+                ],
+                "expression": "idlh_atmosphere AND service_life_minimum"
+              },
+              "protections": ["full facepiece pressure demand SCBA", "combination SAR with auxiliary air supply"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.134(e)",
+          "title": "Medical evaluation",
+          "rules": [
+            {
+              "rule_id": "1910.134(e)(1)",
+              "text": "The employer shall provide a medical evaluation to determine the employee's ability to use a respirator, before the employee is fit tested or required to use the respirator in the workplace.",
+              "requirement": "provide medical evaluation before fit testing or workplace respirator use",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees required to use respirators",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "before_fit_test", "parameter": "before fit testing", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "before_workplace_use", "parameter": "before workplace respirator use", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "before_fit_test OR before_workplace_use"
+              },
+              "protections": ["medical evaluation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.134(f)",
+          "title": "Fit testing",
+          "rules": [
+            {
+              "rule_id": "1910.134(f)(2)",
+              "text": "The employer shall ensure that an employee using a tight-fitting facepiece respirator is fit tested prior to initial use of the respirator, whenever a different respirator facepiece (size, style, model or make) is used, and at least annually thereafter.",
+              "requirement": "conduct fit testing before initial use, when changing respirator, and annually",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees using tight-fitting facepiece respirators",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "initial_use", "parameter": "prior to initial use", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "different_respirator", "parameter": "different respirator facepiece used", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "annual_retest", "parameter": "annual fit testing", "value": "365", "unit": "days", "operator": ">="}
+                ],
+                "expression": "initial_use OR different_respirator OR annual_retest"
+              },
+              "protections": ["fit testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.134(f)(7)",
+              "text": "If the fit factor, as determined through an OSHA-accepted QNFT protocol, is equal to or greater than 100 for tight-fitting half facepieces, or equal to or greater than 500 for tight-fitting full facepieces, the QNFT has been passed with that respirator.",
+              "requirement": "achieve minimum fit factor of 100 for half facepieces or 500 for full facepieces",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees using tight-fitting respirators",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "half_facepiece_fit_factor", "parameter": "half facepiece fit factor", "value": "100", "unit": "factor", "operator": ">="},
+                  {"id": "full_facepiece_fit_factor", "parameter": "full facepiece fit factor", "value": "500", "unit": "factor", "operator": ">="}
+                ],
+                "expression": "half_facepiece_fit_factor OR full_facepiece_fit_factor"
+              },
+              "protections": ["quantitative fit testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.134(i)",
+          "title": "Breathing air quality and use",
+          "rules": [
+            {
+              "rule_id": "1910.134(i)(1)(ii)",
+              "text": "Compressed breathing air shall meet at least the requirements for Grade D breathing air described in ANSI/Compressed Gas Association Commodity Specification for Air, G-7.1-1989, to include: (A) Oxygen content (v/v) of 19.5-23.5%; (B) Hydrocarbon (condensed) content of 5 milligrams per cubic meter of air or less; (C) Carbon monoxide (CO) content of 10 ppm or less; (D) Carbon dioxide content of 1,000 ppm or less; and (E) Lack of noticeable odor.",
+              "requirement": "ensure compressed breathing air meets Grade D specifications with specified purity levels",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers using atmosphere-supplying respirators",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [
+                  {"id": "oxygen_content_min", "parameter": "oxygen content minimum", "value": "19.5", "unit": "percent v/v", "operator": ">="},
+                  {"id": "oxygen_content_max", "parameter": "oxygen content maximum", "value": "23.5", "unit": "percent v/v", "operator": "<="},
+                  {"id": "hydrocarbon_content", "parameter": "hydrocarbon content", "value": "5", "unit": "mg/m3", "operator": "<="},
+                  {"id": "co_content", "parameter": "carbon monoxide content", "value": "10", "unit": "ppm", "operator": "<="},
+                  {"id": "co2_content", "parameter": "carbon dioxide content", "value": "1000", "unit": "ppm", "operator": "<="}
+                ],
+                "expression": "oxygen_content_min AND oxygen_content_max AND hydrocarbon_content AND co_content AND co2_content"
+              },
+              "protections": ["Grade D breathing air quality"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.135",
+      "title": "Head protection",
+      "subsections": [
+        {
+          "subsection": "1910.135(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.135(a)(1)",
+              "text": "The employer shall ensure that each affected employee wears a protective helmet when working in areas where there is a potential for injury to the head from falling objects.",
+              "requirement": "ensure employees wear protective helmets when potential for head injury from falling objects exists",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "affected employees",
+              "work_types": ["construction", "industrial operations", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "falling_object_potential", "parameter": "potential for injury from falling objects", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "falling_object_potential"
+              },
+              "protections": ["protective helmet"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.135(a)(2)",
+              "text": "The employer shall ensure that a protective helmet designed to reduce electrical shock hazard is worn by each such affected employee when near exposed electrical conductors which could contact the head.",
+              "requirement": "ensure employees wear electrical shock-resistant helmets when near exposed electrical conductors",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees near electrical conductors",
+              "work_types": ["electrical work", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "exposed_electrical_conductors", "parameter": "near exposed electrical conductors that could contact head", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "exposed_electrical_conductors"
+              },
+              "protections": ["electrical shock-resistant helmet"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.136",
+      "title": "Foot protection",
+      "subsections": [
+        {
+          "subsection": "1910.136(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.136(a)",
+              "text": "The employer shall ensure that each affected employee uses protective footwear when working in areas where there is a danger of foot injuries due to falling or rolling objects, or objects piercing the sole, or when the use of protective footwear will protect the affected employee from an electrical hazard, such as a static-discharge or electric-shock hazard, that remains after the employer takes other necessary protective measures.",
+              "requirement": "ensure employees use protective footwear when danger of foot injuries or electrical hazards exist",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "affected employees",
+              "work_types": ["industrial operations", "construction", "electrical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "falling_objects_danger", "parameter": "danger of foot injuries from falling objects", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "rolling_objects_danger", "parameter": "danger of foot injuries from rolling objects", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "piercing_objects_danger", "parameter": "danger from objects piercing sole", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "electrical_hazard", "parameter": "electrical hazard protection needed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "falling_objects_danger OR rolling_objects_danger OR piercing_objects_danger OR electrical_hazard"
+              },
+              "protections": ["protective footwear"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.137",
+      "title": "Electrical protective equipment",
+      "subsections": [
+        {
+          "subsection": "1910.137(a)",
+          "title": "Design requirements for specific types of electrical protective equipment",
+          "rules": [
+            {
+              "rule_id": "1910.137(a)(2)(i)",
+              "text": "Equipment shall be capable of withstanding the ac proof-test voltage specified in Table I-1 or the dc proof-test voltage specified in Table I-2.",
+              "requirement": "electrical protective equipment must withstand specified proof-test voltages",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical protective equipment",
+              "work_types": ["electrical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "class_00_equipment", "parameter": "Class 00 equipment proof test", "value": "2500", "unit": "volts AC", "operator": ">="},
+                  {"id": "class_0_equipment", "parameter": "Class 0 equipment proof test", "value": "5000", "unit": "volts AC", "operator": ">="},
+                  {"id": "class_1_equipment", "parameter": "Class 1 equipment proof test", "value": "10000", "unit": "volts AC", "operator": ">="},
+                  {"id": "class_2_equipment", "parameter": "Class 2 equipment proof test", "value": "20000", "unit": "volts AC", "operator": ">="}
+                ],
+                "expression": "class_00_equipment OR class_0_equipment OR class_1_equipment OR class_2_equipment"
+              },
+              "protections": ["proof-tested electrical equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.137(c)",
+          "title": "In-service care and use of electrical protective equipment",
+          "rules": [
+            {
+              "rule_id": "1910.137(c)(2)(ii)",
+              "text": "Insulating equipment shall be inspected for damage before each day's use and immediately following any incident that can reasonably be suspected of causing damage. Insulating gloves shall be given an air test, along with the inspection.",
+              "requirement": "inspect insulating equipment daily and after incidents, conduct air test for gloves",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "users of electrical insulating equipment",
+              "work_types": ["electrical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "daily_use", "parameter": "before each day's use", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "after_incident", "parameter": "immediately following suspected damage incident", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "daily_use OR after_incident"
+              },
+              "protections": ["daily inspection", "air test for gloves"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.137(c)(2)(viii)",
+              "text": "Electrical protective equipment shall be subjected to periodic electrical tests. Test voltages and the maximum intervals between tests shall be in accordance with Table I-4 and Table I-5.",
+              "requirement": "conduct periodic electrical tests according to specified intervals and voltages",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical protective equipment",
+              "work_types": ["electrical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "rubber_blankets_interval", "parameter": "rubber insulating blankets test interval", "value": "12", "unit": "months", "operator": "<="},
+                  {"id": "rubber_gloves_interval", "parameter": "rubber insulating gloves test interval", "value": "6", "unit": "months", "operator": "<="},
+                  {"id": "rubber_sleeves_interval", "parameter": "rubber insulating sleeves test interval", "value": "12", "unit": "months", "operator": "<="}
+                ],
+                "expression": "rubber_blankets_interval OR rubber_gloves_interval OR rubber_sleeves_interval"
+              },
+              "protections": ["periodic electrical testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.138",
+      "title": "Hand protection",
+      "subsections": [
+        {
+          "subsection": "1910.138(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.138(a)",
+              "text": "Employers shall select and require employees to use appropriate hand protection when employees' hands are exposed to hazards such as those from skin absorption of harmful substances; severe cuts or lacerations; severe abrasions; punctures; chemical burns; thermal burns; and harmful temperature extremes.",
+              "requirement": "select and require appropriate hand protection when hands exposed to specified hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees with hand hazard exposure",
+              "work_types": ["chemical handling", "cutting operations", "thermal operations", "mechanical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "skin_absorption_hazard", "parameter": "skin absorption of harmful substances", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "cut_laceration_hazard", "parameter": "severe cuts or lacerations", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "abrasion_hazard", "parameter": "severe abrasions", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "puncture_hazard", "parameter": "punctures", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "chemical_burn_hazard", "parameter": "chemical burns", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "thermal_burn_hazard", "parameter": "thermal burns", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "temperature_extreme_hazard", "parameter": "harmful temperature extremes", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "skin_absorption_hazard OR cut_laceration_hazard OR abrasion_hazard OR puncture_hazard OR chemical_burn_hazard OR thermal_burn_hazard OR temperature_extreme_hazard"
+              },
+              "protections": ["appropriate hand protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.140",
+      "title": "Personal fall protection systems",
+      "subsections": [
+        {
+          "subsection": "1910.140(c)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1910.140(c)(4)",
+              "text": "Lanyards and vertical lifelines must have a minimum breaking strength of 5,000 pounds (22.2 kN).",
+              "requirement": "ensure lanyards and vertical lifelines have minimum breaking strength of 5,000 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall protection systems",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "lanyard_breaking_strength", "parameter": "lanyard breaking strength", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "lifeline_breaking_strength", "parameter": "vertical lifeline breaking strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "lanyard_breaking_strength AND lifeline_breaking_strength"
+              },
+              "protections": ["adequate breaking strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(c)(7)",
+              "text": "D-rings, snaphooks, and carabiners must be capable of sustaining a minimum tensile load of 5,000 pounds (22.2 kN).",
+              "requirement": "ensure D-rings, snaphooks, and carabiners sustain minimum tensile load of 5,000 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall protection systems",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "dring_tensile_load", "parameter": "D-ring tensile load capacity", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "snaphook_tensile_load", "parameter": "snaphook tensile load capacity", "value": "5000", "unit": "pounds", "operator": ">="},
+                  {"id": "carabiner_tensile_load", "parameter": "carabiner tensile load capacity", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "dring_tensile_load AND snaphook_tensile_load AND carabiner_tensile_load"
+              },
+              "protections": ["adequate tensile strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(c)(8)",
+              "text": "D-rings, snaphooks, and carabiners must be proof tested to a minimum tensile load of 3,600 pounds (16 kN) without cracking, breaking, or incurring permanent deformation. The gate strength of snaphooks and carabiners must be capable of withstanding a minimum load of 3,600 pounds (16 kN) without the gate separating from the nose of the snaphook or carabiner body by more than 0.125 inches (3.175 mm).",
+              "requirement": "proof test hardware to 3,600 pounds without failure and gate separation limit of 0.125 inches",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall protection hardware",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "proof_test_load", "parameter": "proof test load", "value": "3600", "unit": "pounds", "operator": ">="},
+                  {"id": "gate_separation_limit", "parameter": "gate separation", "value": "0.125", "unit": "inches", "operator": "<="}
+                ],
+                "expression": "proof_test_load AND gate_separation_limit"
+              },
+              "protections": ["proof testing", "gate strength verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(c)(13)(i)",
+              "text": "Anchorages, except window cleaners' belt anchors covered by paragraph (e) of this section, must be: Capable of supporting at least 5,000 pounds (22.2 kN) for each employee attached.",
+              "requirement": "ensure anchorages support minimum 5,000 pounds per attached employee",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fall protection anchorages",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "anchorage_capacity_per_employee", "parameter": "anchorage capacity per employee", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "anchorage_capacity_per_employee"
+              },
+              "protections": ["adequate anchorage strength"],
+              "exceptions": {
+                "items": [
+                  {"id": "window_cleaners_anchors", "description": "window cleaners' belt anchors covered by paragraph (e)", "conditions": []}
+                ],
+                "expression": "window_cleaners_anchors"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.140(d)",
+          "title": "Personal fall arrest systems",
+          "rules": [
+            {
+              "rule_id": "1910.140(d)(1)(i)",
+              "text": "Limit the maximum arresting force on the employee to 1,800 pounds (8 kN).",
+              "requirement": "limit maximum arresting force to 1,800 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest systems",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_arresting_force", "parameter": "maximum arresting force", "value": "1800", "unit": "pounds", "operator": "<="}
+                ],
+                "expression": "max_arresting_force"
+              },
+              "protections": ["force limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(d)(1)(ii)",
+              "text": "Bring the employee to a complete stop and limit the maximum deceleration distance the employee travels to 3.5 feet (1.1 m).",
+              "requirement": "limit maximum deceleration distance to 3.5 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest systems",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_deceleration_distance", "parameter": "maximum deceleration distance", "value": "3.5", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_deceleration_distance"
+              },
+              "protections": ["deceleration distance limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(d)(2)(ii)",
+              "text": "Personal fall arrest systems are rigged in such a manner that the employee cannot free fall more than 6 feet (1.8 m) or contact a lower level. A free fall may be more than 6 feet (1.8 m) provided the employer can demonstrate the manufacturer designed the system to allow a free fall of more than 6 feet and tested the system to ensure a maximum arresting force of 1,800 pounds (8 kN) is not exceeded.",
+              "requirement": "limit free fall to 6 feet unless system designed and tested for greater distances",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "personal fall arrest systems",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "free_fall_distance", "parameter": "free fall distance", "value": "6", "unit": "feet", "operator": "<="},
+                  {"id": "manufacturer_designed_tested", "parameter": "manufacturer designed and tested for greater fall", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "arresting_force_verified", "parameter": "maximum arresting force verified not to exceed 1,800 pounds", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "free_fall_distance OR (manufacturer_designed_tested AND arresting_force_verified)"
+              },
+              "protections": ["free fall limitation"],
+              "exceptions": {
+                "items": [
+                  {"id": "designed_tested_system", "description": "system designed and tested by manufacturer for greater than 6 feet free fall with verified 1,800 pound force limit", "conditions": [{"parameter": "manufacturer design verification", "value": "true", "operator": "="}, {"parameter": "force testing verification", "value": "true", "operator": "="}]}
+                ],
+                "expression": "designed_tested_system"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.140(e)",
+          "title": "Positioning systems",
+          "rules": [
+            {
+              "rule_id": "1910.140(e)(1)(i)",
+              "text": "All positioning systems, except window cleaners' positioning systems, are capable of withstanding, without failure, a drop test consisting of a 4-foot (1.2-m) drop of a 250-pound (113-kg) weight.",
+              "requirement": "positioning systems must withstand 4-foot drop test with 250-pound weight",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "positioning systems except window cleaners'",
+              "work_types": ["construction", "maintenance", "elevated work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "drop_test_distance", "parameter": "drop test distance", "value": "4", "unit": "feet", "operator": "="},
+                  {"id": "drop_test_weight", "parameter": "drop test weight", "value": "250", "unit": "pounds", "operator": "="}
+                ],
+                "expression": "drop_test_distance AND drop_test_weight"
+              },
+              "protections": ["drop test verification"],
+              "exceptions": {
+                "items": [
+                  {"id": "window_cleaners_systems", "description": "window cleaners' positioning systems", "conditions": []}
+                ],
+                "expression": "window_cleaners_systems"
+              }
+            },
+            {
+              "rule_id": "1910.140(e)(1)(ii)(A)",
+              "text": "All window cleaners' positioning systems must: Be capable of withstanding without failure a drop test consisting of a 6-foot (1.8-m) drop of a 250-pound (113-kg) weight.",
+              "requirement": "window cleaners' systems must withstand 6-foot drop test with 250-pound weight",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "window cleaners' positioning systems",
+              "work_types": ["window cleaning"],
+              "triggers": {
+                "conditions": [
+                  {"id": "window_cleaner_drop_distance", "parameter": "window cleaner drop test distance", "value": "6", "unit": "feet", "operator": "="},
+                  {"id": "window_cleaner_drop_weight", "parameter": "window cleaner drop test weight", "value": "250", "unit": "pounds", "operator": "="}
+                ],
+                "expression": "window_cleaner_drop_distance AND window_cleaner_drop_weight"
+              },
+              "protections": ["enhanced drop test for window cleaning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(e)(1)(ii)(B)",
+              "text": "Limit the initial arresting force on the falling employee to not more than 2,000 pounds (8.9 kN), with a duration not exceeding 2 milliseconds and any subsequent arresting forces to not more than 1,000 pounds (4.5 kN).",
+              "requirement": "limit initial arresting force to 2,000 pounds for 2 milliseconds, subsequent forces to 1,000 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "window cleaners' positioning systems",
+              "work_types": ["window cleaning"],
+              "triggers": {
+                "conditions": [
+                  {"id": "initial_arresting_force", "parameter": "initial arresting force", "value": "2000", "unit": "pounds", "operator": "<="},
+                  {"id": "initial_force_duration", "parameter": "initial force duration", "value": "2", "unit": "milliseconds", "operator": "<="},
+                  {"id": "subsequent_arresting_force", "parameter": "subsequent arresting forces", "value": "1000", "unit": "pounds", "operator": "<="}
+                ],
+                "expression": "initial_arresting_force AND initial_force_duration AND subsequent_arresting_force"
+              },
+              "protections": ["force limitation for window cleaning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.140(e)(2)(iii)",
+              "text": "Each window anchor is capable of supporting a minimum load of 6,000 pounds (26.5 kN).",
+              "requirement": "window anchors must support minimum 6,000 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "window anchors",
+              "work_types": ["window cleaning"],
+              "triggers": {
+                "conditions": [
+                  {"id": "window_anchor_capacity", "parameter": "window anchor load capacity", "value": "6000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "window_anchor_capacity"
+              },
+              "protections": ["adequate window anchor strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

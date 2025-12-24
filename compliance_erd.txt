@@ -1,0 +1,21 @@
+[Industries] |industryId| industryName industryDescription created_at updated_at created_by updated_by
+[Regulatory_Bodies] |regBodyId| regBodyName regBodyDescription website created_at updated_at created_by updated_by
+[Regulations] |regulationId| regBodyId regulationName regulationDescription created_at updated_at created_by updated_by
+[Industry_Regulations] |industryRegulationId| industryId regulationId created_at updated_at created_by updated_by
+[Compliance_Rules] |ruleId| regulationId ruleNumber ruleTitle ruleDescription created_at updated_at created_by updated_by
+[Rule_Details] |ruleDetailId| ruleId detailNumber detailDescription created_at updated_at created_by updated_by
+[Companies] |companyId| companyName industryId regionId zipCode created_at updated_at created_by updated_by
+[Compliance_Status] |complianceStatusId| companyId ruleId complianceStatus lastCheckedDate comments created_at updated_at created_by updated_by
+[Country] |countryId| countryName created_at updated_at created_by updated_by
+[Region] |regionId| regionName countryId created_at updated_at created_by updated_by
+
+Industries industryId < Industry_Regulations industryId
+Regulatory_Bodies regBodyId < Regulations regBodyId
+Regulations regulationId < Industry_Regulations regulationId
+Regulations regulationId < Compliance_Rules regulationId
+Compliance_Rules ruleId < Rule_Details ruleId
+Industries industryId < Companies industryId
+Region regionId < Companies regionId
+Compliance_Rules ruleId < Compliance_Status ruleId
+Companies companyId < Compliance_Status companyId
+Country countryId < Region countryId

@@ -1,0 +1,1221 @@
+{
+  "regulation_metadata": {
+    "regulation_id": "29_CFR_1904",
+    "title": "Recording and Reporting Occupational Injuries and Illnesses",
+    "authority": "OSHA",
+    "effective_date": "2025-09-24",
+    "last_updated": "2025-09-24",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904",
+    "parsing_version": "v1.0",
+    "parsing_date": "2025-09-25",
+    "content_hash": "sha256:extracted_from_actual_pdf_content",
+    "legal_basis": [
+      "29 U.S.C. 657",
+      "29 U.S.C. 658", 
+      "29 U.S.C. 660",
+      "29 U.S.C. 666",
+      "29 U.S.C. 669",
+      "29 U.S.C. 673",
+      "Secretary of Labor's Orders No. 3-2000 (65 FR 50017)",
+      "Secretary of Labor's Orders No. 1-2012 (77 FR 3912)",
+      "5 U.S.C. 553"
+    ],
+    "purpose": "to require employers to record and report work-related fatalities, injuries, and illnesses",
+    "editorial_notes": [
+      {
+        "date": "2017-05-03",
+        "citation": "82 FR 20548",
+        "note": "Congressional Review Act and Public Law 115-21 required removal of all amendments published at 81 FR 91792, Dec. 19, 2016"
+      }
+    ],
+    "disclaimer": "Recording or reporting a work-related injury, illness, or fatality does not mean that the employer or employee was at fault, that an OSHA rule has been violated, or that the employee is eligible for workers' compensation or other benefits."
+  },
+
+  "company_applicability": {
+    "size_exemptions": [
+      {
+        "exemption_id": "small_employer_exemption",
+        "regulation_ref": "29CFR-1904.1",
+        "condition": "10_or_fewer_employees_at_all_times_during_last_calendar_year",
+        "scope": "entire_company",
+        "result": "partial_exemption_from_recordkeeping",
+        "exceptions": [
+          {
+            "exception_type": "fatality_reporting",
+            "requirement": "must_report_work_related_fatalities",
+            "regulation_ref": "29CFR-1904.39"
+          },
+          {
+            "exception_type": "serious_injury_reporting", 
+            "requirement": "must_report_hospitalizations_amputations_eye_loss",
+            "regulation_ref": "29CFR-1904.39"
+          },
+          {
+            "exception_type": "osha_bls_written_request",
+            "requirement": "must_keep_records_if_written_request_received",
+            "regulation_ref": "29CFR-1904.41, 29CFR-1904.42"
+          }
+        ],
+        "implementation_details": {
+          "size_determination": "peak_employment_during_last_calendar_year",
+          "counting_rule": "no_more_than_10_employees_at_any_time",
+          "employee_types_counted": "all_employees_including_part_time_seasonal_temporary"
+        },
+        "verbatim_text": "If your company had 10 or fewer employees at all times during the last calendar year, you do not need to keep OSHA injury and illness records unless OSHA or the Bureau of Labor Statistics informs you in writing that you must keep records under § 1904.41 or § 1904.42."
+      }
+    ],
+    "industry_exemptions": [
+      {
+        "exemption_id": "partially_exempt_industries",
+        "regulation_ref": "29CFR-1904.2",
+        "scope": "individual_business_establishments",
+        "result": "partial_exemption_from_recordkeeping",
+        "exceptions": [
+          "fatality_reporting_required",
+          "hospitalization_amputation_eye_loss_reporting_required", 
+          "written_government_request_overrides_exemption"
+        ],
+        "naics_codes": [
+          {"code": "4412", "industry": "Other Motor Vehicle Dealers"},
+          {"code": "4431", "industry": "Electronics and Appliance Stores"},
+          {"code": "4461", "industry": "Health and Personal Care Stores"},
+          {"code": "4471", "industry": "Gasoline Stations"},
+          {"code": "4481", "industry": "Clothing Stores"},
+          {"code": "4482", "industry": "Shoe Stores"},
+          {"code": "4483", "industry": "Jewelry, Luggage, and Leather Goods Stores"},
+          {"code": "4511", "industry": "Sporting Goods, Hobby, and Musical Instrument Stores"},
+          {"code": "4512", "industry": "Book, Periodical, and Music Stores"},
+          {"code": "4531", "industry": "Florists"},
+          {"code": "4532", "industry": "Office Supplies, Stationery, and Gift Stores"},
+          {"code": "4812", "industry": "Nonscheduled Air Transportation"},
+          {"code": "4861", "industry": "Pipeline Transportation of Crude Oil"},
+          {"code": "4862", "industry": "Pipeline Transportation of Natural Gas"},
+          {"code": "4869", "industry": "Other Pipeline Transportation"},
+          {"code": "4879", "industry": "Scenic and Sightseeing Transportation, Other"},
+          {"code": "4885", "industry": "Freight Transportation Arrangement"},
+          {"code": "5111", "industry": "Newspaper, Periodical, Book, and Directory Publishers"},
+          {"code": "5112", "industry": "Software Publishers"},
+          {"code": "5121", "industry": "Motion Picture and Video Industries"},
+          {"code": "5122", "industry": "Sound Recording Industries"},
+          {"code": "5151", "industry": "Radio and Television Broadcasting"},
+          {"code": "5172", "industry": "Wireless Telecommunications Carriers (except Satellite)"},
+          {"code": "5173", "industry": "Telecommunications Resellers"},
+          {"code": "5179", "industry": "Other Telecommunications"},
+          {"code": "5181", "industry": "Internet Service Providers and Web Search Portals"},
+          {"code": "5182", "industry": "Data Processing, Hosting, and Related Services"},
+          {"code": "5191", "industry": "Other Information Services"},
+          {"code": "5211", "industry": "Monetary Authorities—Central Bank"},
+          {"code": "5221", "industry": "Depository Credit Intermediation"},
+          {"code": "5222", "industry": "Nondepository Credit Intermediation"},
+          {"code": "5223", "industry": "Activities Related to Credit Intermediation"},
+          {"code": "5231", "industry": "Securities and Commodity Contracts Intermediation and Brokerage"},
+          {"code": "5232", "industry": "Securities and Commodity Exchanges"},
+          {"code": "5239", "industry": "Other Financial Investment Activities"},
+          {"code": "5241", "industry": "Insurance Carriers"},
+          {"code": "5242", "industry": "Agencies, Brokerages, and Other Insurance Related Activities"},
+          {"code": "5251", "industry": "Insurance and Employee Benefit Funds"},
+          {"code": "5259", "industry": "Other Investment Pools and Funds"},
+          {"code": "5312", "industry": "Offices of Real Estate Agents and Brokers"},
+          {"code": "5331", "industry": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)"},
+          {"code": "5411", "industry": "Legal Services"},
+          {"code": "5412", "industry": "Accounting, Tax Preparation, Bookkeeping, and Payroll Services"},
+          {"code": "5413", "industry": "Architectural, Engineering, and Related Services"},
+          {"code": "5414", "industry": "Specialized Design Services"},
+          {"code": "5415", "industry": "Computer Systems Design and Related Services"},
+          {"code": "5416", "industry": "Management, Scientific, and Technical Consulting Services"},
+          {"code": "5417", "industry": "Scientific Research and Development Services"},
+          {"code": "5418", "industry": "Advertising and Related Services"},
+          {"code": "5511", "industry": "Management of Companies and Enterprises"},
+          {"code": "5611", "industry": "Office Administrative Services"},
+          {"code": "5614", "industry": "Business Support Services"},
+          {"code": "5615", "industry": "Travel Arrangement and Reservation Services"},
+          {"code": "5616", "industry": "Investigation and Security Services"},
+          {"code": "6111", "industry": "Elementary and Secondary Schools"},
+          {"code": "6112", "industry": "Junior Colleges"},
+          {"code": "6113", "industry": "Colleges, Universities, and Professional Schools"},
+          {"code": "6114", "industry": "Business Schools and Computer and Management Training"},
+          {"code": "6115", "industry": "Technical and Trade Schools"},
+          {"code": "6116", "industry": "Other Schools and Instruction"},
+          {"code": "6117", "industry": "Educational Support Services"},
+          {"code": "6211", "industry": "Offices of Physicians"},
+          {"code": "6212", "industry": "Offices of Dentists"},
+          {"code": "6213", "industry": "Offices of Other Health Practitioners"},
+          {"code": "6214", "industry": "Outpatient Care Centers"},
+          {"code": "6215", "industry": "Medical and Diagnostic Laboratories"},
+          {"code": "6244", "industry": "Child Day Care Services"},
+          {"code": "7114", "industry": "Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures"},
+          {"code": "7115", "industry": "Independent Artists, Writers, and Performers"},
+          {"code": "7213", "industry": "Rooming and Boarding Houses"},
+          {"code": "7221", "industry": "Full-Service Restaurants"},
+          {"code": "7222", "industry": "Limited-Service Eating Places"},
+          {"code": "7224", "industry": "Drinking Places (Alcoholic Beverages)"},
+          {"code": "8112", "industry": "Electronic and Precision Equipment Repair and Maintenance"},
+          {"code": "8114", "industry": "Personal and Household Goods Repair and Maintenance"},
+          {"code": "8121", "industry": "Personal Care Services"},
+          {"code": "8122", "industry": "Death Care Services"},
+          {"code": "8131", "industry": "Religious Organizations"},
+          {"code": "8132", "industry": "Grantmaking and Giving Services"},
+          {"code": "8133", "industry": "Social Advocacy Organizations"},
+          {"code": "8134", "industry": "Civic and Social Organizations"},
+          {"code": "8139", "industry": "Business, Professional, Labor, Political, and Similar Organizations"}
+        ],
+        "verbatim_text": "If your business establishment is classified in a specific industry group listed in appendix A to this subpart, you do not need to keep OSHA injury and illness records unless the government asks you to keep the records under § 1904.41 or § 1904.42."
+      }
+    ],
+    "coverage_determinations": {
+      "naics_code_determination": [
+        {
+          "method": "census_bureau_search",
+          "url": "http://www.census.gov/eos/www/naics/",
+          "description": "use search feature with keyword describing business"
+        },
+        {
+          "method": "browse_naics_structure", 
+          "url": "http://www.census.gov/eos/www/naics/",
+          "description": "view complete NAICS structure with codes and titles"
+        },
+        {
+          "method": "sic_to_naics_conversion",
+          "url": "http://www.census.gov/eos/www/naics/",
+          "description": "use detailed conversion between 1987 SIC and 2002 NAICS"
+        }
+      ]
+    },
+    "multi_agency_compliance": {
+      "regulation_ref": "29CFR-1904.3",
+      "requirement": "OSHA accepts other agency records if they contain same information as part 1904 requires",
+      "condition": "memorandum_of_understanding_with_other_agency_or_equivalent_information"
+    }
+  },
+
+  "recording_criteria": {
+    "recordability_decision_tree": {
+      "regulation_ref": "29CFR-1904.4(b)(2)",
+      "decision_path": [
+        {
+          "step": 1,
+          "question": "Did the employee experience an injury or illness?",
+          "regulation_ref": "29CFR-1904.4(a)",
+          "yes_path": "step_2",
+          "no_path": "not_recordable",
+          "notes": "Basic threshold - must be actual injury or illness"
+        },
+        {
+          "step": 2,
+          "question": "Is the injury or illness work-related?",
+          "regulation_ref": "29CFR-1904.5", 
+          "yes_path": "step_3",
+          "no_path": "not_recordable",
+          "determination_method": "use_work_relatedness_rules"
+        },
+        {
+          "step": 3,
+          "question": "Is the injury or illness a new case?",
+          "regulation_ref": "29CFR-1904.6",
+          "yes_path": "step_4", 
+          "no_path": "update_previously_recorded_entry_if_necessary",
+          "determination_method": "use_new_case_criteria"
+        },
+        {
+          "step": 4,
+          "question": "Does the injury or illness meet the general recording criteria or the application to specific cases?",
+          "regulation_ref": "29CFR-1904.7",
+          "yes_path": "record_the_injury_or_illness",
+          "no_path": "do_not_record_the_injury_or_illness",
+          "criteria_references": ["29CFR-1904.7", "29CFR-1904.8", "29CFR-1904.9", "29CFR-1904.10", "29CFR-1904.11", "29CFR-1904.12"]
+        }
+      ]
+    },
+    "work_relatedness_criteria": {
+      "regulation_ref": "29CFR-1904.5",
+      "basic_requirement": "injury or illness is work-related if event or exposure in work environment caused, contributed to, or significantly aggravated the condition",
+      "presumption": "work-relatedness is presumed for injuries and illnesses in work environment unless exception applies",
+      "work_environment_definition": "establishment and other locations where employees work or are present as condition of employment, including equipment and materials",
+      "exceptions": [
+        {
+          "exception": "employee_as_general_public",
+          "description": "employee present as member of general public rather than as employee"
+        },
+        {
+          "exception": "non_work_related_event",
+          "description": "signs or symptoms surface at work but result solely from non-work-related event outside work environment"
+        },
+        {
+          "exception": "wellness_program_participation",
+          "description": "results solely from voluntary participation in wellness program, medical/fitness/recreational activity"
+        },
+        {
+          "exception": "personal_food_consumption",
+          "description": "solely result of eating, drinking, or preparing food for personal consumption",
+          "note": "exception does not apply if food contaminated by workplace contaminants or food poisoning from employer-supplied food"
+        },
+        {
+          "exception": "personal_tasks_outside_hours",
+          "description": "solely result of personal tasks unrelated to employment outside assigned working hours"
+        },
+        {
+          "exception": "personal_grooming_self_medication",
+          "description": "solely result of personal grooming, self medication for non-work condition, or intentionally self-inflicted"
+        },
+        {
+          "exception": "motor_vehicle_commuting",
+          "description": "motor vehicle accident on company parking lot or access road while commuting"
+        },
+        {
+          "exception": "common_cold_flu", 
+          "description": "common cold or flu",
+          "note": "contagious diseases like tuberculosis, brucellosis, hepatitis A, plague are work-related if infected at work"
+        },
+        {
+          "exception": "mental_illness",
+          "description": "mental illness unless employee voluntarily provides physician opinion stating work-relatedness"
+        }
+      ],
+      "significant_aggravation_criteria": [
+        "death_that_would_not_have_occurred_without_workplace_exposure",
+        "loss_of_consciousness_that_would_not_have_occurred_without_workplace_exposure", 
+        "days_away_restricted_transfer_that_would_not_have_occurred_without_workplace_exposure",
+        "medical_treatment_needed_due_to_workplace_exposure_or_change_in_treatment_necessitated"
+      ],
+      "travel_status_rules": {
+        "work_related_if": "engaged in work activities in interest of employer",
+        "examples": "travel to/from customer contacts, job tasks, work-related entertainment",
+        "hotel_rules": {
+          "establishes_home_away_from_home": "evaluate activities same as non-traveling employee",
+          "commuting_exception": "injuries while commuting between temporary residence and job location not work-related"
+        },
+        "personal_detour_exception": "injuries during personal detour from reasonably direct route not work-related"
+      },
+      "work_at_home_rules": {
+        "work_related_if": "injury occurs while performing work for pay and directly related to work performance",
+        "examples_work_related": ["dropping box of work documents", "needle puncture from work sewing machine"],
+        "examples_not_work_related": ["tripping on family dog while answering work call", "electrocution from faulty home wiring"]
+      }
+    },
+    "new_case_determination": {
+      "regulation_ref": "29CFR-1904.6",
+      "criteria": [
+        "employee_has_not_previously_experienced_recorded_injury_illness_same_type_same_body_part",
+        "employee_previously_experienced_same_type_same_body_part_but_recovered_completely_and_workplace_event_caused_recurrence"
+      ],
+      "chronic_illness_rule": "occupational illnesses with recurring symptoms recorded only once",
+      "chronic_illness_examples": ["occupational cancer", "asbestosis", "byssinosis", "silicosis"],
+      "episodic_illness_rule": "each episode caused by workplace event treated as new case",
+      "physician_consultation": "may rely on physician recommendation about new case vs recurrence"
+    },
+    "general_recording_criteria": [
+      {
+        "criterion": "death",
+        "regulation_ref": "29CFR-1904.7(b)(2)",
+        "condition": "injury_or_illness_results_in_death",
+        "form_action": {
+          "form": "OSHA_300_Log",
+          "action": "enter_check_mark_in_death_column"
+        },
+        "additional_requirements": [
+          {
+            "requirement": "report_to_osha",
+            "timing": "within_8_hours",
+            "regulation_ref": "29CFR-1904.39"
+          }
+        ]
+      },
+      {
+        "criterion": "days_away_from_work",
+        "regulation_ref": "29CFR-1904.7(b)(3)",
+        "condition": "injury_or_illness_involves_days_away_from_work",
+        "form_action": {
+          "form": "OSHA_300_Log", 
+          "action": "check_mark_in_days_away_space_and_enter_number_of_calendar_days"
+        },
+        "counting_rules": {
+          "start_counting": "day_after_injury_occurred_or_illness_began",
+          "include_all_calendar_days": "weekends_holidays_vacation_days_if_unable_to_work_due_to_injury_illness",
+          "physician_recommendation_controls": "record_days_away_recommended_by_physician_whether_employee_follows_or_not",
+          "cap_at_180_days": "may_cap_total_days_away_at_180_calendar_days",
+          "employee_leaves_company": "stop_counting_if_leaves_for_unrelated_reason_estimate_if_leaves_due_to_injury"
+        }
+      },
+      {
+        "criterion": "restricted_work_job_transfer",
+        "regulation_ref": "29CFR-1904.7(b)(4)",
+        "condition": "injury_illness_results_in_restricted_work_or_job_transfer_without_death_or_days_away",
+        "form_action": {
+          "form": "OSHA_300_Log",
+          "action": "check_mark_in_job_transfer_restriction_space_and_enter_number_of_restricted_days"
+        },
+        "restricted_work_definition": [
+          "employer_keeps_employee_from_performing_routine_functions_or_working_full_workday",
+          "physician_recommends_employee_not_perform_routine_functions_or_work_full_workday"
+        ],
+        "routine_functions_definition": "work_activities_employee_regularly_performs_at_least_once_per_week",
+        "day_of_injury_exception": "do_not_record_if_restriction_applies_only_to_day_injury_occurred_or_illness_began",
+        "job_transfer_definition": "assign_injured_employee_to_job_other_than_regular_job_for_part_of_day"
+      },
+      {
+        "criterion": "medical_treatment_beyond_first_aid",
+        "regulation_ref": "29CFR-1904.7(b)(5)",
+        "condition": "work_related_injury_illness_results_in_medical_treatment_beyond_first_aid",
+        "form_action": {
+          "form": "OSHA_300_Log",
+          "action": "check_mark_in_medical_treatment_box_if_no_death_days_away_restriction_transfer"
+        },
+        "medical_treatment_definition": "management_and_care_of_patient_to_combat_disease_or_disorder",
+        "medical_treatment_exclusions": [
+          "visits_for_observation_or_counseling_only",
+          "diagnostic_procedures_including_prescription_medications_for_diagnostic_purposes",
+          "first_aid_as_defined_in_regulation"
+        ]
+      },
+      {
+        "criterion": "loss_of_consciousness",
+        "regulation_ref": "29CFR-1904.7(b)(6)",
+        "condition": "work_related_injury_illness_causes_loss_of_consciousness",
+        "requirement": "record_regardless_of_length_of_unconsciousness"
+      },
+      {
+        "criterion": "significant_diagnosed_injury_illness",
+        "regulation_ref": "29CFR-1904.7(b)(7)", 
+        "condition": "physician_diagnosis_of_significant_injury_illness_even_without_other_criteria",
+        "always_recordable_conditions": ["cancer", "chronic_irreversible_disease", "fractured_or_cracked_bone", "punctured_eardrum"]
+      }
+    ],
+    "specific_recording_criteria": {
+      "needlestick_sharps_injuries": {
+        "regulation_ref": "29CFR-1904.8",
+        "requirement": "record_all_work_related_needlestick_injuries_and_cuts_from_sharp_objects_contaminated_with_blood_or_potentially_infectious_material",
+        "form_entry": "enter_as_injury_on_OSHA_300_Log",
+        "privacy_protection": "may_not_enter_employee_name_use_privacy_case_procedures",
+        "potentially_infectious_material_includes": [
+          "human_bodily_fluids_tissues_organs",
+          "materials_infected_with_HIV_or_hepatitis_B"
+        ],
+        "update_requirement": "update_classification_if_employee_later_diagnosed_with_infectious_bloodborne_disease"
+      },
+      "medical_removal_cases": {
+        "regulation_ref": "29CFR-1904.9",
+        "requirement": "record_if_employee_medically_removed_under_medical_surveillance_requirements_of_OSHA_standard",
+        "classification": "enter_as_days_away_or_restricted_work_depending_on_compliance_method",
+        "chemical_exposure_notation": "check_poisoning_column_if_medical_removal_result_of_chemical_exposure",
+        "standards_with_medical_removal": ["lead", "cadmium", "methylene_chloride", "formaldehyde", "benzene"],
+        "voluntary_removal_exception": "do_not_record_voluntary_removal_before_medical_removal_criteria_met"
+      },
+      "occupational_hearing_loss": {
+        "regulation_ref": "29CFR-1904.10",
+        "requirement": "record_if_employee_experiences_work_related_Standard_Threshold_Shift_and_total_hearing_level_25dB_or_more",
+        "standard_threshold_shift_definition": "change_in_hearing_threshold_average_of_10dB_or_more_at_2000_3000_4000_Hz",
+        "25dB_requirement": "total_hearing_level_25dB_or_more_above_audiometric_zero_averaged_at_2000_3000_4000_Hz",
+        "baseline_comparison": "compare_current_audiogram_to_baseline_or_revised_baseline_if_previous_recordable_loss",
+        "age_adjustment_allowed": "may_age_adjust_for_STS_determination_but_not_for_25dB_determination",
+        "retest_provision": "not_required_to_record_if_retest_within_30_days_does_not_confirm_STS",
+        "form_notation": "check_hearing_loss_column_on_OSHA_300_Log"
+      },
+      "tuberculosis_cases": {
+        "regulation_ref": "29CFR-1904.11", 
+        "requirement": "record_if_employee_occupationally_exposed_to_known_active_TB_case_and_subsequently_develops_TB_infection",
+        "evidence": "positive_skin_test_or_physician_diagnosis",
+        "form_notation": "check_respiratory_condition_column",
+        "pre_employment_exception": "do_not_record_positive_TB_skin_test_from_pre_employment_physical",
+        "line_out_provisions": [
+          "worker_living_with_person_diagnosed_with_active_TB",
+          "public_health_department_identified_worker_as_contact_of_non_workplace_TB_case",
+          "medical_investigation_shows_infection_caused_by_non_workplace_exposure"
+        ]
+      }
+    }
+  },
+
+  "form_requirements": {
+    "required_forms": [
+      {
+        "form_id": "OSHA_300",
+        "form_name": "Log of Work-Related Injuries and Illnesses",
+        "regulation_ref": "29CFR-1904.29(a)",
+        "purpose": "ongoing_log_of_recordable_cases",
+        "completion_timing": {
+          "deadline": "within_7_calendar_days",
+          "trigger": "receiving_information_that_recordable_injury_illness_occurred",
+          "regulation_ref": "29CFR-1904.29(b)(3)"
+        },
+        "required_information": [
+          "business_information_at_top_of_log",
+          "one_or_two_line_description_for_each_recordable_case"
+        ],
+        "privacy_protections": {
+          "privacy_concern_cases": [
+            "injury_illness_to_intimate_body_part_reproductive_system",
+            "injury_illness_from_sexual_assault",
+            "mental_illnesses", 
+            "hiv_hepatitis_tuberculosis",
+            "needlestick_cuts_contaminated_sharps",
+            "employee_voluntary_request_name_not_entered"
+          ],
+          "privacy_case_handling": "enter_privacy_case_instead_of_employee_name",
+          "confidential_list_requirement": "keep_separate_confidential_list_case_numbers_employee_names"
+        }
+      },
+      {
+        "form_id": "OSHA_300A", 
+        "form_name": "Summary of Work-Related Injuries and Illnesses",
+        "regulation_ref": "29CFR-1904.29(a)",
+        "purpose": "annual_summary_of_injuries_illnesses"
+      },
+      {
+        "form_id": "OSHA_301",
+        "form_name": "Injury and Illness Incident Report", 
+        "regulation_ref": "29CFR-1904.29(a)",
+        "purpose": "detailed_incident_report_for_each_recordable_case",
+        "completion_timing": {
+          "deadline": "within_7_calendar_days",
+          "trigger": "receiving_information_that_recordable_injury_illness_occurred",
+          "regulation_ref": "29CFR-1904.29(b)(3)"
+        }
+      }
+    ],
+    "equivalent_forms": {
+      "definition": "form_with_same_information_as_readable_and_understandable_completed_using_same_instructions",
+      "common_example": "insurance_form_instead_of_OSHA_301_with_additional_OSHA_required_information"
+    },
+    "computer_records": {
+      "allowed": "yes_if_computer_can_produce_equivalent_forms_when_needed",
+      "requirements": "must_meet_requirements_of_sections_1904.35_and_1904.40"
+    },
+    "privacy_protections": {
+      "complete_list_privacy_concern_cases": [
+        "injury_illness_to_intimate_body_part_or_reproductive_system",
+        "injury_illness_resulting_from_sexual_assault", 
+        "mental_illnesses",
+        "hiv_infection_hepatitis_tuberculosis",
+        "needlestick_injuries_cuts_contaminated_sharps",
+        "other_illnesses_if_employee_voluntarily_requests_name_not_entered"
+      ],
+      "privacy_case_procedures": {
+        "log_entry": "enter_privacy_case_instead_of_employee_name",
+        "confidential_list": "keep_separate_confidential_list_of_case_numbers_and_employee_names",
+        "discretionary_description": "may_use_discretion_in_describing_injury_illness_if_personally_identifiable"
+      },
+      "voluntary_disclosure_restrictions": {
+        "general_rule": "remove_or_hide_names_and_personally_identifying_information",
+        "exceptions": [
+          "auditor_or_consultant_hired_to_evaluate_safety_health_program",
+          "processing_workers_compensation_or_insurance_benefits_claims",
+          "public_health_authority_or_law_enforcement_for_uses_not_requiring_consent_under_45_CFR_164.512"
+        ]
+      }
+    }
+  },
+
+  "ongoing_obligations": {
+    "multiple_establishments": {
+      "regulation_ref": "29CFR-1904.30",
+      "basic_requirement": "keep_separate_OSHA_300_Log_for_each_establishment_expected_to_operate_one_year_or_longer",
+      "short_term_establishments": {
+        "definition": "establishments_existing_less_than_one_year",
+        "requirement": "may_keep_one_OSHA_300_Log_covering_all_short_term_establishments",
+        "alternative": "may_include_on_log_covering_short_term_establishments_for_company_divisions_or_geographic_regions"
+      },
+      "centralized_recordkeeping": {
+        "allowed": "yes_if_can_meet_transmission_and_production_requirements",
+        "transmission_requirement": "transmit_information_to_central_location_within_7_calendar_days",
+        "production_requirement": "produce_and_send_records_to_establishment_within_timeframes_required_by_sections_1904.35_and_1904.40"
+      },
+      "employee_assignment": {
+        "requirement": "link_each_employee_with_one_establishment_for_recordkeeping_purposes",
+        "multiple_locations": "record_on_log_of_injured_employee_establishment_or_short_term_establishment_log",
+        "injury_at_different_establishment": "record_on_log_of_establishment_where_injury_occurred",
+        "injury_away_from_establishments": "record_on_log_of_establishment_where_employee_normally_works"
+      }
+    },
+    "covered_employees": {
+      "regulation_ref": "29CFR-1904.31",
+      "basic_requirement": "record_injuries_illnesses_of_all_employees_on_payroll_including_labor_executive_hourly_salary_part_time_seasonal_migrant",
+      "day_to_day_supervision_rule": "must_record_injuries_illnesses_of_employees_not_on_payroll_if_supervise_day_to_day_basis",
+      "exclusions": [
+        "self_employed_individuals_not_covered_by_OSH_Act",
+        "owners_or_partners_in_sole_proprietorship_or_partnership_not_considered_employees"
+      ],
+      "temporary_help_services": {
+        "requirement": "record_if_you_supervise_day_to_day_basis",
+        "coordination": "coordinate_with_personnel_supply_service_to_ensure_each_injury_recorded_only_once"
+      },
+      "contractor_employees": {
+        "contractor_supervised": "contractor_responsible_for_recording",
+        "client_supervised": "client_responsible_for_recording_if_day_to_day_supervision"
+      }
+    },
+    "annual_summary": {
+      "regulation_ref": "29CFR-1904.32",
+      "requirements": [
+        "review_OSHA_300_Log_to_verify_entries_complete_and_accurate",
+        "create_annual_summary_of_injuries_illnesses",
+        "certify_the_summary",
+        "post_the_annual_summary"
+      ],
+      "review_requirement": "review_entries_as_extensively_as_necessary_to_ensure_complete_and_correct",
+      "summary_completion": {
+        "totals": "total_columns_on_OSHA_300_Log_enter_zeros_if_no_recordable_cases",
+        "required_information": [
+          "calendar_year_covered",
+          "company_name",
+          "establishment_name", 
+          "establishment_address",
+          "annual_average_number_of_employees_covered",
+          "total_hours_worked_by_all_employees_covered"
+        ],
+        "equivalent_forms": "must_include_employee_access_and_employer_penalty_statements_from_OSHA_300A"
+      },
+      "certification": {
+        "requirement": "company_executive_must_certify_examination_of_log_and_reasonable_belief_summary_correct_complete",
+        "authorized_signatories": [
+          "owner_of_company_if_sole_proprietorship_or_partnership",
+          "officer_of_corporation",
+          "highest_ranking_company_official_working_at_establishment",
+          "immediate_supervisor_of_highest_ranking_official_at_establishment"
+        ]
+      },
+      "posting": {
+        "location": "conspicuous_place_where_notices_to_employees_customarily_posted",
+        "timing": "no_later_than_February_1_of_year_following_covered_year",
+        "duration": "keep_posting_in_place_until_April_30",
+        "protection": "ensure_not_altered_defaced_or_covered_by_other_material"
+      }
+    },
+    "retention_and_updating": {
+      "regulation_ref": "29CFR-1904.33",
+      "retention_period": "5_years_following_end_of_calendar_year_records_cover",
+      "records_to_retain": [
+        "OSHA_300_Log",
+        "privacy_case_list_if_exists",
+        "annual_summary",
+        "OSHA_301_Incident_Report_forms"
+      ],
+      "updating_requirements": {
+        "OSHA_300_Log": "must_update_during_storage_period_for_newly_discovered_cases_and_classification_changes",
+        "annual_summary": "not_required_to_update_but_may_do_so",
+        "OSHA_301_Reports": "not_required_to_update_but_may_do_so"
+      },
+      "change_documentation": "remove_or_line_out_original_entry_and_enter_new_information_if_description_or_outcome_changes"
+    },
+    "business_ownership_change": {
+      "regulation_ref": "29CFR-1904.34",
+      "seller_responsibility": "responsible_for_recording_only_during_period_of_ownership",
+      "record_transfer": "must_transfer_part_1904_records_to_new_owner",
+      "buyer_responsibility": "must_save_all_records_kept_by_prior_owner_as_required_by_section_1904.33",
+      "update_requirement": "need_not_update_or_correct_records_of_prior_owner"
+    },
+    "employee_involvement": {
+      "regulation_ref": "29CFR-1904.35",
+      "basic_requirements": [
+        "inform_employees_how_to_report_work_related_injuries_illnesses",
+        "provide_employees_with_required_information_about_rights",
+        "provide_access_to_injury_illness_records"
+      ],
+      "reporting_procedure": {
+        "requirement": "establish_reasonable_procedure_for_prompt_accurate_reporting",
+        "reasonableness_standard": "procedure_not_reasonable_if_would_deter_or_discourage_reasonable_employee_from_reporting",
+        "information_to_employees": [
+          "procedure_for_reporting_work_related_injuries_illnesses",
+          "employees_have_right_to_report_work_related_injuries_illnesses",
+          "employers_prohibited_from_discriminating_against_employees_for_reporting"
+        ],
+        "anti_retaliation": "must_not_discharge_or_discriminate_against_employee_for_reporting"
+      },
+      "record_access": {
+        "authorized_persons": [
+          "employees",
+          "former_employees", 
+          "personal_representatives",
+          "authorized_employee_representatives"
+        ],
+        "authorized_employee_representative_definition": "authorized_collective_bargaining_agent",
+        "personal_representative_definition": [
+          "person_designated_by_employee_in_writing",
+          "legal_representative_of_deceased_or_incapacitated_employee"
+        ],
+        "OSHA_300_access": {
+          "timing": "by_end_of_next_business_day",
+          "scope": "current_or_stored_logs_for_establishment_where_employee_worked",
+          "name_retention": "must_leave_names_on_log_except_privacy_concern_cases"
+        },
+        "OSHA_301_access": {
+          "employee_personal_representative": "copy_of_301_describing_injury_to_that_employee_by_end_of_next_business_day",
+          "authorized_employee_representative": "copies_within_7_calendar_days_only_tell_us_about_case_section_remove_other_information"
+        },
+        "copying_fees": "no_charge_first_time_may_assess_reasonable_charge_for_additional_copies"
+      }
+    },
+    "discrimination_prohibition": {
+      "regulation_ref": "29CFR-1904.36",
+      "scope": "section_11c_OSH_Act_prohibits_discrimination_for_reporting_fatality_injury_illness",
+      "protected_activities": [
+        "reporting_work_related_fatality_injury_illness",
+        "filing_safety_health_complaint",
+        "asking_for_access_to_part_1904_records",
+        "exercising_any_rights_under_OSH_Act"
+      ]
+    }
+  },
+
+  "government_reporting": {
+    "immediate_reporting": [
+      {
+        "trigger": "employee_fatality",
+        "regulation_ref": "29CFR-1904.39(a)(1)",
+        "deadline": "within_8_hours_after_death",
+        "recipient": "OSHA",
+        "reporting_methods": [
+          "telephone_or_in_person_to_nearest_OSHA_area_office",
+          "telephone_to_1-800-321-OSHA",
+          "electronic_submission_via_osha_website_www.osha.gov"
+        ]
+      },
+      {
+        "trigger": "in_patient_hospitalization_amputation_eye_loss",
+        "regulation_ref": "29CFR-1904.39(a)(2)", 
+        "deadline": "within_24_hours_after_incident",
+        "recipient": "OSHA",
+        "reporting_methods": [
+          "telephone_or_in_person_to_nearest_OSHA_area_office",
+          "telephone_to_1-800-321-OSHA", 
+          "electronic_submission_via_osha_website_www.osha.gov"
+        ]
+      }
+    ],
+    "required_information": [
+      "establishment_name",
+      "location_of_work_related_incident",
+      "time_of_work_related_incident", 
+      "type_of_reportable_event",
+      "number_of_employees_who_suffered_fatality_hospitalization_amputation_eye_loss",
+      "names_of_employees_who_suffered_fatality_hospitalization_amputation_eye_loss",
+      "contact_person_and_phone_number",
+      "brief_description_of_work_related_incident"
+    ],
+    "reporting_exceptions": [
+      {
+        "exception_type": "motor_vehicle_public_street",
+        "condition": "motor_vehicle_accident_on_public_street_highway_not_construction_zone",
+        "result": "no_reporting_required_but_must_record_if_keeping_records"
+      },
+      {
+        "exception_type": "commercial_transportation",
+        "condition": "occurred_on_commercial_public_transportation_system",
+        "result": "no_reporting_required_but_must_record_if_keeping_records"
+      },
+      {
+        "exception_type": "construction_work_zone",
+        "condition": "motor_vehicle_accident_in_construction_work_zone",
+        "result": "must_report"
+      }
+    ],
+    "timing_clarifications": {
+      "fatality_timeframe": "must_occur_within_30_days_of_work_related_incident",
+      "hospitalization_amputation_eye_loss_timeframe": "must_occur_within_24_hours_of_work_related_incident",
+      "delayed_knowledge_rule": "if_do_not_learn_immediately_report_within_timeframe_after_learning",
+      "work_relatedness_discovery": "report_within_timeframe_after_learning_event_was_work_related"
+    },
+    "definitions": {
+      "in_patient_hospitalization": "formal_admission_to_in_patient_service_of_hospital_or_clinic_for_care_or_treatment",
+      "observation_diagnostic_exception": "do_not_report_hospitalization_involving_only_observation_or_diagnostic_testing",
+      "amputation": "traumatic_loss_of_limb_or_external_body_part_including_partial_fingertip_medical_reattached",
+      "amputation_exclusions": ["avulsions", "enucleations", "deglovings", "scalpings", "severed_ears", "broken_chipped_teeth"]
+    },
+    "electronic_submission": {
+      "regulation_ref": "29CFR-1904.41",
+      "form_300A_submission": [
+        {
+          "category": "20_to_249_employees_designated_industries",
+          "requirement": "establishments_with_20-249_employees_in_appendix_A_industries",
+          "deadline": "March_2_of_year_after_calendar_year_covered"
+        },
+        {
+          "category": "250_or_more_employees_all_covered",
+          "requirement": "establishments_with_250_or_more_employees_required_to_keep_records",
+          "deadline": "March_2_of_year_after_calendar_year_covered"
+        }
+      ],
+      "forms_300_301_submission": {
+        "category": "100_or_more_employees_designated_industries",
+        "requirement": "establishments_with_100_or_more_employees_in_appendix_B_industries",
+        "forms": ["OSHA_300_Log", "OSHA_301_Incident_Reports"],
+        "deadline": "March_2_of_year_after_calendar_year_covered"
+      },
+      "individual_data_collection": "submit_upon_OSHA_notification",
+      "EIN_requirement": "provide_Employer_Identification_Number_for_each_establishment",
+      "employee_counting": "part_time_seasonal_temporary_workers_count_as_employees",
+      "notification_methods": ["mail", "Federal_Register_publication", "OSHA_newsletter", "OSHA_website"],
+      "submission_method": "electronically_via_OSHA_secure_website",
+      "partial_exemption_override": "partially_exempt_employers_must_submit_if_OSHA_notifies_in_writing",
+      "state_plan_coverage": "requirements_apply_to_state_plan_state_employers",
+      "enterprise_submission": "enterprise_or_corporate_office_may_submit_for_establishments",
+      "information_exclusions": [
+        "employee_name_from_Form_300",
+        "employee_name_address_physician_name_facility_name_address_from_Form_301"
+      ]
+    },
+    "government_access": {
+      "regulation_ref": "29CFR-1904.40",
+      "deadline": "within_4_business_hours_of_request",
+      "authorized_representatives": [
+        "representative_of_Secretary_of_Labor_conducting_inspection_investigation",
+        "representative_of_Secretary_of_Health_Human_Services_including_NIOSH_conducting_section_20b_investigation",
+        "representative_of_state_agency_administering_approved_state_plan"
+      ],
+      "time_zone_consideration": "may_use_business_hours_of_location_where_records_kept_if_different_time_zone"
+    },
+    "BLS_surveys": {
+      "regulation_ref": "29CFR-1904.42",
+      "requirement": "promptly_complete_and_return_BLS_Survey_of_Occupational_Injuries_Illnesses_if_received",
+      "selection": "BLS_randomly_selects_employers_each_year",
+      "exempt_employer_override": "even_exempt_employers_must_respond_if_BLS_notifies_in_writing",
+      "state_plan_coverage": "all_employers_who_receive_survey_must_respond_including_state_plan_states"
+    }
+  },
+
+  "reference_data": {
+    "definitions": {
+      "first_aid": {
+        "regulation_ref": "29CFR-1904.7(b)(5)(ii)",
+        "definition_type": "complete_list_of_treatments",
+        "items": [
+          {
+            "treatment": "non_prescription_medication",
+            "details": "using_nonprescription_medication_at_nonprescription_strength",
+            "exception": "recommendation_by_physician_to_use_nonprescription_medication_at_prescription_strength_is_medical_treatment"
+          },
+          {
+            "treatment": "tetanus_immunizations",
+            "details": "administering_tetanus_immunizations_only",
+            "exception": "other_immunizations_such_as_hepatitis_b_rabies_considered_medical_treatment"
+          },
+          {
+            "treatment": "wound_care",
+            "details": "cleaning_flushing_soaking_wounds_on_surface_of_skin"
+          },
+          {
+            "treatment": "bandages",
+            "details": "using_wound_coverings_bandages_gauze_pads_butterfly_bandages_steri_strips",
+            "exception": "other_wound_closing_devices_sutures_staples_considered_medical_treatment"
+          },
+          {
+            "treatment": "hot_cold_therapy",
+            "details": "using_hot_or_cold_therapy"
+          },
+          {
+            "treatment": "non_rigid_support",
+            "details": "using_elastic_bandages_wraps_non_rigid_back_belts",
+            "exception": "devices_with_rigid_stays_or_immobilization_systems_considered_medical_treatment"
+          },
+          {
+            "treatment": "temporary_immobilization_transport",
+            "details": "using_splints_slings_neck_collars_back_boards_while_transporting_accident_victim"
+          },
+          {
+            "treatment": "drilling_nail_draining_blister",
+            "details": "drilling_fingernail_or_toenail_to_relieve_pressure_or_draining_fluid_from_blister"
+          },
+          {
+            "treatment": "eye_patches",
+            "details": "using_eye_patches"
+          },
+          {
+            "treatment": "foreign_body_removal_eye",
+            "details": "removing_foreign_bodies_from_eye_using_only_irrigation_or_cotton_swab"
+          },
+          {
+            "treatment": "foreign_material_removal_other",
+            "details": "removing_splinters_or_foreign_material_from_areas_other_than_eye_by_irrigation_tweezers_cotton_swabs_simple_means"
+          },
+          {
+            "treatment": "finger_guards",
+            "details": "using_finger_guards"
+          },
+          {
+            "treatment": "massages",
+            "details": "using_massages",
+            "exception": "physical_therapy_or_chiropractic_treatment_considered_medical_treatment"
+          },
+          {
+            "treatment": "drinking_fluids_heat_stress",
+            "details": "drinking_fluids_for_relief_of_heat_stress"
+          }
+        ],
+        "completeness_note": "this_is_complete_list_of_all_treatments_considered_first_aid",
+        "professional_status_irrelevant": "treatments_considered_first_aid_regardless_of_professional_status_of_provider"
+      },
+      "the_act": "Occupational_Safety_and_Health_Act_of_1970_29_USC_651_et_seq",
+      "establishment": {
+        "basic_definition": "single_physical_location_where_business_conducted_or_services_industrial_operations_performed",
+        "mobile_operations": "for_activities_without_single_location_establishment_represented_by_main_branch_offices_terminals_stations_supervising_or_base_for_activities",
+        "multiple_establishments_same_location": {
+          "conditions": [
+            "each_represents_distinctly_separate_business",
+            "each_engaged_in_different_economic_activity",
+            "no_single_NAICS_code_applies_to_joint_activities",
+            "separate_reports_routinely_prepared_for_employees_wages_sales_receipts_business_information"
+          ]
+        },
+        "single_establishment_multiple_locations": {
+          "conditions": [
+            "operated_as_single_business_under_common_management",
+            "all_located_in_close_proximity",
+            "keeps_one_set_business_records_for_locations"
+          ]
+        },
+        "telecommuting": "employee_home_not_separate_establishment_must_link_to_existing_establishment"
+      },
+      "injury_or_illness": "abnormal_condition_or_disorder_including_cuts_fractures_sprains_amputations_skin_diseases_respiratory_disorders_poisoning",
+      "physician_or_licensed_health_care_professional": "individual_whose_legally_permitted_scope_of_practice_allows_independent_performance_or_delegation_of_activities_described_by_regulation",
+      "you": "employer_as_defined_in_section_3_of_OSH_Act_29_USC_652"
+    },
+    "naics_codes": {
+      "appendix_a_partial_exemption": [
+        {"naics_code": "4412", "industry": "Other Motor Vehicle Dealers"},
+        {"naics_code": "4431", "industry": "Electronics and Appliance Stores"},
+        {"naics_code": "4461", "industry": "Health and Personal Care Stores"},
+        {"naics_code": "4471", "industry": "Gasoline Stations"},
+        {"naics_code": "4481", "industry": "Clothing Stores"},
+        {"naics_code": "4482", "industry": "Shoe Stores"},
+        {"naics_code": "4483", "industry": "Jewelry, Luggage, and Leather Goods Stores"},
+        {"naics_code": "4511", "industry": "Sporting Goods, Hobby, and Musical Instrument Stores"},
+        {"naics_code": "4512", "industry": "Book, Periodical, and Music Stores"},
+        {"naics_code": "4531", "industry": "Florists"},
+        {"naics_code": "4532", "industry": "Office Supplies, Stationery, and Gift Stores"},
+        {"naics_code": "4812", "industry": "Nonscheduled Air Transportation"},
+        {"naics_code": "4861", "industry": "Pipeline Transportation of Crude Oil"},
+        {"naics_code": "4862", "industry": "Pipeline Transportation of Natural Gas"},
+        {"naics_code": "4869", "industry": "Other Pipeline Transportation"},
+        {"naics_code": "4879", "industry": "Scenic and Sightseeing Transportation, Other"},
+        {"naics_code": "4885", "industry": "Freight Transportation Arrangement"},
+        {"naics_code": "5111", "industry": "Newspaper, Periodical, Book, and Directory Publishers"},
+        {"naics_code": "5112", "industry": "Software Publishers"},
+        {"naics_code": "5121", "industry": "Motion Picture and Video Industries"},
+        {"naics_code": "5122", "industry": "Sound Recording Industries"},
+        {"naics_code": "5151", "industry": "Radio and Television Broadcasting"},
+        {"naics_code": "5172", "industry": "Wireless Telecommunications Carriers (except Satellite)"},
+        {"naics_code": "5173", "industry": "Telecommunications Resellers"},
+        {"naics_code": "5179", "industry": "Other Telecommunications"},
+        {"naics_code": "5181", "industry": "Internet Service Providers and Web Search Portals"},
+        {"naics_code": "5182", "industry": "Data Processing, Hosting, and Related Services"},
+        {"naics_code": "5191", "industry": "Other Information Services"},
+        {"naics_code": "5211", "industry": "Monetary Authorities—Central Bank"},
+        {"naics_code": "5221", "industry": "Depository Credit Intermediation"},
+        {"naics_code": "5222", "industry": "Nondepository Credit Intermediation"},
+        {"naics_code": "5223", "industry": "Activities Related to Credit Intermediation"},
+        {"naics_code": "5231", "industry": "Securities and Commodity Contracts Intermediation and Brokerage"},
+        {"naics_code": "5232", "industry": "Securities and Commodity Exchanges"},
+        {"naics_code": "5239", "industry": "Other Financial Investment Activities"},
+        {"naics_code": "5241", "industry": "Insurance Carriers"},
+        {"naics_code": "5242", "industry": "Agencies, Brokerages, and Other Insurance Related Activities"},
+        {"naics_code": "5251", "industry": "Insurance and Employee Benefit Funds"},
+        {"naics_code": "5259", "industry": "Other Investment Pools and Funds"},
+        {"naics_code": "5312", "industry": "Offices of Real Estate Agents and Brokers"},
+        {"naics_code": "5331", "industry": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)"},
+        {"naics_code": "5411", "industry": "Legal Services"},
+        {"naics_code": "5412", "industry": "Accounting, Tax Preparation, Bookkeeping, and Payroll Services"},
+        {"naics_code": "5413", "industry": "Architectural, Engineering, and Related Services"},
+        {"naics_code": "5414", "industry": "Specialized Design Services"},
+        {"naics_code": "5415", "industry": "Computer Systems Design and Related Services"},
+        {"naics_code": "5416", "industry": "Management, Scientific, and Technical Consulting Services"},
+        {"naics_code": "5417", "industry": "Scientific Research and Development Services"},
+        {"naics_code": "5418", "industry": "Advertising and Related Services"},
+        {"naics_code": "5511", "industry": "Management of Companies and Enterprises"},
+        {"naics_code": "5611", "industry": "Office Administrative Services"},
+        {"naics_code": "5614", "industry": "Business Support Services"},
+        {"naics_code": "5615", "industry": "Travel Arrangement and Reservation Services"},
+        {"naics_code": "5616", "industry": "Investigation and Security Services"},
+        {"naics_code": "6111", "industry": "Elementary and Secondary Schools"},
+        {"naics_code": "6112", "industry": "Junior Colleges"},
+        {"naics_code": "6113", "industry": "Colleges, Universities, and Professional Schools"},
+        {"naics_code": "6114", "industry": "Business Schools and Computer and Management Training"},
+        {"naics_code": "6115", "industry": "Technical and Trade Schools"},
+        {"naics_code": "6116", "industry": "Other Schools and Instruction"},
+        {"naics_code": "6117", "industry": "Educational Support Services"},
+        {"naics_code": "6211", "industry": "Offices of Physicians"},
+        {"naics_code": "6212", "industry": "Offices of Dentists"},
+        {"naics_code": "6213", "industry": "Offices of Other Health Practitioners"},
+        {"naics_code": "6214", "industry": "Outpatient Care Centers"},
+        {"naics_code": "6215", "industry": "Medical and Diagnostic Laboratories"},
+        {"naics_code": "6244", "industry": "Child Day Care Services"},
+        {"naics_code": "7114", "industry": "Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures"},
+        {"naics_code": "7115", "industry": "Independent Artists, Writers, and Performers"},
+        {"naics_code": "7213", "industry": "Rooming and Boarding Houses"},
+        {"naics_code": "7221", "industry": "Full-Service Restaurants"},
+        {"naics_code": "7222", "industry": "Limited-Service Eating Places"},
+        {"naics_code": "7224", "industry": "Drinking Places (Alcoholic Beverages)"},
+        {"naics_code": "8112", "industry": "Electronic and Precision Equipment Repair and Maintenance"},
+        {"naics_code": "8114", "industry": "Personal and Household Goods Repair and Maintenance"},
+        {"naics_code": "8121", "industry": "Personal Care Services"},
+        {"naics_code": "8122", "industry": "Death Care Services"},
+        {"naics_code": "8131", "industry": "Religious Organizations"},
+        {"naics_code": "8132", "industry": "Grantmaking and Giving Services"},
+        {"naics_code": "8133", "industry": "Social Advocacy Organizations"},
+        {"naics_code": "8134", "industry": "Civic and Social Organizations"},
+        {"naics_code": "8139", "industry": "Business, Professional, Labor, Political, and Similar Organizations"}
+      ],
+      "appendix_a_electronic_submission_20_249_employees": [
+        {"naics_code": "11", "industry": "Agriculture, Forestry, Fishing and Hunting"},
+        {"naics_code": "22", "industry": "Utilities"},
+        {"naics_code": "23", "industry": "Construction"},
+        {"naics_code": "31-33", "industry": "Manufacturing"},
+        {"naics_code": "42", "industry": "Wholesale Trade"},
+        {"naics_code": "4413", "industry": "Automotive Parts, Accessories, and Tire Stores"},
+        {"naics_code": "4421", "industry": "Furniture Stores"},
+        {"naics_code": "4422", "industry": "Home Furnishings Stores"},
+        {"naics_code": "4441", "industry": "Building Material and Supplies Dealers"},
+        {"naics_code": "4442", "industry": "Lawn and Garden Equipment and Supplies Stores"},
+        {"naics_code": "4451", "industry": "Grocery Stores"},
+        {"naics_code": "4452", "industry": "Specialty Food Stores"},
+        {"naics_code": "4522", "industry": "Department Stores"},
+        {"naics_code": "4523", "industry": "General Merchandise Stores, including Warehouse Clubs and Supercenters"},
+        {"naics_code": "4533", "industry": "Used Merchandise Stores"},
+        {"naics_code": "4542", "industry": "Vending Machine Operators"},
+        {"naics_code": "4543", "industry": "Direct Selling Establishments"},
+        {"naics_code": "4811", "industry": "Scheduled Air Transportation"},
+        {"naics_code": "4841", "industry": "General Freight Trucking"},
+        {"naics_code": "4842", "industry": "Specialized Freight Trucking"},
+        {"naics_code": "4851", "industry": "Urban Transit Systems"},
+        {"naics_code": "4852", "industry": "Interurban and Rural Bus Transportation"},
+        {"naics_code": "4853", "industry": "Taxi and Limousine Service"},
+        {"naics_code": "4854", "industry": "School and Employee Bus Transportation"},
+        {"naics_code": "4855", "industry": "Charter Bus Industry"},
+        {"naics_code": "4859", "industry": "Other Transit and Ground Passenger Transportation"},
+        {"naics_code": "4871", "industry": "Scenic and Sightseeing Transportation, Land"},
+        {"naics_code": "4881", "industry": "Support Activities for Air Transportation"},
+        {"naics_code": "4882", "industry": "Support Activities for Rail Transportation"},
+        {"naics_code": "4883", "industry": "Support Activities for Water Transportation"},
+        {"naics_code": "4884", "industry": "Support Activities for Road Transportation"},
+        {"naics_code": "4889", "industry": "Other Support Activities for Transportation"},
+        {"naics_code": "4911", "industry": "Postal Service"},
+        {"naics_code": "4921", "industry": "Couriers and Express Delivery Services"},
+        {"naics_code": "4922", "industry": "Local Messengers and Local Delivery"},
+        {"naics_code": "4931", "industry": "Warehousing and Storage"},
+        {"naics_code": "5152", "industry": "Cable and Other Subscription Programming"},
+        {"naics_code": "5311", "industry": "Lessors of Real Estate"},
+        {"naics_code": "5321", "industry": "Automotive Equipment Rental and Leasing"},
+        {"naics_code": "5322", "industry": "Consumer Goods Rental"},
+        {"naics_code": "5323", "industry": "General Rental Centers"},
+        {"naics_code": "5617", "industry": "Services to Buildings and Dwellings"},
+        {"naics_code": "5621", "industry": "Waste Collection"},
+        {"naics_code": "5622", "industry": "Waste Treatment and Disposal"},
+        {"naics_code": "5629", "industry": "Remediation and Other Waste Management Services"},
+        {"naics_code": "6219", "industry": "Other Ambulatory Health Care Services"},
+        {"naics_code": "6221", "industry": "General Medical and Surgical Hospitals"},
+        {"naics_code": "6222", "industry": "Psychiatric and Substance Abuse Hospitals"},
+        {"naics_code": "6223", "industry": "Specialty (except Psychiatric and Substance Abuse) Hospitals"},
+        {"naics_code": "6231", "industry": "Nursing Care Facilities (Skilled Nursing Facilities)"},
+        {"naics_code": "6232", "industry": "Residential Intellectual and Developmental Disability, Mental Health, and Substance Abuse Facilities"},
+        {"naics_code": "6233", "industry": "Continuing Care Retirement Communities and Assisted Living Facilities for the Elderly"},
+        {"naics_code": "6239", "industry": "Other Residential Care Facilities"},
+        {"naics_code": "6242", "industry": "Community Food and Housing, and Emergency and Other Relief Services"},
+        {"naics_code": "6243", "industry": "Vocational Rehabilitation Services"},
+        {"naics_code": "7111", "industry": "Performing Arts Companies"},
+        {"naics_code": "7112", "industry": "Spectator Sports"},
+        {"naics_code": "7121", "industry": "Museums, Historical Sites, and Similar Institutions"},
+        {"naics_code": "7131", "industry": "Amusement Parks and Arcades"},
+        {"naics_code": "7132", "industry": "Gambling Industries"},
+        {"naics_code": "7211", "industry": "Traveler Accommodation"},
+        {"naics_code": "7212", "industry": "RV (Recreational Vehicle) Parks and Recreational Camps"},
+        {"naics_code": "7223", "industry": "Special Food Services"},
+        {"naics_code": "8113", "industry": "Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance"},
+        {"naics_code": "8123", "industry": "Drycleaning and Laundry Services"}
+      ],
+      "appendix_b_electronic_submission_100_plus_employees": [
+        {"naics_code": "1111", "industry": "Oilseed and Grain Farming"},
+        {"naics_code": "1112", "industry": "Vegetable and Melon Farming"},
+        {"naics_code": "1113", "industry": "Fruit and Tree Nut Farming"},
+        {"naics_code": "1114", "industry": "Greenhouse, Nursery, and Floriculture Production"},
+        {"naics_code": "1119", "industry": "Other Crop Farming"},
+        {"naics_code": "1121", "industry": "Cattle Ranching and Farming"},
+        {"naics_code": "1122", "industry": "Hog and Pig Farming"},
+        {"naics_code": "1123", "industry": "Poultry and Egg Production"},
+        {"naics_code": "1129", "industry": "Other Animal Production"},
+        {"naics_code": "1133", "industry": "Logging"},
+        {"naics_code": "1141", "industry": "Fishing"},
+        {"naics_code": "1142", "industry": "Hunting and Trapping"},
+        {"naics_code": "1151", "industry": "Support Activities for Crop Production"},
+        {"naics_code": "1152", "industry": "Support Activities for Animal Production"},
+        {"naics_code": "1153", "industry": "Support Activities for Forestry"},
+        {"naics_code": "2213", "industry": "Water, Sewage and Other Systems"},
+        {"naics_code": "2381", "industry": "Foundation, Structure, and Building Exterior Contractors"},
+        {"naics_code": "3111", "industry": "Animal Food Manufacturing"},
+        {"naics_code": "3113", "industry": "Sugar and Confectionery Product Manufacturing"},
+        {"naics_code": "3114", "industry": "Fruit and Vegetable Preserving and Specialty Food Manufacturing"},
+        {"naics_code": "3115", "industry": "Dairy Product Manufacturing"},
+        {"naics_code": "3116", "industry": "Animal Slaughtering and Processing"},
+        {"naics_code": "3117", "industry": "Seafood Product Preparation and Packaging"},
+        {"naics_code": "3118", "industry": "Bakeries and Tortilla Manufacturing"},
+        {"naics_code": "3119", "industry": "Other Food Manufacturing"},
+        {"naics_code": "3121", "industry": "Beverage Manufacturing"},
+        {"naics_code": "3161", "industry": "Leather and Hide Tanning and Finishing"},
+        {"naics_code": "3162", "industry": "Footwear Manufacturing"},
+        {"naics_code": "3211", "industry": "Sawmills and Wood Preservation"},
+        {"naics_code": "3212", "industry": "Veneer, Plywood, and Engineered Wood Product Manufacturing"},
+        {"naics_code": "3219", "industry": "Other Wood Product Manufacturing"},
+        {"naics_code": "3261", "industry": "Plastics Product Manufacturing"},
+        {"naics_code": "3262", "industry": "Rubber Product Manufacturing"},
+        {"naics_code": "3271", "industry": "Clay Product and Refractory Manufacturing"},
+        {"naics_code": "3272", "industry": "Glass and Glass Product Manufacturing"},
+        {"naics_code": "3273", "industry": "Cement and Concrete Product Manufacturing"},
+        {"naics_code": "3279", "industry": "Other Nonmetallic Mineral Product Manufacturing"},
+        {"naics_code": "3312", "industry": "Steel Product Manufacturing from Purchased Steel"},
+        {"naics_code": "3314", "industry": "Nonferrous Metal (except Aluminum) Production and Processing"},
+        {"naics_code": "3315", "industry": "Foundries"},
+        {"naics_code": "3321", "industry": "Forging and Stamping"},
+        {"naics_code": "3323", "industry": "Architectural and Structural Metals Manufacturing"},
+        {"naics_code": "3324", "industry": "Boiler, Tank, and Shipping Container Manufacturing"},
+        {"naics_code": "3325", "industry": "Hardware Manufacturing"},
+        {"naics_code": "3326", "industry": "Spring and Wire Product Manufacturing"},
+        {"naics_code": "3327", "industry": "Machine Shops; Turned Product; and Screw, Nut, and Bolt Manufacturing"},
+        {"naics_code": "3328", "industry": "Coating, Engraving, Heat Treating, and Allied Activities"},
+        {"naics_code": "3331", "industry": "Agriculture, Construction, and Mining Machinery Manufacturing"},
+        {"naics_code": "3335", "industry": "Metalworking Machinery Manufacturing"},
+        {"naics_code": "3361", "industry": "Motor Vehicle Manufacturing"},
+        {"naics_code": "3362", "industry": "Motor Vehicle Body and Trailer Manufacturing"},
+        {"naics_code": "3363", "industry": "Motor Vehicle Parts Manufacturing"},
+        {"naics_code": "3366", "industry": "Ship and Boat Building"},
+        {"naics_code": "3371", "industry": "Household and Institutional Furniture and Kitchen Cabinet Manufacturing"},
+        {"naics_code": "3372", "industry": "Office Furniture (including Fixtures) Manufacturing"},
+        {"naics_code": "3379", "industry": "Other Furniture Related Product Manufacturing"},
+        {"naics_code": "4231", "industry": "Motor Vehicle and Motor Vehicle Parts and Supplies Merchant Wholesalers"},
+        {"naics_code": "4233", "industry": "Lumber and Other Construction Materials Merchant Wholesalers"},
+        {"naics_code": "4235", "industry": "Metal and Mineral (except Petroleum) Merchant Wholesalers"},
+        {"naics_code": "4239", "industry": "Miscellaneous Durable Goods Merchant Wholesalers"},
+        {"naics_code": "4244", "industry": "Grocery and Related Product Merchant Wholesalers"},
+        {"naics_code": "4248", "industry": "Beer, Wine, and Distilled Alcoholic Beverage Merchant Wholesalers"},
+        {"naics_code": "4413", "industry": "Automotive Parts, Accessories, and Tire Stores"},
+        {"naics_code": "4422", "industry": "Home Furnishings Stores"},
+        {"naics_code": "4441", "industry": "Building Material and Supplies Dealers"},
+        {"naics_code": "4442", "industry": "Lawn and Garden Equipment and Supplies Stores"},
+        {"naics_code": "4451", "industry": "Grocery Stores"},
+        {"naics_code": "4522", "industry": "Department Stores"},
+        {"naics_code": "4523", "industry": "General Merchandise Stores, including Warehouse Clubs and Supercenters"},
+        {"naics_code": "4533", "industry": "Used Merchandise Stores"},
+        {"naics_code": "4543", "industry": "Direct Selling Establishments"},
+        {"naics_code": "4811", "industry": "Scheduled Air Transportation"},
+        {"naics_code": "4841", "industry": "General Freight Trucking"},
+        {"naics_code": "4842", "industry": "Specialized Freight Trucking"},
+        {"naics_code": "4851", "industry": "Urban Transit Systems"},
+        {"naics_code": "4852", "industry": "Interurban and Rural Bus Transportation"},
+        {"naics_code": "4853", "industry": "Taxi and Limousine Service"},
+        {"naics_code": "4854", "industry": "School and Employee Bus Transportation"},
+        {"naics_code": "4859", "industry": "Other Transit and Ground Passenger Transportation"},
+        {"naics_code": "4871", "industry": "Scenic and Sightseeing Transportation, Land"},
+        {"naics_code": "4881", "industry": "Support Activities for Air Transportation"},
+        {"naics_code": "4883", "industry": "Support Activities for Water Transportation"},
+        {"naics_code": "4889", "industry": "Other Support Activities for Transportation"},
+        {"naics_code": "4911", "industry": "Postal Service"},
+        {"naics_code": "4921", "industry": "Couriers and Express Delivery Services"},
+        {"naics_code": "4931", "industry": "Warehousing and Storage"},
+        {"naics_code": "5322", "industry": "Consumer Goods Rental"},
+        {"naics_code": "5621", "industry": "Waste Collection"},
+        {"naics_code": "5622", "industry": "Waste Treatment and Disposal"},
+        {"naics_code": "6219", "industry": "Other Ambulatory Health Care Services"},
+        {"naics_code": "6221", "industry": "General Medical and Surgical Hospitals"},
+        {"naics_code": "6222", "industry": "Psychiatric and Substance Abuse Hospitals"},
+        {"naics_code": "6223", "industry": "Specialty (except Psychiatric and Substance Abuse) Hospitals"},
+        {"naics_code": "6231", "industry": "Nursing Care Facilities (Skilled Nursing Facilities)"},
+        {"naics_code": "6232", "industry": "Residential Intellectual and Developmental Disability, Mental Health, and Substance Abuse Facilities"},
+        {"naics_code": "6233", "industry": "Continuing Care Retirement Communities and Assisted Living Facilities for the Elderly"},
+        {"naics_code": "6239", "industry": "Other Residential Care Facilities"},
+        {"naics_code": "6243", "industry": "Vocational Rehabilitation Services"},
+        {"naics_code": "7111", "industry": "Performing Arts Companies"},
+        {"naics_code": "7112", "industry": "Spectator Sports"},
+        {"naics_code": "7131", "industry": "Amusement Parks and Arcades"},
+        {"naics_code": "7211", "industry": "Traveler Accommodation"},
+        {"naics_code": "7212", "industry": "RV (Recreational Vehicle) Parks and Recreational Camps"},
+        {"naics_code": "7223", "industry": "Special Food Services"}
+      ]
+    }
+  },
+
+  "business_change_provisions": {
+    "transition_from_former_rule": {
+      "2001_data_summary_posting": {
+        "regulation_ref": "29CFR-1904.43",
+        "requirement": "if_required_to_keep_OSHA_200_Logs_in_2001_must_post_2000_annual_summary",
+        "summary_contents": [
+          "copy_of_totals_from_2001_OSHA_200_Log",
+          "calendar_year_covered",
+          "company_name",
+          "establishment_name_and_address",
+          "certification_signature_title_date"
+        ],
+        "no_injuries_rule": "enter_zeros_on_totals_line_if_no_injuries_illnesses_in_2001",
+        "completion_deadline": "February_1_2002",
+        "posting_period": "February_1_2002_to_March_1_2002",
+        "posting_location": "conspicuous_place_where_employee_notices_customarily_posted"
+      },
+      "old_forms_retention": {
+        "regulation_ref": "29CFR-1904.44",
+        "requirement": "save_OSHA_200_and_101_forms_for_5_years_following_year_they_relate",
+        "access_provision": "provide_access_as_though_forms_were_OSHA_300_and_301",
+        "update_requirement": "not_required_to_update_old_200_and_101_forms"
+      }
+    },
+    "ownership_change": {
+      "regulation_ref": "29CFR-1904.34",
+      "seller_responsibility": "responsible_for_recording_reporting_only_during_ownership_period",
+      "record_transfer_requirement": "must_transfer_part_1904_records_to_new_owner",
+      "buyer_responsibility": "save_all_records_kept_by_prior_owner_per_section_1904.33",
+      "update_limitation": "need_not_update_or_correct_prior_owner_records"
+    }
+  },
+
+  "variance_provisions": {
+    "recordkeeping_variances": {
+      "regulation_ref": "29CFR-1904.38",
+      "basic_requirement": "may_submit_variance_petition_to_keep_records_differently_than_prescribed",
+      "recipient": "Assistant_Secretary_of_Labor_for_Occupational_Safety_and_Health_Washington_DC_20210",
+      "approval_criteria": [
+        "collects_same_information_as_part_1904_requires",
+        "meets_purposes_of_OSH_Act",
+        "does_not_interfere_with_administration_of_Act"
+      ],
+      "petition_requirements": [
+        "petitioner_name_and_address",
+        "list_of_states_where_variance_would_be_used",
+        "addresses_of_business_establishments_involved",
+        "description_of_why_seeking_variance",
+        "description_of_different_recordkeeping_procedures_proposed",
+        "description_of_how_procedures_collect_same_information_and_achieve_Act_purposes",
+        "statement_of_employee_notification_and_posting"
+      ],
+      "processing_steps": [
+        "offer_employees_opportunity_to_submit_written_comments",
+        "may_publish_in_Federal_Register_for_public_comment",
+        "Assistant_Secretary_decision_on_meeting_criteria",
+        "if_granted_publish_notice_in_Federal_Register"
+      ],
+      "pending_petition_rule": "must_comply_with_part_1904_while_variance_petition_under_review",
+      "citation_effect": "variance_petition_has_no_effect_on_existing_citations_and_penalties",
+      "revocation_authority": "Assistant_Secretary_may_revoke_variance_for_good_cause",
+      "revocation_process": "follow_same_process_as_variance_review_with_employee_participation_opportunity"
+    }
+  },
+
+  "state_plan_provisions": {
+    "state_recordkeeping_regulations": {
+      "regulation_ref": "29CFR-1904.37",
+      "basic_requirement": "state_plan_states_must_have_substantially_identical_requirements_to_part_1904",
+      "identical_requirements": "same_requirements_for_determining_recordable_injuries_illnesses_and_recording_methods",
+      "additional_requirements": "may_be_more_stringent_or_supplemental_but_must_consult_and_obtain_OSHA_approval",
+      "state_local_government": "all_state_plan_states_must_provide_coverage_and_develop_statistics_for_state_local_workers",
+      "variance_limitations": [
+        "may_not_issue_variance_to_private_sector_employer",
+        "must_recognize_all_federal_OSHA_variances",
+        "may_grant_variance_to_state_local_government_only_with_federal_OSHA_approval"
+      ]
+    }
+  },
+
+  "omb_control_numbers": {
+    "regulation_ref": "29CFR-1904.45",
+    "paperwork_reduction_act_approvals": [
+      {"sections": "1904.4-35", "omb_control_number": "1218-0176"},
+      {"sections": "1904.39-41", "omb_control_number": "1218-0176"},
+      {"sections": "1904.42", "omb_control_number": "1220-0045"},
+      {"sections": "1904.43-44", "omb_control_number": "1218-0176"}
+    ]
+  }
+}

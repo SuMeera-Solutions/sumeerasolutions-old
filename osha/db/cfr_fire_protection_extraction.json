@@ -1,0 +1,533 @@
+{
+  "document_metadata": {
+    "title": "Occupational Safety and Health Standards - Subpart L Fire Protection",
+    "authority": "Occupational Safety and Health Administration, Department of Labor",
+    "cfr_citation": "29 CFR Part 1910 Subpart L",
+    "subpart": "Subpart L - Fire Protection",
+    "effective_date": "June 27, 1974",
+    "last_updated": "September 15, 2025",
+    "source": "OSHA CFR PDF"
+  },
+  "extracted_content": [
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.155",
+        "subsection": "(c)(1)",
+        "paragraph": "",
+        "page_number": "2",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.155(c)(1)",
+      "content": {
+        "id": "after_flame_def",
+        "title": "After-flame",
+        "text": "After-flame means the time a test specimen continues to flame after the flame source has been removed.",
+        "summary": "Duration that material continues burning after ignition source is removed",
+        "category": "test_measurement",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["flame resistance", "test specimen"]
+    },
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.155",
+        "subsection": "(c)(14)",
+        "paragraph": "",
+        "page_number": "3",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.155(c)(14)",
+      "content": {
+        "id": "education_def",
+        "title": "Education",
+        "text": "Education means the process of imparting knowledge or skill through systematic instruction. It does not require formal classroom instruction.",
+        "summary": "Knowledge transfer through systematic instruction, including non-classroom methods",
+        "category": "training_method",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["training", "instruction", "fire brigade"]
+    },
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.155",
+        "subsection": "(c)(18)",
+        "paragraph": "",
+        "page_number": "4",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.155(c)(18)",
+      "content": {
+        "id": "fire_brigade_def",
+        "title": "Fire brigade",
+        "text": "Fire brigade (private fire department, industrial fire department) means an organized group of employees who are knowledgeable, trained, and skilled in at least basic fire fighting operations.",
+        "summary": "Organized employee group trained in basic firefighting operations",
+        "category": "personnel_group",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["training", "fire fighting", "employees"]
+    },
+    {
+      "content_type": "definition",
+      "source_location": {
+        "section": "1910.155",
+        "subsection": "(c)(41)",
+        "paragraph": "",
+        "page_number": "6",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.155(c)(41)",
+      "content": {
+        "id": "training_def",
+        "title": "Training",
+        "text": "Training means the process of making proficient through instruction and hands-on practice in the operation of equipment, including respiratory protection equipment, that is expected to be used and in the performance of assigned duties.",
+        "summary": "Process of developing proficiency through instruction and hands-on practice",
+        "category": "training_method",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["education", "instruction", "equipment operation", "respiratory protection"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.156",
+        "subsection": "(c)(1)",
+        "paragraph": "",
+        "page_number": "6",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.156(c)(1)",
+      "content": {
+        "id": "fire_brigade_basic_training",
+        "title": "Fire Brigade Training and Education",
+        "text": "The employer shall provide training and education for all fire brigade members commensurate with those duties and functions that fire brigade members are expected to perform. Such training and education shall be provided to fire brigade members before they perform fire brigade emergency activities. Fire brigade leaders and training instructors shall be provided with training and education which is more comprehensive than that provided to the general membership of the fire brigade.",
+        "summary": "Mandatory training for all fire brigade members before emergency activities, with enhanced training for leaders and instructors",
+        "category": "fire_brigade",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["fire brigade", "emergency activities", "instructors"],
+      "training_details": {
+        "frequency": "Before emergency activities and at least annually",
+        "scope": "Commensurate with duties and functions expected to be performed",
+        "trainer_requirements": "Fire brigade leaders and training instructors require more comprehensive training",
+        "audience": "All fire brigade members",
+        "quality_benchmark": "Similar to training conducted by fire training schools",
+        "example_institutions": ["Maryland Fire and Rescue Institute", "Iowa Fire Service Extension", "West Virginia Fire Service Extension", "Georgia Fire Academy", "New York State Department Fire Prevention and Control", "Louisiana State University Firemen Training Program", "Washington State's Fire Service Training Commission"],
+        "industry_specific": "For oil refinery industry: Texas A & M University, Lamar University, Reno Fire School, Delaware State Fire School",
+        "trigger": "Before performing fire brigade emergency activities",
+        "performance_standard": "Members must be able to perform assigned duties satisfactorily and safely",
+        "reference": "1910.156(c)(1)"
+      },
+      "procedure_steps": [
+        "Identify duties and functions expected of fire brigade members",
+        "Provide commensurate training and education",
+        "Ensure training occurs before emergency activities",
+        "Provide enhanced training for leaders and instructors",
+        "Document training completion"
+      ],
+      "required_elements": ["Training content matching expected duties", "Pre-emergency training", "Enhanced leader training", "Instructor training"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.156",
+        "subsection": "(c)(2)",
+        "paragraph": "",
+        "page_number": "6-7",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.156(c)(2)",
+      "content": {
+        "id": "fire_brigade_frequency_training",
+        "title": "Fire Brigade Training Frequency",
+        "text": "The employer shall assure that training and education is conducted frequently enough to assure that each member of the fire brigade is able to perform the member's assigned duties and functions satisfactorily and in a safe manner so as not to endanger fire brigade members or other employees. All fire brigade members shall be provided with training at least annually. In addition, fire brigade members who are expected to perform interior structural fire fighting shall be provided with an education session or training at least quarterly.",
+        "summary": "Annual training for all members, quarterly for interior structural firefighters",
+        "category": "fire_brigade",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["interior structural fire fighting", "safety", "assigned duties"],
+      "training_details": {
+        "frequency": "At least annually for all members; at least quarterly for interior structural firefighting",
+        "scope": "Assigned duties and functions performed safely",
+        "trainer_requirements": "Not specified",
+        "audience": "All fire brigade members, with special requirements for interior structural firefighters",
+        "quality_benchmark": "Satisfactory and safe performance of assigned duties",
+        "example_institutions": [],
+        "industry_specific": "",
+        "trigger": "Ongoing requirement",
+        "performance_standard": "Safe performance without endangering members or other employees",
+        "reference": "1910.156(c)(2)"
+      },
+      "procedure_steps": [
+        "Assess member competency in assigned duties",
+        "Provide annual training for all members",
+        "Provide quarterly training for interior structural firefighters",
+        "Ensure safe performance standards are met"
+      ],
+      "required_elements": ["Annual training", "Quarterly training for interior firefighters", "Safety performance verification"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.157",
+        "subsection": "(g)(1)",
+        "paragraph": "",
+        "page_number": "14",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.157(g)(1)",
+      "content": {
+        "id": "extinguisher_education",
+        "title": "Portable Fire Extinguisher Education",
+        "text": "Where the employer has provided portable fire extinguishers for employee use in the workplace, the employer shall also provide an educational program to familiarize employees with the general principles of fire extinguisher use and the hazards involved with incipient stage fire fighting.",
+        "summary": "Educational program required when portable extinguishers are provided for employee use",
+        "category": "fire_extinguisher",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["portable fire extinguishers", "incipient stage fire fighting", "hazards"],
+      "training_details": {
+        "frequency": "Upon initial employment and at least annually thereafter",
+        "scope": "General principles of fire extinguisher use and hazards of incipient stage fire fighting",
+        "trainer_requirements": "Not specified",
+        "audience": "Employees who have access to portable fire extinguishers",
+        "quality_benchmark": "Familiarization with principles and hazards",
+        "example_institutions": [],
+        "industry_specific": "",
+        "trigger": "When portable fire extinguishers are provided for employee use",
+        "performance_standard": "Understanding of general principles and hazards",
+        "reference": "1910.157(g)(1)"
+      },
+      "procedure_steps": [
+        "Provide educational program covering general principles",
+        "Cover hazards of incipient stage fire fighting",
+        "Ensure employee understanding"
+      ],
+      "required_elements": ["General principles education", "Hazards awareness", "Employee understanding verification"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.157",
+        "subsection": "(g)(3)",
+        "paragraph": "",
+        "page_number": "14",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.157(g)(3)",
+      "content": {
+        "id": "designated_extinguisher_training",
+        "title": "Designated Employee Fire Equipment Training",
+        "text": "The employer shall provide employees who have been designated to use fire fighting equipment as part of an emergency action plan with training in the use of the appropriate equipment.",
+        "summary": "Specific training required for employees designated to use firefighting equipment",
+        "category": "fire_extinguisher",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "29 CFR 1910.38",
+          "purpose": "Emergency action plan requirements"
+        }
+      ],
+      "related_terms": ["emergency action plan", "fire fighting equipment", "designated employees"],
+      "training_details": {
+        "frequency": "Upon initial assignment and at least annually thereafter",
+        "scope": "Use of appropriate fire fighting equipment",
+        "trainer_requirements": "Not specified",
+        "audience": "Employees designated to use fire fighting equipment in emergency action plan",
+        "quality_benchmark": "Competency in equipment use",
+        "example_institutions": [],
+        "industry_specific": "",
+        "trigger": "When employees are designated for fire fighting equipment use",
+        "performance_standard": "Proper use of appropriate equipment",
+        "reference": "1910.157(g)(3)"
+      },
+      "procedure_steps": [
+        "Identify designated employees",
+        "Provide equipment-specific training",
+        "Verify competency in equipment use"
+      ],
+      "required_elements": ["Equipment-specific training", "Competency verification", "Initial and annual training"]
+    },
+    {
+      "content_type": "training",
+      "source_location": {
+        "section": "1910.160",
+        "subsection": "(b)(10)",
+        "paragraph": "",
+        "page_number": "19",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.160(b)(10)",
+      "content": {
+        "id": "fixed_system_training",
+        "title": "Fixed Extinguishing System Training",
+        "text": "The employer shall train employees designated to inspect, maintain, operate, or repair fixed extinguishing systems and annually review their training to keep them up-to-date in the functions they are to perform.",
+        "summary": "Training and annual review for employees working with fixed extinguishing systems",
+        "category": "fixed_extinguishing_system",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["fixed extinguishing systems", "inspection", "maintenance", "operation", "repair"],
+      "training_details": {
+        "frequency": "Initial training with annual review",
+        "scope": "Inspection, maintenance, operation, or repair of fixed extinguishing systems",
+        "trainer_requirements": "Not specified",
+        "audience": "Employees designated for fixed system work",
+        "quality_benchmark": "Up-to-date in functions to be performed",
+        "example_institutions": [],
+        "industry_specific": "",
+        "trigger": "When employees are designated for fixed system work",
+        "performance_standard": "Current competency in assigned functions",
+        "reference": "1910.160(b)(10)"
+      },
+      "procedure_steps": [
+        "Provide initial training for designated employees",
+        "Conduct annual training review",
+        "Update training for current functions",
+        "Verify ongoing competency"
+      ],
+      "required_elements": ["Initial comprehensive training", "Annual review", "Function-specific training", "Competency updates"]
+    },
+    {
+      "content_type": "procedure",
+      "source_location": {
+        "section": "1910.156",
+        "subsection": "(b)(1)",
+        "paragraph": "",
+        "page_number": "6",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.156(b)(1)",
+      "content": {
+        "id": "organizational_statement",
+        "title": "Fire Brigade Organizational Statement",
+        "text": "The employer shall prepare and maintain a statement or written policy which establishes the existence of a fire brigade; the basic organizational structure; the type, amount, and frequency of training to be provided to fire brigade members; the expected number of members in the fire brigade; and the functions that the fire brigade is to perform at the workplace. The organizational statement shall be available for inspection by the Assistant Secretary and by employees or their designated representatives.",
+        "summary": "Written policy establishing fire brigade organization, training, and functions",
+        "category": "fire_brigade_organization",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["fire brigade", "organizational structure", "training", "workplace functions"],
+      "procedure_steps": [
+        "Prepare written organizational statement",
+        "Include fire brigade existence declaration",
+        "Define basic organizational structure",
+        "Specify training type, amount, and frequency",
+        "Identify expected number of members",
+        "Define workplace functions",
+        "Make available for inspection by Assistant Secretary",
+        "Make available for inspection by employees or representatives",
+        "Maintain statement current"
+      ],
+      "required_elements": [
+        "Written statement establishing fire brigade existence",
+        "Basic organizational structure",
+        "Training specifications (type, amount, frequency)",
+        "Expected membership numbers",
+        "Defined workplace functions",
+        "Inspection availability"
+      ]
+    },
+    {
+      "content_type": "procedure",
+      "source_location": {
+        "section": "1910.157",
+        "subsection": "(e)(1)",
+        "paragraph": "",
+        "page_number": "11",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.157(e)(1)",
+      "content": {
+        "id": "extinguisher_inspection_responsibility",
+        "title": "Portable Fire Extinguisher Inspection Responsibility",
+        "text": "The employer shall be responsible for the inspection, maintenance and testing of all portable fire extinguishers in the workplace.",
+        "summary": "Employer responsibility for all portable fire extinguisher maintenance activities",
+        "category": "fire_extinguisher_maintenance",
+        "status": "mandatory"
+      },
+      "cross_references": [],
+      "related_terms": ["portable fire extinguishers", "inspection", "maintenance", "testing"],
+      "procedure_steps": [
+        "Establish inspection program",
+        "Implement maintenance procedures",
+        "Conduct testing protocols",
+        "Document all activities",
+        "Ensure workplace coverage"
+      ],
+      "required_elements": [
+        "Comprehensive inspection program",
+        "Maintenance procedures",
+        "Testing protocols",
+        "Documentation system",
+        "Employer responsibility designation"
+      ]
+    },
+    {
+      "content_type": "reference",
+      "source_location": {
+        "section": "1910.156",
+        "subsection": "(e)(3)(ii)",
+        "paragraph": "",
+        "page_number": "8",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.156(e)(3)(ii)",
+      "content": {
+        "id": "nfpa_1971_reference",
+        "title": "NFPA Protective Clothing Standard",
+        "text": "The performance, construction, and testing of fire-resistive coats and protective trousers shall be at least equivalent to the requirements of the National Fire Protection Association (NFPA) standard NFPA No. 1971-1975, \"Protective Clothing for Structural Fire Fighting,\" which is incorporated by reference as specified in § 1910.6.",
+        "summary": "NFPA 1971-1975 standard incorporated for protective clothing requirements",
+        "category": "protective_clothing",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "§ 1910.6",
+          "purpose": "Incorporation by reference specifications"
+        }
+      ],
+      "related_terms": ["fire-resistive coats", "protective trousers", "structural fire fighting"],
+      "reference_details": {
+        "standard_id": "NFPA No. 1971-1975",
+        "title": "Protective Clothing for Structural Fire Fighting",
+        "organization": "National Fire Protection Association (NFPA)",
+        "publication_year": "1975",
+        "purpose": "Performance, construction, and testing requirements for fire-resistive coats and protective trousers",
+        "incorporation_method": "Referenced in § 1910.6",
+        "publication_title": "Protective Clothing for Structural Fire Fighting"
+      }
+    },
+    {
+      "content_type": "reference",
+      "source_location": {
+        "section": "1910.156",
+        "subsection": "(e)(4)(i)",
+        "paragraph": "",
+        "page_number": "8",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → 1910.156(e)(4)(i)",
+      "content": {
+        "id": "niosh_glove_criteria",
+        "title": "NIOSH Fire Fighter Glove Criteria",
+        "text": "Gloves or glove system shall be tested in accordance with the test methods contained in the National Institute for Occupational Safety and Health (NIOSH) 1976 publication, \"The Development of Criteria for Fire Fighter's Gloves; Vol. II, Part II: Test Methods,\" which is incorporated by reference as specified in § 1910.6.",
+        "summary": "NIOSH 1976 publication incorporated for glove testing methods",
+        "category": "hand_protection",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "§ 1910.6",
+          "purpose": "Incorporation by reference specifications"
+        }
+      ],
+      "related_terms": ["gloves", "glove system", "test methods", "hand protection"],
+      "reference_details": {
+        "standard_id": "NIOSH 1976",
+        "title": "The Development of Criteria for Fire Fighter's Gloves; Vol. II, Part II: Test Methods",
+        "organization": "National Institute for Occupational Safety and Health (NIOSH)",
+        "publication_year": "1976",
+        "purpose": "Test methods for fire fighter gloves and glove systems",
+        "incorporation_method": "Referenced in § 1910.6",
+        "publication_title": "The Development of Criteria for Fire Fighter's Gloves"
+      }
+    },
+    {
+      "content_type": "appendix",
+      "source_location": {
+        "section": "Appendix A",
+        "subsection": "Fire Protection",
+        "paragraph": "",
+        "page_number": "24-31",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → Appendix A",
+      "content": {
+        "id": "appendix_a_fire_protection",
+        "title": "Fire Protection Guidance",
+        "text": "This appendix contains nonmandatory guidelines to assist employers in complying with the appropriate requirements of subpart L, including guidance on fire brigade organization, training, protective clothing, and respiratory protection.",
+        "summary": "Nonmandatory guidance for fire protection compliance including detailed recommendations for fire brigade operations",
+        "category": "implementation_guidance",
+        "status": "informational"
+      },
+      "cross_references": [],
+      "related_terms": ["fire brigade", "training", "protective clothing", "respiratory protection"],
+      "appendix_details": {
+        "type": "non-mandatory",
+        "purpose": "Assist employers in complying with subpart L requirements",
+        "scope": "Fire brigade organization, training, protective clothing, respiratory protection",
+        "content_areas": [
+          "Fire brigade scope and organization",
+          "Pre-fire planning recommendations",
+          "Physical capability requirements",
+          "Training and education guidance",
+          "Protective clothing specifications",
+          "Respiratory protection requirements"
+        ],
+        "organizations": ["NFPA", "NIOSH", "Fire training institutions"],
+        "coverage": "Comprehensive fire brigade implementation guidance",
+        "test_methods": ["Quantitative fit testing", "Physical performance tests"],
+        "includes": ["Training recommendations", "Equipment specifications", "Safety procedures"]
+      }
+    },
+    {
+      "content_type": "appendix",
+      "source_location": {
+        "section": "Appendix E",
+        "subsection": "Test Methods for Protective Clothing",
+        "paragraph": "",
+        "page_number": "50-59",
+        "line_reference": ""
+      },
+      "hierarchy_path": "Part 1910 → Subpart L → Appendix E",
+      "content": {
+        "id": "appendix_e_test_methods",
+        "title": "Test Methods for Protective Clothing",
+        "text": "This appendix contains test methods which must be used to determine if protective clothing affords the required level of protection as specified in § 1910.156, fire brigades.",
+        "summary": "Mandatory test methods for verifying protective clothing meets required protection levels",
+        "category": "test_procedures",
+        "status": "mandatory"
+      },
+      "cross_references": [
+        {
+          "cfr_citation": "§ 1910.156",
+          "purpose": "Fire brigade protective clothing requirements"
+        }
+      ],
+      "related_terms": ["protective clothing", "test methods", "fire brigades"],
+      "appendix_details": {
+        "type": "mandatory",
+        "purpose": "Determine if protective clothing meets required protection levels",
+        "scope": "Test methods for protective clothing verification",
+        "content_areas": [
+          "Puncture resistance test for foot protection",
+          "Cloth tearing strength test (Trapezoid Method)",
+          "Flame resistance test (Vertical Method)"
+        ],
+        "organizations": ["Military specifications", "Federal Test Method Standards"],
+        "coverage": "Complete testing protocols for protective clothing",
+        "test_methods": [
+          "Puncture resistance testing",
+          "Tearing strength testing",
+          "Flame resistance testing"
+        ],
+        "includes": [
+          "Test apparatus specifications",
+          "Detailed procedures",
+          "Reporting requirements",
+          "Technical diagrams"
+        ]
+      }
+    }
+  ]
+}

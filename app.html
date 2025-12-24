@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSHA Compliance Tool - CompliEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+        
+        // Lucide Icons as React components
+        const Shield = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>;
+        const AlertTriangle = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>;
+        const Check = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>;
+        const X = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>;
+        const ChevronRight = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>;
+        const ChevronLeft = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>;
+        const CheckCircle = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>;
+        const XCircle = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>;
+        const AlertCircle = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>;
+        const Info = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>;
+        const Clock = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>;
+        const Activity = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>;
+        const ArrowLeft = (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>;
+
+        // Simple Demo Component
+        const RecordabilityTool = () => {
+          const [currentStep, setCurrentStep] = useState(0);
+          const [sidebarOpen, setSidebarOpen] = useState(true);
+          const [currentView, setCurrentView] = useState('recordability');
+
+          return (
+            <div className="min-h-screen bg-gray-100 flex">
+              {/* Sidebar */}
+              <div className={sidebarOpen ? 'w-64 bg-white shadow-lg' : 'w-20 bg-white shadow-lg'}>
+                <div className="p-6 border-b">
+                  {sidebarOpen ? (
+                    <div className="flex items-center">
+                      <Shield className="h-8 w-8 text-blue-600 mr-2" />
+                      <span className="font-bold text-xl">OSHA Compliance</span>
+                    </div>
+                  ) : (
+                    <Shield className="h-8 w-8 text-blue-600 mx-auto" />
+                  )}
+                </div>
+
+                <nav className="p-4 space-y-2">
+                  {[
+                    { id: 'recordability', label: 'Recordability Assessment', icon: CheckCircle },
+                    { id: 'incident', label: 'Incident Report', icon: AlertTriangle }
+                  ].map(item => {
+                    const Icon = item.icon;
+                    const isActive = currentView === item.id;
+                    return (
+                      <button
+                        key={item.id}
+                        onClick={() => setCurrentView(item.id)}
+                        className={
+                          sidebarOpen 
+                            ? (isActive 
+                                ? 'w-full flex items-center px-4 py-3 rounded-lg bg-blue-50 text-blue-600 transition-colors' 
+                                : 'w-full flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors')
+                            : (isActive
+                                ? 'w-full flex justify-center px-4 py-3 rounded-lg bg-blue-50 text-blue-600 transition-colors'
+                                : 'w-full flex justify-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors')
+                        }
+                      >
+                        <Icon className="h-5 w-5" />
+                        {sidebarOpen && <span className="ml-3 text-sm font-medium">{item.label}</span>}
+                      </button>
+                    );
+                  })}
+                </nav>
+
+                {/* Toggle sidebar button */}
+                <div className="absolute bottom-4 left-4">
+                  <button
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    <ChevronLeft className={`h-5 w-5 text-gray-600 transition-transform ${sidebarOpen ? '' : 'rotate-180'}`} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <div className="flex-1 flex flex-col">
+                <div className="bg-white shadow-sm border-b px-8 py-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h1 className="text-xl font-semibold">
+                        {currentView === 'recordability' ? 'OSHA Recordability Assessment' : 'OSHA Incident Report'}
+                      </h1>
+                      <p className="text-sm text-gray-600">
+                        {currentView === 'recordability' 
+                          ? 'Determine if workplace incidents must be recorded per 29 CFR 1904' 
+                          : 'Create detailed incident reports for OSHA Forms 300/301'
+                        }
+                      </p>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Clock className="h-4 w-4 mr-1" />
+                      Enterprise SaaS Platform
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex-1 overflow-auto p-8">
+                  <div className="max-w-4xl mx-auto">
+                    <div className="bg-white rounded-2xl shadow-lg p-8">
+                      <div className="flex items-center mb-6">
+                        <Shield className="h-10 w-10 text-blue-600 mr-4" />
+                        <div>
+                          <h2 className="text-2xl font-bold text-gray-900">Welcome to OSHA CompliEase</h2>
+                          <p className="text-gray-600">Your comprehensive OSHA compliance management tool</p>
+                        </div>
+                      </div>
+
+                      {currentView === 'recordability' ? (
+                        <div className="space-y-6">
+                          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
+                            <h3 className="font-semibold text-blue-900 mb-2">Recordability Assessment</h3>
+                            <p className="text-sm text-blue-800">
+                              This tool helps you determine if a workplace incident must be recorded on your OSHA 300 Log 
+                              according to 29 CFR 1904 regulations.
+                            </p>
+                          </div>
+
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-400 transition-all">
+                              <CheckCircle className="h-8 w-8 text-green-600 mb-3" />
+                              <h4 className="font-bold text-lg mb-2">Step 1: Work-Related</h4>
+                              <p className="text-sm text-gray-600">
+                                Did the incident occur in the work environment?
+                              </p>
+                            </div>
+                            
+                            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-400 transition-all">
+                              <Activity className="h-8 w-8 text-blue-600 mb-3" />
+                              <h4 className="font-bold text-lg mb-2">Step 2: New Case</h4>
+                              <p className="text-sm text-gray-600">
+                                Is this a new injury or illness, not a continuation?
+                              </p>
+                            </div>
+                            
+                            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-400 transition-all">
+                              <AlertCircle className="h-8 w-8 text-orange-600 mb-3" />
+                              <h4 className="font-bold text-lg mb-2">Step 3: Severity</h4>
+                              <p className="text-sm text-gray-600">
+                                Does it meet OSHA's recording criteria?
+                              </p>
+                            </div>
+                            
+                            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-400 transition-all">
+                              <Info className="h-8 w-8 text-purple-600 mb-3" />
+                              <h4 className="font-bold text-lg mb-2">Step 4: Documentation</h4>
+                              <p className="text-sm text-gray-600">
+                                Complete OSHA Forms 300, 300A, and 301
+                              </p>
+                            </div>
+                          </div>
+
+                          <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
+                            Start Assessment
+                            <ChevronRight className="inline h-5 w-5 ml-2" />
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="space-y-6">
+                          <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-lg">
+                            <h3 className="font-semibold text-orange-900 mb-2">Incident Reporting</h3>
+                            <p className="text-sm text-orange-800">
+                              Create comprehensive incident reports for OSHA Forms 300 and 301. 
+                              Document all details of workplace injuries and illnesses.
+                            </p>
+                          </div>
+
+                          <div className="border-2 border-gray-200 rounded-xl p-6">
+                            <h4 className="font-bold text-lg mb-4">Quick Report Form</h4>
+                            <div className="space-y-4">
+                              <div>
+                                <label className="block text-sm font-semibold mb-2">Employee Name</label>
+                                <input type="text" className="w-full p-3 border border-gray-300 rounded-lg" placeholder="Full name" />
+                              </div>
+                              <div>
+                                <label className="block text-sm font-semibold mb-2">Date of Incident</label>
+                                <input type="date" className="w-full p-3 border border-gray-300 rounded-lg" />
+                              </div>
+                              <div>
+                                <label className="block text-sm font-semibold mb-2">Description of Incident</label>
+                                <textarea className="w-full p-3 border border-gray-300 rounded-lg" rows="4" placeholder="Describe what happened..."></textarea>
+                              </div>
+                            </div>
+                          </div>
+
+                          <button className="w-full bg-orange-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-700 transition-all shadow-lg hover:shadow-xl">
+                            Create Incident Report
+                            <ChevronRight className="inline h-5 w-5 ml-2" />
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        };
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<RecordabilityTool />);
+    </script>
+</body>
+</html>

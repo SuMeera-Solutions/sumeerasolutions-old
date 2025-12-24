@@ -1,0 +1,785 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - Personal Protective and Life Saving Equipment",
+    "part": "1926",
+    "subpart": "E",
+    "authority": "40 U.S.C. 3701 et seq.; 29 U.S.C. 653, 655, 657; Secretary of Labor's Orders",
+    "effective_date": "1979-02-09",
+    "last_updated": "2025-06-05",
+    "applies_to": "all construction workplaces requiring personal protective equipment",
+    "excludes": []
+  },
+  "sections": [
+    {
+      "section_number": "1926.95",
+      "title": "Criteria for personal protective equipment",
+      "subsections": [
+        {
+          "subsection": "1926.95(d)(7)",
+          "title": "Payment for protective equipment - Effective dates",
+          "rules": [
+            {
+              "rule_id": "1926.95(d)(7)",
+              "text": "This section shall become effective on February 13, 2008. Employers must implement the PPE payment requirements no later than May 15, 2008.",
+              "requirement": "implement PPE payment requirements by specified deadline",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all employers",
+              "work_types": ["construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "effective_date", "condition": "section effective date", "value": "2008-02-13", "unit": "date", "operator": ">="},
+                  {"id": "implementation_deadline", "condition": "implementation deadline", "value": "2008-05-15", "unit": "date", "operator": "<="}
+                ],
+                "expression": "effective_date AND implementation_deadline"
+              },
+              "protections": ["required PPE payment"],
+              "exceptions": {
+                "items": [
+                  {"id": "non_specialty_footwear", "description": "non-specialty safety-toe protective footwear", "conditions": []},
+                  {"id": "prescription_eyewear", "description": "non-specialty prescription safety eyewear", "conditions": []},
+                  {"id": "everyday_clothing", "description": "everyday clothing and weather protection items", "conditions": []}
+                ],
+                "expression": "non_specialty_footwear OR prescription_eyewear OR everyday_clothing"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.96",
+      "title": "Occupational foot protection",
+      "subsections": [
+        {
+          "subsection": "1926.96",
+          "title": "Safety-toe footwear requirements",
+          "rules": [
+            {
+              "rule_id": "1926.96",
+              "text": "Safety-toe footwear for employees shall meet the requirements and specifications in American National Standard for Men's Safety-Toe Footwear, Z41.1-1967.",
+              "requirement": "provide safety-toe footwear meeting ANSI Z41.1-1967 specifications",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employees requiring foot protection",
+              "work_types": ["construction", "heavy work"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["ANSI Z41.1-1967 compliant safety footwear"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.97",
+      "title": "Electrical protective equipment",
+      "subsections": [
+        {
+          "subsection": "1926.97(a)(2)",
+          "title": "Electrical requirements - Test duration",
+          "rules": [
+            {
+              "rule_id": "1926.97(a)(2)(i)(B)",
+              "text": "The test voltage shall be applied continuously for 3 minutes for equipment other than matting and shall be applied continuously for 1 minute for matting.",
+              "requirement": "apply proof test voltage for specified durations",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical protective equipment testing",
+              "work_types": ["electrical testing", "equipment certification"],
+              "triggers": {
+                "conditions": [
+                  {"id": "test_duration_equipment", "condition": "test duration for equipment (non-matting)", "value": "3", "unit": "minutes", "operator": "="},
+                  {"id": "test_duration_matting", "condition": "test duration for matting", "value": "1", "unit": "minutes", "operator": "="}
+                ],
+                "expression": "test_duration_equipment OR test_duration_matting"
+              },
+              "protections": ["proper electrical testing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.97(a)(2)(i)(C)",
+              "text": "Gloves shall also be capable of separately withstanding the ac proof-test voltage specified in Table E-1 after a 16-hour water soak.",
+              "requirement": "conduct 16-hour water soak test for gloves",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "rubber insulating gloves",
+              "work_types": ["glove testing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "water_soak_duration", "condition": "water soak duration", "value": "16", "unit": "hours", "operator": "="}
+                ],
+                "expression": "water_soak_duration"
+              },
+              "protections": ["water resistance verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.97(a)(2)(ii)(C)",
+              "text": "After the 16-hour water soak specified in paragraph (a)(2)(i)(C) of this section, the 60-hertz proof-test current may not exceed the values given in Table E-1 by more than 2 milliamperes.",
+              "requirement": "limit current increase to 2 milliamperes after water soak",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "water-soaked gloves",
+              "work_types": ["post-soak testing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "current_increase_limit", "condition": "maximum current increase after water soak", "value": "2", "unit": "milliamperes", "operator": "<="}
+                ],
+                "expression": "current_increase_limit"
+              },
+              "protections": ["controlled current increase limits"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.97(b)(2)",
+          "title": "Equipment current requirements",
+          "rules": [
+            {
+              "rule_id": "1926.97(b)(2)(ii)",
+              "text": "When insulating equipment is tested in accordance with paragraph (b)(2)(i) of this section, the equipment current may not exceed 1 microampere per kilovolt of phase-to-phase applied voltage.",
+              "requirement": "limit equipment current to 1 microampere per kilovolt",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "insulating equipment testing",
+              "work_types": ["electrical testing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "current_per_kilovolt", "condition": "equipment current per kilovolt", "value": "1", "unit": "microamperes per kilovolt", "operator": "<="}
+                ],
+                "expression": "current_per_kilovolt"
+              },
+              "protections": ["controlled leakage current"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.97(c)(2)(x)",
+          "title": "Salvage requirements for blankets",
+          "rules": [
+            {
+              "rule_id": "1926.97(c)(2)(x)(B)",
+              "text": "Rubber insulating blankets may be salvaged by severing the defective area from the undamaged portion of the blanket. The resulting undamaged area may not be smaller than 560 millimeters by 560 millimeters (22 inches by 22 inches) for Class 1, 2, 3, and 4 blankets.",
+              "requirement": "maintain minimum blanket size when salvaging",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "rubber insulating blankets Class 1-4",
+              "work_types": ["blanket repair", "salvage operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_size_mm", "condition": "minimum salvaged blanket size (metric)", "value": "560", "unit": "millimeters", "operator": ">="},
+                  {"id": "min_size_inches", "condition": "minimum salvaged blanket size (imperial)", "value": "22", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "min_size_mm AND min_size_inches"
+              },
+              "protections": ["adequate blanket coverage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.100",
+      "title": "Head protection",
+      "subsections": [
+        {
+          "subsection": "1926.100(b)",
+          "title": "Criteria for head protection",
+          "rules": [
+            {
+              "rule_id": "1926.100(b)(1)",
+              "text": "The employer must provide each employee with head protection that meets the specifications contained in ANSI Z89.1-2009, ANSI Z89.1-2003, or ANSI Z89.1-1997.",
+              "requirement": "provide head protection meeting specified ANSI standards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees exposed to head injury hazards",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "head_injury_risk", "condition": "risk of head injury from impact, falling objects, or electrical hazards", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "head_injury_risk"
+              },
+              "protections": ["ANSI Z89.1 compliant head protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.104",
+      "title": "Safety belts, lifelines, and lanyards",
+      "subsections": [
+        {
+          "subsection": "1926.104(b)",
+          "title": "Lifeline anchorage requirements",
+          "rules": [
+            {
+              "rule_id": "1926.104(b)",
+              "text": "Lifelines shall be secured above the point of operation to an anchorage or structural member capable of supporting a minimum dead weight of 5,400 pounds.",
+              "requirement": "secure lifelines to anchorage supporting minimum 5,400 pounds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "lifeline installations",
+              "work_types": ["fall protection", "rigging"],
+              "triggers": {
+                "conditions": [
+                  {"id": "anchorage_strength", "condition": "anchorage minimum dead weight capacity", "value": "5400", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "anchorage_strength"
+              },
+              "protections": ["adequate anchorage strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.104(c)",
+              "text": "Lifelines used on rock-scaling operations, or in areas where the lifeline may be subjected to cutting or abrasion, shall be a minimum of 7⁄8-inch wire core manila rope. For all other lifeline applications, a minimum of 3⁄4-inch manila or equivalent, with a minimum breaking strength of 5,000 pounds, shall be used.",
+              "requirement": "use specified rope sizes and strengths for different applications",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "lifeline selection",
+              "work_types": ["rock scaling", "general lifeline applications"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wire_core_rope_size", "condition": "wire core manila rope diameter for rock scaling", "value": "0.875", "unit": "inches", "operator": ">="},
+                  {"id": "general_rope_size", "condition": "general manila rope diameter", "value": "0.75", "unit": "inches", "operator": ">="},
+                  {"id": "breaking_strength", "condition": "minimum breaking strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "(rock_scaling AND wire_core_rope_size) OR (general_use AND general_rope_size AND breaking_strength)"
+              },
+              "protections": ["appropriate rope strength and size"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.104(d)",
+              "text": "Safety belt lanyard shall be a minimum of 1⁄2-inch nylon, or equivalent, with a maximum length to provide for a fall of no greater than 6 feet. The rope shall have a nominal breaking strength of 5,400 pounds.",
+              "requirement": "use proper lanyard size, length, and strength specifications",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety belt lanyards",
+              "work_types": ["fall protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "lanyard_diameter", "condition": "minimum lanyard diameter", "value": "0.5", "unit": "inches", "operator": ">="},
+                  {"id": "max_fall_distance", "condition": "maximum fall distance", "value": "6", "unit": "feet", "operator": "<="},
+                  {"id": "lanyard_breaking_strength", "condition": "lanyard breaking strength", "value": "5400", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "lanyard_diameter AND max_fall_distance AND lanyard_breaking_strength"
+              },
+              "protections": ["controlled fall distance", "adequate lanyard strength"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.104(f)",
+              "text": "All safety belt and lanyard hardware, except rivets, shall be capable of withstanding a tensile loading of 4,000 pounds without cracking, breaking, or taking a permanent deformation.",
+              "requirement": "ensure hardware withstands 4,000 pound tensile load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety belt and lanyard hardware",
+              "work_types": ["hardware specification", "testing"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hardware_tensile_strength", "condition": "hardware tensile loading capacity", "value": "4000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "hardware_tensile_strength"
+              },
+              "protections": ["adequate hardware strength"],
+              "exceptions": {
+                "items": [
+                  {"id": "rivets", "description": "rivets", "conditions": []}
+                ],
+                "expression": "rivets"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.105",
+      "title": "Safety nets",
+      "subsections": [
+        {
+          "subsection": "1926.105(a)",
+          "title": "Safety net requirements",
+          "rules": [
+            {
+              "rule_id": "1926.105(a)",
+              "text": "Safety nets shall be provided when workplaces are more than 25 feet above the ground or water surface, or other surfaces where the use of ladders, scaffolds, catch platforms, temporary floors, safety lines, or safety belts is impractical.",
+              "requirement": "provide safety nets for work above 25 feet when other protection is impractical",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "elevated work locations",
+              "work_types": ["construction", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "height_threshold", "condition": "workplace height above surface", "value": "25", "unit": "feet", "operator": ">"},
+                  {"id": "other_protection_impractical", "condition": "other fall protection methods impractical", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "height_threshold AND other_protection_impractical"
+              },
+              "protections": ["safety nets"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.105(c)(1)",
+              "text": "Nets shall extend 8 feet beyond the edge of the work surface where employees are exposed and shall be installed as close under the work surface as practical but in no case more than 25 feet below such work surface.",
+              "requirement": "position nets with proper extension and maximum distance below work surface",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety net installation",
+              "work_types": ["net installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "net_extension", "condition": "net extension beyond work edge", "value": "8", "unit": "feet", "operator": ">="},
+                  {"id": "max_distance_below", "condition": "maximum distance below work surface", "value": "25", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "net_extension AND max_distance_below"
+              },
+              "protections": ["adequate net coverage", "proper positioning"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.105(d)",
+              "text": "The mesh size of nets shall not exceed 6 inches by 6 inches. All new nets shall meet accepted performance standards of 17,500 foot-pounds minimum impact resistance as determined and certified by the manufacturers, and shall bear a label of proof test. Edge ropes shall provide a minimum breaking strength of 5,000 pounds.",
+              "requirement": "ensure proper mesh size, impact resistance, and edge rope strength",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "safety net specifications",
+              "work_types": ["net specification", "procurement"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_mesh_size", "condition": "maximum mesh opening size", "value": "6", "unit": "inches", "operator": "<="},
+                  {"id": "impact_resistance", "condition": "minimum impact resistance", "value": "17500", "unit": "foot-pounds", "operator": ">="},
+                  {"id": "edge_rope_strength", "condition": "edge rope breaking strength", "value": "5000", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "max_mesh_size AND impact_resistance AND edge_rope_strength"
+              },
+              "protections": ["controlled mesh openings", "adequate impact resistance", "strong edge ropes"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.106",
+      "title": "Working over or near water",
+      "subsections": [
+        {
+          "subsection": "1926.106(c)",
+          "title": "Emergency rescue equipment",
+          "rules": [
+            {
+              "rule_id": "1926.106(c)",
+              "text": "Ring buoys with at least 90 feet of line shall be provided and readily available for emergency rescue operations. Distance between ring buoys shall not exceed 200 feet.",
+              "requirement": "provide ring buoys with specified line length and spacing",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "work over or near water",
+              "work_types": ["water work", "marine construction"],
+              "triggers": {
+                "conditions": [
+                  {"id": "ring_buoy_line_length", "condition": "ring buoy line length", "value": "90", "unit": "feet", "operator": ">="},
+                  {"id": "ring_buoy_spacing", "condition": "maximum distance between ring buoys", "value": "200", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "ring_buoy_line_length AND ring_buoy_spacing"
+              },
+              "protections": ["emergency rescue capability"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "E-1",
+      "title": "AC Proof-Test Requirements",
+      "purpose": "Electrical protective equipment testing voltages and current limits",
+      "data": [
+        {
+          "class": "00",
+          "proof_test_voltage": "2500",
+          "unit": "V rms",
+          "max_current_280mm": "8",
+          "max_current_360mm": "12",
+          "max_current_410mm": "",
+          "max_current_460mm": "",
+          "current_unit": "mA"
+        },
+        {
+          "class": "0",
+          "proof_test_voltage": "5000",
+          "unit": "V rms",
+          "max_current_280mm": "8",
+          "max_current_360mm": "12",
+          "max_current_410mm": "14",
+          "max_current_460mm": "16",
+          "current_unit": "mA"
+        },
+        {
+          "class": "1",
+          "proof_test_voltage": "10000",
+          "unit": "V rms",
+          "max_current_280mm": "",
+          "max_current_360mm": "14",
+          "max_current_410mm": "16",
+          "max_current_460mm": "18",
+          "current_unit": "mA"
+        },
+        {
+          "class": "2",
+          "proof_test_voltage": "20000",
+          "unit": "V rms",
+          "max_current_280mm": "",
+          "max_current_360mm": "16",
+          "max_current_410mm": "18",
+          "max_current_460mm": "20",
+          "current_unit": "mA"
+        },
+        {
+          "class": "3",
+          "proof_test_voltage": "30000",
+          "unit": "V rms",
+          "max_current_280mm": "",
+          "max_current_360mm": "18",
+          "max_current_410mm": "20",
+          "max_current_460mm": "22",
+          "current_unit": "mA"
+        },
+        {
+          "class": "4",
+          "proof_test_voltage": "40000",
+          "unit": "V rms",
+          "max_current_280mm": "",
+          "max_current_360mm": "22",
+          "max_current_410mm": "",
+          "max_current_460mm": "24",
+          "current_unit": "mA"
+        }
+      ]
+    },
+    {
+      "table_id": "E-2",
+      "title": "DC Proof-Test Requirements",
+      "purpose": "DC voltage requirements for electrical protective equipment",
+      "data": [
+        {"class": "00", "proof_test_voltage": "10000", "unit": "V DC"},
+        {"class": "0", "proof_test_voltage": "20000", "unit": "V DC"},
+        {"class": "1", "proof_test_voltage": "40000", "unit": "V DC"},
+        {"class": "2", "proof_test_voltage": "50000", "unit": "V DC"},
+        {"class": "3", "proof_test_voltage": "60000", "unit": "V DC"},
+        {"class": "4", "proof_test_voltage": "70000", "unit": "V DC"}
+      ]
+    },
+    {
+      "table_id": "E-3",
+      "title": "Glove Tests - Water Level",
+      "purpose": "Water level clearances for glove testing",
+      "data": [
+        {"class": "00", "ac_test_mm": "38", "ac_test_in": "1.5", "dc_test_mm": "38", "dc_test_in": "1.5"},
+        {"class": "0", "ac_test_mm": "38", "ac_test_in": "1.5", "dc_test_mm": "38", "dc_test_in": "1.5"},
+        {"class": "1", "ac_test_mm": "38", "ac_test_in": "1.5", "dc_test_mm": "51", "dc_test_in": "2.0"},
+        {"class": "2", "ac_test_mm": "64", "ac_test_in": "2.5", "dc_test_mm": "76", "dc_test_in": "3.0"},
+        {"class": "3", "ac_test_mm": "89", "ac_test_in": "3.5", "dc_test_mm": "102", "dc_test_in": "4.0"},
+        {"class": "4", "ac_test_mm": "127", "ac_test_in": "5.0", "dc_test_mm": "153", "dc_test_in": "6.0"}
+      ],
+      "notes": [
+        "Water level tolerance: ±13 mm (±0.5 in.)",
+        "Atmospheric conditions may increase clearances by maximum 25 mm (1 in.)"
+      ]
+    },
+    {
+      "table_id": "E-4",
+      "title": "Rubber Insulating Equipment, Voltage Requirements",
+      "purpose": "Maximum use voltages and retest requirements",
+      "data": [
+        {"class": "00", "max_use_voltage_ac": "500", "retest_voltage_ac": "2500", "retest_voltage_dc": "10000"},
+        {"class": "0", "max_use_voltage_ac": "1000", "retest_voltage_ac": "5000", "retest_voltage_dc": "20000"},
+        {"class": "1", "max_use_voltage_ac": "7500", "retest_voltage_ac": "10000", "retest_voltage_dc": "40000"},
+        {"class": "2", "max_use_voltage_ac": "17000", "retest_voltage_ac": "20000", "retest_voltage_dc": "50000"},
+        {"class": "3", "max_use_voltage_ac": "26500", "retest_voltage_ac": "30000", "retest_voltage_dc": "60000"},
+        {"class": "4", "max_use_voltage_ac": "36000", "retest_voltage_ac": "40000", "retest_voltage_dc": "70000"}
+      ],
+      "notes": [
+        "Proof-test voltage applied continuously for at least 1 minute, but no more than 3 minutes"
+      ]
+    },
+    {
+      "table_id": "E-5",
+      "title": "Rubber Insulating Equipment, Test Intervals",
+      "purpose": "Testing frequency requirements for electrical protective equipment",
+      "data": [
+        {"equipment_type": "Rubber insulating line hose", "test_intervals": "Upon indication that insulating value is suspect and after repair"},
+        {"equipment_type": "Rubber insulating covers", "test_intervals": "Upon indication that insulating value is suspect and after repair"},
+        {"equipment_type": "Rubber insulating blankets", "test_intervals": "Before first issue and every 12 months thereafter; upon indication that insulating value is suspect; and after repair"},
+        {"equipment_type": "Rubber insulating gloves", "test_intervals": "Before first issue and every 6 months thereafter; upon indication that insulating value is suspect; after repair; and after use without protectors"},
+        {"equipment_type": "Rubber insulating sleeves", "test_intervals": "Before first issue and every 12 months thereafter; upon indication that insulating value is suspect; and after repair"}
+      ],
+      "numerical_requirements": [
+        {"item": "blankets_test_interval", "value": "12", "unit": "months", "description": "Maximum interval between blanket tests"},
+        {"item": "gloves_test_interval", "value": "6", "unit": "months", "description": "Maximum interval between glove tests"},
+        {"item": "sleeves_test_interval", "value": "12", "unit": "months", "description": "Maximum interval between sleeve tests"}
+      ]
+    },
+    {
+      "table_id": "Filter_Lens",
+      "title": "Filter Lens Shade Numbers for Protection Against Radiant Energy",
+      "purpose": "Welding filter lens requirements",
+      "data": [
+        {"operation": "Shielded metal-arc welding 1/16-, 3/32-, 1/8-, 5/32-inch diameter electrodes", "shade_number": "10"},
+        {"operation": "Gas-shielded arc welding (nonferrous) 1/16-, 3/32-, 1/8-, 5/32-inch diameter electrodes", "shade_number": "11"},
+        {"operation": "Gas-shielded arc welding (ferrous) 1/16-, 3/32-, 1/8-, 5/32-inch diameter electrodes", "shade_number": "12"},
+        {"operation": "Shielded metal-arc welding 3/16-, 7/32-, 1/4-inch diameter electrodes", "shade_number": "12"},
+        {"operation": "5/16-, 3/8-inch diameter electrodes", "shade_number": "14"},
+        {"operation": "Atomic hydrogen welding", "shade_number": "10-14"},
+        {"operation": "Carbon-arc welding", "shade_number": "14"},
+        {"operation": "Soldering", "shade_number": "2"},
+        {"operation": "Torch brazing", "shade_number": "3 or 4"},
+        {"operation": "Light cutting, up to 1 inch", "shade_number": "3 or 4"},
+        {"operation": "Medium cutting, 1 inch to 6 inches", "shade_number": "4 or 5"},
+        {"operation": "Heavy cutting, over 6 inches", "shade_number": "5 or 6"},
+        {"operation": "Gas welding (light), up to 1/8-inch", "shade_number": "4 or 5"},
+        {"operation": "Gas welding (medium), 1/8-inch to 1/2-inch", "shade_number": "5 or 6"},
+        {"operation": "Gas welding (heavy), over 1/2-inch", "shade_number": "6 or 8"}
+      ],
+      "numerical_requirements": [
+        {"item": "electrode_diameter_small", "value": "0.0625", "unit": "inches", "description": "1/16-inch electrode diameter"},
+        {"item": "electrode_diameter_3_32", "value": "0.09375", "unit": "inches", "description": "3/32-inch electrode diameter"},
+        {"item": "electrode_diameter_1_8", "value": "0.125", "unit": "inches", "description": "1/8-inch electrode diameter"},
+        {"item": "electrode_diameter_5_32", "value": "0.15625", "unit": "inches", "description": "5/32-inch electrode diameter"},
+        {"item": "cutting_thickness_light", "value": "1", "unit": "inches", "description": "Light cutting thickness limit"},
+        {"item": "cutting_thickness_medium_max", "value": "6", "unit": "inches", "description": "Medium cutting thickness limit"},
+        {"item": "welding_thickness_light", "value": "0.125", "unit": "inches", "description": "Light gas welding thickness limit"},
+        {"item": "welding_thickness_medium", "value": "0.5", "unit": "inches", "description": "Medium gas welding thickness limit"}
+      ]
+    },
+    {
+      "table_id": "Laser_Safety",
+      "title": "Selecting Laser Safety Glass",
+      "purpose": "Optical density requirements for laser protection",
+      "data": [
+        {"intensity_cw": "10^-2", "optical_density": "5", "attenuation_factor": "10^5"},
+        {"intensity_cw": "10^-1", "optical_density": "6", "attenuation_factor": "10^6"},
+        {"intensity_cw": "1.0", "optical_density": "7", "attenuation_factor": "10^7"},
+        {"intensity_cw": "10.0", "optical_density": "8", "attenuation_factor": "10^8"}
+      ]
+    }
+  ],
+  "additional_rules": [
+    {
+      "section": "1926.97",
+      "category": "Electrical Equipment Performance",
+      "rules": [
+        {
+          "rule_id": "1926.97_table_e1_currents",
+          "text": "Maximum proof-test currents for gloves shall not exceed specified values in Table E-1 based on glove size and class",
+          "requirement": "maintain proof-test current within specified limits for each glove class and size",
+          "type": "mandatory",
+          "severity": "critical",
+          "applies_to": "rubber insulating gloves",
+          "work_types": ["electrical testing"],
+          "numerical_values": [
+            {"class": "00", "size_280mm": "8", "size_360mm": "12", "unit": "milliamperes"},
+            {"class": "0", "size_280mm": "8", "size_360mm": "12", "size_410mm": "14", "size_460mm": "16", "unit": "milliamperes"},
+            {"class": "1", "size_360mm": "14", "size_410mm": "16", "size_460mm": "18", "unit": "milliamperes"},
+            {"class": "2", "size_360mm": "16", "size_410mm": "18", "size_460mm": "20", "unit": "milliamperes"},
+            {"class": "3", "size_360mm": "18", "size_410mm": "20", "size_460mm": "22", "unit": "milliamperes"},
+            {"class": "4", "size_360mm": "22", "size_460mm": "24", "unit": "milliamperes"}
+          ],
+          "triggers": {
+            "conditions": [
+              {"id": "proof_test_current", "condition": "proof test current level", "value": "varies by class", "unit": "milliamperes", "operator": "<="}
+            ],
+            "expression": "proof_test_current"
+          },
+          "protections": ["controlled electrical testing parameters"],
+          "exceptions": {
+            "items": [],
+            "expression": ""
+          }
+        },
+        {
+          "rule_id": "1926.97_glove_water_levels",
+          "text": "Glove testing water levels must be maintained at specified clearances from reinforced edge with tolerance of ±13 mm (±0.5 in.)",
+          "requirement": "maintain precise water levels during glove testing",
+          "type": "mandatory",
+          "severity": "high",
+          "applies_to": "glove testing procedures",
+          "work_types": ["electrical testing"],
+          "numerical_values": [
+            {"parameter": "water_level_tolerance", "value": "13", "unit": "millimeters", "description": "±13 mm tolerance"},
+            {"parameter": "water_level_tolerance_imperial", "value": "0.5", "unit": "inches", "description": "±0.5 inch tolerance"},
+            {"parameter": "atmospheric_adjustment", "value": "25", "unit": "millimeters", "description": "Maximum increase for atmospheric conditions"},
+            {"parameter": "atmospheric_adjustment_imperial", "value": "1", "unit": "inches", "description": "Maximum increase for atmospheric conditions"}
+          ],
+          "triggers": {
+            "conditions": [
+              {"id": "water_level_precision", "condition": "water level measurement accuracy", "value": "13", "unit": "millimeters", "operator": "±"}
+            ],
+            "expression": "water_level_precision"
+          },
+          "protections": ["accurate testing conditions"],
+          "exceptions": {
+            "items": [
+              {"id": "atmospheric_conditions", "description": "impractical atmospheric conditions allow 25mm increase", "conditions": [{"parameter": "atmospheric_impracticality", "value": "true", "operator": "="}]}
+            ],
+            "expression": "atmospheric_conditions"
+          }
+        }
+      ]
+    },
+    {
+      "section": "1926.102",
+      "category": "Eye and Face Protection",
+      "rules": [
+        {
+          "rule_id": "1926.102_welding_shade_numbers",
+          "text": "Filter lens shade numbers must be selected according to welding operation and electrode/material sizes as specified in Table E-1",
+          "requirement": "use proper shade numbers for specific welding operations and material sizes",
+          "type": "mandatory",
+          "severity": "critical",
+          "applies_to": "welding operations",
+          "work_types": ["welding", "cutting", "brazing"],
+          "numerical_values": [
+            {"operation": "electrode_1_16_inch", "value": "0.0625", "unit": "inches", "shade_requirement": "10-12"},
+            {"operation": "electrode_3_32_inch", "value": "0.09375", "unit": "inches", "shade_requirement": "10-12"},
+            {"operation": "electrode_1_8_inch", "value": "0.125", "unit": "inches", "shade_requirement": "10-12"},
+            {"operation": "electrode_5_32_inch", "value": "0.15625", "unit": "inches", "shade_requirement": "10-12"},
+            {"operation": "electrode_3_16_inch", "value": "0.1875", "unit": "inches", "shade_requirement": "12"},
+            {"operation": "electrode_7_32_inch", "value": "0.21875", "unit": "inches", "shade_requirement": "12"},
+            {"operation": "electrode_1_4_inch", "value": "0.25", "unit": "inches", "shade_requirement": "12"},
+            {"operation": "electrode_5_16_inch", "value": "0.3125", "unit": "inches", "shade_requirement": "14"},
+            {"operation": "electrode_3_8_inch", "value": "0.375", "unit": "inches", "shade_requirement": "14"}
+          ],
+          "triggers": {
+            "conditions": [
+              {"id": "welding_operation", "condition": "type of welding operation", "value": "varies", "unit": "operation_type", "operator": "="},
+              {"id": "electrode_size", "condition": "electrode diameter", "value": "varies", "unit": "inches", "operator": "="}
+            ],
+            "expression": "welding_operation AND electrode_size"
+          },
+          "protections": ["appropriate optical protection for welding intensity"],
+          "exceptions": {
+            "items": [
+              {"id": "denser_shades", "description": "shades more dense than listed may be used to suit individual needs", "conditions": []}
+            ],
+            "expression": "denser_shades"
+          }
+        }
+      ]
+    }
+  ],
+  "compliance_verification_rules": [
+    {
+      "category": "Testing and Certification",
+      "requirements": [
+        {
+          "rule_id": "electrical_equipment_testing_intervals",
+          "requirement": "Conduct periodic electrical tests according to Table E-5 intervals",
+          "intervals": [
+            {"equipment": "rubber_insulating_gloves", "interval": "6", "unit": "months"},
+            {"equipment": "rubber_insulating_blankets", "interval": "12", "unit": "months"},
+            {"equipment": "rubber_insulating_sleeves", "interval": "12", "unit": "months"}
+          ],
+          "additional_testing": [
+            "before first issue",
+            "upon indication insulating value is suspect",
+            "after repair",
+            "after use without protectors (gloves only)"
+          ]
+        },
+        {
+          "rule_id": "equipment_marking_requirements",
+          "requirement": "Mark electrical protective equipment with class and type designations",
+          "markings": [
+            {"type": "class_marking", "values": ["Class 00", "Class 0", "Class 1", "Class 2", "Class 3", "Class 4"]},
+            {"type": "ozone_resistance", "values": ["Type I (non-ozone-resistant)", "Type II (ozone-resistant)"]},
+            {"type": "manufacturer_id", "required": true},
+            {"type": "equipment_size", "required": true}
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Performance Standards",
+      "requirements": [
+        {
+          "rule_id": "minimum_breaking_strengths",
+          "requirement": "Ensure equipment meets minimum breaking strength requirements",
+          "specifications": [
+            {"item": "lifeline_anchorage", "value": "5400", "unit": "pounds"},
+            {"item": "lifeline_manila_rope", "value": "5000", "unit": "pounds"},
+            {"item": "safety_belt_lanyard", "value": "5400", "unit": "pounds"},
+            {"item": "safety_net_edge_rope", "value": "5000", "unit": "pounds"},
+            {"item": "safety_belt_hardware", "value": "4000", "unit": "pounds"}
+          ]
+        },
+        {
+          "rule_id": "dimensional_requirements",
+          "requirement": "Maintain specified dimensions for safety equipment",
+          "specifications": [
+            {"item": "safety_net_mesh_maximum", "value": "6", "unit": "inches by 6 inches"},
+            {"item": "safety_net_extension", "value": "8", "unit": "feet"},
+            {"item": "safety_net_maximum_distance_below", "value": "25", "unit": "feet"},
+            {"item": "ring_buoy_line_minimum", "value": "90", "unit": "feet"},
+            {"item": "ring_buoy_spacing_maximum", "value": "200", "unit": "feet"},
+            {"item": "salvaged_blanket_minimum_size", "value": "560", "unit": "millimeters by 560 millimeters"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2478 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - Scaffolds",
+    "part": "1926",
+    "subpart": "L",
+    "authority": "40 U.S.C. 3704; 29 U.S.C. 653, 655, and 657",
+    "effective_date": "1996-08-30",
+    "last_updated": "2025-06-05",
+    "applies_to": "all scaffolds used in workplaces covered by this part",
+    "excludes": ["crane suspended personnel platforms", "derrick suspended personnel platforms"]
+  },
+  "sections": [
+    {
+      "section_number": "1926.450",
+      "title": "Scope, application and definitions applicable to this subpart",
+      "subsections": [
+        {
+          "subsection": "1926.450(a)",
+          "title": "Scope and application",
+          "rules": [
+            {
+              "rule_id": "1926.450(a)",
+              "text": "This subpart applies to all scaffolds used in workplaces covered by this part. It does not apply to crane or derrick suspended personnel platforms.",
+              "requirement": "comply with scaffold safety requirements for all scaffold types",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffold users",
+              "work_types": ["construction", "maintenance", "repair"],
+              "exclusions": ["crane suspended personnel platforms", "derrick suspended personnel platforms"],
+              "triggers": [],
+              "protections": [],
+              "exceptions": ["crane or derrick suspended personnel platforms"]
+            }
+          ]
+        },
+        {
+          "subsection": "1926.450(b)",
+          "title": "Definitions",
+          "rules": [
+            {
+              "rule_id": "1926.450(b)-definitions",
+              "text": "Definitions for scaffold-related terms including adjustable suspension scaffold, bearer, competent person, etc.",
+              "requirement": "understand and apply all defined terms correctly",
+              "type": "informational",
+              "severity": "high",
+              "key_definitions": {
+                "open_sides_and_ends": "edges more than 14 inches away horizontally from sturdy surface",
+                "competent_person": "capable of identifying hazards and authorized to take corrective measures",
+                "qualified": "by degree, certificate, professional standing, or extensive knowledge"
+              },
+              "triggers": [
+                {
+                  "condition": "distance from sturdy surface",
+                  "value": "14",
+                  "unit": "inches",
+                  "operator": ">"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.451",
+      "title": "General requirements",
+      "subsections": [
+        {
+          "subsection": "1926.451(a)",
+          "title": "Capacity",
+          "rules": [
+            {
+              "rule_id": "1926.451(a)(1)",
+              "text": "Each scaffold and scaffold component shall be capable of supporting, without failure, its own weight and at least 4 times the maximum intended load applied or transmitted to it.",
+              "requirement": "design scaffolds with minimum 4:1 safety factor",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffolds and components",
+              "work_types": ["scaffold design", "scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "safety factor",
+                  "value": "4",
+                  "unit": "times maximum intended load",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper load calculations", "structural integrity"],
+              "exceptions": ["paragraphs (a)(2)", "(a)(3)", "(a)(4)", "(a)(5)", "(g)"]
+            },
+            {
+              "rule_id": "1926.451(a)(2)",
+              "text": "Direct connections to roofs and floors, and counterweights used to balance adjustable suspension scaffolds, shall be capable of resisting at least 4 times the tipping moment imposed by the scaffold operating at the rated load of the hoist, or 1.5 (minimum) times the tipping moment imposed by the scaffold operating at the stall load of the hoist, whichever is greater.",
+              "requirement": "design connections and counterweights for tipping resistance",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "adjustable suspension scaffolds",
+              "work_types": ["suspension scaffold installation"],
+              "triggers": [
+                {
+                  "condition": "tipping moment resistance - rated load",
+                  "value": "4",
+                  "unit": "times tipping moment",
+                  "operator": ">="
+                },
+                {
+                  "condition": "tipping moment resistance - stall load",
+                  "value": "1.5",
+                  "unit": "times tipping moment",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper counterweight design", "adequate connections"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(a)(3)",
+              "text": "Each suspension rope, including connecting hardware, used on non-adjustable suspension scaffolds shall be capable of supporting, without failure, at least 6 times the maximum intended load applied or transmitted to that rope.",
+              "requirement": "design non-adjustable suspension ropes with 6:1 safety factor",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "non-adjustable suspension scaffolds",
+              "work_types": ["suspension scaffold rigging"],
+              "triggers": [
+                {
+                  "condition": "rope safety factor - non-adjustable",
+                  "value": "6",
+                  "unit": "times maximum intended load",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper rope selection", "hardware ratings"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(a)(4)",
+              "text": "Each suspension rope, including connecting hardware, used on adjustable suspension scaffolds shall be capable of supporting, without failure, at least 6 times the maximum intended load applied or transmitted to that rope with the scaffold operating at either the rated load of the hoist, or 2 (minimum) times the stall load of the hoist, whichever is greater.",
+              "requirement": "design adjustable suspension ropes with 6:1 safety factor",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "adjustable suspension scaffolds",
+              "work_types": ["suspension scaffold rigging"],
+              "triggers": [
+                {
+                  "condition": "rope safety factor - adjustable",
+                  "value": "6",
+                  "unit": "times maximum intended load",
+                  "operator": ">="
+                },
+                {
+                  "condition": "stall load factor",
+                  "value": "2",
+                  "unit": "times stall load",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper rope selection", "hoist capacity limits"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(a)(5)",
+              "text": "The stall load of any scaffold hoist shall not exceed 3 times its rated load.",
+              "requirement": "limit hoist stall load to maximum 3 times rated load",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffold hoists",
+              "work_types": ["hoist selection", "hoist operation"],
+              "triggers": [
+                {
+                  "condition": "hoist stall load",
+                  "value": "3",
+                  "unit": "times rated load",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper hoist sizing", "load limiters"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(a)(6)",
+              "text": "Scaffolds shall be designed by a qualified person and shall be constructed and loaded in accordance with that design.",
+              "requirement": "have qualified person design all scaffolds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffolds",
+              "work_types": ["scaffold design", "scaffold construction"],
+              "personnel_required": "qualified person",
+              "triggers": [],
+              "protections": ["professional design", "construction oversight"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(b)",
+          "title": "Scaffold platform construction",
+          "rules": [
+            {
+              "rule_id": "1926.451(b)(1)(i)",
+              "text": "Each platform unit shall be installed so that the space between adjacent units and the space between the platform and the uprights is no more than 1 inch (2.5 cm) wide.",
+              "requirement": "minimize gaps between platform units to maximum 1 inch",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all platform installations",
+              "work_types": ["platform installation"],
+              "triggers": [
+                {
+                  "condition": "gap between platform units",
+                  "value": "1",
+                  "unit": "inch",
+                  "operator": "<="
+                },
+                {
+                  "condition": "gap between platform and uprights",
+                  "value": "1",
+                  "unit": "inch", 
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper platform fit", "gap control"],
+              "exceptions": ["where employer demonstrates wider space is necessary"]
+            },
+            {
+              "rule_id": "1926.451(b)(1)(ii)",
+              "text": "Where the employer makes the demonstration provided for in paragraph (b)(1)(i), the platform shall be planked or decked as fully as possible and the remaining open space between the platform and the uprights shall not exceed 9½ inches (24.1 cm).",
+              "requirement": "limit maximum gap to 9.5 inches when wider space demonstrated necessary",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "platforms with demonstrated need for wider gaps",
+              "work_types": ["platform installation with special circumstances"],
+              "triggers": [
+                {
+                  "condition": "maximum open space with demonstration",
+                  "value": "9.5",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["maximum planking", "controlled gaps"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(b)(2)",
+              "text": "Each scaffold platform and walkway shall be at least 18 inches (46 cm) wide.",
+              "requirement": "ensure minimum platform width of 18 inches",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all scaffold platforms and walkways",
+              "work_types": ["platform design", "walkway construction"],
+              "triggers": [
+                {
+                  "condition": "platform width",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate working space", "stability"],
+              "exceptions": ["paragraphs (b)(2)(i) and (b)(2)(ii)"]
+            },
+            {
+              "rule_id": "1926.451(b)(2)(i)",
+              "text": "Each ladder jack scaffold, top plate bracket scaffold, roof bracket scaffold, and pump jack scaffold shall be at least 12 inches (30 cm) wide. There is no minimum width requirement for boatswains' chairs.",
+              "requirement": "ensure 12-inch minimum width for specified scaffold types",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": ["ladder jack scaffolds", "top plate bracket scaffolds", "roof bracket scaffolds", "pump jack scaffolds"],
+              "work_types": ["specialized scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "specific scaffold types width",
+                  "value": "12",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate workspace", "stability"],
+              "exceptions": ["boatswains' chairs - no minimum width requirement"]
+            },
+            {
+              "rule_id": "1926.451(b)(2)(ii)",
+              "text": "Where scaffolds must be used in areas that the employer can demonstrate are so narrow that platforms and walkways cannot be at least 18 inches (46 cm) wide, such platforms and walkways shall be as wide as feasible, and employees on those platforms and walkways shall be protected from fall hazards by the use of guardrails and/or personal fall arrest systems.",
+              "requirement": "use maximum feasible width and provide fall protection in narrow areas",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "scaffolds in narrow areas",
+              "work_types": ["restricted space scaffolding"],
+              "triggers": [
+                {
+                  "condition": "area width constraint",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": "<"
+                }
+              ],
+              "protections": ["guardrails", "personal fall arrest systems"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(b)(3)",
+              "text": "The front edge of all platforms shall not be more than 14 inches (36 cm) from the face of the work, unless guardrail systems are erected along the front edge and/or personal fall arrest systems are used.",
+              "requirement": "maintain maximum 14-inch distance from work face or provide protection",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffold platforms",
+              "work_types": ["platform positioning"],
+              "triggers": [
+                {
+                  "condition": "distance from work face",
+                  "value": "14",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["guardrail systems", "personal fall arrest systems"],
+              "exceptions": ["when guardrails or fall arrest systems are used"]
+            },
+            {
+              "rule_id": "1926.451(b)(3)(i)",
+              "text": "The maximum distance from the face for outrigger scaffolds shall be 3 inches (8 cm).",
+              "requirement": "limit outrigger scaffold distance to maximum 3 inches from work face",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "outrigger scaffolds",
+              "work_types": ["outrigger scaffold positioning"],
+              "triggers": [
+                {
+                  "condition": "outrigger scaffold distance from face",
+                  "value": "3",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["close work positioning"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(b)(3)(ii)",
+              "text": "The maximum distance from the face for plastering and lathing operations shall be 18 inches (46 cm).",
+              "requirement": "allow maximum 18-inch distance for plastering and lathing work",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "plastering and lathing operations",
+              "work_types": ["plastering", "lathing"],
+              "triggers": [
+                {
+                  "condition": "distance for plastering/lathing",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["appropriate work distance"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(b)(4)",
+              "text": "Each end of a platform, unless cleated or otherwise restrained by hooks or equivalent means, shall extend over the centerline of its support at least 6 inches (15 cm).",
+              "requirement": "ensure minimum 6-inch platform extension over support centerline",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "unrestrained platform ends",
+              "work_types": ["platform installation"],
+              "triggers": [
+                {
+                  "condition": "platform extension over support centerline",
+                  "value": "6",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate support", "platform stability"],
+              "exceptions": ["cleated or hook-restrained platforms"]
+            },
+            {
+              "rule_id": "1926.451(b)(5)(i)",
+              "text": "Each end of a platform 10 feet or less in length shall not extend over its support more than 12 inches (30 cm) unless the platform is designed and installed so that the cantilevered portion of the platform is able to support employees and/or materials without tipping, or has guardrails which block employee access to the cantilevered end.",
+              "requirement": "limit cantilever extension to 12 inches for platforms 10 feet or shorter",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "platforms 10 feet or less in length",
+              "work_types": ["short platform installation"],
+              "triggers": [
+                {
+                  "condition": "platform length",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": "<="
+                },
+                {
+                  "condition": "maximum cantilever extension",
+                  "value": "12",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["anti-tip design", "access-blocking guardrails"],
+              "exceptions": ["designed for cantilever loads", "guardrails blocking access"]
+            },
+            {
+              "rule_id": "1926.451(b)(5)(ii)",
+              "text": "Each platform greater than 10 feet in length shall not extend over its support more than 18 inches (46 cm), unless it is designed and installed so that the cantilevered portion of the platform is able to support employees without tipping, or has guardrails which block employee access to the cantilevered end.",
+              "requirement": "limit cantilever extension to 18 inches for platforms longer than 10 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "platforms greater than 10 feet in length",
+              "work_types": ["long platform installation"],
+              "triggers": [
+                {
+                  "condition": "platform length",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": ">"
+                },
+                {
+                  "condition": "maximum cantilever extension",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["anti-tip design", "access-blocking guardrails"],
+              "exceptions": ["designed for cantilever loads", "guardrails blocking access"]
+            },
+            {
+              "rule_id": "1926.451(b)(7)",
+              "text": "On scaffolds where platforms are overlapped to create a long platform, the overlap shall occur only over supports, and shall not be less than 12 inches (30 cm) unless the platforms are nailed together or otherwise restrained to prevent movement.",
+              "requirement": "ensure minimum 12-inch overlap between platforms over supports",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "overlapped platforms",
+              "work_types": ["long platform construction"],
+              "triggers": [
+                {
+                  "condition": "platform overlap",
+                  "value": "12",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper overlap", "platform restraint"],
+              "exceptions": ["nailed together platforms", "otherwise restrained platforms"]
+            },
+            {
+              "rule_id": "1926.451(b)(16)",
+              "text": "Platforms shall not deflect more than 1/60 of the span when loaded.",
+              "requirement": "limit platform deflection to maximum 1/60 of span under load",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all loaded platforms",
+              "work_types": ["platform design", "load calculations"],
+              "triggers": [
+                {
+                  "condition": "platform deflection ratio",
+                  "value": "1/60",
+                  "unit": "of span",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["adequate platform stiffness", "proper support"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(c)",
+          "title": "Criteria for supported scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.451(c)(1)",
+              "text": "Supported scaffolds with a height to base width (including outrigger supports, if used) ratio of more than four to one (4:1) shall be restrained from tipping by guying, tying, bracing, or equivalent means.",
+              "requirement": "restrain scaffolds with height-to-base ratio greater than 4:1 from tipping",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "supported scaffolds",
+              "work_types": ["tall scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "height to base width ratio",
+                  "value": "4",
+                  "unit": "ratio (4:1)",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["guying", "tying", "bracing", "equivalent restraint means"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(c)(1)(ii)",
+              "text": "Guys, ties, and braces shall be installed according to the scaffold manufacturer's recommendations or at the closest horizontal member to the 4:1 height and be repeated vertically at locations of horizontal members every 20 feet (6.1 m) or less thereafter for scaffolds 3 feet (0.91 m) wide or less, and every 26 feet (7.9 m) or less thereafter for scaffolds greater than 3 feet (0.91 m) wide.",
+              "requirement": "install restraints at specified vertical intervals based on scaffold width",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "scaffolds requiring restraint",
+              "work_types": ["scaffold restraint installation"],
+              "triggers": [
+                {
+                  "condition": "scaffold width",
+                  "value": "3",
+                  "unit": "feet",
+                  "operator": "<="
+                },
+                {
+                  "condition": "vertical spacing for narrow scaffolds",
+                  "value": "20",
+                  "unit": "feet",
+                  "operator": "<="
+                },
+                {
+                  "condition": "scaffold width",
+                  "value": "3",
+                  "unit": "feet",
+                  "operator": ">"
+                },
+                {
+                  "condition": "vertical spacing for wide scaffolds",
+                  "value": "26",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["manufacturer recommended restraints", "proper spacing"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(c)(1)(ii)-horizontal",
+              "text": "Such guys, ties and braces shall be installed at each end of the scaffold and at horizontal intervals not to exceed 30 feet (9.1 m) (measured from one end towards the other).",
+              "requirement": "install restraints at scaffold ends and maximum 30-foot horizontal intervals",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "scaffolds requiring restraint",
+              "work_types": ["scaffold restraint installation"],
+              "triggers": [
+                {
+                  "condition": "horizontal restraint spacing",
+                  "value": "30",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["end restraints", "intermediate restraints"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(e)",
+          "title": "Access",
+          "rules": [
+            {
+              "rule_id": "1926.451(e)(1)",
+              "text": "When scaffold platforms are more than 2 feet (0.6 m) above or below a point of access, portable ladders, hook-on ladders, attachable ladders, stair towers, stairway-type ladders, ramps, walkways, integral prefabricated scaffold access, or direct access from another scaffold, structure, personnel hoist, or similar surface shall be used.",
+              "requirement": "provide safe access when platforms are more than 2 feet from access point",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffold platforms",
+              "work_types": ["scaffold access design"],
+              "triggers": [
+                {
+                  "condition": "vertical distance from access point",
+                  "value": "2",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["portable ladders", "hook-on ladders", "attachable ladders", "stair towers", "stairway-type ladders", "ramps", "walkways", "integral prefabricated access", "direct access"],
+              "exceptions": ["crossbraces shall not be used as access means"]
+            },
+            {
+              "rule_id": "1926.451(e)(2)(ii)",
+              "text": "Hook-on and attachable ladders shall be positioned so that their bottom rung is not more than 24 inches (61 cm) above the scaffold supporting level.",
+              "requirement": "position hook-on and attachable ladders with bottom rung maximum 24 inches above support",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "hook-on and attachable ladders",
+              "work_types": ["ladder installation"],
+              "triggers": [
+                {
+                  "condition": "bottom rung height above support",
+                  "value": "24",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper ladder positioning"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(2)(iii)",
+              "text": "When hook-on and attachable ladders are used on a supported scaffold more than 35 feet (10.7 m) high, they shall have rest platforms at 35-foot (10.7 m) maximum vertical intervals.",
+              "requirement": "provide rest platforms every 35 feet maximum on tall scaffolds",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "hook-on and attachable ladders on scaffolds over 35 feet",
+              "work_types": ["tall scaffold access"],
+              "triggers": [
+                {
+                  "condition": "scaffold height",
+                  "value": "35",
+                  "unit": "feet",
+                  "operator": ">"
+                },
+                {
+                  "condition": "rest platform interval",
+                  "value": "35",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["rest platforms"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(2)(v)",
+              "text": "Hook-on and attachable ladders shall have a minimum rung length of 11½ inches (29 cm).",
+              "requirement": "ensure minimum rung length of 11.5 inches for hook-on and attachable ladders",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "hook-on and attachable ladders",
+              "work_types": ["ladder specification"],
+              "triggers": [
+                {
+                  "condition": "ladder rung length",
+                  "value": "11.5",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate foot support"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(2)(vi)",
+              "text": "Hook-on and attachable ladders shall have uniformly spaced rungs with a maximum spacing between rungs of 16¾ inches.",
+              "requirement": "ensure maximum rung spacing of 16.75 inches with uniform spacing",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "hook-on and attachable ladders",
+              "work_types": ["ladder specification"],
+              "triggers": [
+                {
+                  "condition": "maximum rung spacing",
+                  "value": "16.75",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["uniform rung spacing", "safe climbing intervals"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(3)(i)",
+              "text": "Stairway-type ladders shall be positioned such that their bottom step is not more than 24 inches (61 cm) above the scaffold supporting level.",
+              "requirement": "position stairway-type ladders with bottom step maximum 24 inches above support",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "stairway-type ladders",
+              "work_types": ["stairway ladder installation"],
+              "triggers": [
+                {
+                  "condition": "bottom step height above support",
+                  "value": "24",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper stairway positioning"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(3)(ii)",
+              "text": "Stairway-type ladders shall be provided with rest platforms at 12 foot (3.7 m) maximum vertical intervals.",
+              "requirement": "provide rest platforms every 12 feet maximum for stairway-type ladders",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "stairway-type ladders",
+              "work_types": ["stairway design"],
+              "triggers": [
+                {
+                  "condition": "rest platform interval",
+                  "value": "12",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["rest platforms"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(3)(iii)",
+              "text": "Stairway-type ladders shall have a minimum step width of 16 inches (41 cm), except that mobile scaffold stairway-type ladders shall have a minimum step width of 11½ inches (30 cm).",
+              "requirement": "ensure minimum step width of 16 inches (11.5 inches for mobile scaffolds)",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "stairway-type ladders",
+              "work_types": ["stairway specification"],
+              "triggers": [
+                {
+                  "condition": "step width - standard",
+                  "value": "16",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "step width - mobile scaffold",
+                  "value": "11.5",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate step width", "safe footing"],
+              "exceptions": ["mobile scaffold stairway-type ladders"]
+            },
+            {
+              "rule_id": "1926.451(e)(4)",
+              "text": "Stairtowers (scaffold stairway/towers) shall be positioned such that their bottom step is not more than 24 inches (61 cm) above the scaffold supporting level.",
+              "requirement": "position stair towers with bottom step maximum 24 inches above support",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "stair towers",
+              "work_types": ["stair tower installation"],
+              "triggers": [
+                {
+                  "condition": "bottom step height above support",
+                  "value": "24",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper stair tower positioning"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(4)(vii)",
+              "text": "Stairrails shall be not less than 28 inches (71 cm) nor more than 37 inches (94 cm) from the upper surface of the stairrail to the surface of the tread, in line with the face of the riser at the forward edge of the tread.",
+              "requirement": "maintain stairrail height between 28 and 37 inches",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "stair tower stairrails",
+              "work_types": ["stairrail installation"],
+              "triggers": [
+                {
+                  "condition": "stairrail minimum height",
+                  "value": "28",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "stairrail maximum height",
+                  "value": "37",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper handrail height"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(4)(viii)",
+              "text": "A landing platform at least 18 inches (45.7 cm) wide by at least 18 inches (45.7 cm) long shall be provided at each level.",
+              "requirement": "provide minimum 18x18 inch landing platforms at each level",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "stair tower landings",
+              "work_types": ["landing platform construction"],
+              "triggers": [
+                {
+                  "condition": "landing platform width",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "landing platform length",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate landing space"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(4)(ix)",
+              "text": "Each scaffold stairway shall be at least 18 inches (45.7 cm) wide between stairrails.",
+              "requirement": "ensure minimum 18-inch width between stairrails",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "scaffold stairways",
+              "work_types": ["stairway construction"],
+              "triggers": [
+                {
+                  "condition": "stairway width between rails",
+                  "value": "18",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate passage width"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(4)(xi)",
+              "text": "Stairways shall be installed between 40 degrees and 60 degrees from the horizontal.",
+              "requirement": "install stairways at angle between 40 and 60 degrees",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "scaffold stairways",
+              "work_types": ["stairway installation"],
+              "triggers": [
+                {
+                  "condition": "stairway minimum angle",
+                  "value": "40",
+                  "unit": "degrees",
+                  "operator": ">="
+                },
+                {
+                  "condition": "stairway maximum angle",
+                  "value": "60",
+                  "unit": "degrees",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["safe climbing angle"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(5)(ii)",
+              "text": "No ramp or walkway shall be inclined more than a slope of one (1) vertical to three (3) horizontal (20 degrees above the horizontal).",
+              "requirement": "limit ramp slope to maximum 1:3 ratio (20 degrees)",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "ramps and walkways",
+              "work_types": ["ramp construction"],
+              "triggers": [
+                {
+                  "condition": "ramp slope ratio",
+                  "value": "1:3",
+                  "unit": "vertical:horizontal",
+                  "operator": "<="
+                },
+                {
+                  "condition": "ramp angle",
+                  "value": "20",
+                  "unit": "degrees",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["safe ramp angle"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(5)(iii)",
+              "text": "If the slope of a ramp or a walkway is steeper than one (1) vertical in eight (8) horizontal, the ramp or walkway shall have cleats not more than fourteen (14) inches (35 cm) apart which are securely fastened to the planks to provide footing.",
+              "requirement": "install cleats maximum 14 inches apart on steep ramps",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "steep ramps and walkways",
+              "work_types": ["ramp construction with cleats"],
+              "triggers": [
+                {
+                  "condition": "ramp slope ratio threshold",
+                  "value": "1:8",
+                  "unit": "vertical:horizontal",
+                  "operator": ">"
+                },
+                {
+                  "condition": "cleat spacing",
+                  "value": "14",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["cleats for footing"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(6)(ii)",
+              "text": "Integral prefabricated scaffold access frames shall have a rung length of at least 8 inches (20 cm).",
+              "requirement": "ensure minimum 8-inch rung length for integral access frames",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "integral prefabricated scaffold access frames",
+              "work_types": ["access frame specification"],
+              "triggers": [
+                {
+                  "condition": "access frame rung length",
+                  "value": "8",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate foot support"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(6)(iii)",
+              "text": "Integral prefabricated scaffold access frames shall not be used as work platforms when rungs are less than 11½ inches in length, unless each affected employee uses fall protection, or a positioning device, which complies with § 1926.502.",
+              "requirement": "require fall protection when using short rungs as work platforms",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "integral access frames with short rungs",
+              "work_types": ["access frame work platforms"],
+              "triggers": [
+                {
+                  "condition": "rung length for work platform use",
+                  "value": "11.5",
+                  "unit": "inches",
+                  "operator": "<"
+                }
+              ],
+              "protections": ["fall protection", "positioning device"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(6)(v)",
+              "text": "Integral prefabricated scaffold access frames shall be provided with rest platforms at 35-foot (10.7 m) maximum vertical intervals on all supported scaffolds more than 35 feet (10.7 m) high.",
+              "requirement": "provide rest platforms every 35 feet maximum on tall scaffolds",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "integral access frames on tall scaffolds",
+              "work_types": ["tall scaffold access"],
+              "triggers": [
+                {
+                  "condition": "scaffold height threshold",
+                  "value": "35",
+                  "unit": "feet",
+                  "operator": ">"
+                },
+                {
+                  "condition": "rest platform interval",
+                  "value": "35",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["rest platforms"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(6)(vi)",
+              "text": "Integral prefabricated scaffold access frames shall have a maximum spacing between rungs of 16¾ inches (43 cm).",
+              "requirement": "ensure maximum rung spacing of 16.75 inches",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "integral access frames",
+              "work_types": ["access frame specification"],
+              "triggers": [
+                {
+                  "condition": "maximum rung spacing",
+                  "value": "16.75",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["safe climbing intervals"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(8)",
+              "text": "Direct access to or from another surface shall be used only when the scaffold is not more than 14 inches (36 cm) horizontally and not more than 24 inches (61 cm) vertically from the other surface.",
+              "requirement": "limit direct access gaps to 14 inches horizontal and 24 inches vertical",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "direct access situations",
+              "work_types": ["direct access design"],
+              "triggers": [
+                {
+                  "condition": "horizontal gap for direct access",
+                  "value": "14",
+                  "unit": "inches",
+                  "operator": "<="
+                },
+                {
+                  "condition": "vertical gap for direct access",
+                  "value": "24",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["safe direct access gaps"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(e)(9)(iii)",
+              "text": "When erecting or dismantling tubular welded frame scaffolds, (end) frames, with horizontal members that are parallel, level and are not more than 22 inches apart vertically may be used as climbing devices for access, provided they are erected in a manner that creates a usable ladder and provides good hand hold and foot space.",
+              "requirement": "allow frame climbing when horizontal members are maximum 22 inches apart vertically",
+              "type": "conditional",
+              "severity": "high",
+              "applies_to": "tubular welded frame scaffolds during erection/dismantling",
+              "work_types": ["scaffold erection", "scaffold dismantling"],
+              "triggers": [
+                {
+                  "condition": "vertical spacing of horizontal members",
+                  "value": "22",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["usable ladder configuration", "good hand hold", "foot space"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(f)",
+          "title": "Use",
+          "rules": [
+            {
+              "rule_id": "1926.451(f)(6)",
+              "text": "The clearance between scaffolds and power lines shall be as follows: Scaffolds shall not be erected, used, dismantled, altered, or moved such that they or any conductive material handled on them might come closer to exposed and energized power lines than specified distances.",
+              "requirement": "maintain safe clearance from power lines",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all scaffolds near power lines",
+              "work_types": ["scaffold operations near power lines"],
+              "triggers": [
+                {
+                  "condition": "insulated lines - less than 300 volts",
+                  "value": "3",
+                  "unit": "feet",
+                  "operator": ">="
+                },
+                {
+                  "condition": "insulated lines - 300 volts to 50 kv",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": ">="
+                },
+                {
+                  "condition": "insulated lines - more than 50 kv",
+                  "value": "10",
+                  "unit": "feet plus 0.4 inches per 1 kv over 50 kv",
+                  "operator": ">="
+                },
+                {
+                  "condition": "uninsulated lines - less than 50 kv",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": ">="
+                },
+                {
+                  "condition": "uninsulated lines - more than 50 kv",
+                  "value": "10",
+                  "unit": "feet plus 0.4 inches per 1 kv over 50 kv",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["electrical clearance distances"],
+              "exceptions": ["when utility company deenergizes lines, relocates lines, or installs protective coverings"]
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(g)",
+          "title": "Fall protection",
+          "rules": [
+            {
+              "rule_id": "1926.451(g)(1)",
+              "text": "Each employee on a scaffold more than 10 feet (3.1 m) above a lower level shall be protected from falling to that lower level.",
+              "requirement": "provide fall protection for employees on scaffolds over 10 feet high",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees on scaffolds",
+              "work_types": ["all scaffold work"],
+              "triggers": [
+                {
+                  "condition": "scaffold height above lower level",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["personal fall arrest systems", "guardrail systems"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(g)(4)(ii)",
+              "text": "The top edge height of toprails or equivalent member on supported scaffolds manufactured or placed in service after January 1, 2000 shall be installed between 38 inches (0.97 m) and 45 inches (1.2 m) above the platform surface. The top edge height on supported scaffolds manufactured and placed in service before January 1, 2000, and on all suspended scaffolds where both a guardrail and a personal fall arrest system are required shall be between 36 inches (0.9 m) and 45 inches (1.2 m).",
+              "requirement": "maintain proper guardrail height based on scaffold age and type",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "guardrail systems",
+              "work_types": ["guardrail installation"],
+              "triggers": [
+                {
+                  "condition": "toprail height - new supported scaffolds",
+                  "value": "38",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "toprail height - new supported scaffolds",
+                  "value": "45",
+                  "unit": "inches",
+                  "operator": "<="
+                },
+                {
+                  "condition": "toprail height - old supported scaffolds and suspended scaffolds",
+                  "value": "36",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "toprail height - old supported scaffolds and suspended scaffolds",
+                  "value": "45",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper guardrail height"],
+              "exceptions": ["when conditions warrant height may exceed 45 inches"]
+            },
+            {
+              "rule_id": "1926.451(g)(4)(vi)",
+              "text": "When intermediate members (such as balusters or additional rails) are used, they shall not be more than 19 inches (48 cm) apart.",
+              "requirement": "limit spacing of intermediate guardrail members to 19 inches",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "guardrail intermediate members",
+              "work_types": ["guardrail construction"],
+              "triggers": [
+                {
+                  "condition": "intermediate member spacing",
+                  "value": "19",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["adequate guardrail coverage"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(g)(4)(vii)",
+              "text": "Each toprail or equivalent member of a guardrail system shall be capable of withstanding, without failure, a force applied in any downward or horizontal direction at any point along its top edge of at least 100 pounds (445 n) for guardrail systems installed on single-point adjustable suspension scaffolds or two-point adjustable suspension scaffolds, and at least 200 pounds (890 n) for guardrail systems installed on all other scaffolds.",
+              "requirement": "ensure guardrail strength based on scaffold type",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "guardrail systems",
+              "work_types": ["guardrail design"],
+              "triggers": [
+                {
+                  "condition": "toprail strength - suspension scaffolds",
+                  "value": "100",
+                  "unit": "pounds",
+                  "operator": ">="
+                },
+                {
+                  "condition": "toprail strength - other scaffolds",
+                  "value": "200",
+                  "unit": "pounds",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate guardrail strength"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(g)(4)(ix)",
+              "text": "Midrails, screens, mesh, intermediate vertical members, solid panels, and equivalent structural members of a guardrail system shall be capable of withstanding, without failure, a force applied in any downward or horizontal direction at any point along the midrail or other member of at least 75 pounds (333 n) for guardrail systems with a minimum 100 pound toprail capacity, and at least 150 pounds (666 n) for guardrail systems with a minimum 200 pound toprail capacity.",
+              "requirement": "ensure midrail and intermediate member strength based on guardrail system capacity",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "guardrail intermediate components",
+              "work_types": ["guardrail component design"],
+              "triggers": [
+                {
+                  "condition": "midrail strength - 100 lb toprail systems",
+                  "value": "75",
+                  "unit": "pounds",
+                  "operator": ">="
+                },
+                {
+                  "condition": "midrail strength - 200 lb toprail systems",
+                  "value": "150",
+                  "unit": "pounds",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate intermediate component strength"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(g)(4)(xv)",
+              "text": "Crossbracing is acceptable in place of a midrail when the crossing point of two braces is between 20 inches (0.5 m) and 30 inches (0.8 m) above the work platform or as a toprail when the crossing point of two braces is between 38 inches (0.97 m) and 48 inches (1.3 m) above the work platform. The end points at each upright shall be no more than 48 inches (1.3 m) apart.",
+              "requirement": "allow crossbracing as guardrail component with specific height and spacing requirements",
+              "type": "conditional",
+              "severity": "medium",
+              "applies_to": "crossbracing used as guardrail components",
+              "work_types": ["crossbracing installation"],
+              "triggers": [
+                {
+                  "condition": "crossbracing as midrail - minimum height",
+                  "value": "20",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "crossbracing as midrail - maximum height",
+                  "value": "30",
+                  "unit": "inches",
+                  "operator": "<="
+                },
+                {
+                  "condition": "crossbracing as toprail - minimum height",
+                  "value": "38",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "crossbracing as toprail - maximum height",
+                  "value": "48",
+                  "unit": "inches",
+                  "operator": "<="
+                },
+                {
+                  "condition": "end point spacing at uprights",
+                  "value": "48",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["crossbracing as guardrail component"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.451(h)",
+          "title": "Falling object protection",
+          "rules": [
+            {
+              "rule_id": "1926.451(h)(2)(ii)",
+              "text": "A toeboard shall be erected along the edge of platforms more than 10 feet (3.1 m) above lower levels for a distance sufficient to protect employees below, except on float (ship) scaffolds where an edging of 3/4 × 1½ inch (2 × 4 cm) wood or equivalent may be used in lieu of toeboards.",
+              "requirement": "install toeboards on platforms over 10 feet high",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "platforms over 10 feet high",
+              "work_types": ["toeboard installation"],
+              "triggers": [
+                {
+                  "condition": "platform height above lower levels",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["toeboards", "equivalent edging on float scaffolds"],
+              "exceptions": ["float scaffolds may use 3/4 × 1½ inch wood edging"]
+            },
+            {
+              "rule_id": "1926.451(h)(4)(i)",
+              "text": "Toeboards shall be capable of withstanding, without failure, a force of at least 50 pounds (222 n) applied in any downward or horizontal direction at any point along the toeboard.",
+              "requirement": "ensure toeboard strength of minimum 50 pounds",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all toeboards",
+              "work_types": ["toeboard design"],
+              "triggers": [
+                {
+                  "condition": "toeboard strength",
+                  "value": "50",
+                  "unit": "pounds",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate toeboard strength"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.451(h)(4)(ii)",
+              "text": "Toeboards shall be at least three and one-half inches (9 cm) high from the top edge of the toeboard to the level of the walking/working surface. Toeboards shall be securely fastened in place at the outermost edge of the platform and have not more than 1/4 inch (0.7 cm) clearance above the walking/working surface. Toeboards shall be solid or with openings not over one inch (2.5 cm) in the greatest dimension.",
+              "requirement": "ensure proper toeboard height, clearance, and opening size",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "all toeboards",
+              "work_types": ["toeboard installation"],
+              "triggers": [
+                {
+                  "condition": "toeboard minimum height",
+                  "value": "3.5",
+                  "unit": "inches",
+                  "operator": ">="
+                },
+                {
+                  "condition": "toeboard clearance above surface",
+                  "value": "0.25",
+                  "unit": "inch",
+                  "operator": "<="
+                },
+                {
+                  "condition": "toeboard opening size",
+                  "value": "1",
+                  "unit": "inch",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper toeboard dimensions"],
+              "exceptions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.452",
+      "title": "Additional requirements applicable to specific types of scaffolds",
+      "subsections": [
+        {
+          "subsection": "1926.452(a)",
+          "title": "Pole scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(a)(6)",
+              "text": "Bearers shall extend a minimum of 3 inches (7.6 cm) over the outside edges of runners.",
+              "requirement": "ensure minimum 3-inch bearer extension over runners",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "pole scaffolds",
+              "work_types": ["pole scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "bearer extension over runners",
+                  "value": "3",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate bearer support"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(a)(9)",
+              "text": "Wood splice plates shall extend at least 2 feet (0.6 m) on either side of the splice, overlap the abutted ends equally, and have at least the same cross-sectional areas as the pole.",
+              "requirement": "ensure proper wood splice plate dimensions and overlap",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "wooden pole splices",
+              "work_types": ["pole splicing"],
+              "triggers": [
+                {
+                  "condition": "splice plate extension",
+                  "value": "2",
+                  "unit": "feet",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate splice strength"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(a)(10)",
+              "text": "Pole scaffolds over 60 feet in height shall be designed by a registered professional engineer, and shall be constructed and loaded in accordance with that design.",
+              "requirement": "require professional engineer design for pole scaffolds over 60 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "tall pole scaffolds",
+              "work_types": ["tall pole scaffold design"],
+              "personnel_required": "registered professional engineer",
+              "triggers": [
+                {
+                  "condition": "pole scaffold height",
+                  "value": "60",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["professional engineering design"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(b)",
+          "title": "Tube and coupler scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(b)(10)",
+              "text": "Tube and coupler scaffolds over 125 feet in height shall be designed by a registered professional engineer, and shall be constructed and loaded in accordance with such design.",
+              "requirement": "require professional engineer design for tube and coupler scaffolds over 125 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "tall tube and coupler scaffolds",
+              "work_types": ["tall tube and coupler scaffold design"],
+              "personnel_required": "registered professional engineer",
+              "triggers": [
+                {
+                  "condition": "tube and coupler scaffold height",
+                  "value": "125",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["professional engineering design"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(c)",
+          "title": "Fabricated frame scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(c)(6)",
+              "text": "Scaffolds over 125 feet (38.0 m) in height above their base plates shall be designed by a registered professional engineer, and shall be constructed and loaded in accordance with such design.",
+              "requirement": "require professional engineer design for fabricated frame scaffolds over 125 feet",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "tall fabricated frame scaffolds",
+              "work_types": ["tall fabricated frame scaffold design"],
+              "personnel_required": "registered professional engineer",
+              "triggers": [
+                {
+                  "condition": "fabricated frame scaffold height",
+                  "value": "125",
+                  "unit": "feet",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["professional engineering design"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(e)",
+          "title": "Bricklayers' square scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(e)(4)",
+              "text": "Scaffolds shall not exceed three tiers in height, and shall be so constructed and arranged that one square rests directly above the other.",
+              "requirement": "limit bricklayers' square scaffolds to maximum 3 tiers",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "bricklayers' square scaffolds",
+              "work_types": ["square scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "maximum tiers",
+                  "value": "3",
+                  "unit": "tiers",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["proper tier arrangement"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(f)",
+          "title": "Horse scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(f)(1)",
+              "text": "Scaffolds shall not be constructed or arranged more than two tiers or 10 feet (3.0 m) in height, whichever is less.",
+              "requirement": "limit horse scaffolds to maximum 2 tiers or 10 feet height",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "horse scaffolds",
+              "work_types": ["horse scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "maximum tiers",
+                  "value": "2",
+                  "unit": "tiers",
+                  "operator": "<="
+                },
+                {
+                  "condition": "maximum height",
+                  "value": "10",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["height limitations"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(h)",
+          "title": "Roof bracket scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(h)(2)",
+              "text": "Brackets (including those provided with pointed metal projections) shall be anchored in place by nails unless it is impractical to use nails. When nails are not used, brackets shall be secured in place with first-grade manila rope of at least three-fourth inch (1.9 cm) diameter, or equivalent.",
+              "requirement": "secure roof brackets with nails or minimum 3/4 inch manila rope",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "roof bracket scaffolds",
+              "work_types": ["roof bracket installation"],
+              "triggers": [
+                {
+                  "condition": "manila rope diameter when nails not used",
+                  "value": "0.75",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["nails", "first-grade manila rope"],
+              "exceptions": ["when impractical to use nails"]
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(i)",
+          "title": "Outrigger scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(i)(1)",
+              "text": "The inboard end of outrigger beams, measured from the fulcrum point to the extreme point of anchorage, shall be not less than one and one-half times the outboard end in length.",
+              "requirement": "ensure inboard end is minimum 1.5 times outboard end length",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "outrigger scaffolds",
+              "work_types": ["outrigger beam design"],
+              "triggers": [
+                {
+                  "condition": "inboard to outboard length ratio",
+                  "value": "1.5",
+                  "unit": "times",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper counterbalance"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(i)(3)",
+              "text": "The fulcrum point of outrigger beams shall rest on secure bearings at least 6 inches (15.2 cm) in each horizontal dimension.",
+              "requirement": "ensure fulcrum bearings are minimum 6 inches in each direction",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "outrigger scaffolds",
+              "work_types": ["outrigger fulcrum installation"],
+              "triggers": [
+                {
+                  "condition": "bearing dimension",
+                  "value": "6",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["secure bearing support"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(j)",
+          "title": "Pump jack scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(j)(2)",
+              "text": "When the pump jack has to pass bracing already installed, an additional brace shall be installed approximately 4 feet (1.2 m) above the brace to be passed, and shall be left in place until the pump jack has been moved and the original brace reinstalled.",
+              "requirement": "install additional brace 4 feet above existing brace when pump jack passes through",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "pump jack scaffolds",
+              "work_types": ["pump jack operation"],
+              "triggers": [
+                {
+                  "condition": "additional brace height above existing brace",
+                  "value": "4",
+                  "unit": "feet",
+                  "operator": "approximately"
+                }
+              ],
+              "protections": ["additional bracing during movement"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(k)",
+          "title": "Ladder jack scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(k)(1)",
+              "text": "Platforms shall not exceed a height of 20 feet (6.1 m).",
+              "requirement": "limit ladder jack scaffold platforms to maximum 20 feet height",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "ladder jack scaffolds",
+              "work_types": ["ladder jack scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "platform height",
+                  "value": "20",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["height limitation"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(k)(3)",
+              "text": "If bearing on rungs only, the bearing area shall include a length of at least 10 inches (25.4 cm) on each rung.",
+              "requirement": "ensure minimum 10-inch bearing length on each rung",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "ladder jacks bearing on rungs only",
+              "work_types": ["ladder jack installation"],
+              "triggers": [
+                {
+                  "condition": "bearing length on rung",
+                  "value": "10",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate bearing area"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(m)",
+          "title": "Crawling boards (chicken ladders)",
+          "rules": [
+            {
+              "rule_id": "1926.452(m)(1)",
+              "text": "Crawling boards shall extend from the roof peak to the eaves when used in connection with roof construction, repair, or maintenance.",
+              "requirement": "ensure crawling boards extend from peak to eaves",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "crawling boards on roofs",
+              "work_types": ["roof construction", "roof repair", "roof maintenance"],
+              "triggers": [],
+              "protections": ["full roof coverage"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(n)",
+          "title": "Step, platform, and trestle ladder scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(n)(1)",
+              "text": "Scaffold platforms shall not be placed any higher than the second highest rung or step of the ladder supporting the platform.",
+              "requirement": "limit platform placement to second highest rung or step",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "step, platform, and trestle ladder scaffolds",
+              "work_types": ["ladder scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "platform placement limit",
+                  "value": "second highest rung or step",
+                  "unit": "position",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["safe platform placement"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(o)",
+          "title": "Single-point adjustable suspension scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(o)(3)",
+              "text": "Boatswains' chair tackle shall consist of correct size ball bearings or bushed blocks containing safety hooks and properly \"eye-spliced\" minimum five-eighth (5/8) inch (1.6 cm) diameter first-grade manila rope, or other rope which will satisfy the criteria of manila rope.",
+              "requirement": "use minimum 5/8 inch diameter first-grade manila rope for boatswains' chair tackle",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "boatswains' chairs",
+              "work_types": ["boatswains' chair rigging"],
+              "triggers": [
+                {
+                  "condition": "rope diameter for tackle",
+                  "value": "0.625",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper rope specifications"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(o)(5)",
+              "text": "Boatswains' chair seat slings shall be a minimum of five-eight (5/8) inch (1.6 cm) diameter fiber, synthetic, or other rope which will satisfy the criteria of first grade manila rope.",
+              "requirement": "use minimum 5/8 inch diameter rope for seat slings",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "boatswains' chair seat slings",
+              "work_types": ["boatswains' chair rigging"],
+              "triggers": [
+                {
+                  "condition": "rope diameter for seat slings",
+                  "value": "0.625",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["proper rope specifications"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(o)(6)",
+              "text": "When a heat-producing process such as gas or arc welding is being conducted, boatswains' chair seat slings shall be a minimum of three-eight (3/8) inch (1.0 cm) wire rope.",
+              "requirement": "use minimum 3/8 inch wire rope for seat slings during welding",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "boatswains' chairs during welding operations",
+              "work_types": ["welding from boatswains' chairs"],
+              "triggers": [
+                {
+                  "condition": "wire rope diameter for welding operations",
+                  "value": "0.375",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["heat-resistant wire rope"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(p)",
+          "title": "Two-point adjustable suspension scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(p)(1)",
+              "text": "Platforms shall not be more than 36 inches (0.9 m) wide unless designed by a qualified person to prevent unstable conditions.",
+              "requirement": "limit platform width to 36 inches unless specially designed",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "two-point adjustable suspension scaffolds",
+              "work_types": ["suspension scaffold platform design"],
+              "triggers": [
+                {
+                  "condition": "platform width",
+                  "value": "36",
+                  "unit": "inches",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["stability design"],
+              "exceptions": ["designed by qualified person"]
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(r)",
+          "title": "Catenary scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(r)(1)",
+              "text": "No more than one platform shall be placed between consecutive vertical pickups, and no more than two platforms shall be used on a catenary scaffold.",
+              "requirement": "limit platforms to one between pickups and maximum two total",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "catenary scaffolds",
+              "work_types": ["catenary scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "platforms between pickups",
+                  "value": "1",
+                  "unit": "platform",
+                  "operator": "<="
+                },
+                {
+                  "condition": "total platforms",
+                  "value": "2",
+                  "unit": "platforms",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["platform limitations"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(s)",
+          "title": "Float (ship) scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(s)(1)",
+              "text": "The platform shall be supported by a minimum of two bearers, each of which shall project a minimum of 6 inches (15.2 cm) beyond the platform on both sides.",
+              "requirement": "use minimum 2 bearers projecting minimum 6 inches beyond platform",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "float scaffolds",
+              "work_types": ["float scaffold construction"],
+              "triggers": [
+                {
+                  "condition": "minimum bearers",
+                  "value": "2",
+                  "unit": "bearers",
+                  "operator": ">="
+                },
+                {
+                  "condition": "bearer projection beyond platform",
+                  "value": "6",
+                  "unit": "inches",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate bearer support"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(w)",
+          "title": "Mobile scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(w)(3)",
+              "text": "Manual force used to move the scaffold shall be applied as close to the base as practicable, but not more than 5 feet (1.5 m) above the supporting surface.",
+              "requirement": "apply manual moving force maximum 5 feet above supporting surface",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "mobile scaffolds",
+              "work_types": ["mobile scaffold movement"],
+              "triggers": [
+                {
+                  "condition": "force application height",
+                  "value": "5",
+                  "unit": "feet",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["low force application point"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(w)(6)(i)",
+              "text": "The surface on which the scaffold is being moved is within 3 degrees of level, and free of pits, holes, and obstructions.",
+              "requirement": "ensure surface is within 3 degrees of level for employee riding",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "mobile scaffolds with employees riding",
+              "work_types": ["mobile scaffold movement with riders"],
+              "triggers": [
+                {
+                  "condition": "surface levelness",
+                  "value": "3",
+                  "unit": "degrees",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["level surface requirement"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(w)(6)(ii)",
+              "text": "The height to base width ratio of the scaffold during movement is two to one or less, unless the scaffold is designed and constructed to meet or exceed nationally recognized stability test requirements.",
+              "requirement": "maintain height to base width ratio of 2:1 or less during movement",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "mobile scaffolds with employees riding",
+              "work_types": ["mobile scaffold movement with riders"],
+              "triggers": [
+                {
+                  "condition": "height to base width ratio during movement",
+                  "value": "2",
+                  "unit": "ratio (2:1)",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["stability ratio"],
+              "exceptions": ["scaffolds meeting nationally recognized stability test requirements"]
+            },
+            {
+              "rule_id": "1926.452(w)(6)(iv)",
+              "text": "When power systems are used, the propelling force is applied directly to the wheels, and does not produce a speed in excess of 1 foot per second (.3 mps).",
+              "requirement": "limit powered movement speed to maximum 1 foot per second",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "powered mobile scaffolds with employees riding",
+              "work_types": ["powered mobile scaffold movement"],
+              "triggers": [
+                {
+                  "condition": "maximum speed with power systems",
+                  "value": "1",
+                  "unit": "foot per second",
+                  "operator": "<="
+                }
+              ],
+              "protections": ["speed limitation"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(x)",
+          "title": "Repair bracket scaffolds",
+          "rules": [
+            {
+              "rule_id": "1926.452(x)(1)",
+              "text": "Brackets shall be secured in place by at least one wire rope at least 1/2 inch (1.27 cm) in diameter.",
+              "requirement": "secure brackets with minimum 1/2 inch diameter wire rope",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "repair bracket scaffolds",
+              "work_types": ["repair bracket installation"],
+              "triggers": [
+                {
+                  "condition": "wire rope diameter",
+                  "value": "0.5",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate wire rope securing"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(x)(5)",
+              "text": "When a wire rope is placed around the structure in order to provide a safe anchorage for personal fall arrest systems used by employees erecting or dismantling scaffolds, the wire rope shall meet the requirements of subpart M of this part, but shall be at least 5/16 inch (0.8 cm) in diameter.",
+              "requirement": "use minimum 5/16 inch diameter wire rope for fall arrest anchorage",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "repair bracket scaffolds with fall arrest systems",
+              "work_types": ["scaffold erection", "scaffold dismantling"],
+              "triggers": [
+                {
+                  "condition": "fall arrest anchorage wire rope diameter",
+                  "value": "0.3125",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate fall arrest anchorage"],
+              "exceptions": []
+            },
+            {
+              "rule_id": "1926.452(x)(7)",
+              "text": "Tensioning of each wire rope used for securing brackets in place or as an anchorage for personal fall arrest systems shall be by means of a turnbuckle at least 1 inch (2.54 cm) in diameter, or by equivalent means.",
+              "requirement": "use minimum 1-inch diameter turnbuckle for wire rope tensioning",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "repair bracket scaffolds",
+              "work_types": ["wire rope tensioning"],
+              "triggers": [
+                {
+                  "condition": "turnbuckle diameter",
+                  "value": "1",
+                  "unit": "inch",
+                  "operator": ">="
+                }
+              ],
+              "protections": ["adequate tensioning capability"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.452(y)",
+          "title": "Stilts",
+          "rules": [
+            {
+              "rule_id": "1926.452(y)(2)",
+              "text": "When an employee is using stilts on a large area scaffold where a guardrail system is used to provide fall protection, the guardrail system shall be increased in height by an amount equal to the height of the stilts being used by the employee.",
+              "requirement": "increase guardrail height by stilt height when stilts are used",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "large area scaffolds with stilt use",
+              "work_types": ["stilt use on scaffolds"],
+              "triggers": [
+                {
+                  "condition": "guardrail height adjustment",
+                  "value": "equal to stilt height",
+                  "unit": "height increase",
+                  "operator": "="
+                }
+              ],
+              "protections": ["adjusted guardrail height"],
+              "exceptions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.453",
+      "title": "Aerial lifts",
+      "subsections": [
+        {
+          "subsection": "1926.453(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1926.453(a)(1)",
+              "text": "Aerial lifts acquired for use on or after January 22, 1973 shall be designed and constructed in conformance with the applicable requirements of ANSI A92.2-1969. Aerial lifts acquired before January 22, 1973 which do not meet the requirements of ANSI A92.2-1969, may not be used after January 1, 1976, unless they shall have been modified so as to conform with the applicable design and construction requirements of ANSI A92.2-1969.",
+              "requirement": "ensure aerial lifts comply with ANSI A92.2-1969 standards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all aerial lifts",
+              "work_types": ["aerial lift operation"],
+              "triggers": [
+                {
+                  "condition": "acquisition date cutoff",
+                  "value": "January 22, 1973",
+                  "unit": "date",
+                  "operator": ">="
+                },
+                {
+                  "condition": "use prohibition date for non-compliant lifts",
+                  "value": "January 1, 1976",
+                  "unit": "date",
+                  "operator": ">"
+                }
+              ],
+              "protections": ["ANSI A92.2-1969 compliance"],
+              "exceptions": ["modified to conform with ANSI A92.2-1969"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.454",
+      "title": "Training requirements",
+      "subsections": [
+        {
+          "subsection": "1926.454(a)",
+          "title": "Employee training on scaffold use",
+          "rules": [
+            {
+              "rule_id": "1926.454(a)",
+              "text": "The employer shall have each employee who performs work while on a scaffold trained by a person qualified in the subject matter to recognize the hazards associated with the type of scaffold being used and to understand the procedures to control or minimize those hazards.",
+              "requirement": "provide qualified training for all employees working on scaffolds",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employees working on scaffolds",
+              "work_types": ["all scaffold work"],
+              "personnel_required": "person qualified in subject matter",
+              "triggers": [],
+              "protections": ["hazard recognition training", "control procedure training"],
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "subsection": "1926.454(b)",
+          "title": "Training for scaffold erectors and dismantlers",
+          "rules": [
+            {
+              "rule_id": "1926.454(b)",
+              "text": "The employer shall have each employee who is involved in erecting, disassembling, moving, operating, repairing, maintaining, or inspecting a scaffold trained by a competent person to recognize any hazards associated with the work in question.",
+              "requirement": "provide competent person training for scaffold erectors and dismantlers",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees erecting, disassembling, moving, operating, repairing, maintaining, or inspecting scaffolds",
+              "work_types": ["scaffold erection", "scaffold disassembly", "scaffold moving", "scaffold operation", "scaffold repair", "scaffold maintenance", "scaffold inspection"],
+              "personnel_required": "competent person",
+              "triggers": [],
+              "protections": ["specialized hazard training"],
+              "exceptions": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "appendices": [
+    {
+      "appendix": "A",
+      "title": "Scaffold Specifications (Non-mandatory)",
+      "specifications": {
+        "general_guidelines": {
+          "load_ratings": {
+            "light_duty": {
+              "intended_load": "25 pounds per square foot",
+              "one_person": "250 pounds at center of span",
+              "two_person": "250 pounds at 18 inches left and right of center (500 pounds total)",
+              "three_person": "750 pounds total"
+            },
+            "medium_duty": {
+              "intended_load": "50 pounds per square foot"
+            },
+            "heavy_duty": {
+              "intended_load": "75 pounds per square foot"
+            }
+          },
+          "plank_spans": {
+            "25_psf": {
+              "full_thickness_undressed": "10 feet maximum",
+              "nominal_thickness": "8 feet maximum"
+            },
+            "50_psf": {
+              "full_thickness_undressed": "8 feet maximum",
+              "nominal_thickness": "6 feet maximum"
+            },
+            "75_psf": {
+              "nominal_thickness": "6 feet maximum"
+            }
+          },
+          "guardrail_specifications": {
+            "toprail_height_new_supported": {
+              "minimum": "38 inches",
+              "maximum": "45 inches"
+            },
+            "toprail_height_old_supported_and_suspended": {
+              "minimum": "36 inches", 
+              "maximum": "45 inches"
+            },
+            "intermediate_member_spacing": {
+              "maximum": "19 inches"
+            },
+            "toprail_strength_suspension": {
+              "minimum": "100 pounds"
+            },
+            "toprail_strength_other": {
+              "minimum": "200 pounds"
+            },
+            "midrail_strength_100lb_system": {
+              "minimum": "75 pounds"
+            },
+            "midrail_strength_200lb_system": {
+              "minimum": "150 pounds"
+            }
+          }
+        },
+        "specific_scaffold_types": {
+          "pole_scaffolds": {
+            "single_pole_wood": {
+              "light_duty_20ft": {
+                "max_intended_load": "25 lbs/ft2",
+                "poles": "2 × 4 in",
+                "max_pole_spacing_longitudinal": "6 feet",
+                "max_pole_spacing_transverse": "5 feet"
+              },
+              "heavy_duty_60ft": {
+                "max_intended_load": "75 lbs/ft2",
+                "poles": "4 × 6 in",
+                "max_pole_spacing_longitudinal": "6 feet",
+                "max_pole_spacing_transverse": "5 feet"
+              }
+            },
+            "professional_design_required": {
+              "height_threshold": "60 feet"
+            }
+          },
+          "tube_and_coupler_scaffolds": {
+            "professional_design_required": {
+              "height_threshold": "125 feet"
+            },
+            "maximum_planked_levels": {
+              "light_duty": {
+                "1_level": "125 feet max height",
+                "2_levels": "125 feet max height", 
+                "3_levels": "125 feet max height",
+                "4_levels": "125 feet max height"
+              }
+            }
+          },
+          "fabricated_frame_scaffolds": {
+            "professional_design_required": {
+              "height_threshold": "125 feet"
+            }
+          },
+          "bricklayers_square_scaffolds": {
+            "max_intended_load": "50 lb/ft2",
+            "max_width": "5 ft",
+            "max_height": "5 ft",
+            "max_tiers": "3"
+          },
+          "horse_scaffolds": {
+            "max_tiers": "2",
+            "max_height": "10 feet"
+          },
+          "ladder_jack_scaffolds": {
+            "max_intended_load": "25 lb/ft2",
+            "max_height": "20 feet",
+            "max_span": "8 feet",
+            "max_employees": "2"
+          },
+          "pump_jack_scaffolds": {
+            "max_wood_pole_height": "30 feet",
+            "max_intended_load": "500 lbs between poles",
+            "max_employees": "2"
+          },
+          "single_point_suspension": {
+            "max_intended_load": "250 lbs",
+            "boatswains_chair_wood_seat": {
+              "non_laminated": "1 inch thick minimum",
+              "marine_plywood": "5/8 inches thick minimum"
+            }
+          },
+          "two_point_suspension": {
+            "max_employees_500lb": "2",
+            "max_employees_750lb": "3",
+            "max_platform_span_plank_type": "10 feet",
+            "max_platform_span_beam_type": "12 feet"
+          },
+          "catenary_scaffolds": {
+            "max_intended_load": "500 lbs",
+            "max_employees": "2",
+            "max_come_along_capacity": "2000 lbs",
+            "max_vertical_pickup_spacing": "50 feet"
+          },
+          "float_scaffolds": {
+            "max_intended_load": "750 lbs"
+          },
+          "interior_hung_scaffolds": {
+            "max_spans": {
+              "25_psf": "10 ft",
+              "50_psf": "10 ft", 
+              "75_psf": "7 ft"
+            }
+          },
+          "needle_beam_scaffolds": {
+            "max_intended_load": "25 lb/ft2",
+            "max_platform_span": "8 ft",
+            "max_beam_span": "10 ft"
+          },
+          "tank_builders_scaffolds": {
+            "max_bracket_spacing": "10 feet 6 inches",
+            "max_employees_per_span": "3",
+            "safety_line_threshold": "12 inches gap"
+          }
+        }
+      }
+    },
+    {
+      "appendix": "B", 
+      "title": "Criteria for Determining the Feasibility of Providing Safe Access and Fall Protection for Scaffold Erectors and Dismantlers",
+      "status": "Reserved"
+    },
+    {
+      "appendix": "C",
+      "title": "List of National Consensus Standards (Non-mandatory)",
+      "standards": [
+        "ANSI/SIA A92.2-1990 Vehicle-Mounted Elevating and Rotating Aerial Devices",
+        "ANSI/SIA A92.3-1990 Manually Propelled Elevating Aerial Platforms", 
+        "ANSI/SIA A92.5-1990 Boom Supported Elevating Work Platforms",
+        "ANSI/SIA A92.6-1990 Self-Propelled Elevating Work Platforms",
+        "ANSI/SIA A92.7-1990 Airline Ground Support Vehicle-Mounted Vertical Lift Devices",
+        "ANSI/SIA A92.8-1993 Vehicle-Mounted Bridge Inspection and Maintenance Devices",
+        "ANSI/SIA A92.9-1993 Mast-Climbing Work Platforms"
+      ]
+    },
+    {
+      "appendix": "D",
+      "title": "List of Training Topics for Scaffold Erectors and Dismantlers (Non-mandatory)",
+      "training_topics": {
+        "general_overview": [
+          "regulations and standards",
+          "erection/dismantling planning", 
+          "PPE and proper procedures",
+          "fall protection",
+          "materials handling",
+          "access",
+          "working platforms",
+          "foundations",
+          "guys, ties and braces"
+        ],
+        "tubular_welded_frame_scaffolds": [
+          "specific regulations and standards",
+          "components",
+          "parts inspection", 
+          "erection/dismantling planning",
+          "guys, ties and braces",
+          "fall protection",
+          "general safety",
+          "access and platforms",
+          "erection/dismantling procedures",
+          "rolling scaffold assembly",
+          "putlogs"
+        ],
+        "tube_and_clamp_scaffolds": [
+          "specific regulations and standards",
+          "components",
+          "parts inspection",
+          "erection/dismantling planning", 
+          "guys, ties and braces",
+          "fall protection",
+          "general safety",
+          "access and platforms",
+          "erection/dismantling procedures",
+          "buttresses, cantilevers, & bridges"
+        ],
+        "system_scaffolds": [
+          "specific regulations and standards",
+          "components", 
+          "parts inspection",
+          "erection/dismantling planning",
+          "guys, ties and braces",
+          "fall protection",
+          "general safety",
+          "access and platforms",
+          "erection/dismantling procedures",
+          "buttresses, cantilevers, & bridges"
+        ]
+      }
+    },
+    {
+      "appendix": "E",
+      "title": "Drawings and Illustrations (Non-mandatory)",
+      "illustrations": [
+        "Bracing - Tube & Coupler Scaffolds",
+        "Suspended Scaffold Platform Welding Precautions", 
+        "Maximum Vertical Guy, Tie or Brace Spacing Wider Than 3'-0\" Bases",
+        "Maximum Vertical Guy, Tie or Brace Spacing 3'-0\" and Narrower Bases",
+        "System Scaffold",
+        "Tube and Coupler Scaffold",
+        "Scaffolding Work Surfaces",
+        "Outrigger Scaffold"
+      ]
+    }
+  ],
+  "additional_rules_from_suspension_scaffolds": [
+    {
+      "rule_id": "1926.451(d)(1)",
+      "text": "All suspension scaffold support devices, such as outrigger beams, cornice hooks, parapet clamps, and similar devices, shall rest on surfaces capable of supporting at least 4 times the load imposed on them by the scaffold operating at the rated load of the hoist (or at least 1.5 times the load imposed on them by the scaffold at the stall capacity of the hoist, whichever is greater).",
+      "requirement": "ensure suspension scaffold supports can handle 4x rated load or 1.5x stall load",
+      "type": "mandatory",
+      "severity": "critical",
+      "applies_to": "suspension scaffold support devices",
+      "work_types": ["suspension scaffold installation"],
+      "triggers": [
+        {
+          "condition": "support capacity - rated load",
+          "value": "4",
+          "unit": "times load",
+          "operator": ">="
+        },
+        {
+          "condition": "support capacity - stall load", 
+          "value": "1.5",
+          "unit": "times load",
+          "operator": ">="
+        }
+      ],
+      "protections": ["adequate support capacity"],
+      "exceptions": []
+    },
+    {
+      "rule_id": "1926.451(d)(6)",
+      "text": "When winding drum hoists are used on a suspension scaffold, they shall contain not less than four wraps of the suspension rope at the lowest point of scaffold travel.",
+      "requirement": "maintain minimum 4 wraps of rope on winding drum hoists",
+      "type": "mandatory", 
+      "severity": "critical",
+      "applies_to": "winding drum hoists on suspension scaffolds",
+      "work_types": ["suspension scaffold rigging"],
+      "triggers": [
+        {
+          "condition": "minimum rope wraps",
+          "value": "4",
+          "unit": "wraps",
+          "operator": ">="
+        }
+      ],
+      "protections": ["adequate rope retention"],
+      "exceptions": []
+    },
+    {
+      "rule_id": "1926.451(d)(10)(iii)",
+      "text": "Six randomly distributed broken wires in one rope lay or three broken wires in one strand in one rope lay.",
+      "requirement": "replace rope if broken wire limits exceeded",
+      "type": "mandatory",
+      "severity": "critical", 
+      "applies_to": "wire suspension ropes",
+      "work_types": ["rope inspection"],
+      "triggers": [
+        {
+          "condition": "broken wires - random distribution",
+          "value": "6",
+          "unit": "wires in one rope lay",
+          "operator": ">="
+        },
+        {
+          "condition": "broken wires - one strand",
+          "value": "3", 
+          "unit": "wires in one strand in one rope lay",
+          "operator": ">="
+        }
+      ],
+      "protections": ["rope replacement"],
+      "exceptions": []
+    },
+    {
+      "rule_id": "1926.451(d)(12)(i)",
+      "text": "There shall be a minimum of 3 wire rope clips installed, with the clips a minimum of 6 rope diameters apart.",
+      "requirement": "install minimum 3 wire rope clips spaced 6 rope diameters apart",
+      "type": "mandatory",
+      "severity": "high",
+      "applies_to": "wire rope clips on suspension scaffolds", 
+      "work_types": ["wire rope installation"],
+      "triggers": [
+        {
+          "condition": "minimum wire rope clips",
+          "value": "3",
+          "unit": "clips",
+          "operator": ">="
+        },
+        {
+          "condition": "clip spacing",
+          "value": "6",
+          "unit": "rope diameters",
+          "operator": ">="
+        }
+      ],
+      "protections": ["proper clip installation"],
+      "exceptions": []
+    },
+    {
+      "rule_id": "1926.451(f)(17)(ii)",
+      "text": "The suspension wire rope shall be covered with insulating material extending at least 4 feet (1.2 m) above the hoist.",
+      "requirement": "insulate suspension wire rope minimum 4 feet above hoist during welding",
+      "type": "mandatory",
+      "severity": "critical",
+      "applies_to": "welding from suspended scaffolds",
+      "work_types": ["welding from suspended scaffolds"],
+      "triggers": [
+        {
+          "condition": "insulation coverage above hoist",
+          "value": "4",
+          "unit": "feet", 
+          "operator": ">="
+        }
+      ],
+      "protections": ["electrical insulation"],
+      "exceptions": []
+    }
+  ],
+  "power_line_clearance_table": {
+    "insulated_lines": {
+      "less_than_300v": {
+        "minimum_distance": "3 feet",
+        "alternative": "none specified"
+      },
+      "300v_to_50kv": {
+        "minimum_distance": "10 feet", 
+        "alternative": "none specified"
+      },
+      "more_than_50kv": {
+        "minimum_distance": "10 feet plus 0.4 inches for each 1 kv over 50 kv",
+        "alternative": "2 times the length of the line insulator, but never less than 10 feet"
+      }
+    },
+    "uninsulated_lines": {
+      "less_than_50kv": {
+        "minimum_distance": "10 feet",
+        "alternative": "none specified"
+      },
+      "more_than_50kv": {
+        "minimum_distance": "10 feet plus 0.4 inches for each 1 kv over 50 kv", 
+        "alternative": "2 times the length of the line insulator, but never less than 10 feet"
+      }
+    }
+  },
+  "numerical_summary": {
+    "total_quantitative_rules": 89,
+    "critical_measurements": [
+      "4:1 safety factor for scaffold capacity",
+      "6:1 safety factor for suspension ropes", 
+      "10 feet height threshold for fall protection",
+      "18 inches minimum platform width",
+      "14 inches maximum gap from work face",
+      "1 inch maximum gap between platform units",
+      "24 inches maximum for ladder bottom positioning",
+      "35 feet interval for rest platforms",
+      "3 degrees maximum surface slope for mobile scaffold movement",
+      "125 feet height threshold for professional engineering design"
+    ],
+    "key_ratios_and_factors": [
+      "4:1 scaffold load capacity safety factor",
+      "6:1 suspension rope safety factor", 
+      "4:1 height to base width ratio for restraint requirement",
+      "2:1 height to base width ratio for mobile scaffold movement",
+      "1:3 maximum ramp slope ratio",
+      "1:8 ramp slope threshold for cleats",
+      "1/60 maximum platform deflection ratio"
+    ]
+  }
+}

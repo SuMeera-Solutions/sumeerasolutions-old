@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-30T18:33:15.798718",
+    "database": "compliease_sbx",
+    "schema": "osha_rules_v1"
+  },
+  "basic_stats": {
+    "regulation": 11,
+    "rule": 525,
+    "condition": 821,
+    "definition": 9,
+    "appendix": 1,
+    "training_requirement": 0,
+    "database_info": {
+      "db_size": "93 MB",
+      "db_name": "compliease_sbx",
+      "schema_name": "osha_rules_v1",
+      "analysis_time": "2025-06-30T23:33:15.497517+00:00"
+    }
+  },
+  "regulations_by_subpart": [
+    {
+      "part": "1910",
+      "subpart": "E",
+      "title": "Occupational Safety and Health Standards - Exit Routes and Emergency Planning",
+      "total_rules": 57,
+      "critical_rules": 22,
+      "high_rules": 29,
+      "medium_rules": 5,
+      "low_rules": 1,
+      "mandatory_rules": 53,
+      "informational_rules": 2,
+      "effective_date": "2002-11-07",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1910",
+      "subpart": "F",
+      "title": "Occupational Safety and Health Standards - Powered Platforms, Manlifts, and Vehicle-Mounted Work Platforms",
+      "total_rules": 47,
+      "critical_rules": 16,
+      "high_rules": 21,
+      "medium_rules": 10,
+      "low_rules": 0,
+      "mandatory_rules": 47,
+      "informational_rules": 0,
+      "effective_date": "1974-06-27",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1910",
+      "subpart": "I",
+      "title": "Occupational Safety and Health Standards - Personal Protective Equipment",
+      "total_rules": 34,
+      "critical_rules": 32,
+      "high_rules": 2,
+      "medium_rules": 0,
+      "low_rules": 0,
+      "mandatory_rules": 34,
+      "informational_rules": 0,
+      "effective_date": "1974-06-27",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1910",
+      "subpart": "L",
+      "title": "Occupational Safety and Health Standards - Fire Protection",
+      "total_rules": 26,
+      "critical_rules": 15,
+      "high_rules": 10,
+      "medium_rules": 1,
+      "low_rules": 0,
+      "mandatory_rules": 22,
+      "informational_rules": 4,
+      "effective_date": "1974-06-27",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1910",
+      "subpart": "Q",
+      "title": "Occupational Safety and Health Standards - Welding, Cutting and Brazing",
+      "total_rules": 22,
+      "critical_rules": 19,
+      "high_rules": 2,
+      "medium_rules": 1,
+      "low_rules": 0,
+      "mandatory_rules": 19,
+      "informational_rules": 1,
+      "effective_date": "1990-04-11",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "C",
+      "title": "Safety and Health Regulations for Construction - General Safety and Health Provisions",
+      "total_rules": 58,
+      "critical_rules": 37,
+      "high_rules": 16,
+      "medium_rules": 3,
+      "low_rules": 2,
+      "mandatory_rules": 54,
+      "informational_rules": 3,
+      "effective_date": "1979-02-09",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "E",
+      "title": "Safety and Health Regulations for Construction - Personal Protective and Life Saving Equipment",
+      "total_rules": 16,
+      "critical_rules": 13,
+      "high_rules": 3,
+      "medium_rules": 0,
+      "low_rules": 0,
+      "mandatory_rules": 16,
+      "informational_rules": 0,
+      "effective_date": "1979-02-09",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "F",
+      "title": "Safety and Health Regulations for Construction - Fire Protection and Prevention",
+      "total_rules": 68,
+      "critical_rules": 40,
+      "high_rules": 24,
+      "medium_rules": 4,
+      "low_rules": 0,
+      "mandatory_rules": 61,
+      "informational_rules": 2,
+      "effective_date": "1979-02-09",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "K",
+      "title": "Safety and Health Regulations for Construction - Electrical",
+      "total_rules": 49,
+      "critical_rules": 25,
+      "high_rules": 14,
+      "medium_rules": 10,
+      "low_rules": 0,
+      "mandatory_rules": 42,
+      "informational_rules": 6,
+      "effective_date": "1986-07-11",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "L",
+      "title": "Safety and Health Regulations for Construction - Scaffolds",
+      "total_rules": 79,
+      "critical_rules": 24,
+      "high_rules": 41,
+      "medium_rules": 14,
+      "low_rules": 0,
+      "mandatory_rules": 78,
+      "informational_rules": 1,
+      "effective_date": "1996-08-30",
+      "last_updated": "2025-06-05"
+    },
+    {
+      "part": "1926",
+      "subpart": "M",
+      "title": "Safety and Health Regulations for Construction - Fall Protection",
+      "total_rules": 69,
+      "critical_rules": 39,
+      "high_rules": 19,
+      "medium_rules": 11,
+      "low_rules": 0,
+      "mandatory_rules": 63,
+      "informational_rules": 5,
+      "effective_date": "1994-08-09",
+      "last_updated": "2025-06-05"
+    }
+  ],
+  "duplicate_analysis": {
+    "duplicate_codes": [],
+    "identical_content": []
+  },
+  "data_quality": {
+    "completeness": {
+      "total_rules": 525,
+      "has_rule_text": 525,
+      "has_requirement": 525,
+      "has_severity": 525,
+      "has_triggers": 435,
+      "has_exceptions": 73,
+      "has_applies_to": 525,
+      "has_work_types": 524,
+      "has_protections": 511
+    },
+    "conditions": [
+      {
+        "condition_type": "trigger",
+        "count": 719,
+        "has_parameter": 467,
+        "has_operator": 719,
+        "has_value": 719,
+        "has_unit": 719
+      },
+      {
+        "condition_type": "description_only",
+        "count": 92,
+        "has_parameter": 0,
+        "has_operator": 0,
+        "has_value": 0,
+        "has_unit": 0
+      },
+      {
+        "condition_type": "exception",
+        "count": 10,
+        "has_parameter": 0,
+        "has_operator": 10,
+        "has_value": 10,
+        "has_unit": 7
+      }
+    ]
+  },
+  "rules_by_severity": [
+    {
+      "severity_level": "critical",
+      "rule_count": 282,
+      "percentage": 

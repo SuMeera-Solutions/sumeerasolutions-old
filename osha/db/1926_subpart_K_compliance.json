@@ -1,0 +1,1484 @@
+{
+  "regulation": {
+    "title": "Safety and Health Regulations for Construction - Electrical",
+    "part": "1926",
+    "subpart": "K",
+    "authority": "40 U.S.C. 3704; 29 U.S.C. 653, 655, and 657",
+    "effective_date": "1986-07-11",
+    "last_updated": "2025-06-05",
+    "applies_to": "all electrical installations, equipment, and work practices in construction workplaces",
+    "excludes": ["existing permanent installations in place before construction commenced"]
+  },
+  "sections": [
+    {
+      "section_number": "1926.400",
+      "title": "Introduction",
+      "subsections": [
+        {
+          "subsection": "1926.400(a)",
+          "title": "Installation safety requirements",
+          "rules": [
+            {
+              "rule_id": "1926.400(a)",
+              "text": "Installation safety requirements are contained in §§ 1926.402 through 1926.408. Included in this category are electric equipment and installations used to provide electric power and light on jobsites.",
+              "requirement": "comply with installation safety requirements for electrical equipment providing power and light",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electric equipment and installations",
+              "work_types": ["electrical installation", "construction"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["proper electrical installation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.402",
+      "title": "Applicability",
+      "subsections": [
+        {
+          "subsection": "1926.402(a)",
+          "title": "Covered installations",
+          "rules": [
+            {
+              "rule_id": "1926.402(a)",
+              "text": "Sections 1926.402 through 1926.408 contain installation safety requirements for electrical equipment and installations used to provide electric power and light at the jobsite. These sections apply to installations, both temporary and permanent, used on the jobsite.",
+              "requirement": "apply electrical safety requirements to all temporary and permanent electrical installations at jobsite",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical equipment and installations at jobsite",
+              "work_types": ["electrical installation", "temporary wiring", "permanent wiring"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["electrical safety compliance"],
+              "exceptions": {
+                "items": [
+                  {"id": "pre_construction", "description": "existing permanent installations that were in place before construction activity commenced", "conditions": []}
+                ],
+                "expression": "pre_construction"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.403",
+      "title": "General requirements",
+      "subsections": [
+        {
+          "subsection": "1926.403(a)",
+          "title": "Approval",
+          "rules": [
+            {
+              "rule_id": "1926.403(a)",
+              "text": "All electrical conductors and equipment shall be approved.",
+              "requirement": "use only approved electrical conductors and equipment",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all electrical conductors and equipment",
+              "work_types": ["electrical installation", "equipment selection"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["approved equipment usage"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.403(b)",
+          "title": "Examination, installation, and use of equipment",
+          "rules": [
+            {
+              "rule_id": "1926.403(b)(1)",
+              "text": "The employer shall ensure that electrical equipment is free from recognized hazards that are likely to cause death or serious physical harm to employees.",
+              "requirement": "ensure electrical equipment is free from recognized hazards",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all electrical equipment",
+              "work_types": ["equipment inspection", "electrical safety"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["hazard-free equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.403(i)",
+          "title": "Working space requirements (600 volts or less)",
+          "rules": [
+            {
+              "rule_id": "1926.403(i)(1)",
+              "text": "Sufficient access and working space shall be provided and maintained about all electric equipment to permit ready and safe operation and maintenance of such equipment.",
+              "requirement": "provide sufficient access and working space around electrical equipment",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "all electric equipment 600V or less",
+              "work_types": ["electrical installation", "workspace design"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["adequate working space"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.403(i)(1)(i)",
+              "text": "Working space shall not be less than 30 inches (762 mm) wide in front of the electric equipment.",
+              "requirement": "maintain minimum 30-inch width in front of electrical equipment",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "electric equipment workspace",
+              "work_types": ["workspace design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "workspace_width", "condition": "workspace width in front of equipment", "value": "30", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "workspace_width"
+              },
+              "protections": ["minimum workspace width"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.403(i)(1)(v)",
+              "text": "The minimum headroom of working spaces about service equipment, switchboards, panelboards, or motor control centers shall be 6 feet 3 inches (1.91 m).",
+              "requirement": "maintain minimum 6 feet 3 inches headroom for electrical equipment working spaces",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "service equipment, switchboards, panelboards, motor control centers",
+              "work_types": ["workspace design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "headroom_height", "condition": "minimum headroom height", "value": "75", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "headroom_height"
+              },
+              "protections": ["adequate headroom"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.403(i)(2)",
+          "title": "Guarding of live parts",
+          "rules": [
+            {
+              "rule_id": "1926.403(i)(2)(i)",
+              "text": "Live parts of electric equipment operating at 50 volts or more shall be guarded against accidental contact by cabinets or other forms of enclosures.",
+              "requirement": "guard live parts of electrical equipment 50V or more against accidental contact",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electric equipment with live parts 50V or more",
+              "work_types": ["electrical safety", "equipment guarding"],
+              "triggers": {
+                "conditions": [
+                  {"id": "voltage_threshold", "condition": "operating voltage", "value": "50", "unit": "volts", "operator": ">="}
+                ],
+                "expression": "voltage_threshold"
+              },
+              "protections": ["cabinets", "enclosures", "guarding systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.403(i)(2)(i)(D)",
+              "text": "Live parts may be guarded by elevation of 8 feet (2.44 m) or more above the floor or other working surface and so installed as to exclude unqualified persons.",
+              "requirement": "guard live parts by elevation of 8 feet or more above floor to exclude unqualified persons",
+              "type": "alternative",
+              "severity": "critical",
+              "applies_to": "live parts of electrical equipment",
+              "work_types": ["electrical safety", "equipment installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "elevation_height", "condition": "height above floor or working surface", "value": "8", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "elevation_height"
+              },
+              "protections": ["elevation guarding"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.404",
+      "title": "Wiring design and protection",
+      "subsections": [
+        {
+          "subsection": "1926.404(b)(1)",
+          "title": "Ground-fault protection",
+          "rules": [
+            {
+              "rule_id": "1926.404(b)(1)(ii)",
+              "text": "All 120-volt, single-phase, 15- and 20-ampere receptacle outlets on construction sites, which are not a part of the permanent wiring of the building or structure and which are in use by employees, shall have approved ground-fault circuit interrupters for personnel protection.",
+              "requirement": "install GFCI protection on all 120V, single-phase, 15A and 20A receptacles used by employees on construction sites",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "120V single-phase 15A and 20A receptacles on construction sites",
+              "work_types": ["temporary wiring", "construction electrical"],
+              "triggers": {
+                "conditions": [
+                  {"id": "voltage_120", "condition": "voltage", "value": "120", "unit": "volts", "operator": "="},
+                  {"id": "single_phase", "condition": "single phase", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "amperage_15_20", "condition": "amperage rating", "value": "15,20", "unit": "amperes", "operator": "in"},
+                  {"id": "construction_site", "condition": "construction site usage", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "employee_use", "condition": "in use by employees", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "voltage_120 AND single_phase AND amperage_15_20 AND construction_site AND employee_use"
+              },
+              "protections": ["ground-fault circuit interrupters"],
+              "exceptions": {
+                "items": [
+                  {"id": "permanent_wiring", "description": "receptacles that are part of permanent building wiring", "conditions": []},
+                  {"id": "small_generator", "description": "receptacles on two-wire, single-phase portable or vehicle-mounted generator rated not more than 5kW where circuit conductors are insulated from generator frame", "conditions": [{"parameter": "generator_rating", "value": "5", "unit": "kW", "operator": "<="}]}
+                ],
+                "expression": "permanent_wiring OR small_generator"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.404(b)(1)(iii)",
+          "title": "Assured equipment grounding conductor program",
+          "rules": [
+            {
+              "rule_id": "1926.404(b)(1)(iii)(C)",
+              "text": "Each cord set, attachment cap, plug and receptacle of cord sets, and any equipment connected by cord and plug, except cord sets and receptacles which are fixed and not exposed to damage, shall be visually inspected before each day's use for external defects, such as deformed or missing pins or insulation damage, and for indications of possible internal damage.",
+              "requirement": "visually inspect all cord sets and plug-connected equipment daily before use for defects",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "cord sets, plugs, receptacles, and cord-connected equipment",
+              "work_types": ["equipment inspection", "electrical safety"],
+              "triggers": {
+                "conditions": [
+                  {"id": "daily_use", "condition": "equipment used daily", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "daily_use"
+              },
+              "protections": ["visual inspection", "defect identification"],
+              "exceptions": {
+                "items": [
+                  {"id": "fixed_unexposed", "description": "cord sets and receptacles which are fixed and not exposed to damage", "conditions": []}
+                ],
+                "expression": "fixed_unexposed"
+              }
+            },
+            {
+              "rule_id": "1926.404(b)(1)(iii)(E)(4)",
+              "text": "All required tests shall be performed at intervals not to exceed 3 months, except that cord sets and receptacles which are fixed and not exposed to damage shall be tested at intervals not exceeding 6 months.",
+              "requirement": "test electrical equipment at maximum 3-month intervals, or 6 months for fixed unexposed equipment",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "electrical equipment under assured grounding program",
+              "work_types": ["equipment testing", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "test_interval_3mo", "condition": "maximum test interval", "value": "3", "unit": "months", "operator": "<="},
+                  {"id": "test_interval_6mo", "condition": "maximum test interval for fixed equipment", "value": "6", "unit": "months", "operator": "<="}
+                ],
+                "expression": "test_interval_3mo OR (fixed_unexposed AND test_interval_6mo)"
+              },
+              "protections": ["regular testing", "equipment verification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.404(c)(1)",
+          "title": "Outside conductors (600 volts or less)",
+          "rules": [
+            {
+              "rule_id": "1926.404(c)(1)(ii)(A)",
+              "text": "Open conductors shall conform to minimum clearances of 10 feet (3.05 m) above finished grade, sidewalks, or from any platform or projection from which they might be reached.",
+              "requirement": "maintain minimum 10-foot clearance for open conductors above ground level",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "open conductors 600V or less",
+              "work_types": ["overhead wiring", "outdoor electrical"],
+              "triggers": {
+                "conditions": [
+                  {"id": "clearance_ground", "condition": "clearance above ground", "value": "10", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "clearance_ground"
+              },
+              "protections": ["adequate clearance height"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.404(c)(1)(ii)(D)",
+              "text": "Open conductors shall maintain 18 feet (5.49 m) clearance over public streets, alleys, roads, and driveways.",
+              "requirement": "maintain minimum 18-foot clearance over public streets and roadways",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "open conductors over public roadways",
+              "work_types": ["overhead wiring", "public area electrical"],
+              "triggers": {
+                "conditions": [
+                  {"id": "clearance_roadway", "condition": "clearance over public roadways", "value": "18", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "clearance_roadway"
+              },
+              "protections": ["adequate roadway clearance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.405",
+      "title": "Wiring methods, components, and equipment for general use",
+      "subsections": [
+        {
+          "subsection": "1926.405(a)(2)",
+          "title": "Temporary wiring",
+          "rules": [
+            {
+              "rule_id": "1926.405(a)(2)(ii)(G)",
+              "text": "Portable electric lighting used in wet and/or other conductive locations, as for example, drums, tanks, and vessels, shall be operated at 12 volts or less. However, 120-volt lights may be used if protected by a ground-fault circuit interrupter.",
+              "requirement": "use 12V or less lighting in wet/conductive locations, or 120V with GFCI protection",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "portable electric lighting in wet/conductive locations",
+              "work_types": ["temporary lighting", "wet location work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "wet_conductive_location", "condition": "wet or conductive location", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "voltage_12v", "condition": "operating voltage 12V or less", "value": "12", "unit": "volts", "operator": "<="},
+                  {"id": "voltage_120v_gfci", "condition": "120V with GFCI protection", "value": "120", "unit": "volts", "operator": "="}
+                ],
+                "expression": "wet_conductive_location AND (voltage_12v OR voltage_120v_gfci)"
+              },
+              "protections": ["low voltage operation", "GFCI protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.405(a)(2)(ii)(J)",
+              "text": "Extension cord sets used with portable electric tools and appliances shall be of three-wire type and shall be designed for hard or extra-hard usage.",
+              "requirement": "use three-wire hard or extra-hard usage extension cords for portable tools and appliances",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "extension cords for portable tools and appliances",
+              "work_types": ["portable tool use", "temporary wiring"],
+              "triggers": {
+                "conditions": [
+                  {"id": "three_wire", "condition": "three-wire type", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "hard_usage", "condition": "hard or extra-hard usage design", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "three_wire AND hard_usage"
+              },
+              "protections": ["proper cord construction", "grounding conductor"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.405(j)(1)",
+          "title": "Lighting fixtures and receptacles",
+          "rules": [
+            {
+              "rule_id": "1926.405(j)(1)(i)",
+              "text": "Fixtures, lampholders, lamps, rosettes, and receptacles shall have no live parts normally exposed to employee contact. However, rosettes and cleat-type lampholders and receptacles located at least 8 feet (2.44 m) above the floor may have exposed parts.",
+              "requirement": "ensure lighting fixtures have no exposed live parts, or locate at least 8 feet above floor",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "lighting fixtures, lampholders, receptacles",
+              "work_types": ["lighting installation", "electrical fixtures"],
+              "triggers": {
+                "conditions": [
+                  {"id": "no_exposed_parts", "condition": "no live parts exposed to employee contact", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "height_8ft", "condition": "height above floor", "value": "8", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "no_exposed_parts OR height_8ft"
+              },
+              "protections": ["enclosed live parts", "elevation protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.406",
+      "title": "Specific purpose equipment and installations",
+      "subsections": [
+        {
+          "subsection": "1926.406(a)",
+          "title": "Cranes and hoists",
+          "rules": [
+            {
+              "rule_id": "1926.406(a)(3)",
+              "text": "The dimension of the working space in the direction of access to live parts which may require examination, adjustment, servicing, or maintenance while alive shall be a minimum of 2 feet 6 inches (762 mm).",
+              "requirement": "maintain minimum 30-inch working space for crane/hoist electrical components requiring live maintenance",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "crane and hoist electrical equipment",
+              "work_types": ["crane installation", "hoist maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "working_space_crane", "condition": "working space for live maintenance", "value": "30", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "working_space_crane"
+              },
+              "protections": ["adequate maintenance access"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.406(c)",
+          "title": "Electric welders",
+          "rules": [
+            {
+              "rule_id": "1926.406(c)(1)",
+              "text": "A disconnecting means shall be provided in the supply circuit for each motor-generator arc welder, and for each AC transformer and DC rectifier arc welder which is not equipped with a disconnect mounted as an integral part of the welder.",
+              "requirement": "provide disconnecting means for arc welders not equipped with integral disconnect",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "motor-generator, AC transformer, and DC rectifier arc welders",
+              "work_types": ["welding operations", "welder installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "no_integral_disconnect", "condition": "welder not equipped with integral disconnect", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "no_integral_disconnect"
+              },
+              "protections": ["supply circuit disconnect"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.407",
+      "title": "Hazardous (classified) locations",
+      "subsections": [
+        {
+          "subsection": "1926.407(a)",
+          "title": "Scope",
+          "rules": [
+            {
+              "rule_id": "1926.407(a)",
+              "text": "This section sets forth requirements for electric equipment and wiring in locations which are classified depending on the properties of the flammable vapors, liquids or gases, or combustible dusts or fibers which may be present.",
+              "requirement": "apply hazardous location requirements based on classification of flammable materials present",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical equipment and wiring in hazardous locations",
+              "work_types": ["hazardous location electrical work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hazardous_classification", "condition": "location classified as hazardous", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazardous_classification"
+              },
+              "protections": ["appropriate hazardous location equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.407(b)",
+          "title": "Electrical installations",
+          "rules": [
+            {
+              "rule_id": "1926.407(b)(1)",
+              "text": "Equipment and associated wiring approved as intrinsically safe is permitted in any hazardous (classified) location included in its listing or labeling.",
+              "requirement": "use only intrinsically safe equipment approved for specific hazardous location classification",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical equipment in hazardous locations",
+              "work_types": ["hazardous location electrical installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "intrinsically_safe", "condition": "equipment approved as intrinsically safe", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "location_listed", "condition": "location included in equipment listing", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "intrinsically_safe AND location_listed"
+              },
+              "protections": ["intrinsically safe equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.408",
+      "title": "Special systems",
+      "subsections": [
+        {
+          "subsection": "1926.408(a)(1)",
+          "title": "Systems over 600 volts - Wiring methods",
+          "rules": [
+            {
+              "rule_id": "1926.408(a)(1)(ii)",
+              "text": "Conductors emerging from the ground shall be enclosed in raceways. Raceways installed on poles shall be of rigid metal conduit, intermediate metal conduit, PVC schedule 80 or equivalent extending from the ground line up to a point 8 feet (2.44 m) above finished grade.",
+              "requirement": "enclose underground conductors in raceways and protect pole-mounted raceways to 8 feet above grade",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "conductors over 600V emerging from ground",
+              "work_types": ["high voltage installation", "underground electrical"],
+              "triggers": {
+                "conditions": [
+                  {"id": "voltage_over_600", "condition": "voltage over 600V", "value": "600", "unit": "volts", "operator": ">"},
+                  {"id": "ground_emergence", "condition": "conductors emerging from ground", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "protection_height", "condition": "raceway protection height", "value": "8", "unit": "feet", "operator": ">="}
+                ],
+                "expression": "voltage_over_600 AND ground_emergence AND protection_height"
+              },
+              "protections": ["raceway enclosure", "rigid conduit protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.408(a)(3)",
+          "title": "Mobile and portable equipment over 600V",
+          "rules": [
+            {
+              "rule_id": "1926.408(a)(3)(i)",
+              "text": "A metallic enclosure shall be provided on the mobile machine for enclosing the terminals of the power cable. The enclosure shall include provisions for a solid connection for the ground wire(s) terminal to ground effectively the machine frame.",
+              "requirement": "provide metallic enclosure with proper grounding for mobile equipment power cable terminals",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "mobile equipment over 600V",
+              "work_types": ["mobile equipment electrical", "high voltage connections"],
+              "triggers": {
+                "conditions": [
+                  {"id": "mobile_equipment", "condition": "mobile equipment over 600V", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "mobile_equipment"
+              },
+              "protections": ["metallic enclosure", "effective grounding"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.408(b)(1)",
+          "title": "Class 1, 2, and 3 circuits",
+          "rules": [
+            {
+              "rule_id": "1926.408(b)(1)(i)(A)",
+              "text": "A Class 1 power-limited circuit is supplied from a source having a rated output of not more than 30 volts and 1000 volt-amperes.",
+              "requirement": "limit Class 1 power-limited circuits to maximum 30 volts and 1000 volt-amperes",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "Class 1 power-limited circuits",
+              "work_types": ["control circuits", "signaling circuits"],
+              "triggers": {
+                "conditions": [
+                  {"id": "class1_voltage", "condition": "Class 1 circuit voltage", "value": "30", "unit": "volts", "operator": "<="},
+                  {"id": "class1_power", "condition": "Class 1 circuit power", "value": "1000", "unit": "volt-amperes", "operator": "<="}
+                ],
+                "expression": "class1_voltage AND class1_power"
+              },
+              "protections": ["voltage limitation", "power limitation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.408(b)(1)(ii)(B)",
+              "text": "The maximum circuit voltage is 150 volts AC or DC for a Class 2 inherently limited power source, and 100 volts AC or DC for a Class 3 inherently limited power source.",
+              "requirement": "limit Class 2 circuits to 150V max and Class 3 circuits to 100V max for inherently limited sources",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "Class 2 and Class 3 inherently limited circuits",
+              "work_types": ["control circuits", "signaling circuits"],
+              "triggers": {
+                "conditions": [
+                  {"id": "class2_voltage", "condition": "Class 2 inherent limit voltage", "value": "150", "unit": "volts", "operator": "<="},
+                  {"id": "class3_voltage", "condition": "Class 3 inherent limit voltage", "value": "100", "unit": "volts", "operator": "<="}
+                ],
+                "expression": "class2_voltage OR class3_voltage"
+              },
+              "protections": ["voltage limitation by class"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.408(c)",
+          "title": "Communications systems",
+          "rules": [
+            {
+              "rule_id": "1926.408(c)(2)(i)",
+              "text": "Communication circuits so located as to be exposed to accidental contact with light or power conductors operating at over 300 volts shall have each circuit so exposed provided with an approved protector.",
+              "requirement": "provide approved protectors for communication circuits exposed to power conductors over 300V",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "communication circuits near power conductors over 300V",
+              "work_types": ["communication system installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "power_exposure", "condition": "exposed to power conductors over 300V", "value": "300", "unit": "volts", "operator": ">"}
+                ],
+                "expression": "power_exposure"
+              },
+              "protections": ["approved circuit protectors"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.408(c)(3)(iii)",
+              "text": "Indoor antennas, lead-ins, and other communication conductors attached as open conductors to the inside of buildings shall be located at least 2 inches (50.8 mm) from conductors of any light or power or Class 1 circuits.",
+              "requirement": "maintain minimum 2-inch separation between indoor communication conductors and power/Class 1 circuits",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "indoor communication conductors",
+              "work_types": ["indoor communication installation"],
+              "triggers": {
+                "conditions": [
+                  {"id": "separation_distance", "condition": "separation from power circuits", "value": "2", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "separation_distance"
+              },
+              "protections": ["adequate conductor separation"],
+              "exceptions": {
+                "items": [
+                  {"id": "special_protection", "description": "special and equally protective method of conductor separation is employed", "conditions": []}
+                ],
+                "expression": "special_protection"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.416",
+      "title": "General requirements - Safety-Related Work Practices",
+      "subsections": [
+        {
+          "subsection": "1926.416(a)",
+          "title": "Protection of employees",
+          "rules": [
+            {
+              "rule_id": "1926.416(a)(1)",
+              "text": "No employer shall permit an employee to work in such proximity to any part of an electric power circuit that the employee could contact the electric power circuit in the course of work, unless the employee is protected against electric shock by deenergizing the circuit and grounding it or by guarding it effectively by insulation or other means.",
+              "requirement": "protect employees from electric shock by deenergizing/grounding circuits or effective guarding",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees working near electric power circuits",
+              "work_types": ["electrical work", "construction near power lines"],
+              "triggers": {
+                "conditions": [
+                  {"id": "proximity_risk", "condition": "employee could contact circuit during work", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "proximity_risk"
+              },
+              "protections": ["circuit deenergizing", "circuit grounding", "insulation", "effective guarding"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.416(a)(2)",
+              "text": "In work areas where the exact location of underground electric powerlines is unknown, employees using jack-hammers, bars, or other hand tools which may contact a line shall be provided with insulated protective gloves.",
+              "requirement": "provide insulated protective gloves when using tools that may contact unknown underground power lines",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees using hand tools in areas with unknown underground power lines",
+              "work_types": ["excavation", "underground work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "unknown_location", "condition": "exact location of underground lines unknown", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "contact_tools", "condition": "using tools that may contact lines", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "unknown_location AND contact_tools"
+              },
+              "protections": ["insulated protective gloves"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.416(a)(3)",
+              "text": "Before work is begun the employer shall ascertain by inquiry or direct observation, or by instruments, whether any part of an energized electric power circuit, exposed or concealed, is so located that the performance of the work may bring any person, tool, or machine into physical or electrical contact with the electric power circuit.",
+              "requirement": "determine location of energized circuits before beginning work through inquiry, observation, or instruments",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all work that may involve contact with electric circuits",
+              "work_types": ["pre-work planning", "electrical safety assessment"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["pre-work hazard assessment", "circuit location identification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.417",
+      "title": "Lockout and tagging of circuits",
+      "subsections": [
+        {
+          "subsection": "1926.417(a)",
+          "title": "Controls",
+          "rules": [
+            {
+              "rule_id": "1926.417(a)",
+              "text": "Controls that are to be deactivated during the course of work on energized or deenergized equipment or circuits shall be tagged.",
+              "requirement": "tag controls that will be deactivated during electrical work",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "controls for electrical equipment and circuits",
+              "work_types": ["electrical maintenance", "lockout/tagout"],
+              "triggers": {
+                "conditions": [
+                  {"id": "control_deactivation", "condition": "controls to be deactivated during work", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "control_deactivation"
+              },
+              "protections": ["control tagging"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.417(b)",
+          "title": "Equipment and circuits",
+          "rules": [
+            {
+              "rule_id": "1926.417(b)",
+              "text": "Equipment or circuits that are deenergized shall be rendered inoperative and shall have tags attached at all points where such equipment or circuits can be energized.",
+              "requirement": "render deenergized equipment inoperative and tag all energization points",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "deenergized electrical equipment and circuits",
+              "work_types": ["electrical maintenance", "lockout/tagout"],
+              "triggers": {
+                "conditions": [
+                  {"id": "deenergized_equipment", "condition": "equipment or circuits are deenergized", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "deenergized_equipment"
+              },
+              "protections": ["equipment isolation", "energization point tagging"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.431",
+      "title": "Maintenance of equipment",
+      "subsections": [
+        {
+          "subsection": "1926.431",
+          "title": "Hazardous location maintenance",
+          "rules": [
+            {
+              "rule_id": "1926.431",
+              "text": "The employer shall ensure that all wiring components and utilization equipment in hazardous locations are maintained in a dust-tight, dust-ignition-proof, or explosion-proof condition, as appropriate. There shall be no loose or missing screws, gaskets, threaded connections, seals, or other impairments to a tight condition.",
+              "requirement": "maintain electrical equipment in hazardous locations in proper dust-tight or explosion-proof condition",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical equipment in hazardous locations",
+              "work_types": ["equipment maintenance", "hazardous location work"],
+              "triggers": {
+                "conditions": [
+                  {"id": "hazardous_location", "condition": "equipment in hazardous location", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "hazardous_location"
+              },
+              "protections": ["dust-tight condition", "explosion-proof condition", "proper sealing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.441",
+      "title": "Batteries and battery charging",
+      "subsections": [
+        {
+          "subsection": "1926.441(a)",
+          "title": "General requirements",
+          "rules": [
+            {
+              "rule_id": "1926.441(a)(1)",
+              "text": "Batteries of the unsealed type shall be located in enclosures with outside vents or in well ventilated rooms and shall be arranged so as to prevent the escape of fumes, gases, or electrolyte spray into other areas.",
+              "requirement": "locate unsealed batteries in ventilated enclosures to prevent fume escape",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "unsealed type batteries",
+              "work_types": ["battery installation", "battery charging"],
+              "triggers": {
+                "conditions": [
+                  {"id": "unsealed_battery", "condition": "unsealed type battery", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "unsealed_battery"
+              },
+              "protections": ["ventilated enclosures", "fume containment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(2)",
+              "text": "Ventilation shall be provided to ensure diffusion of the gases from the battery and to prevent the accumulation of an explosive mixture.",
+              "requirement": "provide ventilation to prevent accumulation of explosive gas mixtures from batteries",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "battery installations",
+              "work_types": ["battery installation", "ventilation systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "gas_producing_battery", "condition": "battery produces gases", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "gas_producing_battery"
+              },
+              "protections": ["adequate ventilation", "gas diffusion systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(3)",
+              "text": "Racks and trays shall be substantial and shall be treated to make them resistant to the electrolyte.",
+              "requirement": "use substantial racks and trays with electrolyte-resistant treatment for batteries",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "battery racks and trays",
+              "work_types": ["battery installation", "equipment selection"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["substantial construction", "electrolyte resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(4)",
+              "text": "Floors shall be of acid resistant construction unless protected from acid accumulations.",
+              "requirement": "use acid-resistant floor construction or provide protection from acid accumulations",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "battery area floors",
+              "work_types": ["battery room construction", "floor protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "acid_resistant_floor", "condition": "floor is acid resistant", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "acid_protection", "condition": "floor protected from acid", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "acid_resistant_floor OR acid_protection"
+              },
+              "protections": ["acid-resistant construction", "acid accumulation protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(5)",
+              "text": "Face shields, aprons, and rubber gloves shall be provided for workers handling acids or batteries.",
+              "requirement": "provide face shields, aprons, and rubber gloves for workers handling acids or batteries",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "workers handling acids or batteries",
+              "work_types": ["battery handling", "acid handling"],
+              "triggers": {
+                "conditions": [
+                  {"id": "acid_battery_handling", "condition": "worker handles acids or batteries", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "acid_battery_handling"
+              },
+              "protections": ["face shields", "aprons", "rubber gloves"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(6)",
+              "text": "Facilities for quick drenching of the eyes and body shall be provided within 25 feet (7.62 m) of battery handling areas.",
+              "requirement": "provide emergency eyewash and body drenching facilities within 25 feet of battery areas",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "battery handling areas",
+              "work_types": ["battery handling", "emergency preparedness"],
+              "triggers": {
+                "conditions": [
+                  {"id": "distance_25ft", "condition": "distance from battery handling area", "value": "25", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "distance_25ft"
+              },
+              "protections": ["emergency eyewash", "body drenching facilities"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(a)(7)",
+              "text": "Facilities shall be provided for flushing and neutralizing spilled electrolyte and for fire protection.",
+              "requirement": "provide facilities for flushing and neutralizing spilled electrolyte and fire protection",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "battery areas",
+              "work_types": ["battery handling", "emergency preparedness"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["electrolyte flushing systems", "neutralizing agents", "fire protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1926.441(b)",
+          "title": "Charging",
+          "rules": [
+            {
+              "rule_id": "1926.441(b)(1)",
+              "text": "Battery charging installations shall be located in areas designated for that purpose.",
+              "requirement": "locate battery charging installations in designated areas",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "battery charging installations",
+              "work_types": ["battery charging", "facility planning"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["designated charging areas"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(b)(2)",
+              "text": "Charging apparatus shall be protected from damage by trucks.",
+              "requirement": "protect battery charging apparatus from truck damage",
+              "type": "mandatory",
+              "severity": "medium",
+              "applies_to": "battery charging apparatus",
+              "work_types": ["battery charging", "equipment protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "truck_traffic", "condition": "area has truck traffic", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "truck_traffic"
+              },
+              "protections": ["physical barriers", "equipment guards"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.441(b)(3)",
+              "text": "When batteries are being charged, the vent caps shall be kept in place to avoid electrolyte spray. Vent caps shall be maintained in functioning condition.",
+              "requirement": "keep vent caps in place and functioning during battery charging to avoid electrolyte spray",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "battery charging operations",
+              "work_types": ["battery charging"],
+              "triggers": {
+                "conditions": [
+                  {"id": "charging_operation", "condition": "batteries being charged", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "charging_operation"
+              },
+              "protections": ["vent caps in place", "functioning vent caps"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1926.449", 
+      "title": "Definitions applicable to this subpart",
+      "subsections": [
+        {
+          "subsection": "1926.449",
+          "title": "Key electrical definitions with numerical criteria",
+          "rules": [
+            {
+              "rule_id": "1926.449-hole",
+              "text": "Hole means a gap or void 2 inches (5.1 cm) or more in its least dimension, in a floor, roof, or other walking/working surface.",
+              "requirement": "recognize gaps 2 inches or larger as holes requiring protection",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "floors, roofs, walking/working surfaces",
+              "work_types": ["construction", "safety assessment"],
+              "triggers": {
+                "conditions": [
+                  {"id": "gap_size_hole", "condition": "gap or void size", "value": "2", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "gap_size_hole"
+              },
+              "protections": ["hole protection measures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.449-opening",
+              "text": "Opening means a gap or void 30 inches (76 cm) or more high and 18 inches (48 cm) or more wide, in a wall or partition, through which employees can fall to a lower level.",
+              "requirement": "recognize wall gaps 30+ inches high and 18+ inches wide as openings requiring protection",
+              "type": "informational", 
+              "severity": "high",
+              "applies_to": "walls and partitions",
+              "work_types": ["construction", "safety assessment"],
+              "triggers": {
+                "conditions": [
+                  {"id": "opening_height", "condition": "opening height", "value": "30", "unit": "inches", "operator": ">="},
+                  {"id": "opening_width", "condition": "opening width", "value": "18", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "opening_height AND opening_width"
+              },
+              "protections": ["opening protection measures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.449-class_i_div_1",
+              "text": "Class I, Division 1 location is a location in which ignitible concentrations of flammable gases or vapors may exist under normal operating conditions, or may exist frequently because of repair or maintenance operations or because of leakage, or in which breakdown or faulty operation of equipment might release ignitible concentrations and cause simultaneous failure of electric equipment.",
+              "requirement": "classify locations with normal presence of flammable gases/vapors as Class I, Division 1",
+              "type": "informational",
+              "severity": "critical",
+              "applies_to": "hazardous locations with flammable gases/vapors",
+              "work_types": ["hazardous location classification", "electrical safety"],
+              "triggers": {
+                "conditions": [
+                  {"id": "normal_ignitable", "condition": "ignitible concentrations under normal conditions", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "frequent_ignitable", "condition": "frequent ignitible concentrations from maintenance/leakage", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "equipment_failure_risk", "condition": "equipment failure could release ignitible concentrations", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "normal_ignitable OR frequent_ignitable OR equipment_failure_risk"
+              },
+              "protections": ["Class I, Division 1 rated equipment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.449-volatile_flammable_liquid",
+              "text": "Volatile flammable liquid means a flammable liquid having a flash point below 38 degrees C (100 degrees F) or whose temperature is above its flash point, or a Class II combustible liquid having a vapor pressure not exceeding 40 psia (276 kPa) at 38°C (100°F) whose temperature is above its flash point.",
+              "requirement": "classify liquids with flash point below 100°F as volatile flammable liquids requiring special handling",
+              "type": "informational",
+              "severity": "critical",
+              "applies_to": "flammable and combustible liquids",
+              "work_types": ["hazardous material handling", "fire safety"],
+              "triggers": {
+                "conditions": [
+                  {"id": "flash_point_low", "condition": "flash point below 100°F", "value": "100", "unit": "degrees F", "operator": "<"},
+                  {"id": "temp_above_flash", "condition": "temperature above flash point", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "vapor_pressure", "condition": "vapor pressure at 100°F", "value": "40", "unit": "psia", "operator": "<="}
+                ],
+                "expression": "flash_point_low OR (temp_above_flash AND vapor_pressure)"
+              },
+              "protections": ["volatile liquid handling procedures"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.449-readily_accessible",
+              "text": "Readily accessible means capable of being reached quickly for operation, renewal, or inspections, without requiring those to whom ready access is requisite to climb over or remove obstacles or to resort to portable ladders, chairs, etc.",
+              "requirement": "ensure electrical equipment is readily accessible without obstacles or climbing aids",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "electrical equipment requiring access",
+              "work_types": ["electrical installation", "equipment placement"],
+              "triggers": {
+                "conditions": [
+                  {"id": "no_obstacles", "condition": "no obstacles to remove", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "no_climbing", "condition": "no climbing required", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "no_ladders", "condition": "no portable ladders needed", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "no_obstacles AND no_climbing AND no_ladders"
+              },
+              "protections": ["accessible installation"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1926.449-ampacity",
+              "text": "Ampacity means the current in amperes a conductor can carry continuously under the conditions of use without exceeding its temperature rating.",
+              "requirement": "select conductors with adequate ampacity for continuous current without exceeding temperature rating",
+              "type": "informational",
+              "severity": "critical",
+              "applies_to": "electrical conductors",
+              "work_types": ["conductor selection", "electrical design"],
+              "triggers": {
+                "conditions": [
+                  {"id": "continuous_current", "condition": "conductor carries continuous current", "value": "true", "unit": "boolean", "operator": "="},
+                  {"id": "temp_rating_exceeded", "condition": "temperature rating exceeded", "value": "false", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "continuous_current AND temp_rating_exceeded"
+              },
+              "protections": ["proper conductor sizing"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ],
+      "definitions_summary": {
+        "key_terms": {
+          "approved": "Acceptable to the authority enforcing this subpart (Assistant Secretary of Labor)",
+          "qualified_person": "One familiar with the construction and operation of the equipment and the hazards involved",
+          "ground_fault_circuit_interrupter": "A device for personnel protection that functions to deenergize a circuit when current to ground exceeds predetermined value",
+          "hazardous_location": "Locations classified as Class I, II, or III based on presence of flammable gases, vapors, combustible dusts, or easily ignitible fibers",
+          "accessible": "Admitting close approach; not guarded by locked doors, elevation, or other effective means",
+          "ampacity": "The current in amperes a conductor can carry continuously under conditions of use without exceeding temperature rating",
+          "bonding": "The permanent joining of metallic parts to form an electrically conductive path",
+          "enclosure": "The case or housing of apparatus, or fence/walls surrounding installation to prevent accidental contact with energized parts"
+        },
+        "voltage_classifications": {
+          "low_voltage": "600 volts nominal or less",
+          "high_voltage": "Over 600 volts nominal"
+        },
+        "hazardous_location_classes": {
+          "class_i": "Locations with flammable gases or vapors in air in quantities sufficient to produce explosive mixtures",
+          "class_ii": "Locations hazardous because of presence of combustible dust",
+          "class_iii": "Locations hazardous because of easily ignitible fibers or flyings"
+        }
+      },
+      "additional_sections": {
+        "measurement_requirements": {
+          "clearances": [
+            {
+              "application": "Open conductors above ground",
+              "minimum_value": "10",
+              "unit": "feet",
+              "reference": "1926.404(c)(1)(ii)(A)"
+            },
+            {
+              "application": "Open conductors over public roadways", 
+              "minimum_value": "18",
+              "unit": "feet",
+              "reference": "1926.404(c)(1)(ii)(D)"
+            },
+            {
+              "application": "Working space width in front of electrical equipment",
+              "minimum_value": "30",
+              "unit": "inches", 
+              "reference": "1926.403(i)(1)(i)"
+            },
+            {
+              "application": "Headroom for electrical equipment working spaces",
+              "minimum_value": "75",
+              "unit": "inches",
+              "reference": "1926.403(i)(1)(v)"
+            },
+            {
+              "application": "Live parts guarding by elevation",
+              "minimum_value": "8",
+              "unit": "feet",
+              "reference": "1926.403(i)(2)(i)(D)"
+            },
+            {
+              "application": "Emergency eyewash distance from battery areas",
+              "maximum_value": "25",
+              "unit": "feet",
+              "reference": "1926.441(a)(6)"
+            },
+            {
+              "application": "Communication conductor separation from power circuits",
+              "minimum_value": "2", 
+              "unit": "inches",
+              "reference": "1926.408(c)(3)(iii)"
+            },
+            {
+              "application": "Hole definition threshold",
+              "minimum_value": "2",
+              "unit": "inches",
+              "reference": "1926.449-hole"
+            },
+            {
+              "application": "Opening height threshold",
+              "minimum_value": "30",
+              "unit": "inches", 
+              "reference": "1926.449-opening"
+            },
+            {
+              "application": "Opening width threshold",
+              "minimum_value": "18",
+              "unit": "inches",
+              "reference": "1926.449-opening"
+            },
+            {
+              "application": "Crane/hoist working space",
+              "minimum_value": "30",
+              "unit": "inches",
+              "reference": "1926.406(a)(3)"
+            },
+            {
+              "application": "Raceway protection height on poles",
+              "minimum_value": "8",
+              "unit": "feet",
+              "reference": "1926.408(a)(1)(ii)"
+            }
+          ],
+          "electrical_limits": [
+            {
+              "application": "GFCI required voltage/amperage",
+              "voltage": "120",
+              "amperage": "15,20",
+              "unit": "volts/amperes",
+              "reference": "1926.404(b)(1)(ii)"
+            },
+            {
+              "application": "Portable lighting in wet locations",
+              "maximum_voltage": "12",
+              "unit": "volts",
+              "alternative": "120V with GFCI",
+              "reference": "1926.405(a)(2)(ii)(G)"
+            },
+            {
+              "application": "Live parts guarding threshold",
+              "minimum_voltage": "50",
+              "unit": "volts",
+              "reference": "1926.403(i)(2)(i)"
+            },
+            {
+              "application": "Class 1 power-limited circuit limits",
+              "maximum_voltage": "30",
+              "maximum_power": "1000",
+              "unit": "volts/volt-amperes", 
+              "reference": "1926.408(b)(1)(i)(A)"
+            },
+            {
+              "application": "Class 2 inherently limited circuit voltage",
+              "maximum_voltage": "150",
+              "unit": "volts",
+              "reference": "1926.408(b)(1)(ii)(B)"
+            },
+            {
+              "application": "Class 3 inherently limited circuit voltage", 
+              "maximum_voltage": "100",
+              "unit": "volts",
+              "reference": "1926.408(b)(1)(ii)(B)"
+            },
+            {
+              "application": "Communication circuit protector threshold",
+              "threshold_voltage": "300",
+              "unit": "volts",
+              "reference": "1926.408(c)(2)(i)"
+            },
+            {
+              "application": "Volatile flammable liquid flash point",
+              "maximum_temperature": "100",
+              "unit": "degrees F",
+              "reference": "1926.449-volatile_flammable_liquid"
+            },
+            {
+              "application": "High voltage system threshold",
+              "threshold_voltage": "600",
+              "unit": "volts",
+              "reference": "Various sections"
+            }
+          ],
+          "testing_intervals": [
+            {
+              "application": "Electrical equipment testing (general)",
+              "maximum_interval": "3",
+              "unit": "months",
+              "reference": "1926.404(b)(1)(iii)(E)(4)"
+            },
+            {
+              "application": "Fixed unexposed electrical equipment testing",
+              "maximum_interval": "6", 
+              "unit": "months",
+              "reference": "1926.404(b)(1)(iii)(E)(4)"
+            }
+          ]
+        },
+        "compliance_summary": {
+          "critical_requirements": [
+            "Install GFCI protection on all 120V, 15A/20A construction site receptacles",
+            "Guard all live parts operating at 50V or more against accidental contact", 
+            "Provide minimum 30-inch working space width in front of electrical equipment",
+            "Maintain proper clearances for overhead conductors (10ft minimum, 18ft over roadways)",
+            "Use only approved electrical conductors and equipment",
+            "Protect employees from electric shock through deenergizing/grounding or effective guarding",
+            "Implement proper lockout/tagout procedures for electrical work",
+            "Use appropriate equipment for hazardous classified locations",
+            "Provide emergency eyewash facilities within 25 feet of battery handling areas",
+            "Maintain proper ventilation for battery areas to prevent explosive gas accumulation",
+            "Use 12V or less lighting in wet/conductive locations (or 120V with GFCI)",
+            "Enclose underground conductors over 600V in proper raceways with 8ft pole protection",
+            "Maintain 2-inch minimum separation between communication and power conductors",
+            "Provide metallic enclosures with proper grounding for mobile equipment over 600V"
+          ],
+          "inspection_points": [
+            "Daily visual inspection of cord sets and plug-connected equipment for defects",
+            "Regular testing of electrical equipment (3-6 month intervals maximum)",
+            "Verification of GFCI functionality on construction site receptacles", 
+            "Working space clearance measurements (30\" minimum width, 75\" headroom)",
+            "Overhead conductor clearance verification (10ft/18ft minimums)",
+            "Hazardous location equipment condition and sealing assessment",
+            "Battery area ventilation and emergency equipment verification",
+            "Lockout/tagout tag placement and equipment isolation verification",
+            "Communication/power conductor separation measurements",
+            "Mobile equipment grounding and enclosure integrity checks"
+          ],
+          "documentation_requirements": [
+            "Written assured equipment grounding conductor program with specific procedures",
+            "Equipment testing records with employee identity, dates, trainer signatures",
+            "Lockout/tagout procedures, tags, and equipment identification",
+            "Hazardous location equipment listings, approvals, and classifications",
+            "Battery handling safety procedures and emergency response plans",
+            "High voltage equipment installation and maintenance records",
+            "Communication system installation documentation and clearance verification"
+          ],
+          "numerical_compliance_thresholds": {
+            "voltage_levels": {
+              "gfci_required": "120V, 15A/20A receptacles",
+              "guarding_required": "50V or more",
+              "high_voltage": "Over 600V",
+              "wet_location_lighting": "12V or less (or 120V with GFCI)",
+              "hazardous_location_classification": "Based on gas/vapor/dust presence"
+            },
+            "clearances_minimums": {
+              "working_space_width": "30 inches",
+              "headroom": "75 inches (6 feet 3 inches)", 
+              "overhead_conductors_ground": "10 feet",
+              "overhead_conductors_roadway": "18 feet",
+              "guarding_by_elevation": "8 feet",
+              "communication_power_separation": "2 inches",
+              "emergency_eyewash_distance": "25 feet maximum"
+            },
+            "testing_intervals": {
+              "equipment_testing_general": "3 months maximum",
+              "fixed_unexposed_equipment": "6 months maximum",
+              "daily_visual_inspection": "Before each day's use"
+            },
+            "size_thresholds": {
+              "hole_definition": "2 inches or more",
+              "opening_height": "30 inches or more",
+              "opening_width": "18 inches or more",
+              "raceway_protection_height": "8 feet on poles"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "appendices": []
+}

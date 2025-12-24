@@ -1,0 +1,670 @@
+{
+  "regulation": {
+    "title": "Occupational Safety and Health Standards - Fire Protection",
+    "part": "1910",
+    "subpart": "L",
+    "authority": "33 U.S.C. 941; 29 U.S.C. 653, 655, 657; Secretary of Labor's Orders",
+    "effective_date": "1974-06-27",
+    "last_updated": "2025-06-05",
+    "applies_to": "all employments except for maritime, construction, and agriculture",
+    "excludes": ["maritime", "construction", "agriculture"]
+  },
+  "sections": [
+    {
+      "section_number": "1910.155",
+      "title": "Scope, application and definitions applicable to this subpart",
+      "subsections": [
+        {
+          "subsection": "1910.155(a)",
+          "title": "Scope",
+          "rules": [
+            {
+              "rule_id": "1910.155(a)(1)",
+              "text": "This subpart contains requirements for fire brigades, and all portable and fixed fire suppression equipment, fire detection systems, and fire or employee alarm systems installed to meet the fire protection requirements of 29 CFR part 1910.",
+              "requirement": "comply with fire protection requirements for portable and fixed fire suppression equipment, fire detection systems, and employee alarm systems",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "all employers subject to 29 CFR part 1910",
+              "work_types": ["general industry"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["fire brigades", "portable fire suppression equipment", "fixed fire suppression equipment", "fire detection systems", "employee alarm systems"],
+              "exceptions": {
+                "items": [
+                  {"id": "maritime", "description": "maritime employments", "conditions": []},
+                  {"id": "construction", "description": "construction employments", "conditions": []},
+                  {"id": "agriculture", "description": "agriculture employments", "conditions": []}
+                ],
+                "expression": "maritime OR construction OR agriculture"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.155(c)",
+          "title": "Definitions applicable to this subpart",
+          "rules": [
+            {
+              "rule_id": "1910.155(c)(1)",
+              "text": "After-flame means the time a test specimen continues to flame after the flame source has been removed.",
+              "requirement": "recognize after-flame as continued flaming after flame source removal",
+              "type": "informational",
+              "severity": "medium",
+              "applies_to": "testing procedures",
+              "work_types": ["testing", "inspection"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": [],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.155(c)(8)",
+              "text": "Class A fire means a fire involving ordinary combustible materials such as paper, wood, cloth, and some rubber and plastic materials.",
+              "requirement": "classify fires involving ordinary combustible materials as Class A",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "fire classification and extinguisher selection",
+              "work_types": ["fire fighting", "fire prevention"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_materials", "parameter": "material type", "value": "ordinary combustible", "unit": "classification", "operator": "="}
+                ],
+                "expression": "combustible_materials"
+              },
+              "protections": ["appropriate extinguisher type"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.155(c)(9)",
+              "text": "Class B fire means a fire involving flammable or combustible liquids, flammable gases, greases and similar materials, and some rubber and plastic materials.",
+              "requirement": "classify fires involving flammable/combustible liquids and gases as Class B",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "fire classification and extinguisher selection",
+              "work_types": ["fire fighting", "fire prevention"],
+              "triggers": {
+                "conditions": [
+                  {"id": "flammable_liquids", "parameter": "material type", "value": "flammable liquid", "unit": "classification", "operator": "="},
+                  {"id": "flammable_gases", "parameter": "material type", "value": "flammable gas", "unit": "classification", "operator": "="}
+                ],
+                "expression": "flammable_liquids OR flammable_gases"
+              },
+              "protections": ["appropriate extinguisher type"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.155(c)(10)",
+              "text": "Class C fire means a fire involving energized electrical equipment where safety to the employee requires the use of electrically nonconductive extinguishing media.",
+              "requirement": "classify fires involving energized electrical equipment as Class C and use electrically nonconductive extinguishing media",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "electrical fires",
+              "work_types": ["electrical work", "fire fighting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "energized_electrical", "parameter": "equipment type", "value": "energized electrical", "unit": "classification", "operator": "="}
+                ],
+                "expression": "energized_electrical"
+              },
+              "protections": ["electrically nonconductive extinguishing media"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.155(c)(11)",
+              "text": "Class D fire means a fire involving combustible metals such as magnesium, titanium, zirconium, sodium, lithium and potassium.",
+              "requirement": "classify fires involving combustible metals as Class D",
+              "type": "informational",
+              "severity": "high",
+              "applies_to": "metal fire classification",
+              "work_types": ["metalworking", "fire fighting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "combustible_metals", "parameter": "material type", "value": "combustible metal", "unit": "classification", "operator": "="}
+                ],
+                "expression": "combustible_metals"
+              },
+              "protections": ["dry powder extinguishing agents"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.155(c)(18)",
+              "text": "Fire brigade (private fire department, industrial fire department) means an organized group of employees who are knowledgeable, trained, and skilled in at least basic fire fighting operations.",
+              "requirement": "establish fire brigade as organized group of knowledgeable, trained, and skilled employees",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employers establishing fire brigades",
+              "work_types": ["fire brigade operations"],
+              "triggers": {
+                "conditions": [],
+                "expression": ""
+              },
+              "protections": ["basic fire fighting operations"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.156",
+      "title": "Fire brigades",
+      "subsections": [
+        {
+          "subsection": "1910.156(b)(2)",
+          "title": "Personnel",
+          "rules": [
+            {
+              "rule_id": "1910.156(b)(2)(1)",
+              "text": "The employer shall assure that employees who are expected to do interior structural fire fighting are physically capable of performing duties which may be assigned to them during emergencies.",
+              "requirement": "ensure employees expected to do interior structural fire fighting are physically capable",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fire brigade members performing interior structural fire fighting",
+              "work_types": ["interior structural fire fighting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "interior_firefighting", "parameter": "activity type", "value": "interior structural fire fighting", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "interior_firefighting"
+              },
+              "protections": ["physical capability assessment"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.156(b)(2)(2)",
+              "text": "The employer shall not permit employees with known heart disease, epilepsy, or emphysema, to participate in fire brigade emergency activities unless a physician's certificate of the employees' fitness to participate in such activities is provided.",
+              "requirement": "prohibit employees with known heart disease, epilepsy, or emphysema from fire brigade activities unless physician certified",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "employees with specified medical conditions",
+              "work_types": ["fire brigade emergency activities"],
+              "triggers": {
+                "conditions": [
+                  {"id": "heart_disease", "parameter": "medical condition", "value": "heart disease", "unit": "boolean", "operator": "="},
+                  {"id": "epilepsy", "parameter": "medical condition", "value": "epilepsy", "unit": "boolean", "operator": "="},
+                  {"id": "emphysema", "parameter": "medical condition", "value": "emphysema", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "heart_disease OR epilepsy OR emphysema"
+              },
+              "protections": ["physician certification"],
+              "exceptions": {
+                "items": [
+                  {"id": "physician_cert", "description": "physician's certificate of fitness to participate", "conditions": [{"parameter": "physician certification", "value": "true", "operator": "="}]}
+                ],
+                "expression": "physician_cert"
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.156(e)(2)",
+          "title": "Foot and leg protection",
+          "rules": [
+            {
+              "rule_id": "1910.156(e)(2)(ii)",
+              "text": "Protective footwear shall meet the requirements of § 1910.136 for Class 75 footwear. In addition, protective footwear shall be water-resistant for at least 5 inches (12.7 cm) above the bottom of the heel and shall be equipped with slip-resistant outer soles.",
+              "requirement": "provide protective footwear meeting Class 75 requirements, water-resistant for 5+ inches above heel, with slip-resistant soles",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fire brigade members performing interior structural fire fighting",
+              "work_types": ["interior structural fire fighting"],
+              "triggers": {
+                "conditions": [
+                  {"id": "water_resistance_height", "parameter": "water resistance height above heel", "value": "5", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "water_resistance_height"
+              },
+              "protections": ["Class 75 footwear", "water resistance", "slip-resistant soles"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.156(e)(2)(iii)",
+              "text": "Protective footwear shall be tested in accordance with paragraph (1) of appendix E, and shall provide protection against penetration of the midsole by a size 8D common nail when at least 300 pounds (1330 N) of static force is applied to the nail.",
+              "requirement": "test protective footwear to resist penetration by 8D nail under 300+ pounds static force",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "protective footwear testing",
+              "work_types": ["footwear testing", "quality assurance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "nail_size", "parameter": "nail size", "value": "8D", "unit": "size", "operator": "="},
+                  {"id": "static_force", "parameter": "static force applied", "value": "300", "unit": "pounds", "operator": ">="}
+                ],
+                "expression": "nail_size AND static_force"
+              },
+              "protections": ["midsole penetration resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.156(e)(4)",
+          "title": "Hand protection",
+          "rules": [
+            {
+              "rule_id": "1910.156(e)(4)(i)(A)",
+              "text": "Materials used for gloves shall resist surface cut by a blade with an edge having a 60° included angle and a .001 inch (.0025 cm.) radius, under an applied force of 16 lbf (72N), and at a slicing velocity of greater or equal to 60 in/min (2.5 cm./sec).",
+              "requirement": "ensure glove materials resist surface cuts under specified blade test conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fire brigade gloves",
+              "work_types": ["glove testing", "hand protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "blade_angle", "parameter": "blade included angle", "value": "60", "unit": "degrees", "operator": "="},
+                  {"id": "blade_radius", "parameter": "blade radius", "value": "0.001", "unit": "inches", "operator": "="},
+                  {"id": "applied_force", "parameter": "applied force", "value": "16", "unit": "lbf", "operator": "="},
+                  {"id": "slicing_velocity", "parameter": "slicing velocity", "value": "60", "unit": "in/min", "operator": ">="}
+                ],
+                "expression": "blade_angle AND blade_radius AND applied_force AND slicing_velocity"
+              },
+              "protections": ["cut resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.156(e)(4)(i)(B)",
+              "text": "Materials used for the palm and palm side of the fingers shall resist puncture by a penetrometer (simulating a 4d lath nail), under an applied force of 13.2 lbf (60N), and at a velocity greater or equal to 20 in/min (.85 cm./sec).",
+              "requirement": "ensure palm materials resist puncture under specified penetrometer test conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fire brigade glove palms",
+              "work_types": ["glove testing", "hand protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "penetrometer_force", "parameter": "penetrometer force", "value": "13.2", "unit": "lbf", "operator": "="},
+                  {"id": "penetration_velocity", "parameter": "penetration velocity", "value": "20", "unit": "in/min", "operator": ">="}
+                ],
+                "expression": "penetrometer_force AND penetration_velocity"
+              },
+              "protections": ["puncture resistance"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.156(e)(4)(i)(C)",
+              "text": "The temperature inside the palm and gripping surface of the fingers of gloves shall not exceed 135 °F (57 °C) when gloves or glove system are exposed to 932 °F (500 °C) for five seconds at 4 psi (28 kPa) pressure.",
+              "requirement": "ensure glove interior temperature does not exceed 135°F when exposed to extreme heat conditions",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "fire brigade glove heat protection",
+              "work_types": ["glove testing", "heat protection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_interior_temp", "parameter": "maximum interior temperature", "value": "135", "unit": "°F", "operator": "<="},
+                  {"id": "exposure_temp", "parameter": "exposure temperature", "value": "932", "unit": "°F", "operator": "="},
+                  {"id": "exposure_time", "parameter": "exposure time", "value": "5", "unit": "seconds", "operator": "="},
+                  {"id": "exposure_pressure", "parameter": "exposure pressure", "value": "4", "unit": "psi", "operator": "="}
+                ],
+                "expression": "max_interior_temp AND exposure_temp AND exposure_time AND exposure_pressure"
+              },
+              "protections": ["heat protection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.157",
+      "title": "Portable fire extinguishers",
+      "subsections": [
+        {
+          "subsection": "1910.157(d)",
+          "title": "Selection and distribution",
+          "rules": [
+            {
+              "rule_id": "1910.157(d)(2)",
+              "text": "The employer shall distribute portable fire extinguishers for use by employees on Class A fires so that the travel distance for employees to any extinguisher is 75 feet (22.9 m) or less.",
+              "requirement": "distribute Class A fire extinguishers so travel distance is 75 feet or less",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "Class A fire hazard areas",
+              "work_types": ["fire prevention", "emergency response"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_travel_distance", "parameter": "travel distance to extinguisher", "value": "75", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_travel_distance"
+              },
+              "protections": ["portable fire extinguishers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.157(d)(4)",
+              "text": "The employer shall distribute portable fire extinguishers for use by employees on Class B fires so that the travel distance from the Class B hazard area to any extinguisher is 50 feet (15.2 m) or less.",
+              "requirement": "distribute Class B fire extinguishers so travel distance is 50 feet or less",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "Class B fire hazard areas",
+              "work_types": ["fire prevention", "emergency response"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_travel_distance_b", "parameter": "travel distance from Class B hazard", "value": "50", "unit": "feet", "operator": "<="}
+                ],
+                "expression": "max_travel_distance_b"
+              },
+              "protections": ["portable fire extinguishers"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.157(d)(6)",
+              "text": "The employer shall distribute portable fire extinguishers or other containers of Class D extinguishing agent for use by employees so that the travel distance from the combustible metal working area to any extinguishing agent is 75 feet (22.9 m) or less. Portable fire extinguishers for Class D hazards are required in those combustible metal working areas where combustible metal powders, flakes, shavings, or similarly sized products are generated at least once every two weeks.",
+              "requirement": "distribute Class D extinguishing agents within 75 feet of combustible metal work areas generating powders/flakes/shavings at least biweekly",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "combustible metal working areas",
+              "work_types": ["metalworking", "fire prevention"],
+              "triggers": {
+                "conditions": [
+                  {"id": "max_travel_distance_d", "parameter": "travel distance from combustible metal area", "value": "75", "unit": "feet", "operator": "<="},
+                  {"id": "generation_frequency", "parameter": "combustible metal product generation frequency", "value": "2", "unit": "weeks", "operator": "<="}
+                ],
+                "expression": "max_travel_distance_d AND generation_frequency"
+              },
+              "protections": ["Class D extinguishing agents"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.157(e)",
+          "title": "Inspection, maintenance and testing",
+          "rules": [
+            {
+              "rule_id": "1910.157(e)(2)",
+              "text": "Portable extinguishers or hose used in lieu thereof under paragraph (d)(3) of this section shall be visually inspected monthly.",
+              "requirement": "conduct monthly visual inspections of portable extinguishers or substitute hose systems",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "portable fire extinguishers and substitute hose systems",
+              "work_types": ["maintenance", "inspection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "inspection_frequency", "parameter": "inspection frequency", "value": "1", "unit": "month", "operator": "<="}
+                ],
+                "expression": "inspection_frequency"
+              },
+              "protections": ["visual inspection"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.157(e)(3)",
+              "text": "The employer shall assure that portable fire extinguishers are subjected to an annual maintenance check. Stored pressure extinguishers do not require an internal examination. The employer shall record the annual maintenance date and retain this record for one year after the last entry or the life of the shell, whichever is less.",
+              "requirement": "conduct annual maintenance checks on portable fire extinguishers and maintain records for one year or shell life",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "portable fire extinguishers",
+              "work_types": ["maintenance", "record keeping"],
+              "triggers": {
+                "conditions": [
+                  {"id": "maintenance_frequency", "parameter": "maintenance check frequency", "value": "1", "unit": "year", "operator": "<="},
+                  {"id": "record_retention", "parameter": "record retention period", "value": "1", "unit": "year", "operator": ">="}
+                ],
+                "expression": "maintenance_frequency AND record_retention"
+              },
+              "protections": ["annual maintenance", "record keeping"],
+              "exceptions": {
+                "items": [
+                  {"id": "stored_pressure", "description": "stored pressure extinguishers do not require internal examination", "conditions": [{"parameter": "extinguisher type", "value": "stored pressure", "operator": "="}]}
+                ],
+                "expression": "stored_pressure"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.159",
+      "title": "Automatic sprinkler systems",
+      "subsections": [
+        {
+          "subsection": "1910.159(c)(9)",
+          "title": "Sprinkler alarms",
+          "rules": [
+            {
+              "rule_id": "1910.159(c)(9)(1)",
+              "text": "On all sprinkler systems having more than twenty (20) sprinklers, the employer shall assure that a local waterflow alarm is provided which sounds an audible signal on the premises upon water flow through the system equal to the flow from a single sprinkler.",
+              "requirement": "provide local waterflow alarm for sprinkler systems with more than 20 sprinklers",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "sprinkler systems with more than 20 sprinklers",
+              "work_types": ["fire protection", "alarm systems"],
+              "triggers": {
+                "conditions": [
+                  {"id": "sprinkler_count", "parameter": "number of sprinklers", "value": "20", "unit": "count", "operator": ">"},
+                  {"id": "flow_trigger", "parameter": "water flow trigger", "value": "single sprinkler flow", "unit": "flow rate", "operator": "="}
+                ],
+                "expression": "sprinkler_count AND flow_trigger"
+              },
+              "protections": ["local waterflow alarm", "audible signal"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        },
+        {
+          "subsection": "1910.159(c)(10)",
+          "title": "Sprinkler spacing",
+          "rules": [
+            {
+              "rule_id": "1910.159(c)(10)(1)",
+              "text": "The employer shall assure that sprinklers are spaced to provide a maximum protection area per sprinkler, a minimum of interference to the discharge pattern by building or structural members or building contents and suitable sensitivity to possible fire hazards. The minimum vertical clearance between sprinklers and material below shall be 18 inches (45.7 cm).",
+              "requirement": "maintain 18-inch minimum vertical clearance between sprinklers and material below",
+              "type": "mandatory",
+              "severity": "critical",
+              "applies_to": "sprinkler system installation and maintenance",
+              "work_types": ["sprinkler installation", "warehouse operations"],
+              "triggers": {
+                "conditions": [
+                  {"id": "min_clearance", "parameter": "vertical clearance below sprinklers", "value": "18", "unit": "inches", "operator": ">="}
+                ],
+                "expression": "min_clearance"
+              },
+              "protections": ["adequate sprinkler spacing", "proper discharge pattern"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.160",
+      "title": "Fixed extinguishing systems, general",
+      "subsections": [
+        {
+          "subsection": "1910.160(b)(7)",
+          "title": "Container pressure and weight checks",
+          "rules": [
+            {
+              "rule_id": "1910.160(b)(7)(1)",
+              "text": "The employer shall assure that the weight and pressure of refillable containers is checked at least semi-annually. If the container shows a loss in net content or weight of more than 5 percent, or a loss in pressure of more than 10 percent, it shall be subjected to maintenance.",
+              "requirement": "check refillable container weight and pressure semi-annually; maintain if weight loss >5% or pressure loss >10%",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "refillable extinguishing system containers",
+              "work_types": ["maintenance", "inspection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "check_frequency", "parameter": "inspection frequency", "value": "6", "unit": "months", "operator": "<="},
+                  {"id": "weight_loss_threshold", "parameter": "weight loss percentage", "value": "5", "unit": "percent", "operator": ">"},
+                  {"id": "pressure_loss_threshold", "parameter": "pressure loss percentage", "value": "10", "unit": "percent", "operator": ">"}
+                ],
+                "expression": "check_frequency AND (weight_loss_threshold OR pressure_loss_threshold)"
+              },
+              "protections": ["container maintenance", "system reliability"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.160(b)(8)(1)",
+              "text": "The employer shall assure that factory charged nonrefillable containers which have no means of pressure indication are weighed at least semi-annually. If a container shows a loss in net weight or more than 5 percent it shall be replaced.",
+              "requirement": "weigh nonrefillable containers semi-annually; replace if weight loss >5%",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "factory charged nonrefillable containers without pressure indication",
+              "work_types": ["maintenance", "inspection"],
+              "triggers": {
+                "conditions": [
+                  {"id": "weighing_frequency", "parameter": "weighing frequency", "value": "6", "unit": "months", "operator": "<="},
+                  {"id": "weight_loss_replace", "parameter": "weight loss for replacement", "value": "5", "unit": "percent", "operator": ">"}
+                ],
+                "expression": "weighing_frequency AND weight_loss_replace"
+              },
+              "protections": ["container replacement"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.164",
+      "title": "Fire detection systems",
+      "subsections": [
+        {
+          "subsection": "1910.164(c)",
+          "title": "Maintenance and testing",
+          "rules": [
+            {
+              "rule_id": "1910.164(c)(3)",
+              "text": "The employer shall assure that pneumatic and hydraulic operated detection systems installed after January 1, 1981, are equipped with supervised systems.",
+              "requirement": "equip pneumatic and hydraulic detection systems installed after 1981 with supervision",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "pneumatic and hydraulic detection systems installed after January 1, 1981",
+              "work_types": ["fire detection", "system supervision"],
+              "triggers": {
+                "conditions": [
+                  {"id": "installation_date", "parameter": "installation date", "value": "1981-01-01", "unit": "date", "operator": ">"},
+                  {"id": "system_type", "parameter": "detection system type", "value": "pneumatic OR hydraulic", "unit": "type", "operator": "="}
+                ],
+                "expression": "installation_date AND system_type"
+              },
+              "protections": ["supervised detection systems"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_number": "1910.165",
+      "title": "Employee alarm systems",
+      "subsections": [
+        {
+          "subsection": "1910.165(d)",
+          "title": "Maintenance and testing",
+          "rules": [
+            {
+              "rule_id": "1910.165(d)(2)",
+              "text": "The employer shall assure that a test of the reliability and adequacy of non-supervised employee alarm systems is made every two months. A different actuation device shall be used in each test of a multi-actuation device system so that no individual device is used for two consecutive tests.",
+              "requirement": "test non-supervised employee alarm systems every two months using different actuation devices",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "non-supervised employee alarm systems",
+              "work_types": ["alarm testing", "maintenance"],
+              "triggers": {
+                "conditions": [
+                  {"id": "test_frequency", "parameter": "testing frequency", "value": "2", "unit": "months", "operator": "<="},
+                  {"id": "device_rotation", "parameter": "actuation device rotation", "value": "different device each test", "unit": "requirement", "operator": "="}
+                ],
+                "expression": "test_frequency AND device_rotation"
+              },
+              "protections": ["alarm system reliability"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            },
+            {
+              "rule_id": "1910.165(d)(4)",
+              "text": "The employer shall assure that employee alarm circuitry installed after January 1, 1981, which is capable of being supervised is supervised and that it will provide positive notification to assigned personnel whenever a deficiency exists in the system.",
+              "requirement": "supervise employee alarm circuitry installed after 1981 that is capable of supervision",
+              "type": "mandatory",
+              "severity": "high",
+              "applies_to": "employee alarm circuitry installed after January 1, 1981",
+              "work_types": ["alarm supervision", "system monitoring"],
+              "triggers": {
+                "conditions": [
+                  {"id": "installation_date_alarm", "parameter": "installation date", "value": "1981-01-01", "unit": "date", "operator": ">"},
+                  {"id": "supervision_capability", "parameter": "supervision capability", "value": "true", "unit": "boolean", "operator": "="}
+                ],
+                "expression": "installation_date_alarm AND supervision_capability"
+              },
+              "protections": ["supervised alarm systems", "positive notification"],
+              "exceptions": {
+                "items": [],
+                "expression": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
