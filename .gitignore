@@ -23,3 +23,7 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Ingestion folder - large data files
+Ingestion/
+
